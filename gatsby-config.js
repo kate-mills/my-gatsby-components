@@ -5,6 +5,7 @@ module.exports = {
     author: `@kate-mills`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,7 +25,7 @@ module.exports = {
         background_color: `#ff645c`,
         theme_color: `#ff645c`,
         display: `minimal-ui`,
-        icon: `src/images/favicon_io`, // This path is relative to the root of the site.
+        icon: `src/images/android-chrome-192x192.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
