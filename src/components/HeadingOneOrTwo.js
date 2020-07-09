@@ -14,20 +14,38 @@ const HeadingOneOrTwo  = ({children,  text, num, className}) => {
 }
 export default styled(HeadingOneOrTwo)`
   & {
-    margin: 0 auto;
     background-color: ${props => props.backgroundColor || "white"};
-    text-align: ${props => props.center ? "center": "center"};
-    ${screen.font.setFont(30, 45)};
+    margin: 0 auto;
+    text-align: center;
   }
-  h2 {color: rgba(179,0,0,.8)};
+  h1 {
+    ${screen.font.setFont({min_font: 30, max_font: 43})};
+    line-height: 54px;
+    color: #222222;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0 auto;
+  }
+  h2 {
+    ${screen.font.setFont({min_font: 25, max_font: 28})};
+    line-height: 42px;
+    color: rgba(179,0,0,.8)};
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+
   ${screen.phone.phone`
-     &{width:80%;}
+     &{width: 100%;}
+     h1{width:80%;}
    `}
   ${screen.tablet.tablet`
-     &{width: 60%;} 
+    & {width: 70%;}
+    h1{width: 80%;} 
    `}
   ${screen.desktop.desktop`
-    &{width: 80%;}
+    & {width: 70%;}
+    h1{width: 100%;}
   `}
 `
 
