@@ -5,7 +5,7 @@ import "./layout.css"
 import OverlayPink from "./OverlayPink"
 import OverlayWhite from "./OverlayWhite"
 import {LogoImg} from "./LogoImg"
-import Navbar from "./Navbar"
+import Navbar from "./globals/Navbar"
 
 
 const Layout = ({ children }) => {
