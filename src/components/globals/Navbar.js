@@ -1,20 +1,21 @@
-import React from "react"
+import React, {Component} from "react"
 
 import styled from 'styled-components'
 
-const Navbar = ({className}) => {
-  return (
-    <div className={className}>
-      <nav>
-        <ul>
-          <li>Navbar</li>
-        </ul>
-      </nav>
-    </div>
-  )
-
+class Navbar extends Component {
+  render(){
+    return (
+      <div className={this.props.className}>
+        <nav>
+          <ul>
+            <li>Navbar</li>
+          </ul>
+        </nav>
+        </div>
+    )
+  }
 }
 
-export default styled(Navbar)`
-
+export default  styled(Navbar)`
+  & {background: pink;}
 `
