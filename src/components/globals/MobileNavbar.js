@@ -73,11 +73,27 @@ button {
 `
 
 class  MobileNavbar extends Component {
+  state = {
+    navbarOpen: false,
+  }
+
+  navbarHandler = () => {
+    const navbar = document.getElementsByClassName('navbar-mobile'); 
+    if(!this.state.navbarOpen) {
+      navbar[0].style.display =  "none";
+    } else{
+      navbar[0].style.display = "flex";
+    }
+    this.setState({navbarOpen: !this.state.navbarOpen})
+  }
+
   render(){
     return (
       <div className={`${this.props.className}`}>
         <nav>
-          <ul className="navbar-desktop">
+          <button className="navbar-toggler" onClick={this.navbarHandler} > MENU </button>
+
+          <ul className="navbar-mobile">
             {links.map((item,id)=>{ return(
               <li key={id}>
                 <Link to={item.path}>
@@ -98,16 +114,19 @@ export default styled(MobileNavbar)`
     background:white !important;
     margin: 0 auto;
     position: sticky;
+    width: 100%;
   }
   button.navbar-toggler {
     border: 0;
     font-size: 15px;
     line-height: 27px;
-    color: #5c5c5c;
+    color: black;
     font-style: normal;
     font-weight: 400;
     outline: none;
     margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
   }
   li {
     list-style: none;
@@ -128,7 +147,6 @@ export default styled(MobileNavbar)`
     justify-content: space-between;
     align-items: center;
   }
-
   `}
   ${screen.tablet.tablet`
   ul{
@@ -140,7 +158,8 @@ export default styled(MobileNavbar)`
 
   `}
   ${screen.desktop.desktop`
-    ul.navbar-desktop {display:none;}
+    button.navbar-toggler {display:none;}
+    ul.navbar-mobile {display:none;}
   `}
 
 
