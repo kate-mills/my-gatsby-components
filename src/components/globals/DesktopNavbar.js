@@ -29,6 +29,8 @@ const MoreItemsWrapper = styled.div`
   display: inline;
   font-size: 0px;
   line-height; 0px;
+  position: sticky;
+  z-index: auto;
 }
 ul.subNavigation{
   display: flex;
@@ -36,16 +38,10 @@ ul.subNavigation{
   align-items: start;
   height: 0px;
 }
-
 ul.subNavigation li {
   background: white;
   height: 0px;
-}
-button {
-  outline: none;
-  border: 0;
-  cursor: pointer;
-  padding: 10px;
+  z-index: 1;
 }
 `
 class  DesktopNavbar extends Component {
@@ -55,13 +51,19 @@ class  DesktopNavbar extends Component {
         <nav>
           <ul className="navbar-desktop">
             {links.map((item,id)=>{ return(
-              <li  key={id}>
-                <Link to={item.path}>
-                  {item.text}
-                </Link>
-                {item.menu.length > 0 ? 
-                  <MoreItems menu={item.menu}/> : false}
-              </li>)})}
+                
+              item.menu.length > 0 ? 
+
+                <li className="parent-nav" key={id}>
+                  <Link to={item.path}> {item.text}</Link>
+                    <MoreItems menu={item.menu}/>
+                </li>
+                :
+                <li key={id}>
+                  <Link to={item.path}> {item.text}</Link>
+                </li>
+
+              )})}
           </ul>
         </nav>
       </div>
@@ -71,22 +73,9 @@ class  DesktopNavbar extends Component {
 export default styled(DesktopNavbar)`
   & {
     background:white !important;
+    margin: 0 auto;
     width: 70%;
-    margin: 0 auto;
     position: sticky;
-  }
-  button.navbar-toggler {
-    border: 0;
-    font-size: 15px;
-    line-height: 27px;
-    color: #5c5c5c;
-    font-style: normal;
-    font-weight: 400;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-    margin: 0 auto;
-    width: 100%;
   }
   ul{
     display: flex;
@@ -96,16 +85,14 @@ export default styled(DesktopNavbar)`
   li {
     list-style: none;
     width: 120px;
-    height: 50px;
+    height: 60px;
     margin: 0;
-    z-index: auto;
   }
   li ul li.hide {
     visibility: hidden;
   }
   li:hover ul {
     background: white;
-    z-index: 1;
     height: auto;
     border: 1px solid white;
     width: max-content;
@@ -113,10 +100,9 @@ export default styled(DesktopNavbar)`
   }
   li:hover  ul li.hide {
     visibility: visible;
-    background: white;
+    background: #9e9e9e4a;
     width: max-content;
-    height: 50px;
-    z-index: 2;
+    height: 30px;
   }
   li:hover ul li.hide a {
     font-weight: 400;
