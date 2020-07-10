@@ -116,6 +116,9 @@ export default styled(MobileNavbar)`
     position: sticky;
     width: 100%;
   }
+  ul.navbar-mobile {
+    display: none;
+  }
   button.navbar-toggler {
     border: 0;
     font-size: 15px;
