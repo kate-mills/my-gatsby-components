@@ -5,7 +5,7 @@ import "./layout.css"
 import OverlayPink from "./OverlayPink"
 import OverlayWhite from "./OverlayWhite"
 import {LogoImg} from "./LogoImg"
-import Navbar from "./globals/Navbar"
+import DesktopNavbar from "./globals/DesktopNavbar"
 
 
 const Layout = ({ children }) => {
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <OverlayWhite/>
       <div >
         <LogoImg/>
-        <Navbar/>
+        <DesktopNavbar/>
         <main>{children}</main>
       </div>
     </>

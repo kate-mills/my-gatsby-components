@@ -19,6 +19,10 @@ export default [
     text: 'why mc?',
     menu: [
       {
+        path: 'why-mc',
+        text: 'why choose us?',
+      },
+      {
         path: 'before-and-after',
         text: 'before and after',
       },

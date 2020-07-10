@@ -7,7 +7,7 @@ const HeadingOneOrTwo  = ({children,  text, num, className}) => {
     <div className={className}>
       { num > 1 ? 
          <h2>{text}</h2>:
-         <h1>{text}</h1>
+         <h1 className="nav-blocker">{text}</h1>
       }
     </div>
   )
@@ -16,6 +16,8 @@ export default styled(HeadingOneOrTwo)`
   & {
     background-color: ${props => props.backgroundColor || "white"};
     margin: 0 auto;
+    z-index: -100;
+    position: sticky;
     text-align: center;
   }
   h1 {
@@ -25,6 +27,7 @@ export default styled(HeadingOneOrTwo)`
     font-style: normal;
     font-weight: 300;
     margin: 0 auto;
+
   }
   h2 {
     ${screen.font.setFont({min_font: 25, max_font: 28})};
