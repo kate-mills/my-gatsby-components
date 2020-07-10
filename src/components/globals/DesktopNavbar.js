@@ -9,14 +9,12 @@ import {screen} from '../../css/js/media-functions'
 const MoreItems = (props) => {
   return ( 
     <MoreItemsWrapper>
-      <button 
-        className="menu-btn" >+</button>
       <ul className="subNavigation">
         {
           props.menu.map((item, id) => {
             return(
               <li 
-                 key={id} className={ `hide sub-item`}>
+                 key={id} className={ `hide `}>
                 <Link to={item.path}>{item.text}</Link>
               </li>
             )
@@ -29,9 +27,10 @@ const MoreItems = (props) => {
 const MoreItemsWrapper = styled.div`
 & {
   display: inline;
+  font-size: 0px;
+  line-height; 0px;
 }
 ul.subNavigation{
-  margin-top: 5px;
   display: flex;
   flex-flow: column wrap;
   align-items: start;
@@ -56,13 +55,12 @@ class  DesktopNavbar extends Component {
         <nav>
           <ul className="navbar-desktop">
             {links.map((item,id)=>{ return(
-              <li key={id}>
+              <li  key={id}>
                 <Link to={item.path}>
                   {item.text}
                 </Link>
                 {item.menu.length > 0 ? 
                   <MoreItems menu={item.menu}/> : false}
-
               </li>)})}
           </ul>
         </nav>
@@ -75,6 +73,7 @@ export default styled(DesktopNavbar)`
     background:white !important;
     width: 70%;
     margin: 0 auto;
+    position: sticky;
   }
   button.navbar-toggler {
     border: 0;
@@ -92,13 +91,14 @@ export default styled(DesktopNavbar)`
   ul{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   li {
     list-style: none;
     width: 120px;
     height: 50px;
     margin: 0;
+    z-index: auto;
   }
   li ul li.hide {
     visibility: hidden;
@@ -107,7 +107,7 @@ export default styled(DesktopNavbar)`
     background: white;
     z-index: 1;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
     width: max-content;
     padding: 5px;
   }
@@ -116,6 +116,10 @@ export default styled(DesktopNavbar)`
     background: white;
     width: max-content;
     height: 50px;
+    z-index: 2;
+  }
+  li:hover ul li.hide a {
+    font-weight: 400;
   }
   ${screen.phone.phone`
     ul.navbar-desktop {display:none;}

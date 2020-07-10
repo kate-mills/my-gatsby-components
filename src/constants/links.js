@@ -10,12 +10,17 @@ export default [
     menu: [],
   },
   {
-    path: '/products',
+    path: '/.',
     text: 'products',
-    menu: [],
+    menu: [
+      {
+        path: '/cleansers',
+        text: 'cleansers',
+      }
+    ],
   },
   {
-    path: '/why-mc',
+    path: '/.',
     text: 'why mc?',
     menu: [
       {
@@ -56,7 +61,7 @@ export default [
     menu: [],
   },
   {
-    path: '/education',
+    path: '/.',
     text: 'education',
     menu: [
       {
