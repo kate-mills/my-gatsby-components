@@ -21,7 +21,7 @@ export default styled(HeadingOneOrTwo)`
     text-align: center;
   }
   h1 {
-    ${screen.font.setFont({min_font: 30, max_font: 43})};
+    font-size: 45px;
     line-height: 54px;
     color: #222222;
     font-style: normal;
@@ -30,7 +30,7 @@ export default styled(HeadingOneOrTwo)`
 
   }
   h2 {
-    ${screen.font.setFont({min_font: 25, max_font: 28})};
+    font-size: 30px;
     line-height: 42px;
     color: rgba(179,0,0,.8)};
     font-style: normal;
