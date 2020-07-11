@@ -22,8 +22,9 @@ export const setFont =  ({family="'proxima-nova', 'sans-serif'", size="15px", he
 }
 
 //flex-start flex-end
-export const setFlexContainer = ({x="center", y="center"}={}) => {
-  return `display:flex;justify-content:${x};align-items:${y};`
+export const setFlexContainer = ({x="center", y="center", direction="row", wrap="wrap"}={}) => {
+  return `display:flex;justify-content:${x};align-items:${y};flex-direction:${direction};flex-wrap: ${wrap};
+  `
 }
 
 export const setBackground = ({img='', color='rgba(0,0,0,0)'}={}) => {

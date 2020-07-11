@@ -7,7 +7,7 @@ import OverlayWhite from "./OverlayWhite"
 import {LogoImg} from "./LogoImg"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
-
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
         <DesktopNavbar/>
         <main>{children}</main>
       </div>
+      <Footer/>
     </>
   )
 }
