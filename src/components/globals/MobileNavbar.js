@@ -43,10 +43,10 @@ const MoreItems = (props) => {
 
 const MoreItemsWrapper = styled.div`
 & {display: inline;}
-& button.plus-btn {sticky; height: 0px; width: 0px; outline: none; border: none;}
-& nav.show.sub-nav  {background: lightgray; box-sizing: border-box;}
+& button.plus-btn { font-weight: 500; font-size: 17px;  background: none; outline: none; border: none;}
+& nav.show.sub-nav  {background: #9e9e9e4a; box-sizing: border-box;}
 & nav.sub-nav.hide {display: none;}
-& ul.sub-ul.show li { text-align: center; list-style: none;}
+& ul.sub-ul.show li { font-size: 14px!important; line-height: 28px; text-align: center; list-style: none;}
 `
 
 
@@ -89,8 +89,11 @@ class  MobileNavbar extends Component {
 }
 
 export default styled(MobileNavbar)`
-
-button.navbar-toggler {width: 100%; border: none;}
+&{
+font-size: 16px;
+line-height: 27px;
+}
+button.navbar-toggler {width: 100%; border: none;margin-top: 20px; background:none; font-size: 16px;}
 & nav.show.main-nav  button.navbar-toggler{ margin-bottom: 0px; outline: none;}
 & nav.hide.main-nav  button.navbar-toggler{ margin-bottom: 30px;outline: none;}
 & li {list-style: none;}
