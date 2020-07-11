@@ -87,8 +87,8 @@ export default styled(DesktopNavbar)`
   & li {
     list-style: none;
     width: 120px;
-    height: 60px;
-    margin: 0;
+    height: 30px;
+    margin: 20px 0 10px 0;
   }
   & li ul li.hide {
     visibility: hidden;
