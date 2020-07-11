@@ -73,9 +73,10 @@ class  DesktopNavbar extends Component {
 export default styled(DesktopNavbar)`
   & {
     background:white !important;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 70%;
     position: sticky;
+    
   }
   ul{
     display: flex;
