@@ -12,21 +12,65 @@ html {
   -webkit-text-size-adjust: 100%;*/
 }
 body {
-  padding: 0;
-  margin: 0;
   font-family: 'proxima-nova', 'sans-serif';
-  background-color:rgba(255, 102, 104, 1);
- /*-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
+   background-color:rgba(255, 102, 104, 1);
 }
 nav  li  a {
     font-family: 'proxima-nova', 'sans-serif';
     font-size: 15px;
     line-height:32px;
     color: #111;
-    border-bottom-color: rgba(0, 0, 0, .1);
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-  }
+}
+
+/*phone*/
+@media screen and (min-width: 100px) and (max-width: 480px){
+  html{background: rgba(255, 102, 104, .9);}
+  body{background:white; width:100vw; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
+  main{ background:white; width: 100%; margin:0 auto; padding: 0 auto; }
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+}
+
+/*tablet - sm*/
+@media screen and (min-width:481px) and (max-width: 767px){
+  html{width:100vw;background: rgba(255, 101, 93, .9); }
+  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
+  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+}
+
+/*tablet - landscape*/
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
+  html{width:100vw;background: rgba(255, 101, 93, .9); }
+  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
+  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+}
+
+/*tablet - md*/
+@media screen and (min-width:768px) and (max-width:1024px){
+  html{width:100vw;background: rgba(255, 101, 93, .9); }
+  body{width:100%;background:white;  margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
+  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+}
+
+/*tablet - lg*/
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  html{width: 100vw;background: rgba(255, 101, 93, .9); }
+  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
+  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+}
+
+/*desktop*/
+@media screen and (min-width: 1281px){
+  html{width: 100vw;background-color:rgba(255, 102, 104, 1);margin: 0 auto;}
+  body{background-color:white;;width:70%;margin:0 auto; border:15px solid rgba(255, 102, 104, 1);}
+  main, footer{background-color:white;width:100%;margin:0 auto;padding:0 auto;}
+  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+
+}

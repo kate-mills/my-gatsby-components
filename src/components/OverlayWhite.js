@@ -11,8 +11,8 @@ const  OverlayWhite = ({className, id, zIndex}) => {
 
 
 const OverlayWhiteWrapper = styled(OverlayWhite)`
-  position: absolute; /* Sit on top of the page content */
-  display: block; /* to hide use none  */
+  position: absolute;
+  display: block;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -20,9 +20,10 @@ const OverlayWhiteWrapper = styled(OverlayWhite)`
   bottom: 0;
   z-index: -999;
   background-color: #ffffff;
+  height: 100vh;
   ${screen.phone.phone`width:100vw;`};
   ${screen.tablet.tablet`width:100vw;`};
-  ${screen.desktop.desktop`width:70vw;`}
+  ${screen.desktop.desktop`height: 100vh;width:70vw;`}
 `
 export default OverlayWhiteWrapper;
 

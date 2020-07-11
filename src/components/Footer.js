@@ -49,7 +49,7 @@ const FooterWrapper = styled(Footer)`
 & {
 background: white;
 width: 70%;
-margin: 0px auto;
+margin: 0 auto 10px auto;
 padding-top: 50px;
 padding-bottom: 80px;
 }
@@ -88,13 +88,8 @@ a.instagram {
 a.youtube {
 color: red;
 }
-
 ${screen.phone.phone`width: 100%;`}
 ${screen.tablet.tablet`width: 100%;`}
-
-
+${screen.desktop.desktop`width: 70%;`}
 `
-
-
 export default FooterWrapper
-

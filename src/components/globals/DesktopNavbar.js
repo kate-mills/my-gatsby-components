@@ -1,10 +1,8 @@
 import React, {Component} from "react"
-
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 import links from '../../constants/links'
 import {screen} from '../../css/js/media-functions'
-
 
 const MoreItems = (props) => {
   return ( 
@@ -42,8 +40,7 @@ ul.subNavigation li {
   background: white;
   height: 0px;
   z-index: 1;
-}
-`
+}`
 class  DesktopNavbar extends Component {
   render(){
     return (
@@ -74,33 +71,38 @@ export default styled(DesktopNavbar)`
   & {
     background:white !important;
     margin: 0 auto 20px auto;
-    width: 60%;
+    width: 70%;
     position: sticky;
     letter-spacing: 1px;
-    
   }
   & ul{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   & li {
     list-style: none;
     width: 120px;
     height: 30px;
-    margin: 20px 0 10px 0;
+    margin: 20px 10px;
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+
   }
   & li ul li.hide {
     visibility: hidden;
+    margin: 10px 0;
+    color: #111111;
   }
   li:hover ul {
     background: white;
     height: auto;
     border: 1px solid white;
     width: max-content;
-    padding: 5px;
-  }
-  li:hover ul li {
+    background: white;
+    position: absolute;
   }
   li:hover  ul li.hide {
     padding: 1px 8px; 
@@ -110,6 +112,7 @@ export default styled(DesktopNavbar)`
     background:white ;
     width: max-content;
     height: auto;
+    background: white;
   }
   li:hover ul li.hide a {
     font-weight: 400;
@@ -120,7 +123,6 @@ export default styled(DesktopNavbar)`
     text-transform: uppercase;
     cursor: default;
   }
-
   ${screen.phone.phone`&{display:none;}`}
   ${screen.tablet.tablet`& {display:none;}`}
   ${screen.desktop.desktop``}

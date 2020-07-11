@@ -39,16 +39,10 @@ export default styled(HeadingOneOrTwo)`
   }
 
   ${screen.phone.phone`
-     &{width: 100%;}
-     h1{width:80%;}
    `}
   ${screen.tablet.tablet`
-    & {width: 70%;}
-    h1{width: 80%;} 
    `}
   ${screen.desktop.desktop`
-    & {width: 70%;}
-    h1{width: 100%;}
   `}
 `
 

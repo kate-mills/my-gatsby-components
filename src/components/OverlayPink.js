@@ -12,14 +12,15 @@ const  OverlayPink = ({className}) => {
 const OverlayPinkWrapper = styled(OverlayPink)`
   position: absolute; /* Sit on top of the page content */
   display: block; /* to hide use none  */
-  width: 100vw; /* Full width (cover the whole page) */
-  height: 100vh; /* Full height (cover the whole page) */
+  width: 100vw; 
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index:-1000; /* Very Bottom of stack */
+  z-index:-1000;
   background-color: ${(props) => props.backgroundColor? props.backgroundColor: "#ff665e"};
+
   ${screen.phone.phone`width:100vw;`};
   ${screen.tablet.tablet`width:100vw;`};
   ${screen.desktop.desktop`width:100vw;`};
