@@ -111,6 +111,7 @@ button.navbar-toggler {width: 100%; border: none;}
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
   `}
   ${screen.desktop.desktop`&{display: none;} `}
