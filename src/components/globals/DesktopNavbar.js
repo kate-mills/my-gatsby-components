@@ -107,13 +107,7 @@ export default styled(DesktopNavbar)`
   li:hover ul li.hide a {
     font-weight: 400;
   }
-  ${screen.phone.phone`
-    ul.navbar-desktop {display:none;}
-  `}
-  ${screen.tablet.tablet`
-    ul.navbar-desktop {display:none;}
-  `}
-  ${screen.desktop.desktop`
-    & {background: white;}
-  `}
+  ${screen.phone.phone`&{display:none;}`}
+  ${screen.tablet.tablet`& {display:none;}`}
+  ${screen.desktop.desktop``}
 `
