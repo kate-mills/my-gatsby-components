@@ -50,12 +50,12 @@ class  DesktopNavbar extends Component {
       <div className={`${this.props.className}`}>
         <nav>
           <ul className="navbar-desktop">
+
             {links.map((item,id)=>{ return(
-                
               item.menu.length > 0 ? 
 
                 <li className="parent-nav" key={id}>
-                  <Link to={item.path}> {item.text}</Link>
+                  <span className="link-text"> {item.text}</span>
                     <MoreItems menu={item.menu}/>
                 </li>
                 :
@@ -74,22 +74,23 @@ export default styled(DesktopNavbar)`
   & {
     background:white !important;
     margin: 0 auto 20px auto;
-    width: 70%;
+    width: 60%;
     position: sticky;
+    letter-spacing: 1px;
     
   }
-  ul{
+  & ul{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
   }
-  li {
+  & li {
     list-style: none;
     width: 120px;
     height: 60px;
     margin: 0;
   }
-  li ul li.hide {
+  & li ul li.hide {
     visibility: hidden;
   }
   li:hover ul {
@@ -99,15 +100,27 @@ export default styled(DesktopNavbar)`
     width: max-content;
     padding: 5px;
   }
+  li:hover ul li {
+  }
   li:hover  ul li.hide {
+    padding: 1px 8px; 
+    margin-top: 2px;
+    margin-bottom: 2px;
     visibility: visible;
-    background: #9e9e9e4a;
+    background:white ;
     width: max-content;
-    height: 30px;
+    height: auto;
   }
   li:hover ul li.hide a {
     font-weight: 400;
+    cursor: pointer;
   }
+  & span.link-text  {
+    line-height: 32px;
+    text-transform: uppercase;
+    cursor: default;
+  }
+
   ${screen.phone.phone`&{display:none;}`}
   ${screen.tablet.tablet`& {display:none;}`}
   ${screen.desktop.desktop``}

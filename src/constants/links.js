@@ -20,27 +20,26 @@ export default [
     ],
   },
   {
-    path: '/.',
     text: 'why mc?',
     menu: [
       {
-        path: 'why-mc',
+        path: '/why-mc',
         text: 'why choose us?',
       },
       {
-        path: 'before-and-after',
+        path: '/before-and-after',
         text: 'before and after',
       },
       {
-        path: 'rave-reviews',
+        path: '/rave-reviews',
         text: 'rave reviews',
       },
       {
-        path: 'press',
+        path: '/press',
         text: 'press',
       },
       {
-        path: 'images-and-logos',
+        path: '/images-and-logos',
         text: 'Product Images & Logos',
       },
     ],
@@ -51,7 +50,7 @@ export default [
     menu: [],
   },
   {
-    path: 'pro-orders',
+    path: '/pro-orders',
     text: 'pro orders',
     menu: [],
   },
@@ -65,15 +64,15 @@ export default [
     text: 'education',
     menu: [
       {
-        path: 'upcoming-classes',
+        path: '/upcoming-classes',
         text: 'classes',
       },
       {
-        path: 'treatment-protocol-videos',
+        path: '/treatment-protocol-videos',
         text: 'treatment protocol & videos',
       },
       {
-        path: 'articles',
+        path: '/articles',
         text: 'articles',
       },
     ],
