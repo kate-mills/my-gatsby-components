@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Michele Corley Clinical Skincare`,
@@ -27,6 +31,13 @@ module.exports = {
         theme_color: `#ff665e`,
         display: `minimal-ui`,
         icon: `src/images/android-chrome-192x192.png`, // This path is relative to the root of the site.
+      },
+    },
+      {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
