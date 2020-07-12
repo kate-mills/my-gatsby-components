@@ -1,17 +1,18 @@
 import React from 'react'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import styled from 'styled-components'
 import {Img} from '../constants/imageurls'
 import {setColor, setFont} from '../css/js/helper-styles'
 import {screen} from '../css/js/media-functions'
 
-const About = ({className}) => {
+
+import PageModel from '../components/PageModel'
+
+
+const About = () => {
   return (
-    <Layout>
-      <SEO title="About"/>
-    <div className={className}>
+    <PageModel title="About">
+      <AboutWrapper>
       <div className="flexItem col">
         <div className="innerFlexContainer">
           <h1>My Philosophy</h1>
@@ -45,123 +46,84 @@ const About = ({className}) => {
           </div>
         </div>
       </div>
-    </div>
-    </Layout>
+      </AboutWrapper>
+      </PageModel>
   )
 }
-export default styled(About)`
+const AboutWrapper = styled.section`
   &{
     box-sizing: border-box;
-    background: white;
     display: flex;
-    margin: 0 auto;
-    max-width: 70vw;
     color: ${setColor.mainText};
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+  
   }
+  & img {object-fit:contain;}
   & h1 {
     ${setFont({size:"45px", height: "54px", color: "#222222", weight: "300"})};
-    box-sizing: border-box;
     text-align: left;
-    padding-left: 15px;
-    flex-wrap: wrap;
   }
   & h2 {
     ${setFont({size:"30px", height: "42px", color: setColor.h2, style: "normal", weight: "400"})};
+  text-align: center;
   }
   & h2.italic{
     ${setFont({size:"30px", height: "42px", color: setColor.h2, style: "italic", weight: "400"})}
-    text-align: center;
+    text-align: left;
   }
-  & img {
-    background: white;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-  & .flexItem {
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
+  & .flexItem { box-sizing: border-box; margin: 0 auto; }
   & p.text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 27px;
-    font-weight: 300;
   }
   & p.tiny {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 27px;
-    font-weight: 300;
   }
   & p.text,p.tiny {
     text-align: left;
-    padding:15px;
+    font-weight: 300;
   }
   /* Meet Michele Corley */
-  .col:nth-child(2) {
-    margin-top: o auto;
-    text-align: center;
-  }
+  .col:nth-child(2) {text-align: center;}
+
   ${screen.phone.phone`
-    flex-direction: column;
-    max-width: 100vw;
-    margin: 0 auto;
-    .col {
-      max-width: 95vw;
-    }
-    .col:nth-child(2) {
-      margin-top: 30px;
-    }
+    & {flex-direction: column; padding: 20px;}
+    & img {width: 100%;}
+    & .col:nth-child(2) {margin-top: 30px;}
     h1{ padding-top: 10px;}
     p.text, p.tiny {
-      max-width: 90vw;
       margin: 0 auto;
-      flex-wrap: wrap;
     }
-    img{
-      width: 256px;
-      max-height: 325px;
-      }
-    h2.italic{text-align: left; padding-left: 12vw;}
   `}
   ${screen.tablet.tablet`
     & {
-      flex-direction: row;
-      margin: 0 auto;
-      max-width: 100vw;
-    }
-    .col {
-      max-width: 45vw;
-    }
-    .col:nth-child(1){
       flex-direction: column;
+      margin: 0 auto;
     }
-    img {
-      max-width: 40vw;
-      max-height: 278px;
-    }
-    p.text, p.tiny {
-      max-width: 45vw;
-    }
-    h2.italic{text-align: left; padding-left: 5vw;}
+    & img {width: 100%;}
+
+    & .col { padding: 15px; }
+    & .col:nth-child(1){ flex-direction: column; }
+    h2.italic{text-align: left; padding-left: 5%;}
 
   `}
   ${screen.desktop.desktop`
     & {
       flex-direction: row;
-      max-width: 70vw;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-evenly;
     }
-    .col {
-      max-width: 30vw;
+    & .col {
+      margin: 10px; 
+      padding: 20px;
     }
-    .col:nth-child(1){
-      flex-direction: column;
+    & .col:nth-child(2) {
     }
-    img {
-      max-width: 30vw;
-      max-height: 457px;
-    }
-    h2.italic{text-align: left; padding-left: 5vw;}
-
   `}
 `
-
+export default About;

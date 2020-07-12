@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const Articles = () => {
   return (
-    <PageModel title="Articles">
+    <PageModel name="Articles" title="Articles">
       <ArticlesWrapper>
       </ArticlesWrapper>
     </PageModel>

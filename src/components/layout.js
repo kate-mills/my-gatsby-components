@@ -12,12 +12,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <OverlayPink/>
-      <div id="main">
+      <div id="content">
         <MobileNavbar/>
         <LogoImg/>
         <DesktopNavbar/>
-        <main>{children}</main>
+        <main>{children}
         <Footer/>
+        </main>
       </div>
     </>
   )

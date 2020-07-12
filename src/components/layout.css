@@ -13,6 +13,7 @@ html {
 }
 body {
   font-family: 'proxima-nova', 'sans-serif';
+   overflow: scroll;
    background-color:rgba(255, 102, 104, 1);
 }
 nav  li  a {
@@ -25,52 +26,42 @@ nav  li  a {
     text-decoration: none;
     text-transform: uppercase;
 }
+div#content {
+  position:;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:white;
+  z-index: 0;
+  width: 100vw;
+}
 
 /*phone*/
 @media screen and (min-width: 100px) and (max-width: 480px){
-  html{background: rgba(255, 102, 104, .9);}
-  body{background:white; width:100vw; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
-  main{ background:white; width: 100%; margin:0 auto; padding: 0 auto; }
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+  div#content{width:100vw;margin:0 auto;}
 }
-
 /*tablet - sm*/
 @media screen and (min-width:481px) and (max-width: 767px){
-  html{width:100vw;background: rgba(255, 101, 93, .9); }
-  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
-  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+  div#content{width:100vw;margin:0 auto;}
 }
 
 /*tablet - landscape*/
 @media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  html{width:100vw;background: rgba(255, 101, 93, .9); }
-  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
-  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+  div#content{width:80vw;margin:0 auto;}
 }
 
 /*tablet - md*/
 @media screen and (min-width:768px) and (max-width:1024px){
-  html{width:100vw;background: rgba(255, 101, 93, .9); }
-  body{width:100%;background:white;  margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
-  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+  div#content{width:80vw;margin:0 auto;}
 }
 
 /*tablet - lg*/
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
-  html{width: 100vw;background: rgba(255, 101, 93, .9); }
-  body{background:white; width:100%; margin-top: 3px; border: 1px solid rgba(255, 102, 104, 1);}
-  main{background:white;width:100%;margin:0 auto;padding:0 auto;}
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
+  div#content{width:80vw; margin:0 auto;}
 }
 
 /*desktop*/
 @media screen and (min-width: 1281px){
-  html{width: 100vw;background-color:rgba(255, 102, 104, 1);margin: 0 auto;}
-  body{background-color:white;;width:70%;margin:0 auto; border:15px solid rgba(255, 102, 104, 1);}
-  main, footer{background-color:white;width:100%;margin:0 auto;padding:0 auto;}
-  div#main{background:white;width:100%;padding-top:10px;margin:0 auto;border:1px solid rgba(255, 102, 104, 1);}
-
+  div#content{width:70vw;margin:0 auto;}
 }

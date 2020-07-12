@@ -16,8 +16,6 @@ export default styled(HeadingOneOrTwo)`
   & {
     background-color: ${props => props.backgroundColor || "white"};
     margin: 0 auto;
-    z-index: -100;
-    position: sticky;
     text-align: center;
   }
   h1 {
