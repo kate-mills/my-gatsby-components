@@ -7,56 +7,62 @@ import {screen} from '../../css/js/media-functions'
 const MoreItems = (props) => {
   return ( 
     <MoreItemsWrapper>
-      <ul className="subNavigation">
         {
           props.menu.map((item, id) => {
             return(
               <li 
-                 key={id} className={ `hide `}>
+                 key={id} className={ `sub-li`}>
                 <Link to={item.path}>{item.text}</Link>
               </li>
             )
           })
         }
-      </ul>
     </MoreItemsWrapper>
   )
 }
-const MoreItemsWrapper = styled.div`
+const MoreItemsWrapper = styled.ul`
 & {
-  display: inline;
-  font-size: 0px;
-  line-height; 0px;
-  position: sticky;
-  z-index: auto;
-}
-ul.subNavigation{
   display: flex;
-  flex-flow: column wrap;
-  align-items: start;
-  height: 0px;
+  flex-direction: column;
+  flex-wrap: inherit;
+  align-self: flex-start;
+  width: -webkit-max-content;
+  display: none;
 }
-ul.subNavigation li {
-  background: white;
-  height: 0px;
-  z-index: 1;
-}`
+& li.sub-li {
+    height: 0;
+    height: auto;
+    width: initial;
+    padding: 1px;
+}
+nav ul.main-nav li:hover  & li.sub-li {
+    visibility: visible;
+    z-index: 1;
+    list-style: none;
+    background: white;
+}
+nav ul.main-nav li:hover  & li.sub-li a {
+  line-height: 25px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+`
 class  DesktopNavbar extends Component {
   render(){
     return (
       <div className={`${this.props.className}`}>
         <nav>
-          <ul className="navbar-desktop">
+          <ul className="main-nav">
 
             {links.map((item,id)=>{ return(
               item.menu.length > 0 ? 
 
-                <li className="parent-nav" key={id}>
+                <li className="parent-li parent-plus" key={id}>
                   <span className="link-text"> {item.text}</span>
                     <MoreItems menu={item.menu}/>
                 </li>
                 :
-                <li key={id}>
+                <li key={id} className="parent-li">
                   <Link to={item.path}> {item.text}</Link>
                 </li>
 
@@ -71,57 +77,48 @@ export default styled(DesktopNavbar)`
   & {
     background:white !important;
     margin: 0 auto 20px auto;
-    width: 70%;
+    width: 100%;
     position: sticky;
     letter-spacing: 1px;
   }
-  & ul{
+  & nav ul.main-nav {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  & li {
+  & nav ul.main-nav li.parent-li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    align-items: flex-start;
+    justify-content: center;
     list-style: none;
-    width: 120px;
+    width: 140px;
     height: 30px;
-    margin: 20px 10px;
-    background: white;
-    text-align: center;
+    margin: 20px 0;
     text-transform: uppercase;
-    padding: 5px 0;
-
   }
-  & li ul li.hide {
+  & nav ul.main-nav li.sub-li {
     visibility: hidden;
-    margin: 10px 0;
-    color: #111111;
+    margin: 0;
   }
-  li:hover ul {
-    background: white;
-    height: auto;
-    border: 1px solid white;
-    width: max-content;
-    background: white;
-    position: absolute;
-  }
-  li:hover  ul li.hide {
-    padding: 1px 8px; 
-    margin-top: 2px;
-    margin-bottom: 2px;
-    visibility: visible;
-    background:white ;
-    width: max-content;
-    height: auto;
-    background: white;
-  }
-  li:hover ul li.hide a {
-    font-weight: 400;
-    cursor: pointer;
-  }
-  & span.link-text  {
-    line-height: 32px;
-    text-transform: uppercase;
+  & nav ul.main-nav li.parent-li.parent-plus:hover {
     cursor: default;
+  }
+  & nav ul.main-nav li.parent-plus:hover li.sub-li {
+    visibility: visible;
+    padding: 1px 0;
+    border-top:1px solid white; 
+    border-bottom:1px solid white; 
+    height: auto;
+  }
+  & nav ul.main-nav li.parent-li li.sub-li {
+    visibility: hidden;
+  }
+  & nav ul.main-nav li.parent-li:hover ul {
+    display: flex;
+    height: 0;
   }
   ${screen.phone.phone`&{display:none;}`}
   ${screen.tablet.tablet`& {display:none;}`}
