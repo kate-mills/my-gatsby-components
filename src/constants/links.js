@@ -16,7 +16,31 @@ export default [
       {
         path: '/cleansers',
         text: 'cleansers',
-      }
+      },
+      {
+        path: '/toners',
+        text: 'toners',
+      },
+      {
+        path: '/moisturizers-spf',
+        text: 'moisturizers-spf',
+      },
+      {
+        path: '/eyes-lips',
+        text: 'eyes & lips',
+      },
+      {
+        path: '/serums-specialty',
+        text: 'serums & specialty',
+      },
+      {
+        path: '/exfoliants',
+        text: 'exfoliants',
+      },
+      {
+        path: '/masks',
+        text: 'masks',
+      },
     ],
   },
   {
@@ -65,7 +89,7 @@ export default [
     menu: [
       {
         path: '/upcoming-classes',
-        text: 'classes',
+        text: 'upcoming classes',
       },
       {
         path: '/treatment-protocol-videos',
