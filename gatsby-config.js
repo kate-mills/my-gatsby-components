@@ -24,7 +24,7 @@ module.exports = {
         short_name: `mcc`,
         start_url: `/`,
         background_color: `#ff645c`,
-        theme_color: `#ff645c`,
+        theme_color: `#ff665e`,
         display: `minimal-ui`,
         icon: `src/images/android-chrome-192x192.png`, // This path is relative to the root of the site.
       },

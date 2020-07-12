@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import links from '../../constants/links'
 import {screen} from '../../css/js/media-functions'
 
@@ -12,7 +12,7 @@ const MoreItems = (props) => {
             return(
               <li 
                  key={id} className={ `sub-li`}>
-                <Link to={item.path}>{item.text}</Link>
+                <AniLink fade to={item.path}>{item.text}</AniLink>
               </li>
             )
           })
@@ -28,6 +28,7 @@ const MoreItemsWrapper = styled.ul`
   align-self: flex-start;
   width: -webkit-max-content;
   display: none;
+  color: #111111;
 }
 & li.sub-li {
     height: 0;
@@ -63,7 +64,7 @@ class  DesktopNavbar extends Component {
                 </li>
                 :
                 <li key={id} className="parent-li">
-                  <Link to={item.path}> {item.text}</Link>
+                  <AniLink fade to={item.path}> {item.text}</AniLink>
                 </li>
 
               )})}
@@ -76,28 +77,33 @@ class  DesktopNavbar extends Component {
 export default styled(DesktopNavbar)`
   & {
     background:white !important;
-    margin: 0 auto 20px auto;
     width: 100%;
     position: sticky;
     letter-spacing: 1px;
+    color: #111111;
   }
   & nav ul.main-nav {
     display: flex;
     flex-flow: row wrap;
+    width: 95%;
+    margin: 0 auto;
     justify-content: space-evenly;
     align-items: center;
   }
+
   & nav ul.main-nav li.parent-li {
     display: flex;
     flex-direction: column;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: center;
     list-style: none;
     width: 140px;
     height: 30px;
-    margin: 20px 0;
+    margin: 20px auto;
     text-transform: uppercase;
+    color: #111111;
+    font-weight: 400;
   }
   & nav ul.main-nav li.sub-li {
     visibility: hidden;

@@ -6,7 +6,7 @@ export const setColor = {
   mainGrey: "#a19996",
   mainText: "#5c5c5c",
   lightGrey: "#d3d3d3",
-  mccPink: "#ff655d", //mccPink
+  mccPink: "#ff665e", //mccPink
   h2: "rgba(179,0,0,0.8)",
 }
 

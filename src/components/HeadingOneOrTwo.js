@@ -30,12 +30,11 @@ export default styled(HeadingOneOrTwo)`
   h2 {
     font-size: 30px;
     line-height: 42px;
-    color: rgba(179,0,0,.8)};
+    color: #ff665e;
     font-style: normal;
     font-weight: 400;
     margin: 0 auto;
   }
-
   ${screen.phone.phone`
    `}
   ${screen.tablet.tablet`

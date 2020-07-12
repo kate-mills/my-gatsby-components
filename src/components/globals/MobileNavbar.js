@@ -1,7 +1,8 @@
 import React, {Component, useState} from "react"
 
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import links from '../../constants/links'
 import {screen} from '../../css/js/media-functions'
 import {setFont} from '../../css/js/helper-styles'
@@ -31,7 +32,7 @@ const MoreItems = (props) => {
             return(
               <li 
                  key={id} className={`${css} sub-item`}>
-                <Link to={item.path}>{item.text}</Link>
+                <AniLink fade to={item.path}>{item.text}</AniLink>
               </li>
             )
           })
@@ -111,7 +112,7 @@ class  MobileNavbar extends Component {
                 <li key={id} className="parent">
                   <MoreItems name={item.text}  menu={item.menu}/></li>
                 : 
-                <li key={id}> <Link to={item.path}> {item.text} </Link></li>
+                <li key={id}> <AniLink fade to={item.path}> {item.text} </AniLink></li>
             )})}
           </ul>
         </nav>
