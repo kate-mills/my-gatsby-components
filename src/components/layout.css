@@ -1,4 +1,18 @@
 @import url("https://use.typekit.net/wua6cxq.css");
+
+:root {
+  --primaryColor: #ff665e;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 1px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
 *,
 ::after,
 ::before {
@@ -31,11 +45,17 @@ body {
     color: #5c5c5c;
     overflow: scroll;
 }
+
+main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 h1 {
     font-family: Varela Round,arial,sans-serif;
     font-weight: normal;
     font-size: 22px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 3px;
     font-family: proxima-nova;
     font-weight: 300;
@@ -57,6 +77,7 @@ h1 {
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .3em;
+    font-weight: 300;
 }
 div#content {
   position:;
