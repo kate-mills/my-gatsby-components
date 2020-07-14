@@ -9,6 +9,7 @@ import {
   setInstagram,
 } from "../css/js/helper-styles"
 
+
 const Footer = ({ className }) => {
   return (
     <footer className={className}>
