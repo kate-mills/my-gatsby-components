@@ -1,5 +1,5 @@
 import React from "react"
-import Instagram from '../components/Instagram'
+import Instagram from "../components/Instagram"
 import { GrFacebook, GrVimeo } from "react-icons/gr"
 
 export default [
@@ -16,7 +16,7 @@ export default [
     style: { color: "#00adef", background: "white" },
   },
   {
-    icon: <Instagram/>,
+    icon: <Instagram />,
     url: "https://www.instagram.com/michelecorleyskincare/",
     class: "instagram-logo",
     style: { color: "#fff" },

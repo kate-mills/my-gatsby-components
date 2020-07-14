@@ -25,7 +25,7 @@ const MoreItems = props => {
         {props.name}
       </button>
       <nav className={`${css} sub-nav`}>
-        <hr className="hr-50"/>
+        <hr className="hr-50" />
         <ul className={`${css} sub-ul`}>
           {props.menu.map((item, id) => {
             return (
@@ -37,7 +37,7 @@ const MoreItems = props => {
             )
           })}
         </ul>
-        <hr className="hr-50"/>
+        <hr className="hr-50" />
       </nav>
     </MoreItemsWrapper>
   )
@@ -114,9 +114,9 @@ class MobileNavbar extends Component {
       <div className={`${this.props.className}`}>
         <nav className={`${this.state.css} main-nav`}>
           <button className="navbar-toggler" onClick={this.navbarHandler}>
-            <hr className="hr-80"/>
+            <hr className="hr-80" />
             MENU
-            <hr className="hr-80"/>
+            <hr className="hr-80" />
           </button>
 
           <ul className={`${this.state.css} main-ul`}>
@@ -136,7 +136,6 @@ class MobileNavbar extends Component {
               )
             })}
           </ul>
-
         </nav>
       </div>
     )
