@@ -25,6 +25,7 @@ const MoreItems = props => {
         {props.name}
       </button>
       <nav className={`${css} sub-nav`}>
+        <hr className="hr-50"/>
         <ul className={`${css} sub-ul`}>
           {props.menu.map((item, id) => {
             return (
@@ -36,6 +37,7 @@ const MoreItems = props => {
             )
           })}
         </ul>
+        <hr className="hr-50"/>
       </nav>
     </MoreItemsWrapper>
   )
@@ -80,8 +82,6 @@ const MoreItemsWrapper = styled.div`
     padding-top: 5px;
   }
   & nav.show.sub-nav li {
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 
   & nav.sub-nav.hide {
@@ -114,9 +114,11 @@ class MobileNavbar extends Component {
       <div className={`${this.props.className}`}>
         <nav className={`${this.state.css} main-nav`}>
           <button className="navbar-toggler" onClick={this.navbarHandler}>
-            {" "}
-            MENU{" "}
+            <hr className="hr-80"/>
+            MENU
+            <hr className="hr-80"/>
           </button>
+
           <ul className={`${this.state.css} main-ul`}>
             {links.map((item, id) => {
               return item.menu.length > 0 ? (
@@ -134,6 +136,7 @@ class MobileNavbar extends Component {
               )
             })}
           </ul>
+
         </nav>
       </div>
     )
@@ -145,12 +148,35 @@ export default styled(MobileNavbar)`
 font-size: 16px;
 line-height: 27px;
   letter-spacing: 1px;
-
 }
-button.navbar-toggler {width: 100%; border: none;margin-top: 20px; background:none; font-size: 16px;}
+& hr.hr-80{
+  height: 2px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+& hr.hr-80:first-child{
+  width: 80vw;
+  margin: 2px auto 20px auto;
+}
+& hr.hr-80:last-child{
+  width: 80vw;
+  margin: 20px auto;
+}
+& hr.hr-50{
+  border: none;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  height: 1px;
+}
+button.navbar-toggler {width: 100%; border: none; background:none; font-size: 16px;}
 & nav.show.main-nav  button.navbar-toggler{ margin-bottom: 0px; outline: none;}
 & nav.hide.main-nav  button.navbar-toggler{ margin-bottom: 30px;outline: none;}
 & li {list-style: none;}
+
+& button.show.plus-btn:hover{cursor: pointer}
+& button.hide.plus-btn:hover{
+  cursor: pointer;}
 & ul.hide {display: none;}
 & ul.show.sub-ul, & ul.show.main-ul {padding: unset;}
 

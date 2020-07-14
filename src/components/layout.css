@@ -2,6 +2,7 @@
 
 :root {
   --primaryColor: #ff665e;
+  --mccPink: #ff665e;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -101,8 +102,11 @@ nav  li  a {
 }
 
 div.visible-hr-block {
-  width: 100%;
-  padding: 10px 0px;
+  width: 85%;
+  margin: 30px auto;
+  background-color: #ff665e63;
+  height: 0,5px;
+  border: none;
 }
 div.visible-hr-block hr{
   display: block;
