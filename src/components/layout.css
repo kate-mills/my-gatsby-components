@@ -100,6 +100,18 @@ nav  li  a {
     text-transform: uppercase;
 }
 
+div.visible-hr-block {
+  width: 100%;
+  padding: 10px 0px;
+}
+div.visible-hr-block hr{
+  display: block;
+  background-color: #bbbbbbbf;
+  color: #bbbbbbbf;
+  height: 1px;
+  border: none;
+
+}
 
 /*phone*/
 @media screen and (min-width: 100px) and (max-width: 480px){

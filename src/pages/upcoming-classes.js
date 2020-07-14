@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react"
 
-import PageModel from '../components/PageModel'
+import PageModel from "../components/PageModel"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const UpcomingClasses = () => {
   return (
     <PageModel title="Upcoming Classes">
-      <UpcomingClassesWrapper>
-      </UpcomingClassesWrapper>
+      <UpcomingClassesWrapper></UpcomingClassesWrapper>
     </PageModel>
   )
 }
 
-const UpcomingClassesWrapper =  styled.section``
+const UpcomingClassesWrapper = styled.section``
 
 export default UpcomingClasses
-

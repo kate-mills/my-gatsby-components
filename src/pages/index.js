@@ -7,7 +7,7 @@ import HeadingOne from "../components/HeadingOneOrTwo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <HeadingOne text="Beautifully Healthy Skin Starts Here" num={1}/>
+    <HeadingOne text="Beautifully Healthy Skin Starts Here" num={1} />
   </Layout>
 )
 

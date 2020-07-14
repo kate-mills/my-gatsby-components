@@ -1,73 +1,73 @@
-import React, {Component} from "react"
-import styled from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import links from '../../constants/links'
-import {screen} from '../../css/js/media-functions'
+import React, { Component } from "react"
+import styled from "styled-components"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import links from "../../constants/links"
+import { screen } from "../../css/js/media-functions"
 
-const MoreItems = (props) => {
-  return ( 
+const MoreItems = props => {
+  return (
     <MoreItemsWrapper>
-        {
-          props.menu.map((item, id) => {
-            return(
-              <li 
-                 key={id} className={ `sub-li`}>
-                <AniLink fade to={item.path}>{item.text}</AniLink>
-              </li>
-            )
-          })
-        }
+      {props.menu.map((item, id) => {
+        return (
+          <li key={id} className={`sub-li`}>
+            <AniLink fade to={item.path}>
+              {item.text}
+            </AniLink>
+          </li>
+        )
+      })}
     </MoreItemsWrapper>
   )
 }
 const MoreItemsWrapper = styled.ul`
-& {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: inherit;
-  align-self: flex-start;
-  width: -webkit-max-content;
-  display: none;
-  color: #111111;
-}
-& li.sub-li {
+  & {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
+    align-self: flex-start;
+    width: -webkit-max-content;
+    display: none;
+    color: #111111;
+  }
+  & li.sub-li {
     height: 0;
     height: auto;
     width: initial;
     padding: 1px;
-}
-nav ul.main-nav li:hover  & li.sub-li {
+  }
+  nav ul.main-nav li:hover & li.sub-li {
     visibility: visible;
     z-index: 1;
     list-style: none;
     background: white;
-}
-nav ul.main-nav li:hover  & li.sub-li a {
-  line-height: 25px;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
+  }
+  nav ul.main-nav li:hover & li.sub-li a {
+    line-height: 25px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
 `
-class  DesktopNavbar extends Component {
-  render(){
+class DesktopNavbar extends Component {
+  render() {
     return (
       <div className={`${this.props.className}`}>
         <nav>
           <ul className="main-nav">
-
-            {links.map((item,id)=>{ return(
-              item.menu.length > 0 ? 
-
+            {links.map((item, id) => {
+              return item.menu.length > 0 ? (
                 <li className="parent-li parent-plus" key={id}>
                   <span className="link-text"> {item.text}</span>
-                    <MoreItems menu={item.menu}/>
+                  <MoreItems menu={item.menu} />
                 </li>
-                :
+              ) : (
                 <li key={id} className="parent-li">
-                  <AniLink fade to={item.path}> {item.text}</AniLink>
+                  <AniLink fade to={item.path}>
+                    {" "}
+                    {item.text}
+                  </AniLink>
                 </li>
-
-              )})}
+              )
+            })}
           </ul>
         </nav>
       </div>

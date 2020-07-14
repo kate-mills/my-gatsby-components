@@ -1,105 +1,104 @@
 export default [
   {
-    path: '/',
-    text: 'home',
+    path: "/",
+    text: "home",
     menu: [],
   },
   {
-    path: '/about',
-    text: 'about',
+    path: "/about",
+    text: "about",
     menu: [],
   },
   {
-    path: '/.',
-    text: 'products',
+    path: "/.",
+    text: "products",
     menu: [
       {
-        path: '/cleansers',
-        text: 'cleansers',
+        path: "/cleansers",
+        text: "cleansers",
       },
       {
-        path: '/toners',
-        text: 'toners',
+        path: "/toners",
+        text: "toners",
       },
       {
-        path: '/moisturizers-spf',
-        text: 'moisturizers-spf',
+        path: "/moisturizers-spf",
+        text: "moisturizers-spf",
       },
       {
-        path: '/eyes-lips',
-        text: 'eyes & lips',
+        path: "/eyes-lips",
+        text: "eyes & lips",
       },
       {
-        path: '/serums-specialty',
-        text: 'serums & specialty',
+        path: "/serums-specialty",
+        text: "serums & specialty",
       },
       {
-        path: '/exfoliants',
-        text: 'exfoliants',
+        path: "/exfoliants",
+        text: "exfoliants",
       },
       {
-        path: '/masks',
-        text: 'masks',
+        path: "/masks",
+        text: "masks",
       },
     ],
   },
   {
-    text: 'why mc?',
+    text: "why mc?",
     menu: [
       {
-        path: '/why-mc',
-        text: 'why choose us?',
+        path: "/why-mc",
+        text: "why choose us?",
       },
       {
-        path: '/before-and-after',
-        text: 'before and after',
+        path: "/before-and-after",
+        text: "before and after",
       },
       {
-        path: '/rave-reviews',
-        text: 'rave reviews',
+        path: "/rave-reviews",
+        text: "rave reviews",
       },
       {
-        path: '/press',
-        text: 'press',
+        path: "/press",
+        text: "press",
       },
       {
-        path: '/images-and-logos',
-        text: 'Product Images & Logos',
+        path: "/images-and-logos",
+        text: "Product Images & Logos",
       },
     ],
   },
   {
-    path: '/contact',
-    text: 'contact',
+    path: "/contact",
+    text: "contact",
     menu: [],
   },
   {
-    path: '/pro-orders',
-    text: 'pro orders',
+    path: "/pro-orders",
+    text: "pro orders",
     menu: [],
   },
   {
-    path: '/professionals',
-    text: 'professionals',
+    path: "/professionals",
+    text: "professionals",
     menu: [],
   },
   {
-    path: '/.',
-    text: 'education',
+    path: "/.",
+    text: "education",
     menu: [
       {
-        path: '/upcoming-classes',
-        text: 'upcoming classes',
+        path: "/upcoming-classes",
+        text: "upcoming classes",
       },
       {
-        path: '/treatment-protocol-videos',
-        text: 'treatment protocol & videos',
+        path: "/treatment-protocol-videos",
+        text: "treatment protocol & videos",
       },
       {
-        path: '/articles',
-        text: 'articles',
+        path: "/articles",
+        text: "articles",
       },
     ],
   },
 ]
-

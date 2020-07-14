@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./layout.css"
 
 import OverlayPink from "./OverlayPink"
-import {LogoImg} from "./LogoImg"
+import { LogoImg } from "./LogoImg"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
 import Footer from "./Footer"
@@ -11,13 +11,14 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
     <>
-      <OverlayPink/>
+      <OverlayPink />
       <div id="content">
-        <MobileNavbar/>
-        <LogoImg/>
-        <DesktopNavbar/>
-        <main>{children}
-        <Footer/>
+        <MobileNavbar />
+        <LogoImg />
+        <DesktopNavbar />
+        <main>
+          {children}
+          <Footer />
         </main>
       </div>
     </>

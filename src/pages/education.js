@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react"
 
-import PageModel from '../components/PageModel'
+import PageModel from "../components/PageModel"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const Education = () => {
   return (
     <PageModel title="Education">
-      <EducationWrapper>
-      </EducationWrapper>
+      <EducationWrapper></EducationWrapper>
     </PageModel>
   )
 }
 
-const EducationWrapper =  styled.section``
+const EducationWrapper = styled.section``
 
 export default Education

@@ -1,47 +1,54 @@
-import React from 'react'
-import styled from 'styled-components'
-import socialLinks from '../constants/social'
+import React from "react"
+import styled from "styled-components"
+import socialLinks from "../constants/social"
 
-import {screen} from '../css/js/media-functions'
-import {setFont, setFlexContainer} from '../css/js/helper-styles'
+import { screen } from "../css/js/media-functions"
+import {
+  setFont,
+  setFlexContainer,
+  setInstagram,
+} from "../css/js/helper-styles"
 
-
-const Footer = ({className}) => {
+const Footer = ({ className }) => {
   return (
     <footer className={className}>
-      <div className="footer-heading">Follow us on</div>
-      <div className="flex-footer-row">
+      <div className="visible-hr-block"><hr/></div>
+     <div className="column">
+       <div className="lg-text">
+         <p> Follow us on </p>
+       </div>
+       <div className="row footer-icons">
         {socialLinks.map((item, index) => {
           return (
-            <div className="flex-icon"
-              key={index}
-            >
-            <a
-              href={item.url}
-              className={item.class}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.icon}
-            </a>
-          </div>
+            <div className="icon" key={index}>
+              <a
+                href={item.url}
+                className={item.class}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={item.style}
+              >
+                {item.icon}
+              </a>
+            </div>
           )
         })}
       </div>
-      <div className="flex-footer-column">
-        <div className="flex-footer-row flex-footer-text phone-email">
+       <div className="row lg-text phone-email">
           <p className="phone">707.637.4996</p>
           <p className="email">info@michelecorley.com</p>
         </div>
-        <div className="flex-footer-row">
-          <p className="address">Michele Corley Company,
-          3055 Jefferson Street. Suite 3,
-          Napa, CA 94558</p>
+        <div className="row sm-text">
+          <p className="address">
+            Michele Corley Company, 3055 Jefferson Street. Suite 3, Napa, CA
+            94558
+          </p>
         </div>
-        <div className="flex-footer-row">
+        <div className="row sm-text">
           <p>All rights reserved. &copy;{new Date().getFullYear()}</p>
         </div>
       </div>
+      <div className="visible-hr-block"><hr/></div>
     </footer>
   )
 }
@@ -50,24 +57,51 @@ const FooterWrapper = styled(Footer)`
 & {
   margin: 10px auto;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
+  width: 100%;
+  text-align: center;
 }
-& .footer-heading, & .flex-footer-text {text-align: center; ${setFont({size: "21px", height: "32px", color: "#524c4c",weight: "400"})}}
 
-& .flex-footer-row {${setFlexContainer({x: "space-evenly"})};}
-& .flex-footer-column {${setFlexContainer({direction: "column"})};}
-& .flex-footer-column  .phone-email {width: 40%;}
-& .flex-footer-column  p.address {
-  ${setFont({size: "16px", height: "26px", color: "#5c5c5c", weight:"400"})}
-  text-align: center;margin-bottom: 5px;
+& div.column {
+  width: 80%
+  margin: 0 auto;
+  ${setFlexContainer({ direction: "column" })};
 }
-div.flex-icon{font-size: 38px;}
-a.facebook {color: blue;}
-a.instagram {color: #F7338C;}
-a.youtube {color: red;}
 
-  ${screen.phone.phone`max-width:80%;`}
-  ${screen.tablet.tablet`width: 80%;`}
-  ${screen.desktop.desktop`max-width: 100%;`}
+& div.row { 
+  width: 80%;
+  ${setFlexContainer({})}
+}
+
+& div.row.footer-icons { 
+  font-size: 38px;
+  justify-content: space-around;
+}
+
+& a.instagram{ ${setInstagram()}}
+
+& .phone-email p {padding: 5px;}
+
+& div.row .sm-text { 
+  ${setFont({
+  size: "16px",
+  height: "26px",
+  color: "#5c5c5c",
+  weight: "400",
+})}
+}
+& div.lg-text {
+  ${setFont({
+    size: "21px",
+    height: "32px",
+    color: "#524c4c",
+    weight: "400"
+  })}
+  margin: 5px;
+  padding: 5px;
+}
+${screen.phone.phone``}
+${screen.tablet.tablet``}
+${screen.desktop.desktop``}
 `
 export default FooterWrapper

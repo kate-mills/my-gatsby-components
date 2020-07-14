@@ -1,4 +1,4 @@
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -33,7 +33,7 @@ module.exports = {
         icon: `src/images/android-chrome-192x192.png`, // This path is relative to the root of the site.
       },
     },
-      {
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,

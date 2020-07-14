@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react"
 
-import PageModel from '../components/PageModel'
+import PageModel from "../components/PageModel"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const BeforeAfter = () => {
   return (
     <PageModel title="Before and After">
-      <BeforeAfterWrapper>
-      </BeforeAfterWrapper>
+      <BeforeAfterWrapper></BeforeAfterWrapper>
     </PageModel>
   )
 }
 
-const BeforeAfterWrapper =  styled.section``
+const BeforeAfterWrapper = styled.section``
 
 export default BeforeAfter
-

@@ -1,14 +1,11 @@
-import React from 'react'
-import {screen} from '../css/js/media-functions'
-import styled from 'styled-components'
+import React from "react"
+import { screen } from "../css/js/media-functions"
+import styled from "styled-components"
 
-const HeadingOneOrTwo  = ({children,  text, num, className}) => {
+const HeadingOneOrTwo = ({ children, text, num, className }) => {
   return (
     <div className={className}>
-      { num > 1 ? 
-         <h2>{text}</h2>:
-         <h1 className="nav-blocker">{text}</h1>
-      }
+      {num > 1 ? <h2>{text}</h2> : <h1 className="nav-blocker">{text}</h1>}
     </div>
   )
 }
@@ -42,5 +39,3 @@ export default styled(HeadingOneOrTwo)`
   ${screen.desktop.desktop`
   `}
 `
-
-

@@ -1,13 +1,12 @@
-import styled  from 'styled-components'
-import logo from '../images/logo-300x220.jpg'
-import {screen} from '../css/js/media-functions'
-
+import styled from "styled-components"
+import logo from "../images/logo-300x220.jpg"
+import { screen } from "../css/js/media-functions"
 
 export const LogoImg = styled.img.attrs(props => ({
   alt: props.alt || "Michele Corley Logo",
   src: props.src || logo,
   display: props.display || "block",
-  width: props.width || "auto"
+  width: props.width || "auto",
 }))`
   display: flex;
   justify-content: center;
