@@ -19,6 +19,7 @@ const getProducts = graphql`
           ingredients
           image {
             id
+            description
             fluid {
               ...GatsbyContentfulFluid
             }

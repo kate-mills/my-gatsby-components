@@ -9,7 +9,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Product = ({ product }) => {
   const {type, slug, name, skinType, description, image, ingredients} = product
-  console.log("Iam a product", product)
   return (
     <ProductWrapper>
       <h2 className="mcc-h2">{name}</h2>
@@ -22,7 +21,7 @@ const Product = ({ product }) => {
      </p>
       <p>{description}</p>
     <div className="img-container">
-      <Image fluid={image.fluid} className="img" alt={image.title}/>
+      <Image fluid={image.fluid} className="img" alt={image.description}/>
       <AniLink fade className="link" to={`/${type}/${slug}`} >
         details
       </AniLink>
