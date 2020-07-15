@@ -1,7 +1,6 @@
 import React from "react"
 import Product from "./Product"
 import { graphql, useStaticQuery } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const getProducts = graphql`
   query getFeatured {
@@ -42,9 +41,6 @@ const FeaturedProducts = () => {
           return <Product key={node.contentful_id} product={node} />
         })}
       </div>
-      <AniLink fade to="/products" className="btn-primary">
-        All Products
-      </AniLink>
     </section>
   )
 }
