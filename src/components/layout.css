@@ -3,10 +3,11 @@
 :root {
   --primaryColor: #ff665e;
   --mccPink: #ff665e;
+  --mccBlue: #6495ed;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
-  --mainGrey: #ececec;
+  --mainGrey: #d3d3d3;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 1px;
@@ -51,6 +52,13 @@ main{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+#page{
+  background: var(--mainWhite);
+  width: 95%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
 }
 h1 {
     font-family: Varela Round,arial,sans-serif;
