@@ -6,16 +6,18 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 const getProducts = graphql`
   query getFeatured {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "cleanser" } }
+      filter: { type: { eq: "cleanser" } }
+      sort: {fields: name, order: ASC}
     ) {
       edges {
         node {
           contentful_id
-          category
+          type
           slug
           name
           skinType
           description
+          ingredients
           image {
             id
             fluid {
