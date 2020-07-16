@@ -8,32 +8,28 @@ import PageModel from "../components/PageModel"
 import Title from "../components/Title"
 import PreFilteredProducts from "../components/Products/PreFilteredList"
 
-const Cleansers = ({data}) => {
+
+const Toners = ({data}) => {
   console.log('data', data.products);
   return (
-    <PageModel title="Cleansers">
-      <CleansersWrapper>
+    <PageModel title="Toners">
+      <TonersWrapper>
         <div className="page-boundary">
           <div className="product-type">
-            <Title title="Our" subtitle="cleansers" />
+            <Title title="Our" subtitle="toners" />
             <p className="description">
-              Whether skin is dry, normal, oily or in between,{" "}
-              <span className="bold">
-                Michele Corley Clinical Skin Care has a cleanser for{" "}
-                <em>every</em> type.{" "}
-              </span>
-              Our cleansers are gentle enough for the most sensitive or Rosacea
-              prone skin, and relieve congestion by keeping skin flawlessly
-              clean.
+              Our toners provide a <span className="bold"> super-boost to the cleansing process</span> to help clear away congestion and debris while giving the skin a nice drink of <span className="bold">replenishing hydration</span>.
             </p>
           </div>
           <PreFilteredProducts products={data.products} />
         </div>
-      </CleansersWrapper>
+      </TonersWrapper>
     </PageModel>
   )
 }
-const CleansersWrapper = styled.section`
+
+
+const TonersWrapper = styled.section`
   & div.page-boundary {
     width: 80%;
     margin: 0 auto;
@@ -44,10 +40,12 @@ const CleansersWrapper = styled.section`
     margin-bottom: 4rem;
   }
 `
+
 export const query = graphql`
   {
+
     products: allContentfulMccProduct(
-      filter: { category: { eq: "cleanser" } }
+      filter: { category: { eq: "toner" } }
       sort: { fields: name, order: ASC }
     ) {
       edges {
@@ -72,6 +70,7 @@ export const query = graphql`
       }
     }
   }
-`
-export default Cleansers
 
+`
+
+export default Toners

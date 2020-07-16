@@ -8,7 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Product = ({ product }) => {
   const {
-    type,
+    category,
     slug,
     name,
     skinType,
@@ -36,7 +36,7 @@ const Product = ({ product }) => {
           className="img"
           alt={imgRetail.description}
         />
-        <AniLink fade className="link" to={`/${type}/${slug}`}>
+        <AniLink fade className="link" to={`/${category}/${slug}`}>
           watch video
         </AniLink>
       </div>
