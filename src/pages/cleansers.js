@@ -56,7 +56,7 @@ export const query = graphql`
           slug
           name
           skinType
-          description
+          description {description}
           ingredients
           imgRetail {
             id

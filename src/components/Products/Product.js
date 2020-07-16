@@ -28,7 +28,7 @@ const Product = ({ product }) => {
           )
         })}
       </p>
-      <p>{description}</p>
+      <p>{description.description}</p>
       <div className="img-container">
         <Image
           objectFit="contain"
