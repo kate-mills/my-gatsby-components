@@ -14,7 +14,7 @@ const getProducts = graphql`
           description
           imgRetail {
             id
-            fluid(quality:100, maxWidth: 1000) {
+            fluid(quality: 100, maxWidth: 1000) {
               src
             }
           }

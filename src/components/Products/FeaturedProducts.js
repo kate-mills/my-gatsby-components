@@ -6,7 +6,7 @@ const getProducts = graphql`
   query getFeatured {
     products: allContentfulMccProduct(
       filter: { type: { eq: "cleanser" } }
-      sort: {fields: name, order: ASC}
+      sort: { fields: name, order: ASC }
     ) {
       edges {
         node {
