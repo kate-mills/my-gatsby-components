@@ -20,10 +20,10 @@ const Product = ({ product }) => {
     <ProductWrapper>
       <h2 className="mcc-h2">{name}</h2>
       <p>
-        {skinType.map((type, index) => {
+        {skinType.map((item, index) => {
           return (
             <span key={index} className="skintype">
-              {type}
+              {item}
             </span>
           )
         })}
