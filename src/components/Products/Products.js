@@ -12,9 +12,9 @@ const getProducts = graphql`
           name
           skinType
           description
-          image {
+          imgRetail {
             id
-            fluid {
+            fluid(quality:100, maxWidth: 1000) {
               src
             }
           }

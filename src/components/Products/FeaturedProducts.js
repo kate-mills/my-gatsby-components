@@ -17,11 +17,11 @@ const getProducts = graphql`
           skinType
           description
           ingredients
-          image {
+          imgRetail {
             id
             description
-            fluid {
-              ...GatsbyContentfulFluid
+            fluid(quality: 90) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           video
