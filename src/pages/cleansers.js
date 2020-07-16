@@ -9,7 +9,6 @@ import Title from "../components/Title"
 import PreFilteredProducts from "../components/Products/PreFilteredList"
 
 const Cleansers = ({data}) => {
-  console.log('data', data.products);
   return (
     <PageModel title="Cleansers">
       <CleansersWrapper>

@@ -10,7 +10,6 @@ import PreFilteredProducts from "../components/Products/PreFilteredList"
 
 
 const Toners = ({data}) => {
-  console.log('data', data.products);
   return (
     <PageModel title="Toners">
       <TonersWrapper>
