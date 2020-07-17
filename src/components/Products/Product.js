@@ -13,7 +13,7 @@ const Product = ({ product }) => {
   } = product
 
   return (
-    <ProductWrapper className="single-product">
+    <ProductWrapper className="single-product page-article">
       <h2  className="product-name">{name}</h2>
       <p   className="product-skintypes">{skinType.map((item, index) => {return (<span key={index} className="skintype">{item}</span>)})}</p>
       <p   className="product-description">{description.description}</p>
@@ -41,8 +41,8 @@ const ProductWrapper = styled.article`
   & .product-skintypes .skintype::after {content: ", ";}
   & .product-skintypes .skintype:last-child::after {content: "";} 
 
+  & .product-ingredients p.bold { margin-top: 20px;}
   & .product-ingredients ul { width: 90%; margin: 0 auto; }
-
   & .product-ingredients .name-formatted {font-weight: 400;}
   & .product-ingredients .benefit {padding-left: 6px;}
 `

@@ -126,6 +126,16 @@ div.visible-hr-block hr{
 
 }
 
+article.page-article{
+  margin: 90px auto;
+}
+article.page-article:first-child{
+  margin-top: 0px;
+}
+article.page-article:last-child{
+  margin-bottom: 0px;
+}
+
 .bold {font-weight: 600;}
 
 

@@ -58,7 +58,7 @@ const Footer = ({ className }) => {
 const FooterWrapper = styled(Footer)`
 & {
   margin: 10px auto;
-  padding-top: 50px;
+  padding-top: 0px;
   padding-bottom: 50px;
   width: 80%;
   text-align: center;
