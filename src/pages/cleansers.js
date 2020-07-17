@@ -12,8 +12,6 @@ const Cleansers = ({data}) => {
   return (
     <PageModel title="Cleansers">
       <CleansersWrapper>
-        <div className="page-boundary">
-          <div className="product-type">
             <Title title="Cleansers"/> <p className="description">
               Whether skin is dry, normal, oily or in between,{" "}
               <span className="bold">
@@ -24,22 +22,19 @@ const Cleansers = ({data}) => {
               prone skin, and relieve congestion by keeping skin flawlessly
               clean.
             </p>
-          </div>
           <PreFilteredProducts products={data.products} />
-        </div>
       </CleansersWrapper>
     </PageModel>
   )
 }
-const CleansersWrapper = styled.section`
-  & div.page-boundary {
-    width: 80%;
+const CleansersWrapper = styled.div`
+  & {
+    width: 70%;
     margin: 0 auto;
-  }
-  & div.product-type {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
   }
 `
 export const query = graphql`

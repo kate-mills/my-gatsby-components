@@ -7,7 +7,7 @@ import Image from "gatsby-image"
 const ProductMedia = ({className,  name, imgRetail, video }) => {
 
   return (
-    <div className={className}>
+    <div className={`${className} media`}>
         <Image objectFit="contain" fluid={imgRetail.fluid} className="media-img" alt={imgRetail.description}/>
         <iframe 
           className="media-video"
@@ -33,17 +33,13 @@ const MediaWrapper = styled(ProductMedia)`
     justify-content: space-around;
     margin: 0 auto;
   }
-  & .media-img {width: 100%;}
-  & .media-video  {width: 100%;}
+  & .media-img {width: 100%; }
+  & .media-video {width: 100%;}
 
-
-  ${screen.phone.phone``};
-  ${screen.tablet.tablet``};
   ${screen.desktop.desktop`
     & {flex-direction: row;}
-    & .media-img {width: 40%;}
+    & .media-img {width: 25%; margin: 0 auto;}
     & .media-video {width: 50%; margin: 0 auto;}
   `};
 `
-
 export default MediaWrapper

@@ -5,38 +5,32 @@ import styled from "styled-components"
 import {graphql} from "gatsby"
 
 import PageModel from "../components/PageModel"
-import Title from "../components/Title"
-import PreFilteredProducts from "../components/Products/PreFilteredList"
+import PageTitle from "../components/Title"
+import ProductList from "../components/Products/PreFilteredList"
 
 
 const Toners = ({data}) => {
   return (
     <PageModel title="Toners">
-      <TonersWrapper>
-        <div className="page-boundary">
-          <div className="product-type">
-            <Title title="toners" />
-            <p className="description">
+      <PageWrapper>
+            <PageTitle title="toners" />
+            <p className="page-description">
               Our toners provide a <span className="bold"> super-boost to the cleansing process</span> to help clear away congestion and debris while giving the skin a nice drink of <span className="bold">replenishing hydration</span>.
             </p>
-          </div>
-          <PreFilteredProducts products={data.products} />
-        </div>
-      </TonersWrapper>
+            <ProductList products={data.products} />
+      </PageWrapper>
     </PageModel>
   )
 }
 
-
-const TonersWrapper = styled.section`
-  & div.page-boundary {
-    width: 80%;
+const PageWrapper = styled.div`
+  & {
+    width: 70%;
     margin: 0 auto;
-  }
-  & div.product-type {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
   }
 `
 

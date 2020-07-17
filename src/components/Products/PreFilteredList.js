@@ -4,12 +4,10 @@ import Product from "./Product"
 const PreFilteredList = ({products}) => {
 
   return (
-    <section className="product">
-      <div className="center">
+    <section className="product-list">
         {products.edges.map(({ node }) => {
           return <Product key={node.contentful_id} product={node} />
         })}
-      </div>
     </section>
   )
 }
