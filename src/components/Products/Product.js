@@ -3,49 +3,39 @@ import styled from "styled-components"
 
 import { setFont } from "../../css/js/helper-styles"
 import { screen } from "../../css/js/media-functions"
-import Image from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import ProductMedia from './ProduductMedia'
 
 const Product = ({ product }) => {
   const {
-    category,
-    slug,
     name,
     skinType,
     description,
-    imgRetail,
-    ingredients,
+    keyIngredients,
   } = product
+
   return (
     <ProductWrapper>
       <h2 className="mcc-h2">{name}</h2>
-      <p>
+      <p className="product">
         {skinType.map((item, index) => {
           return (
-            <span key={index} className="skintype">
-              {item}
-            </span>
+            <span key={index} className="skintype">{item}</span>
           )
         })}
       </p>
       <p>{description.description}</p>
-      <div className="img-container">
-        <Image
-          objectFit="contain"
-          fluid={imgRetail.fluid}
-          className="img"
-          alt={imgRetail.description}
-        />
-        <AniLink fade className="link" to={`/${category}/${slug}`}>
-          watch video
-        </AniLink>
-      </div>
+        <ProductMedia {...product}/>
+
       <p className="bold">A FEW KEY Ingredients & Benefits:</p>
       <ul>
-        {ingredients.map((ing, index) => {
+        {keyIngredients.map((ing) => {
           return (
-            <p key={index}>
-              <li className="ingredient">{ing}</li>
+            <p key={ing.id}>
+              <li className="key-ingredient">
+                <span className="name-en_US">{ing.name.en_US}</span>
+                (<span className="name-latin">{ing.name.latin}</span>);
+                <span className="benefit">{ing.benefit}</span>
+              </li>
             </p>
           )
         })}
@@ -55,6 +45,11 @@ const Product = ({ product }) => {
 }
 
 const ProductWrapper = styled.article`
+div.flex-container{
+dixplay: flex;
+flex-flow: row wrap;
+}
+
   .product {
     box-shadow: var(--lightShadow);
     transition: var(--mainTransition);
@@ -102,36 +97,27 @@ const ProductWrapper = styled.article`
   }
 
   ul {
-    width: 100%;
+    width: 90%;
     margin: 10px auto;
   }
 
-  ul li {
-    margin: 2px;
+  ul li.key-ingredient {
+    margin: 5px;
     font-weight: 300;
   }
+  span.name-en_US{font-style: normal; margin: 0 5px;}
+  span.name-latin{font-style: italic; font-weight: 300;}
+  span.benefit { margin-left: 10px;}
 
   & h2.mcc-h2 {
-    ${setFont({
-      size: "30px",
-      height: "42px",
-      color: "#b30000cc",
-      weight: "400",
-    })};
+    ${setFont({ size: "30px", height: "42px", color: "#b30000cc", weight: "400" })};
     padding: 0;
   }
-  & span.skintype {
-    font-style: italic;
-  }
-  & span.skintype::after {
-    content: ", ";
-  }
-  & span.skintype:last-child::after {
-    content: "";
-  }
-  .bold {
-    font-weight: 600;
-  }
+
+  & span.skintype {font-style: italic;}
+  & span.skintype::after {content: ", ";}
+  & span.skintype:last-child::after {content: "";} 
+
 
   ${screen.phone.phone`
 .img-container { background: var(--lightGrey); } 
@@ -149,9 +135,10 @@ const ProductWrapper = styled.article`
   ${screen.tablet.tablet` 
 .img-container { background: var(--lightGrey); } 
 .img-container:hover .img{ opacity:1; } 
-.link {
-  padding: 0 0;
-  top:100%; 
+.img-container .link {
+  padding: 0 10px;
+  top:50%; 
+  left: 75%;
   color: var(--mainBlack);
   opacity: 1; 
   border:none;
