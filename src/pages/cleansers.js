@@ -14,8 +14,7 @@ const Cleansers = ({data}) => {
       <CleansersWrapper>
         <div className="page-boundary">
           <div className="product-type">
-            <Title title="Our" subtitle="cleansers" />
-            <p className="description">
+            <Title title="Cleansers"/> <p className="description">
               Whether skin is dry, normal, oily or in between,{" "}
               <span className="bold">
                 Michele Corley Clinical Skin Care has a cleanser for{" "}
@@ -47,7 +46,7 @@ export const query = graphql`
   {
     products: allContentfulMccProduct(
       filter: { category: { eq: "cleanser" } }
-      sort: { fields: name, order: ASC }
+      sort: {order: [DESC, ASC] fields:[featured,name]}
     ) {
       edges {
         node {
@@ -67,6 +66,11 @@ export const query = graphql`
           }
           video
           featured
+          keyIngredients{
+            id
+            name{ en_US formatted latin  }
+            benefit
+          }
         }
       }
     }

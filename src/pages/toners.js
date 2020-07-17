@@ -15,7 +15,7 @@ const Toners = ({data}) => {
       <TonersWrapper>
         <div className="page-boundary">
           <div className="product-type">
-            <Title title="Our" subtitle="toners" />
+            <Title title="toners" />
             <p className="description">
               Our toners provide a <span className="bold"> super-boost to the cleansing process</span> to help clear away congestion and debris while giving the skin a nice drink of <span className="bold">replenishing hydration</span>.
             </p>
@@ -45,7 +45,7 @@ export const query = graphql`
 
     products: allContentfulMccProduct(
       filter: { category: { eq: "toner" } }
-      sort: { fields: name, order: ASC }
+      sort: {order: [DESC, ASC] fields:[featured,name]}
     ) {
       edges {
         node {
@@ -65,6 +65,11 @@ export const query = graphql`
           }
           video
           featured
+          keyIngredients{
+            id
+            name{ en_US formatted latin }
+            benefit
+          }
         }
       }
     }

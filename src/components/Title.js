@@ -1,36 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
-const Title = ({ title, subtitle, className }) => {
+const Title = ({ className, title }) => {
   return (
     <div className={className}>
-      <h4>
-        <span className="title">{title}</span>
-        <span>{subtitle}</span>
-      </h4>
+      <h1 className="product-category title">{title} </h1>
     </div>
   )
 }
 
 export default styled(Title)`
-  text-transform: capitalize;
-  font-size: 45px;
-  margin-bottom: 2rem;
-  h4 {
+  h1 {
+    text-transform: capitalize;
     text-align: left;
-    letter-spacing: 7px;
-    color: var(--primaryColor);
-  }
-  .title {
+    letter-spacing: 1px;
+    font-size: 45px;
+    line-height: 54px;
     color: var(--mainBlack);
-  }
-  span {
-    display: block;
-  }
-  @media (min-width: 576px) {
-    span {
-      display: inline-block;
-      margin: 0 0.35rem;
-    }
+    font-weight: 300;
   }
 `
