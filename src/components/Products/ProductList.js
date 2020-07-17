@@ -1,21 +1,15 @@
 import React from "react"
-import styled from "styled-components"
-
 import Product from "./Product"
-import Title from "../Title"
 
-import { screen } from "../../css/js/media-functions"
-import { graphql, useStaticQuery } from "gatsby"
+const PreFilteredList = ({products}) => {
 
-const ProductList = () => {
   return (
-    <ProductListWrapper>
-      <Title title="cleansers" subtitle="" />
-      <Product title="My Title" subtitle="category" />
-    </ProductListWrapper>
+    <section className="product-list">
+        {products.edges.map(({ node }) => {
+          return <Product key={node.contentful_id} product={node} />
+        })}
+    </section>
   )
 }
 
-const ProductListWrapper = styled.section``
-
-export default ProductList
+export default PreFilteredList

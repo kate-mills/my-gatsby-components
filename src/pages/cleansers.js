@@ -6,7 +6,7 @@ import {graphql} from "gatsby"
 
 import PageModel from "../components/PageModel"
 import Title from "../components/Title"
-import PreFilteredProducts from "../components/Products/PreFilteredList"
+import ProductList from "../components/Products/ProductList"
 
 const Cleansers = ({data}) => {
   return (
@@ -22,7 +22,7 @@ const Cleansers = ({data}) => {
               prone skin, and relieve congestion by keeping skin flawlessly
               clean.
             </p>
-          <PreFilteredProducts products={data.products} />
+          <ProductList products={data.products} />
       </CleansersWrapper>
     </PageModel>
   )

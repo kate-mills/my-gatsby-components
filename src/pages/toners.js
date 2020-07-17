@@ -6,7 +6,7 @@ import {graphql} from "gatsby"
 
 import PageModel from "../components/PageModel"
 import PageTitle from "../components/Title"
-import ProductList from "../components/Products/PreFilteredList"
+import ProductList from "../components/Products/ProductList"
 
 
 const Toners = ({data}) => {
