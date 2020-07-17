@@ -90,7 +90,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 div#content {
-  position:;
   top: 0;
   right: 0;
   bottom: 0;
@@ -108,22 +107,6 @@ nav  li  a {
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-div.visible-hr-block {
-  width: 85%;
-  margin: 30px auto;
-  background-color: #ff665e63;
-  height: 0,5px;
-  border: none;
-}
-div.visible-hr-block hr{
-  display: block;
-  background-color: #bbbbbbbf;
-  color: #bbbbbbbf;
-  height: 1px;
-  border: none;
-
 }
 
 article.page-article{

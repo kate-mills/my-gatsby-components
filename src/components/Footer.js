@@ -12,9 +12,6 @@ import {
 const Footer = ({ className }) => {
   return (
     <footer className={className}>
-      <div className="visible-hr-block">
-        <hr />
-      </div>
       <div className="column">
         <div className="lg-text">
           <p> Follow us on </p>
@@ -57,12 +54,13 @@ const Footer = ({ className }) => {
 
 const FooterWrapper = styled(Footer)`
 & {
-  margin: 10px auto;
-  padding-top: 0px;
-  padding-bottom: 50px;
-  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 25px 5px;
+  width: 100%;
   text-align: center;
   letter-spacing: 1px;
+  border: 1px solid #00000026;
 }
 
 & div.column {
