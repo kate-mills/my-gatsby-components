@@ -7,6 +7,7 @@ import { screen } from "../../css/js/media-functions"
 const MoreItems = props => {
   return (
     <MoreItemsWrapper>
+      <ul>
       {props.menu.map((item, id) => {
         return (
           <li key={id} className={`sub-li`}>
@@ -16,10 +17,11 @@ const MoreItems = props => {
           </li>
         )
       })}
+      </ul>
     </MoreItemsWrapper>
   )
 }
-const MoreItemsWrapper = styled.ul`
+const MoreItemsWrapper = styled.nav`
   & {
     display: flex;
     flex-direction: column;
@@ -29,22 +31,28 @@ const MoreItemsWrapper = styled.ul`
     display: none;
     color: #111111;
   }
+  & ul{
+    background: white;
+    position: sticky;
+  }
   & li.sub-li {
-    height: 0;
-    height: auto;
+    height: 12px;
     width: initial;
     padding: 1px;
   }
   nav ul.main-nav li:hover & li.sub-li {
+    position: sticky;
     visibility: visible;
     z-index: 1;
     list-style: none;
     background: white;
+    background-color: hsl(0 0% 5% / 0.12);
+    opacity: 1;
   }
   nav ul.main-nav li:hover & li.sub-li a {
-    line-height: 25px;
+    line-height: 15px;
     font-size: 15px;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
   }
 `
 class DesktopNavbar extends Component {
@@ -76,10 +84,10 @@ class DesktopNavbar extends Component {
 }
 export default styled(DesktopNavbar)`
   & {
-    background:white !important;
+    background: white !important;
     width: 100%;
     position: sticky;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
     color: #111111;
   }
   & nav ul.main-nav {
@@ -87,7 +95,6 @@ export default styled(DesktopNavbar)`
     flex-flow: row wrap;
     width: 95%;
     margin: 0 auto;
-    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -99,8 +106,8 @@ export default styled(DesktopNavbar)`
     justify-content: center;
     list-style: none;
     width: 140px;
-    height: 30px;
-    margin: 20px auto;
+    height: 15px;
+    margin: 30px auto 0px auto;
     text-transform: uppercase;
     color: #111111;
     font-weight: 400;
@@ -115,17 +122,20 @@ export default styled(DesktopNavbar)`
   & nav ul.main-nav li.parent-plus:hover li.sub-li {
     visibility: visible;
     padding: 1px 0;
-    border-top:1px solid white; 
-    border-bottom:1px solid white; 
     height: auto;
   }
   & nav ul.main-nav li.parent-li li.sub-li {
     visibility: hidden;
   }
-  & nav ul.main-nav li.parent-li:hover ul {
+  & nav ul.main-nav li.parent-li:hover nav {
     display: flex;
     height: 0;
   }
+  & nav ul.main-nav li.parent-li:hover nav ul {
+    background: white;
+  }
+
+
   ${screen.phone.phone`&{display:none;}`}
   ${screen.tablet.tablet`& {display:none;}`}
   ${screen.desktop.desktop``}
