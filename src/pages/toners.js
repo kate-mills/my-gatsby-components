@@ -44,24 +44,20 @@ export const query = graphql`
       edges {
         node {
           contentful_id
-          category
-          slug
           name
           skinType
-          description{description}
-          ingredients
+          description{ description }
           imgRetail {
             id
             description
-          fixed(height: 250, cropFocus: CENTER, width: 225, quality: 100) {
+          fixed(cropFocus: CENTER, width: 325, quality: 100) {
               ...GatsbyContentfulFixed
             }
           }
           video
-          featured
           keyIngredients{
             id
-            name{ en_US formatted latin }
+            name{ formatted }
             benefit
           }
         }
