@@ -13,8 +13,8 @@ const Toners = ({data}) => {
   return (
     <PageModel title="Toners">
       <PageWrapper>
-            <PageTitle title="toners" />
-            <p className="page-description">
+            <PageTitle title="Toners" />
+            <p className="description">
               Our toners provide a <span className="bold"> super-boost to the cleansing process</span> to help clear away congestion and debris while giving the skin a nice drink of <span className="bold">replenishing hydration</span>.
             </p>
             <ProductList products={data.products} />
@@ -25,9 +25,12 @@ const Toners = ({data}) => {
 
 const PageWrapper = styled.div`
   & {
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-bottom: 1rem;
   }
 `
 
