@@ -14,8 +14,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <OverlayPink />
-      <div id="content">
         <Announcement/> 
+      <div id="content">
         <MobileNavbar />
         <LogoImg />
         <DesktopNavbar />
