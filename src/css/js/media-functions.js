@@ -34,18 +34,4 @@ export const screen = {
       `
     },
   },
-  font: {
-    setFont: ({
-      min_font = 15,
-      max_font = 20,
-      min_vw = 300,
-      max_vw = 1600,
-    } = {}) => {
-      return `font-size:calc(${
-        min_font + "px"
-      } + (${max_font} - ${min_font}) * ((100vw - ${
-        min_vw + "px"
-      }) /( ${max_vw} - ${min_vw})))`
-    },
-  },
 }

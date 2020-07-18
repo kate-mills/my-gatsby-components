@@ -82,6 +82,7 @@ const MoreItemsWrapper = styled.div`
     padding-top: 5px;
   }
   & nav.show.sub-nav li {
+    background: hsl(0 0% 5% / 0.12)
   }
 
   & nav.sub-nav.hide {
@@ -152,18 +153,17 @@ line-height: 27px;
   height: 2px;
   border: none;
   background: rgba(0, 0, 0, 0.1);
+  width: 80vw;
 }
 & hr.hr-80:first-child{
-  width: 80vw;
   margin: 2px auto 20px auto;
 }
 & hr.hr-80:last-child{
-  width: 80vw;
   margin: 20px auto;
 }
 & hr.hr-50{
   border: none;
-  width: 40%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   height: 1px;

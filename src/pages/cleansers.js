@@ -39,36 +39,41 @@ const CleansersWrapper = styled.div`
 `
 export const query = graphql`
   {
-    products: allContentfulMccProduct(
-      filter: { category: { eq: "cleanser" } }
-      sort: {order: [DESC, ASC] fields:[featured,name]}
-    ) {
-      edges {
-        node {
-          contentful_id
-          category
-          slug
-          name
-          skinType
-          description {description}
-          ingredients
-          imgRetail {
-            id
-            description
-            fluid(quality: 90) {
-              ...GatsbyContentfulFluid_withWebp
-            }
+
+
+ products: allContentfulMccProduct(filter: {category: {eq: "cleanser"}}, sort: {order: [DESC, ASC], fields: [featured, name]}) {
+    edges {
+      node {
+        contentful_id
+        category
+        slug
+        name
+        skinType
+        description {
+          description
+        }
+        ingredients
+        imgRetail {
+          id
+          description
+          fixed(height: 250, cropFocus: CENTER, width: 225, quality: 100) {
+              ...GatsbyContentfulFixed
           }
-          video
-          featured
-          keyIngredients{
-            id
-            name{ en_US formatted latin  }
-            benefit
+        }
+        video
+        featured
+        keyIngredients {
+          id
+          name {
+            en_US
+            formatted
+            latin
           }
+          benefit
         }
       }
     }
+  }
   }
 `
 export default Cleansers

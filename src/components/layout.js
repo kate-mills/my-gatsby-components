@@ -4,8 +4,10 @@ import "./layout.css"
 
 import OverlayPink from "./OverlayPink"
 import { LogoImg } from "./LogoImg"
+import Announcement from './Announcement'
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
+
 import Footer from "./Footer"
 
 const Layout = ({ children }) => {
@@ -13,6 +15,7 @@ const Layout = ({ children }) => {
     <>
       <OverlayPink />
       <div id="content">
+        <Announcement/> 
         <MobileNavbar />
         <LogoImg />
         <DesktopNavbar />

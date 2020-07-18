@@ -25,12 +25,9 @@ const Toners = ({data}) => {
 
 const PageWrapper = styled.div`
   & {
-    width: 70%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-bottom: 1rem;
   }
 `
 
@@ -53,8 +50,8 @@ export const query = graphql`
           imgRetail {
             id
             description
-            fluid(quality: 90) {
-              ...GatsbyContentfulFluid_withWebp
+          fixed(height: 400, cropFocus: CENTER, width: 225, quality: 100) {
+              ...GatsbyContentfulFixed
             }
           }
           video

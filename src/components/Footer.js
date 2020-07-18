@@ -35,7 +35,7 @@ const Footer = ({ className }) => {
         </div>
         <div className="row lg-text phone-email">
           <p className="phone">707.637.4996</p>
-          <span className="spacer">&macr;</span>
+          &middot;
           <p className="email">info@michelecorley.com</p>
         </div>
         <div className="row sm-text">
@@ -54,9 +54,9 @@ const Footer = ({ className }) => {
 
 const FooterWrapper = styled(Footer)`
 & {
-  margin: 0 auto;
+  margin: 0px auto;
   margin-top: 30px;
-  padding: 25px 5px;
+  padding: 10px 0;
   width: 100%;
   text-align: center;
   letter-spacing: 1px;
@@ -80,38 +80,31 @@ const FooterWrapper = styled(Footer)`
 
 & a.instagram{ ${setInstagram()}}
 
-& .phone-email p {padding: 5px;}
-.spacer {visibility: visible;height: 18px; width: 20px; color: #bbb}
+& .phone-email p {padding: 0 5px;}
 
-& div.column,
-& div.column > div.row.lg-text.phone-email {
+& div.column, & div.column > div.row.lg-text.phone-email {
   ${setFont({
     size: "21px",
-    height: "32px",
+    height: "25px",
     color: "#524c4c",
     weight: "400",
   })}
-  margin: 5px;
-  padding: 5px;
 }
 & div.row{ 
   ${setFont({
     size: "16px",
-    height: "26px",
+    height: "19px",
     color: "#5c5c5c",
     weight: "400",
   })}
 }
+div.row.sm-text p{margin: 4px;}
 
 ${screen.phone.phone`
-
-      .spacer {visibility: hidden;display:block;width: 0px;}
       div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
 `}
 ${screen.tablet.tablet`
       div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
-
 `}
-${screen.desktop.desktop``}
 `
 export default FooterWrapper

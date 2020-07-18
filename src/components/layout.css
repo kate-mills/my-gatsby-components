@@ -16,13 +16,6 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 html {
   font-family: 'proxima-nova', 'sans-serif';
   display: block;
@@ -51,15 +44,13 @@ body {
 
 main{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  white-space: pre-wrap;
 }
 #page{
   background: var(--mainWhite);
   width: 95%;
-  margin: 0 auto;
-  padding: 0;
   border: 0;
+  font-size: 15px;
 }
 h1 {
     font-family: Varela Round,arial,sans-serif;
@@ -118,36 +109,25 @@ article.page-article:first-child{
 article.page-article:last-child{
   margin-bottom: 0px;
 }
-
 .bold {font-weight: 600;}
 
 
-
-/*phone*/
-@media screen and (min-width: 100px) and (max-width: 480px){
-  div#content{width:100vw;margin:0 auto;}
-}
-/*tablet - sm*/
-@media screen and (min-width:481px) and (max-width: 767px){
-  div#content{width:100vw;margin:0 auto;}
+/*phone */
+@media screen and (max-width: 767px){
+  div#content{width:100vw;margin:0 auto;} /* 0vw of pink border*/
 }
 
-/*tablet - landscape*/
+/*tablet - landscape */
 @media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  div#content{width:80vw;margin:0 auto;}
+  div#content{width:80vw;margin:0 auto;} /* 20vw of pink border*/
 }
 
-/*tablet - md*/
-@media screen and (min-width:768px) and (max-width:1024px){
-  div#content{width:80vw;margin:0 auto;}
+/*tablet - md & large */
+@media screen and (min-width:768px) and (max-width:1280px){
+  div#content{width:80vw;margin:0 auto;} /* 20vw of pink border*/
 }
 
-/*tablet - lg*/
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-  div#content{width:80vw; margin:0 auto;}
-}
-
-/*desktop*/
+/*desktop */
 @media screen and (min-width: 1281px){
-  div#content{width:70vw;margin:0 auto;}
+  div#content{width:70vw;margin:0 auto;} /* 30vw of pink border*/
 }

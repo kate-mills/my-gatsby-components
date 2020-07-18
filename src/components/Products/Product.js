@@ -17,7 +17,7 @@ const Product = ({ product }) => {
       <h2  className="product-name">{name}</h2>
       <p   className="product-skintypes">{skinType.map((item, index) => {return (<span key={index} className="skintype">{item}</span>)})}</p>
       <p   className="product-description">{description.description}</p>
-      <div className="product-media"><ProductMedia {...product}/></div>
+      <ProductMedia {...product}/>
       <div className="product-ingredients">
         <p className="bold">A FEW KEY Ingredients & Benefits:</p>
         <ul>
