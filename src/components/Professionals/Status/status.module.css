@@ -1,0 +1,17 @@
+.status {
+  background: var(--mccPink);
+  font-size: 87.5%;
+  color: var(--mainWhite);
+  padding: 0.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+.status__text {
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
+}
+
+.professional__link {
+  margin: 0 2px;
+}

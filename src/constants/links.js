@@ -62,10 +62,6 @@ export default [
         path: "/press",
         text: "press",
       },
-      {
-        path: "/images-and-logos",
-        text: "Product Images & Logos",
-      },
     ],
   },
   {
@@ -77,28 +73,5 @@ export default [
     path: "/pro-orders",
     text: "pro orders",
     menu: [],
-  },
-  {
-    path: "/professionals",
-    text: "professionals",
-    menu: [],
-  },
-  {
-    path: "/.",
-    text: "education",
-    menu: [
-      {
-        path: "/upcoming-classes",
-        text: "upcoming classes",
-      },
-      {
-        path: "/treatment-protocol-videos",
-        text: "treatment protocol & videos",
-      },
-      {
-        path: "/articles",
-        text: "articles",
-      },
-    ],
-  },
+  }
 ]
