@@ -8,8 +8,8 @@ const SearchTemplate = props => {
   console.log('allProducts', allProducts);
   return (
     <div>
-      <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
-        Search data using JS Search using Gatsby Api
+      <h1 style={{ color: `white`, marginTop: `3em`, textAlign: `center` }}>
+        Product Search
       </h1>
       <div>
         <ClientSearch products={allProducts} engine={options} />

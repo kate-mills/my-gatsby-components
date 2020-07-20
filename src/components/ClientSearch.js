@@ -118,34 +118,45 @@ class ClientSearch extends Component {
             name="search-form"
             onSubmit={this.handleSubmit}
           >
-            <div style={{ margin: `0 auto` }}>
+            <div style={{ display: `flex`, margin: `0 auto` }}>
               <input
                 id="Search"
                 value={searchQuery}
                 onChange={this.searchData}
                 placeholder="Enter your search here"
-                style={{ margin: `0 auto`, width: `400px` }}
+                style={{ 
+                  margin: `0 auto`, 
+                  width: `400px`,
+                  height: `30px`,
+                  padding: `5px`
+                }}
               />
             </div>
           </form>
           <div>
-            Number of items:
-            {queryResults.length}
+            <p
+              style={{
+                color: `white`,
+                fontSize: `15px`
+              }}
+            >Number of items: {queryResults.length}</p>
             <table
               style={{
                 width: `100%`,
                 borderCollapse: `collapse`,
                 borderRadius: `4px`,
                 border: `1px solid #d3d3d3`,
+                background: `white`,
+                color: `var(--mainBlack)`,
               }}
             >
-              <thead style={{ border: `1px solid #808080` }}>
+              <thead style={{  border: `1px solid #808080` }}>
                 <tr>
                   <th
                     style={{
                       textAlign: `left`,
                       padding: `5px`,
-                      fontSize: `14px`,
+                      fontSize: `16px`,
                       fontWeight: 600,
                       borderBottom: `2px solid #d3d3d3`,
                       cursor: `pointer`,
@@ -157,7 +168,7 @@ class ClientSearch extends Component {
                     style={{
                       textAlign: `left`,
                       padding: `5px`,
-                      fontSize: `14px`,
+                      fontSize: `16px`,
                       fontWeight: 600,
                       borderBottom: `2px solid #d3d3d3`,
                       cursor: `pointer`,
@@ -169,7 +180,7 @@ class ClientSearch extends Component {
                     style={{
                       textAlign: `left`,
                       padding: `5px`,
-                      fontSize: `14px`,
+                      fontSize: `16px`,
                       fontWeight: 600,
                       borderBottom: `2px solid #d3d3d3`,
                       cursor: `pointer`,
@@ -186,15 +197,16 @@ class ClientSearch extends Component {
                     <tr key={`row_${item.contentful_id}`}>
                       <td
                         style={{
-                          fontSize: `14px`,
+                          fontSize: `16px`,
                           border: `1px solid #d3d3d3`,
+                          padding: `5px`
                         }}
                       >
                         {item.contentful_id}
                       </td>
                       <td
                         style={{
-                          fontSize: `14px`,
+                          fontSize: `16px`,
                           border: `1px solid #d3d3d3`,
                         }}
                       >
@@ -202,7 +214,7 @@ class ClientSearch extends Component {
                       </td>
                       <td
                         style={{
-                          fontSize: `14px`,
+                          fontSize: `16px`,
                           border: `1px solid #d3d3d3`,
                         }}
                       >

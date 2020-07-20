@@ -1,6 +1,5 @@
 .status {
   background: var(--mccPink);
-  font-size: 87.5%;
   color: var(--mainWhite);
   padding: 0.25rem;
   letter-spacing: var(--mainSpacing);
@@ -11,7 +10,21 @@
   max-width: 640px;
   text-align: center;
 }
-
-.professional__link {
-  margin: 0 2px;
+.professional__status {
+  font-size: 17px;
 }
+
+.professional__status {
+  margin: 0 2px;
+  color: var(--mainWhite);
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  margin-left: 5px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px solid white;
+}
+
