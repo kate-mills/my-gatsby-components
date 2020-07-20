@@ -15,6 +15,9 @@ class Login extends React.Component {
       [event.target.name]: event.target.value,
     })
   }
+  componentDidMount(){
+    document.getElementsByTagName('input')[0].focus()
+  }
 
   handleSubmit(event) {
     event.preventDefault()
