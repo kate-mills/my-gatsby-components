@@ -12,7 +12,7 @@ const setUser = user => (window.localStorage.mccUser = JSON.stringify(user))
 export const handleLogin = ({ username, password }) => {
   if (!isBrowser) return false
 
-  if (username === `${process.env.USER_NAME}` && password === `${process.env.USER_PSWD}`) {
+  if (username === `${process.env.GATSBY_USER_NAME}` && password === `${process.env.GATSBY_USER_PSWD}`) {
     console.log(`Credentials match! Setting the active user.`)
     return setUser({
       name: `Professional`,
