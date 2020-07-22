@@ -24,7 +24,7 @@
   text-transform: capitalize;
   text-decoration: none;
 }
-a:hover {
+a.professional__status:hover {
   border-bottom: 2px solid white;
 }
 

@@ -5,23 +5,19 @@
   max-width: 640px;
   margin: 2rem auto 3rem;
 }
-
 .form__label {
   display: block;
   letter-spacing: 0.125em;
   text-transform: uppercase;
 }
-
 .form__label + .form__label {
   margin-top: 0.5rem;
 }
-
 .form__input {
   display: block;
   font-size: 1rem;
   padding: 0.25rem;
 }
-
 .form__button {
   background-color: var(--mccPink);
   border: 1px solid white;
@@ -32,13 +28,11 @@
   padding: 0.25rem 1rem;
   transition: background-color 150ms linear;
 }
-
 .form__button:hover {
   cursor: pointer;
   color: var(--mccPink);
   border: 1px solid var(--mccPink);
 }
-
 .form__button:hover,
 .form__button:active,
 .form__button:focus {

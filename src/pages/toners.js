@@ -8,7 +8,6 @@ import PageModel from "../components/PageModel"
 import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
-
 const Toners = ({data}) => {
   return (
     <PageModel title="Toners">
@@ -31,6 +30,9 @@ const PageWrapper = styled.div`
     flex-direction: column;
     flex-wrap: nowrap;
     margin-bottom: 1rem;
+  }
+  & p.description{
+  text-align: left;
   }
 `
 
@@ -64,7 +66,6 @@ export const query = graphql`
       }
     }
   }
-
 `
 
 export default Toners

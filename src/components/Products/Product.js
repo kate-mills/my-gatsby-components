@@ -35,13 +35,15 @@ const Product = ({ product }) => {
 }
 const ProductWrapper = styled.article`
   & {border: 2px solid var(--mccPink;)}
-  & .product-name {${setFont({ size: "30px", height: "42px", color: "#b30000cc", weight: "400" })};padding: 0;}
-  & .product-skintypes {padding: 5px 0px;}
+  & .product-name {
+    ${setFont({ size: "30px", height: "42px", color: "#b30000cc", weight: "400" })};padding: 0;}
+  & .product-skintypes {padding: 5px 0px;text-align: left;}
+
   & .product-skintypes .skintype {font-style: italic;}
   & .product-skintypes .skintype::after {content: ", ";}
   & .product-skintypes .skintype:last-child::after {content: "";} 
 
-  & .product-ingredients p.bold { margin-top: 20px;}
+  & .product-ingredients p.bold { margin-top: 20px; text-align: left;}
   & .product-ingredients ul { width: 90%; margin: 0 auto; }
   & .product-ingredients .name-formatted {font-weight: 400;}
   & .product-ingredients .benefit {padding-left: 6px;}

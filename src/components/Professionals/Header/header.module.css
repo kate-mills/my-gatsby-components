@@ -1,3 +1,6 @@
+.header{
+  padding: 20px;
+}
 .view {
   display: flex;
   flex-direction: column;
@@ -5,27 +8,12 @@
   justify-content: center;
   text-align: center;
 }
-p {
-  text-align: center;
-  margin: 0;
-}
-.header {
-  text-align: center;
-  width: 100%
-}
-
 .header__wrap {
   display:flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-
-.header__heading {
-  margin: 0;
-  font-size: 1rem;
-}
-
 .header__nav {
   margin-top: 0;
 

@@ -7,7 +7,7 @@ const PageModel = ({ name, title, children }) => {
   return (
       <Layout>
         <SEO title={title} />
-        <div id="page">{children}</div>
+        {children}
       </Layout>
   )
 }
