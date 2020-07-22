@@ -1,18 +1,19 @@
-import {useLocation} from  "@reach/router"
+import { useLocation } from "@reach/router"
 
 const isBrowser = typeof window !== `undefined`
 
 const getUser = () =>
-  window.localStorage.mccUser
-    ? JSON.parse(window.localStorage.mccUser)
-    : {}
+  window.localStorage.mccUser ? JSON.parse(window.localStorage.mccUser) : {}
 
 const setUser = user => (window.localStorage.mccUser = JSON.stringify(user))
 
 export const handleLogin = ({ username, password }) => {
   if (!isBrowser) return false
 
-  if (username === `${process.env.GATSBY_USER_NAME}` && password === `${process.env.GATSBY_USER_PSWD}`) {
+  if (
+    username === `${process.env.GATSBY_USER_NAME}` &&
+    password === `${process.env.GATSBY_USER_PSWD}`
+  ) {
     console.log(`Credentials match! Setting the active user.`)
     return setUser({
       name: `Professional`,
@@ -25,7 +26,6 @@ export const handleLogin = ({ username, password }) => {
 }
 
 export const isLoggedIn = () => {
-
   if (!isBrowser) return false
 
   const user = getUser()
@@ -43,10 +43,9 @@ export const logout = callback => {
   callback()
 }
 
-export const cb = (fn) => fn(); 
-export const isAppInPath = () => { 
+export const cb = fn => fn()
+export const isAppInPath = () => {
   const location = cb(useLocation)
-  let pathname = location.pathname;
-  return pathname.match(/app/g);
+  let pathname = location.pathname
+  return pathname.match(/app/g)
 }
-

@@ -73,5 +73,5 @@ export default [
     path: "/pro-orders",
     text: "pro orders",
     menu: [],
-  }
+  },
 ]

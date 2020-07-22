@@ -1,15 +1,12 @@
 import React from "react"
 import View from "./View"
-import Header from './Header'
-
+import Header from "./Header"
 
 const Profile = () => {
-
   return (
     <>
-      <Header title="Product Images & Logos"/>
-    <View>
-    </View>
+      <Header title="Product Images & Logos" />
+      <View></View>
     </>
   )
 }

@@ -5,9 +5,8 @@ exports.createPages = ({ actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
     axios
-   .get(`https://kate-mills.github.io/mcc-product-list/products.json`)
+      .get(`https://kate-mills.github.io/mcc-product-list/products.json`)
       .then(result => {
-
         const { data } = result
 
         createPage({
@@ -36,7 +35,6 @@ exports.createPages = ({ actions }) => {
       })
   })
 }
-
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions

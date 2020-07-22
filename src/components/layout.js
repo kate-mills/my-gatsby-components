@@ -4,8 +4,8 @@ import "./layout.css"
 
 import OverlayPink from "./OverlayPink"
 import { LogoImg } from "./LogoImg"
-import Announcement from './Announcement'
-import Status from './Professionals/Status'
+import Announcement from "./Announcement"
+import Status from "./Professionals/Status"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
 
@@ -15,8 +15,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <OverlayPink />
-        <Announcement/> 
-      <Status/>
+      <Announcement />
+      <Status />
       <div id="content">
         <MobileNavbar />
         <LogoImg />

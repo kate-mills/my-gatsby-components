@@ -82,7 +82,7 @@ const MoreItemsWrapper = styled.div`
     padding-top: 5px;
   }
   & nav.show.sub-nav li {
-    background: hsl(0 0% 5% / 0.12)
+    background: hsl(0 0% 5% / 0.12);
   }
 
   & nav.sub-nav.hide {

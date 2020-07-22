@@ -3,14 +3,12 @@ import styles from "./view.module.css"
 
 const View = ({ title, children }) => (
   <>
-  <section className={styles.view}>
-    {children}
-  </section>
+    <section className={styles.view}>{children}</section>
   </>
 )
 
 View.defaultProps = {
-  title: ""
+  title: "",
 }
 
 export default View

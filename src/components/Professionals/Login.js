@@ -15,8 +15,8 @@ class Login extends React.Component {
       [event.target.name]: event.target.value,
     })
   }
-  componentDidMount(){
-    document.getElementsByTagName('input')[0].focus()
+  componentDidMount() {
+    document.getElementsByTagName("input")[0].focus()
   }
 
   handleSubmit(event) {
@@ -41,5 +41,3 @@ class Login extends React.Component {
 }
 
 export default Login
-
-

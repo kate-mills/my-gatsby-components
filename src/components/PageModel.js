@@ -5,10 +5,10 @@ import SEO from "../components/seo"
 
 const PageModel = ({ name, title, children }) => {
   return (
-      <Layout>
-        <SEO title={title} />
-        {children}
-      </Layout>
+    <Layout>
+      <SEO title={title} />
+      {children}
+    </Layout>
   )
 }
 export default PageModel

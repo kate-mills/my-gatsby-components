@@ -53,57 +53,64 @@ const Footer = ({ className }) => {
 }
 
 const FooterWrapper = styled(Footer)`
-& {
-  margin: 0px auto;
-  margin-top: 30px;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  letter-spacing: 1px;
-  border: 1px solid #00000026;
-}
+  & {
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 1px solid #00000026;
+  }
 
-& div.column {
-  margin: 0 auto;
-  ${setFlexContainer({ direction: "column" })};
-}
+  & div.column {
+    margin: 0 auto;
+    ${setFlexContainer({ direction: "column" })};
+  }
 
-& div.row { 
-  width: 80%;
-  ${setFlexContainer({})}
-}
+  & div.row {
+    width: 80%;
+    ${setFlexContainer({})}
+  }
 
-& div.row.footer-icons { 
-  font-size: 38px;
-  justify-content: space-around;
-}
+  & div.row.footer-icons {
+    font-size: 38px;
+    justify-content: space-around;
+  }
 
-& a.instagram{ ${setInstagram()}}
+  & a.instagram {
+    ${setInstagram()}
+  }
 
-& .phone-email p {padding: 0 5px;}
+  & .phone-email p {
+    padding: 0 5px;
+  }
 
-& div.column, & div.column > div.row.lg-text.phone-email {
-  ${setFont({
-    size: "21px",
-    height: "25px",
-    color: "#524c4c",
-    weight: "400",
-  })}
-}
-& div.row{ 
-  ${setFont({
-    size: "16px",
-    height: "19px",
-    color: "#5c5c5c",
-    weight: "400",
-  })}
-}
-div.row.sm-text p{margin: 4px;}
+  & div.column,
+  & div.column > div.row.lg-text.phone-email {
+    ${setFont({
+      size: "21px",
+      height: "25px",
+      color: "#524c4c",
+      weight: "400",
+    })}
+  }
+  & div.row {
+    ${setFont({
+      size: "16px",
+      height: "19px",
+      color: "#5c5c5c",
+      weight: "400",
+    })}
+  }
+  div.row.sm-text p {
+    margin: 4px;
+  }
 
-${screen.phone.phone`
+  ${screen.phone.phone`
       div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
 `}
-${screen.tablet.tablet`
+  ${screen.tablet.tablet`
       div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
 `}
 `

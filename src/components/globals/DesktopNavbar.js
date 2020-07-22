@@ -8,15 +8,15 @@ const MoreItems = props => {
   return (
     <MoreItemsWrapper>
       <ul>
-      {props.menu.map((item, id) => {
-        return (
-          <li key={id} className={`sub-li`}>
-            <AniLink fade to={item.path}>
-              {item.text}
-            </AniLink>
-          </li>
-        )
-      })}
+        {props.menu.map((item, id) => {
+          return (
+            <li key={id} className={`sub-li`}>
+              <AniLink fade to={item.path}>
+                {item.text}
+              </AniLink>
+            </li>
+          )
+        })}
       </ul>
     </MoreItemsWrapper>
   )
@@ -31,7 +31,7 @@ const MoreItemsWrapper = styled.nav`
     display: none;
     color: #111111;
   }
-  & ul{
+  & ul {
     background: white;
     position: sticky;
   }
@@ -52,7 +52,7 @@ const MoreItemsWrapper = styled.nav`
   nav ul.main-nav li:hover & li.sub-li a {
     line-height: 15px;
     font-size: 15px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 `
 class DesktopNavbar extends Component {

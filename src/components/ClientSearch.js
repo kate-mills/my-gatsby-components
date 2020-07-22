@@ -64,7 +64,9 @@ class ClientSearch extends Component {
       : (dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer())
 
     termFrequency === true
-      ? (dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex(`contentful_id`))
+      ? (dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex(
+          `contentful_id`
+        ))
       : (dataToSearch.searchIndex = new JsSearch.UnorderedSearchIndex())
     /* eslint-enable */
     if (indexByName) {
@@ -114,21 +116,18 @@ class ClientSearch extends Component {
     return (
       <div>
         <div style={{ margin: `0 auto` }}>
-          <form 
-            name="search-form"
-            onSubmit={this.handleSubmit}
-          >
+          <form name="search-form" onSubmit={this.handleSubmit}>
             <div style={{ display: `flex`, margin: `0 auto` }}>
               <input
                 id="Search"
                 value={searchQuery}
                 onChange={this.searchData}
                 placeholder="Enter your search here"
-                style={{ 
-                  margin: `0 auto`, 
+                style={{
+                  margin: `0 auto`,
                   width: `400px`,
                   height: `30px`,
-                  padding: `5px`
+                  padding: `5px`,
                 }}
               />
             </div>
@@ -137,9 +136,11 @@ class ClientSearch extends Component {
             <p
               style={{
                 color: `white`,
-                fontSize: `15px`
+                fontSize: `15px`,
               }}
-            >Number of items: {queryResults.length}</p>
+            >
+              Number of items: {queryResults.length}
+            </p>
             <table
               style={{
                 width: `100%`,
@@ -150,7 +151,7 @@ class ClientSearch extends Component {
                 color: `var(--mainBlack)`,
               }}
             >
-              <thead style={{  border: `1px solid #808080` }}>
+              <thead style={{ border: `1px solid #808080` }}>
                 <tr>
                   <th
                     style={{
@@ -199,7 +200,7 @@ class ClientSearch extends Component {
                         style={{
                           fontSize: `16px`,
                           border: `1px solid #d3d3d3`,
-                          padding: `5px`
+                          padding: `5px`,
                         }}
                       >
                         {item.contentful_id}

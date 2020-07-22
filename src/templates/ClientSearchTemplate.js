@@ -5,7 +5,7 @@ const SearchTemplate = props => {
   const { pageContext } = props
   const { productData } = pageContext
   const { allProducts, options } = productData
-  console.log('allProducts', allProducts);
+  console.log("allProducts", allProducts)
   return (
     <div>
       <h1 style={{ color: `white`, marginTop: `3em`, textAlign: `center` }}>
