@@ -1,94 +1,108 @@
 import React from "react"
 import styled from "styled-components"
+import { screen } from "../css/js/media-functions"
 
 const YesNo = ({ className }) => {
   return (
     <section className={className}>
-      <div className="">
-        <div>
-          <div>
-            <h2>YES</h2>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <p>Powerful Peptides</p>
-              </li>
-              <li>
-                <p>Potent Antioxidants</p>
-              </li>
-              <li>
-                <p>Stable Vitamin C</p>
-              </li>
-              <li>
-                <p>Active Enzymes</p>
-              </li>
-              <li>
-                <p>Nutritious Plant Oils</p>
-              </li>
-              <li>
-                <p>Balancing Essential Oils</p>
-              </li>
-              <li>
-                <p>Vegetarian Formulas</p>
-              </li>
-              <li>
-                <p>Gentle Preservatives</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <div>
-            <h2>NO</h2>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <p>Parabens</p>
-              </li>
-              <li>
-                <p>Synthetic Colorants</p>
-              </li>
-              <li>
-                <p>Synthetic Fragrance</p>
-              </li>
-              <li>
-                <p>Phthalates</p>
-              </li>
-              <li>
-                <p>Urea</p>
-              </li>
-              <li>
-                <p>
-                  Formaldehyde Releasing <span>Preservatives</span>
-                </p>
-              </li>
-              <li>
-                <p>Sodium Lauryl Sulfate</p>
-              </li>
-              <li>
-                <p>Sodium Laureth Sulfate</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <article>
-        <h2>
+      <article className="flex-container">
+        <ul>
+          <h2>YES</h2>
+          <li>Powerful Peptides</li>
+          <li>Potent Antioxidants</li>
+          <li>Stable Vitamin C</li>
+          <li>Active Enzymes</li>
+          <li>Nutritious Plant Oils</li>
+          <li>Balancing Essential Oils</li>
+          <li>Vegetarian Formulas</li>
+          <li>Gentle Preservatives</li>
+        </ul>
+
+        <ul>
+          <h2>NO</h2>
+          <li>Parabens</li>
+          <li>Synthetic Colorants</li>
+          <li>Synthetic Fragrance</li>
+          <li>Phthalates</li>
+          <li>Urea</li>
+          <li>
+            Formaldehyde Releasing
+            <br />
+            Preservatives
+          </li>
+          <li>Sodium Lauryl Sulfate</li>
+          <li>Sodium Laureth Sulfate</li>
+        </ul>
+      </article>
+      <article className="flex-column">
+        <h2 className="yn">
           Professional skincare that delivers. Clean, safe, efficacious
           formulas.
         </h2>
-        <h3>Only available through your licensed skincare professional.</h3>
+        <h3 className="yn">
+          Only available through your licensed skincare professional.
+        </h3>
       </article>
     </section>
   )
 }
 const Wrapper = styled(YesNo)`
-  & {
+  & .flex-container {
     display: flex;
-    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: center;
   }
+  & ul {
+    margin: 0 50px;
+    list-style-position:outside;
+    list-style-type:disc;
+  }
+  li:before{
+    background: red;
+  }
+  & li{
+    color: #5c5c5c;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 27px;
+  }
+  }
+  & .flex-container  h2 {
+    color:rgba(179,0,0,0.8);
+    font-size:30px;
+    font-weight:400;
+    line-height:42px;
+    text-align:center;
+    width:150px;
+  }
+  & .flex-column h2.yn {
+    font-size: 30px;
+    line-height: 42px;
+    color: rgba(179, 0,0,0.8);
+    font-style:normal;
+    font-weight: 400;
+    text-align:center;
+    padding:17px;
+    margin:0 auto;
+  }
+  & .flex-column h3.yn {
+    font-size:21px;
+    line-height:32px;
+    color: #524c4c;
+    font-style:italic;
+    font-weight:400;
+    text-align:center;
+  }
+${screen.phone.phone`
+    & .flex-container{
+      flex-flow:column nowrap;
+      align-items:center;
+      justify-content:center;
+
+    }
+`}
+
+
 `
 
 export default Wrapper

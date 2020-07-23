@@ -7,7 +7,14 @@ import YesNo from "../components/YesNo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1 style={{ fontSize: "45px", textAlign: "center", color: "#222222" }}>
+    <h1
+      style={{
+        padding: "10px",
+        fontSize: "45px",
+        textAlign: "center",
+        color: "#222222",
+      }}
+    >
       Beautifully Healthy Skin Starts Here
     </h1>
     <YesNo />
