@@ -1,7 +1,6 @@
 import React from "react"
 
 import PageModel from "../components/PageModel"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styled from "styled-components"
 
@@ -12,12 +11,11 @@ const ProOrders = () => {
         <article>
           <p>
             If you have a login for online ordering click{" "}
-            <AniLink
-              fade
-              to="https://portal.nowcommerce.com/custsignin.aspx?ID=99867"
+            <a
+              href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867"
             >
               HERE
-            </AniLink>
+            </a>
           </p>
           <p>
             Please note we have a $100 minimum order (Exception - Best Sellers

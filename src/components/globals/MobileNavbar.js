@@ -44,6 +44,9 @@ const MoreItems = props => {
 }
 
 const MoreItemsWrapper = styled.div`
+  &{
+    background-color: var(--offWhite);
+  }
   & button.plus-btn {
     ${setFont({
       size: "15px",
@@ -51,10 +54,14 @@ const MoreItemsWrapper = styled.div`
       color: "#111111",
       weight: "400",
     })}
+    display:flex;
+    justify-content: center;
     background: none;
     outline: none;
     border: none;
     text-transform: uppercase;
+    align-items:center;
+    margin: 0 auto;
     letter-spacing: 1px;
     width: 100%;
     text-align: center;

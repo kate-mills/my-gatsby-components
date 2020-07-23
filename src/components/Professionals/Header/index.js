@@ -9,8 +9,6 @@ const Header = ({ title, msg }) => (
         style={{
           textAlign: "center",
           fontSize: "37px",
-          lineHeight: "35px",
-          position: "sticky",
         }}
       >
         {title}

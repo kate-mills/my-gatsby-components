@@ -1,3 +1,5 @@
+import React from "react"
+
 export default [
   {
     path: "/",
@@ -10,57 +12,143 @@ export default [
     menu: [],
   },
   {
-    path: "/.",
-    text: "products",
+    text: (
+      <span
+        style={{ 
+          borderLeft: "5px solid white",
+          lineHeight: "32px", padding: "0 10px", background: "white" }}
+      >
+        products
+      </span>
+    ),
     menu: [
       {
         path: "/cleansers",
-        text: "cleansers",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            cleansers
+          </span>
+        ),
       },
       {
         path: "/toners",
-        text: "toners",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            toners
+          </span>
+        ),
       },
       {
         path: "/moisturizers-spf",
-        text: "moisturizers-spf",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            moisturizers & spf
+          </span>
+        ),
       },
       {
         path: "/eyes-lips",
-        text: "eyes & lips",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            eyes & lips
+          </span>
+        ),
       },
       {
         path: "/serums-specialty",
-        text: "serums & specialty",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            serums & specialty
+          </span>
+        ),
       },
       {
         path: "/exfoliants",
-        text: "exfoliants",
+        text: (
+          <span
+            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            exfoliants
+          </span>
+        ),
       },
       {
         path: "/masks",
-        text: "masks",
+        text: (
+          <span
+            style={{ 
+              background: "white",
+              lineHeight: "32px",
+              padding: "0 10px"
+            }}
+          >
+            masks
+          </span>
+        ),
       },
     ],
   },
   {
-    text: "why mc?",
+    text: (
+      <span
+        style={{
+          borderLeft: "5px solid white",
+          lineHeight: "32px",
+          padding: "0 10px",
+          background: "white",
+        }}
+      >
+        why mc?
+      </span>
+    ),
     menu: [
       {
         path: "/why-mc",
-        text: "why choose us?",
+        text: (
+          <span
+            style={{ 
+              lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            why choose us?
+          </span>
+        ),
       },
       {
         path: "/before-and-after",
-        text: "before and after",
+        text: (
+          <span
+            style={{ 
+              lineHeight: "32px", padding: "0 10px", background: "white" }}
+          >
+            before and after
+          </span>
+        ),
       },
       {
         path: "/rave-reviews",
-        text: "rave reviews",
+        text: (
+          <span style={{
+              lineHeight: "32px", padding: "0 10px", background: "white" }} >rave reviews </span>),
       },
       {
         path: "/press",
-        text: "press",
+        text: (
+          <span
+            style={{ padding: "0 10px", background: "white" }}
+          >
+            press
+          </span>
+        ),
       },
     ],
   },
