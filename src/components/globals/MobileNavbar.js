@@ -87,15 +87,18 @@ const MoreItemsWrapper = styled.div`
     padding-bottom: 10px;
     padding-top: 5px;
   }
-  & nav.show.sub-nav li {
-    background: var(--offWhite);
+  & nav.show.sub-nav li.sub-item {
   }
   & nav.sub-nav.hide {
     display: none;
   }
   & ul.sub-ul.show li {
+    background: var(--offWhite);
     text-align: center;
     list-style: none;
+  }
+  & ul.sub-ul.show li.show a {
+    background: var(--offWhite);
   }
 `
 
@@ -167,7 +170,7 @@ export default styled(MobileNavbar)`
 & hr.hr-50{
   border: none;
   width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   height: 1px;
 }
@@ -175,6 +178,7 @@ button.navbar-toggler {width: 100%; border: none; background:none; font-size: 16
 & nav.show.main-nav  button.navbar-toggler{ margin-bottom: 0px; outline: none;}
 & nav.hide.main-nav  button.navbar-toggler{ margin-bottom: 30px;outline: none;}
 & li {list-style: none;}
+& nav.show.main-nav li.parent:last-child {margin-bottom: 30px;}
 
 & button.show.plus-btn:hover{cursor: pointer}
 & button.hide.plus-btn:hover{

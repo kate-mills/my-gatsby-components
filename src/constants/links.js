@@ -15,10 +15,10 @@ export default [
     text: (
       <span
         style={{
-          borderLeft: "5px solid white",
+          borderLeft: "5px solid var(--offWhite)",
           lineHeight: "32px",
           padding: "0 10px",
-          background: "white",
+          background: "var(--offWhite)",
         }}
       >
         products
@@ -32,7 +32,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             cleansers
@@ -46,7 +46,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             toners
@@ -60,7 +60,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             moisturizers & spf
@@ -74,7 +74,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             eyes & lips
@@ -88,7 +88,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             serums & specialty
@@ -102,7 +102,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             exfoliants
@@ -114,7 +114,7 @@ export default [
         text: (
           <span
             style={{
-              background: "white",
+              background: "var(--offWhite)",
               lineHeight: "32px",
               padding: "0 10px",
             }}
@@ -129,10 +129,10 @@ export default [
     text: (
       <span
         style={{
-          borderLeft: "5px solid white",
+          borderLeft: "5px solid var(--offWhite)",
           lineHeight: "32px",
           padding: "0 10px",
-          background: "white",
+          background: "var(--offWhite)",
         }}
       >
         why mc?
@@ -146,7 +146,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             why choose us?
@@ -160,7 +160,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             before and after
@@ -174,7 +174,7 @@ export default [
             style={{
               lineHeight: "32px",
               padding: "0 10px",
-              background: "white",
+              background: "var(--offWhite)",
             }}
           >
             rave reviews{" "}
@@ -184,7 +184,9 @@ export default [
       {
         path: "/press",
         text: (
-          <span style={{ padding: "0 10px", background: "white" }}>press</span>
+          <span style={{ padding: "0 10px", background: "var(--offWhite)" }}>
+            press
+          </span>
         ),
       },
     ],
