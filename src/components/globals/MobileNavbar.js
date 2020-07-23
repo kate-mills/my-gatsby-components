@@ -45,7 +45,7 @@ const MoreItems = props => {
 
 const MoreItemsWrapper = styled.div`
   & {
-    background-color: var(--offWhite);
+    background: var(--mainWhite);
   }
   & button.plus-btn {
     ${setFont({
@@ -82,22 +82,18 @@ const MoreItemsWrapper = styled.div`
     font-weight: bold;
     letter-spacing: -1px;
   }
-
   & nav.show.sub-nav {
     box-sizing: border-box;
     padding-bottom: 10px;
     padding-top: 5px;
   }
   & nav.show.sub-nav li {
-    background: hsl(0 0% 5% / 0.12);
+    background: var(--offWhite);
   }
-
   & nav.sub-nav.hide {
     display: none;
   }
   & ul.sub-ul.show li {
-    font-size: 14px !important;
-    line-height: 28px;
     text-align: center;
     list-style: none;
   }
@@ -152,8 +148,8 @@ class MobileNavbar extends Component {
 
 export default styled(MobileNavbar)`
 &{
-font-size: 16px;
-line-height: 27px;
+  font-size: 16px;
+  line-height: 27px;
   letter-spacing: 1px;
 }
 & hr.hr-80{
@@ -171,7 +167,7 @@ line-height: 27px;
 & hr.hr-50{
   border: none;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   height: 1px;
 }
