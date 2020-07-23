@@ -54,18 +54,14 @@ const Wrapper = styled(YesNo)`
   }
   & ul {
     margin: 0 50px;
+    list-style-type:"*  ";
     list-style-position:outside;
-    list-style-type:disc;
-  }
-  li:before{
-    background: red;
   }
   & li{
     color: #5c5c5c;
     font-weight: 300;
     font-size: 15px;
     line-height: 27px;
-  }
   }
   & .flex-container  h2 {
     color:rgba(179,0,0,0.8);
@@ -93,16 +89,7 @@ const Wrapper = styled(YesNo)`
     font-weight:400;
     text-align:center;
   }
-${screen.phone.phone`
-    & .flex-container{
-      flex-flow:column nowrap;
-      align-items:center;
-      justify-content:center;
-
-    }
-`}
-
-
+  ${screen.phone.phone`& .flex-container{flex-flow:column nowrap;align-items:center;justify-content:center;}`}
 `
 
 export default Wrapper

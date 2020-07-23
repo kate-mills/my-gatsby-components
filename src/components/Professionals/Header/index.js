@@ -3,9 +3,10 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "./header.module.css"
 
 const Header = ({ title, msg }) => (
+  <>
   <header className={styles.header}>
+    <h1 style={{ textAlign: "center", fontSize: "37px",lineHeight:"35px",position:"sticky" }}>{title}</h1>
     <div className={styles[`header__wrap`]}>
-      <h1 style={{ textAlign: "center", fontSize: "45px" }}>{title}</h1>
       <nav role="main" className={styles[`header__nav`]}>
         <ul
           style={{
@@ -42,6 +43,7 @@ const Header = ({ title, msg }) => (
       </nav>
     </div>
   </header>
+  </>
 )
 
 Header.defaultProps = {
