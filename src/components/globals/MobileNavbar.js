@@ -44,7 +44,7 @@ const MoreItems = props => {
 }
 
 const MoreItemsWrapper = styled.div`
-  &{
+  & {
     background-color: var(--offWhite);
   }
   & button.plus-btn {
@@ -60,7 +60,7 @@ const MoreItemsWrapper = styled.div`
     outline: none;
     border: none;
     text-transform: uppercase;
-    align-items:center;
+    align-items: center;
     margin: 0 auto;
     letter-spacing: 1px;
     width: 100%;

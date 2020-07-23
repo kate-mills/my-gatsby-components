@@ -14,9 +14,12 @@ export default [
   {
     text: (
       <span
-        style={{ 
+        style={{
           borderLeft: "5px solid white",
-          lineHeight: "32px", padding: "0 10px", background: "white" }}
+          lineHeight: "32px",
+          padding: "0 10px",
+          background: "white",
+        }}
       >
         products
       </span>
@@ -26,7 +29,11 @@ export default [
         path: "/cleansers",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             cleansers
           </span>
@@ -36,7 +43,11 @@ export default [
         path: "/toners",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             toners
           </span>
@@ -46,7 +57,11 @@ export default [
         path: "/moisturizers-spf",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             moisturizers & spf
           </span>
@@ -56,7 +71,11 @@ export default [
         path: "/eyes-lips",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             eyes & lips
           </span>
@@ -66,7 +85,11 @@ export default [
         path: "/serums-specialty",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             serums & specialty
           </span>
@@ -76,7 +99,11 @@ export default [
         path: "/exfoliants",
         text: (
           <span
-            style={{ lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             exfoliants
           </span>
@@ -86,10 +113,10 @@ export default [
         path: "/masks",
         text: (
           <span
-            style={{ 
+            style={{
               background: "white",
               lineHeight: "32px",
-              padding: "0 10px"
+              padding: "0 10px",
             }}
           >
             masks
@@ -116,8 +143,11 @@ export default [
         path: "/why-mc",
         text: (
           <span
-            style={{ 
-              lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             why choose us?
           </span>
@@ -127,8 +157,11 @@ export default [
         path: "/before-and-after",
         text: (
           <span
-            style={{ 
-              lineHeight: "32px", padding: "0 10px", background: "white" }}
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
           >
             before and after
           </span>
@@ -137,17 +170,21 @@ export default [
       {
         path: "/rave-reviews",
         text: (
-          <span style={{
-              lineHeight: "32px", padding: "0 10px", background: "white" }} >rave reviews </span>),
+          <span
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "white",
+            }}
+          >
+            rave reviews{" "}
+          </span>
+        ),
       },
       {
         path: "/press",
         text: (
-          <span
-            style={{ padding: "0 10px", background: "white" }}
-          >
-            press
-          </span>
+          <span style={{ padding: "0 10px", background: "white" }}>press</span>
         ),
       },
     ],

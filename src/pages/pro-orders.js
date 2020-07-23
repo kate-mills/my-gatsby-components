@@ -11,9 +11,7 @@ const ProOrders = () => {
         <article>
           <p>
             If you have a login for online ordering click{" "}
-            <a
-              href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867"
-            >
+            <a href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867">
               HERE
             </a>
           </p>

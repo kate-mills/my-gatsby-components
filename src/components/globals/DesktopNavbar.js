@@ -54,9 +54,8 @@ const MoreItemsWrapper = styled.nav`
     margin-top: 0px;
   }
   & a:hover {
-    background-color:var(--mccPink);
+    background-color: var(--mccPink);
   }
-
 `
 class DesktopNavbar extends Component {
   render() {
