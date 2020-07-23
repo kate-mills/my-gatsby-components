@@ -49,7 +49,6 @@ body {
 
 main{
   min-height: 100vh;
-  white-space: pre-wrap;
 }
 #page{
   background: var(--mainWhite);
