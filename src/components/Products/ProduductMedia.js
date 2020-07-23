@@ -17,8 +17,8 @@ const ProductMedia = ({ className, name, imgRetail, video }) => {
       <div className="flex-item">
         <iframe
           className="media-video"
-          crossOrigin="SameSite"
-          samesite="None; Secure"
+          crossOrigin="None; Secure"
+          secure='true'
           src={`https://player.vimeo.com/video/${video}?color=ff665e&byline=0&title=0`}
           title={name}
           name={name}
