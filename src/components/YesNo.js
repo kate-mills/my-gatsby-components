@@ -54,42 +54,43 @@ const Wrapper = styled(YesNo)`
   }
   & ul {
     margin: 0 50px;
-    list-style-type:"*  ";
-    list-style-position:outside;
+    list-style-type: "*  ";
+    list-style-position: outside;
   }
-  & li{
+  & li {
     color: #5c5c5c;
     font-weight: 300;
     font-size: 15px;
     line-height: 27px;
   }
-  & .flex-container  h2 {
-    color:rgba(179,0,0,0.8);
-    font-size:30px;
-    font-weight:400;
-    line-height:42px;
-    text-align:center;
-    width:150px;
+  & .flex-container h2 {
+    color: rgba(179, 0, 0, 0.8);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    width: 150px;
   }
   & .flex-column h2.yn {
     font-size: 30px;
     line-height: 42px;
-    color: rgba(179, 0,0,0.8);
-    font-style:normal;
+    color: rgba(179, 0, 0, 0.8);
+    font-style: normal;
     font-weight: 400;
-    text-align:center;
-    padding:17px;
-    margin:0 auto;
+    text-align: center;
+    padding: 17px;
+    margin: 0 auto;
   }
   & .flex-column h3.yn {
-    font-size:21px;
-    line-height:32px;
+    font-size: 21px;
+    line-height: 32px;
     color: #524c4c;
-    font-style:italic;
-    font-weight:400;
-    text-align:center;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
   }
-  ${screen.phone.phone`& .flex-container{flex-flow:column nowrap;align-items:center;justify-content:center;}`}
+  ${screen.phone
+    .phone`& .flex-container{flex-flow:column nowrap;align-items:center;justify-content:center;}`}
 `
 
 export default Wrapper

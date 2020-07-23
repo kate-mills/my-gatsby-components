@@ -4,45 +4,54 @@ import styles from "./header.module.css"
 
 const Header = ({ title, msg }) => (
   <>
-  <header className={styles.header}>
-    <h1 style={{ textAlign: "center", fontSize: "37px",lineHeight:"35px",position:"sticky" }}>{title}</h1>
-    <div className={styles[`header__wrap`]}>
-      <nav role="main" className={styles[`header__nav`]}>
-        <ul
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          <li className={styles[`header__link`]}>
-            <AniLink fade to="/app/upcoming-classes">
-              {" "}
-              {`Upcoming Classes`}{" "}
-            </AniLink>
-          </li>
-          <li className={styles[`header__link`]}>
-            <AniLink fade to="/app/articles">
-              {" "}
-              {`Articles`}{" "}
-            </AniLink>
-          </li>
-          <li className={styles[`header__link`]}>
-            <AniLink fade to="/app/treatment-protocol-videos">
-              {" "}
-              {`Treatment Protocol & Videos`}{" "}
-            </AniLink>
-          </li>
-          <li className={styles[`header__link`]}>
-            <AniLink fade to="/app/product-images-and-logos">
-              {" "}
-              Product Images & Logos{" "}
-            </AniLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header className={styles.header}>
+      <h1
+        style={{
+          textAlign: "center",
+          fontSize: "37px",
+          lineHeight: "35px",
+          position: "sticky",
+        }}
+      >
+        {title}
+      </h1>
+      <div className={styles[`header__wrap`]}>
+        <nav role="main" className={styles[`header__nav`]}>
+          <ul
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <li className={styles[`header__link`]}>
+              <AniLink fade to="/app/upcoming-classes">
+                {" "}
+                {`Upcoming Classes`}{" "}
+              </AniLink>
+            </li>
+            <li className={styles[`header__link`]}>
+              <AniLink fade to="/app/articles">
+                {" "}
+                {`Articles`}{" "}
+              </AniLink>
+            </li>
+            <li className={styles[`header__link`]}>
+              <AniLink fade to="/app/treatment-protocol-videos">
+                {" "}
+                {`Treatment Protocol & Videos`}{" "}
+              </AniLink>
+            </li>
+            <li className={styles[`header__link`]}>
+              <AniLink fade to="/app/product-images-and-logos">
+                {" "}
+                Product Images & Logos{" "}
+              </AniLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </>
 )
 
