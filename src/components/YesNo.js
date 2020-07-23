@@ -50,7 +50,7 @@ const Wrapper = styled(YesNo)`
   & .flex-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   & ul {
     margin: 0 50px;
