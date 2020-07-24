@@ -5,14 +5,13 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Cleansers = ({ data }) => {
   return (
     <PageModel title="Cleansers">
       <CleansersWrapper>
-        <PageTitle title="Cleansers" />
+        <h1>Cleansers</h1>
         <p className="description">
           Whether skin is dry, normal, oily or in between,{" "}
           <span className="bold">
@@ -29,11 +28,11 @@ const Cleansers = ({ data }) => {
 }
 const CleansersWrapper = styled.div`
   & {
-    width: 70%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-inline-start: 1.3rem;
+    margin-inline-end: 1.3rem;
     margin-bottom: 1rem;
   }
   & p.description {
@@ -58,7 +57,7 @@ export const query = graphql`
           imgRetail {
             id
             description
-            fixed(cropFocus: CENTER, width: 325, quality: 100) {
+            fixed(cropFocus: CENTER, width: 177, height: 250, quality: 100) {
               ...GatsbyContentfulFixed
             }
           }

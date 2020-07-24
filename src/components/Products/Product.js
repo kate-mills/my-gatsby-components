@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { setFont } from "../../css/js/helper-styles"
-import ProductMedia from "./ProduductMedia"
+import ProductMedia from "./ProductImgPlayer"
 
 const Product = ({ product }) => {
   const { name, skinType, description, keyIngredients } = product
@@ -41,7 +41,10 @@ const Product = ({ product }) => {
 }
 const ProductWrapper = styled.article`
   & {
-    border: 2px solid var(--mccPink;);
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 90%;
+    margin-left: 30px;
   }
   & .product-name {
     ${setFont({
@@ -59,6 +62,7 @@ const ProductWrapper = styled.article`
 
   & .product-skintypes .skintype {
     font-style: italic;
+    font-weight: 400;
   }
   & .product-skintypes .skintype::after {
     content: ", ";

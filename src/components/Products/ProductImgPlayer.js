@@ -1,8 +1,11 @@
 import React from "react"
+
 import styled from "styled-components"
 import { screen } from "../../css/js/media-functions"
 
 import Image from "gatsby-image"
+
+import VideoMedia from "./ProductPlayer"
 
 const ProductMedia = ({ className, name, imgRetail, video }) => {
   return (
@@ -12,19 +15,7 @@ const ProductMedia = ({ className, name, imgRetail, video }) => {
         fixed={imgRetail.fixed}
         alt={imgRetail.description}
       />
-      <iframe
-        className="media-video flex-item"
-        crossOrigin="None; Secure"
-        secure="true"
-        src={`https://player.vimeo.com/video/${video}?color=ff665e&byline=0&title=0`}
-        title={name}
-        name={name}
-        width="440"
-        height="250"
-        frameBorder="0"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      ></iframe>
+      <VideoMedia video={video} />
     </div>
   )
 }
@@ -33,20 +24,17 @@ const MediaWrapper = styled(ProductMedia)`
   & {
     display: flex;
     flex-direction: row;
-    padding: 10px 0;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 10px 0;
+  }
+  & iframe {
+    width: 440px;
+    height: 240px;
   }
   div.flex-item {
     transition: var(--mainTransition);
   }
-
-  & > div.flex-item,
-  & > div.flex-item.iframe {
-    object-fit: cover;
-  }
-  ${screen.phone.phone`
-    & .flex-item { }
-    iframe{width: fit-content;}
-  `}
+  ${screen.phone.phone` & { justify-content: center; } `}
 `
 export default MediaWrapper
