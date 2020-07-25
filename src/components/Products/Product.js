@@ -43,7 +43,6 @@ const ProductWrapper = styled.article`
   & {
     display: flex;
     flex-flow: column nowrap;
-    max-width: 90%;
     margin: 0 auto;
   }
   & .product-name {
