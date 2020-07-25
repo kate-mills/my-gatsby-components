@@ -10,7 +10,7 @@ import ProductList from "../components/Products/ProductList"
 
 const Moisturizers = ({ data }) => {
   return (
-    <PageModel title="Moisturizers & SPF">
+    <PageModel title="Eyes & Lips">
       <CleansersWrapper>
         <PageTitle title="Eyes & Lips" />
         <p className="description">

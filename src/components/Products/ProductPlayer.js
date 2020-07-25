@@ -5,9 +5,9 @@ import ReactPlayer from "react-player"
 
 class VimeoPlayer extends React.Component {
   render() {
-    return this.props.vimeoUrl ? (
-      <div></div>
-    ) : (
+    return (
+    this.props.vimeoUrl ? (
+    false ) : (
       <ReactPlayer
         className="react-player aspect-ratio-box"
         url={`https://vimeo.com/${this.props.id}`}
@@ -25,8 +25,8 @@ class VimeoPlayer extends React.Component {
             playerOptions: {
               color: "eef4f7",
               title: false,
-              height: "240px",
               width: "427px",
+              height: "240px",
               portrait: true,
               playing: false,
               playsinline: true,
@@ -38,6 +38,6 @@ class VimeoPlayer extends React.Component {
         }}
       />
     )
-  }
+  )}
 }
 export default VimeoPlayer

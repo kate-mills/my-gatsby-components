@@ -11,7 +11,7 @@ import ProductList from "../components/Products/ProductList"
 const Moisturizers = ({ data }) => {
   return (
     <PageModel title="Moisturizers & SPF">
-      <CleansersWrapper>
+      <MoisturizersWrapper>
         <PageTitle title="Moisturizers & SPF" />
         <p className="description">
           Whether concerned about slowing the look of aging, keeping skin
@@ -21,11 +21,11 @@ const Moisturizers = ({ data }) => {
           </span>
         </p>
         <ProductList products={data.products} />
-      </CleansersWrapper>
+      </MoisturizersWrapper>
     </PageModel>
   )
 }
-const CleansersWrapper = styled.div`
+const MoisturizersWrapper = styled.div`
   & {
     width: 85%;
     margin: 0 auto;

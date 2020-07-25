@@ -28,22 +28,21 @@ const Masks = ({ data }) => {
 }
 const MasksWrapper = styled.div`
   & {
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin-bottom: 1rem;
-  }
-  & p.description {
     text-align: left;
+    box-sizing: border-box;
   }
 `
 
 export const query = graphql`
   {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "mask" } }
+      filter: { category: { eq: "masks" } }
       sort: { order: [DESC, ASC], fields: [featured, name] }
     ) {
       edges {
