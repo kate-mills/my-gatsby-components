@@ -1,7 +1,7 @@
 export const screen = {
   phone: {
     phone: (...args) => {
-      return `@media (min-width: 280px) and (max-width: 480px){${args};};`
+      return `@media (min-width: 0px) and (max-width: 480px){${args};};`
     },
   },
   tablet: {

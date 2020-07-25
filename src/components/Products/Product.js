@@ -44,7 +44,7 @@ const ProductWrapper = styled.article`
     display: flex;
     flex-flow: column nowrap;
     max-width: 90%;
-    margin-left: 30px;
+    margin: 0 auto;
   }
   & .product-name {
     ${setFont({
