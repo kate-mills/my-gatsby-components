@@ -10,6 +10,9 @@ const ProductMedia = ({ className, name, imgRetail, video }) => {
       <Image
         className="img flex-item"
         fixed={imgRetail.fixed}
+        height="240"
+        objectFit="contain"
+        objectPosition="50% 50%"
         alt={imgRetail.description}
       />
       <iframe

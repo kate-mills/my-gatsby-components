@@ -72,6 +72,7 @@ const ProductWrapper = styled.article`
   }
 
   & .product-ingredients p.bold {
+    font-weight: 700;
     margin-top: 20px;
     text-align: left;
   }

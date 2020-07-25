@@ -49,7 +49,7 @@ const SerumsWrapper = styled.div`
 export const query = graphql`
   {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "serum" } }
+      filter: { category: { eq: "serums & specialty" } }
       sort: { order: [DESC, ASC], fields: [featured, name] }
     ) {
       edges {

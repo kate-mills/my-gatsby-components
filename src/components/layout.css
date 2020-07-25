@@ -22,29 +22,25 @@ html {
   font-family: 'proxima-nova', 'sans-serif';
   display: block;
   font-size: 100%;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: 'proxima-nova', 'sans-serif';
-    font-weight: normal;
-    font-size: 13px;
-    font-family: proxima-nova;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 15px;
-    text-transform: none;
-    text-decoration: none;
     background-image: none;
     background-position: top left;
     background-size: auto;
     background-attachment: scroll;
     background-repeat: repeat;
     background-color: #ff665e;
-    color: #524c4c;
+    color: #5c5c5c;
+    font-family: 'proxima-nova', 'sans-serif';
+    line-height: 27px; 
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
     overflow: scroll;
+    text-transform: none;
+    text-decoration: none;
 }
 
 main{
@@ -136,6 +132,26 @@ article.page-article:last-child{
 .btn-primary:hover {
   background: transparent;
   color: var(--primaryColor);
+}
+
+
+
+/*https://css-tricks.com/aspect-ratio-boxes/*/
+.aspect-ratio-box {
+  background: var(--mainWhite);
+}
+.aspect-ratio-box::before {
+  content: "";
+  width: 1px;
+  margin-left: -1px;
+  float: left;
+  height: 0;
+  padding-top: 591.44px / 1127.34px * 100%;
+}
+.aspect-ratio-box::after { /* to clear float */
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*phone */

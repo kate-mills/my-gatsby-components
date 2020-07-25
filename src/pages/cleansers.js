@@ -5,13 +5,14 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
+import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Cleansers = ({ data }) => {
   return (
     <PageModel title="Cleansers">
       <CleansersWrapper>
-        <h1>Cleansers</h1>
+        <PageTitle title="Cleansers" />
         <p className="description">
           Whether skin is dry, normal, oily or in between,{" "}
           <span className="bold">
@@ -28,15 +29,14 @@ const Cleansers = ({ data }) => {
 }
 const CleansersWrapper = styled.div`
   & {
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-inline-start: 1.3rem;
-    margin-inline-end: 1.3rem;
     margin-bottom: 1rem;
-  }
-  & p.description {
     text-align: left;
+    box-sizing: border-box;
   }
 `
 

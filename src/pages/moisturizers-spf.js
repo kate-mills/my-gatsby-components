@@ -27,22 +27,21 @@ const Moisturizers = ({ data }) => {
 }
 const CleansersWrapper = styled.div`
   & {
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin-bottom: 1rem;
-  }
-  & p.description {
     text-align: left;
+    box-sizing: border-box;
   }
 `
 
 export const query = graphql`
   {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "moisturizer" } }
+      filter: { category: { eq: "moisturizers & spf" } }
       sort: { order: [DESC, ASC], fields: [featured, name] }
     ) {
       edges {
@@ -56,7 +55,7 @@ export const query = graphql`
           imgRetail {
             id
             description
-            fixed(cropFocus: CENTER, width: 325, quality: 100) {
+            fixed(cropFocus: CENTER, quality: 100) {
               ...GatsbyContentfulFixed
             }
           }
