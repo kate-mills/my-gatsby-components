@@ -8,12 +8,13 @@ import Image from "gatsby-image"
 import VideoMedia from "./ProductPlayer"
 
 const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
+  if(vimeoUrl){ video = null }
   return (
     <div className={`${className} media aspect-ratio-box`}>
       <div className="flex-item image-media aspect-ratio-box">
         <Image fixed={imgRetail.fixed} alt={imgRetail.description} />
       </div>
-      {video ? (
+      { video ? (
         <VideoMedia id={video} url={`https://vimeo.com/${video}`} />
       ) : (
         <div></div>
