@@ -40,5 +40,11 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-preconnect",
+      options: {
+        domains: ["https://foo.com", "https://bar.com"],
+      },
+    },
   ],
 }

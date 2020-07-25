@@ -7,19 +7,17 @@ import Image from "gatsby-image"
 
 import VideoMedia from "./ProductPlayer"
 
-const ProductMedia = ({ className, name, imgRetail, video }) => {
+const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
   return (
-    <div className={`${className} media`}>
-      <div className="flex-item image-media">
+    <div className={`${className} media aspect-ratio-box`}>
+      <div className="flex-item image-media aspect-ratio-box">
         <Image fixed={imgRetail.fixed} alt={imgRetail.description} />
       </div>
-      <div className="flex-item video-media">
-        {video ? (
-          <VideoMedia id={video} url={`https://vimeo.com/${video}`} />
-        ) : (
-          false
-        )}
-      </div>
+      {video ? (
+        <VideoMedia id={video} url={`https://vimeo.com/${video}`} />
+      ) : (
+        <div></div>
+      )}
     </div>
   )
 }
@@ -37,8 +35,7 @@ const MediaWrapper = styled(ProductMedia)`
       max-width: inherit;
       padding: 30px auto;
     }
-    & .video-media{width: 90vw;}
-    & .flex-item {}
+    .react-player{max-width: 100vw;}
 
   `}
   ${screen.tablet.tablet`
