@@ -11,7 +11,7 @@ const About = () => {
   return (
     <PageModel title="About">
       <AboutWrapper>
-        <div className="flexItem col">
+        <div className="flexItem col" style={{margin: "0 auto" }}>
           <div className="innerFlexContainer">
             <h1>My Philosophy</h1>
             <div className="flexItem innerFlexItem">
@@ -47,20 +47,26 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flexItem col">
+        <div className="flexItem col" style={{margin: "0 auto" }}>
           <div className="innerFlexContainer">
-            <h2>Meet Michele Corley</h2>
+            <h2 >Meet Michele Corley</h2>
             <img
+              style={{
+                display: "block",
+                margin: "0 auto",
+                objectFit:"cover",
+                width: "90%",
+                height: "auto",
+                whiteSpace: "initial",
+              }}
               src={Img.michele.md}
               alt={Img.michele.alt}
               width="446"
               height="457"
               overflow="hidden"
-              crossOrigin=""
             />
-
             <div className="flexItem">
-              <p className="tiny">
+              <p className="text tiny" style={{ margin: "0 auto", fontSize: "12px", lineHeight: "27px", paddingBlockStart: "10px", paddingBlockEnd: "10px", paddingInlineStart: "15px", paddingInlineEnd: "unset"  }}>
                 Michele is a licensed esthetician and creative visionary behind
                 every Michele Corley Clinical Skincare product. She is deeply
                 committed to educating herself first, so she can then be a
@@ -69,7 +75,7 @@ const About = () => {
                 through each Michele Corley Clinical Skincare Product and every
                 client interaction.
               </p>
-              <p className="tiny">
+              <p className="text tiny" style={{ margin: "0 auto", fontSize: "12px", lineHeight: "27px", paddingBlockStart: "10px", paddingBlockEnd: "10px", paddingInlineStart: "15px", paddingInlineEnd: "unset"  }}>
                 Michele studied with one of the foremost cosmetic chemistry
                 authorities in the professional skincare industry, and has
                 advanced knowledge of skin aging, acne conditions and rosecea.
@@ -83,24 +89,29 @@ const About = () => {
 }
 const AboutWrapper = styled.section`
   &{
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: center;
     box-sizing: border-box;
     display: flex;
     color: ${setColor.mainText};
     justify-content: center;
-    align-items: center;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
-  
+    line-height: 27px;
+    white-space: initial;
   }
-  & img {object-fit:contain;}
+  & .flexItem { box-sizing: border-box; white-space:pre-line;  }
+
   & h1 {
     ${setFont({
       size: "45px",
       height: "54px",
       color: "#222222",
       weight: "300",
-    })};
+    })}
     text-align: left;
+    white-space: break-spaces;
   }
   & h2 {
     ${setFont({
@@ -110,7 +121,9 @@ const AboutWrapper = styled.section`
       style: "normal",
       weight: "400",
     })};
-  text-align: center;
+   text-align: center;
+   margin-top: unset;
+   white-space: break-spaces;
   }
   & h2.italic{
     ${setFont({
@@ -119,45 +132,45 @@ const AboutWrapper = styled.section`
       color: setColor.h2,
       style: "italic",
       weight: "400",
-    })}
-    text-align: left;
+    })} text-align: left;
+    padding-inline-start: 10%;
+    padding-block-start: 0%;
   }
-  & .flexItem { box-sizing: border-box; margin: 0 auto; }
-  & p.text {
-    font-size: 16px;
-    line-height: 27px;
-  }
-  & p.tiny {
-    font-size: 15px;
-    line-height: 27px;
-  }
-  & p.text,p.tiny {
+
+  & p {paddingng-inline-start: 5px; white-space: initial;}
+  & p.text{
+    padding-inline-start: 15px;
+    padding-inline-end: 20px;
+    display:block; 
+    padding-block-end: 10px;
+    margin: 0 auto;
     text-align: left;
     font-weight: 300;
+    color: #5c5c5c; 
+    font-size: 16px;
+    line-height: 27px;
+    white-space: initial;
   }
   /* Meet Michele Corley */
   .col:nth-child(2) {text-align: center;}
 
   ${screen.phone.phone`
     & {flex-direction: column; padding: 20px;}
-    & img {width: 100%;}
     & .col:nth-child(2) {margin-top: 30px;}
-    h1{ padding-top: 10px;}
-    p.text, p.tiny {
-      margin: 0 auto;
-    }
+    & h1{ padding-top: 10px;}
+    & img {max-width: 100%; height: auto;}
   `}
+P
   ${screen.tablet.tablet`
-    & {
+    & { 
       flex-direction: column;
-      margin: 0 auto;
+      flex-wrap: nowrap;
+      margin: 0 auto; 
     }
-    & img {width: 100%;}
-
     & .col { padding: 15px; }
-    & .col:nth-child(1){ flex-direction: column; }
-    h2.italic{text-align: left; padding-left: 5%;}
-
+    & .col:nth-child(1){ flex-direction: column;}
+    & p.text.tiny {width: 80%;}
+    & img {max-width: 80%; height: auto;}
   `}
   ${screen.desktop.desktop`
     & {
@@ -166,12 +179,11 @@ const AboutWrapper = styled.section`
       align-items: flex-start;
       justify-content: space-evenly;
     }
-    & .col {
-      margin: 10px; 
-      padding: 20px;
-    }
-    & .col:nth-child(2) {
-    }
+    & .col { margin: 10px; padding: 20px; }
+    & .col:nth-child(2) { }
+    & img {max-width: 80%; height: auto;}
+    & p.text.tiny {width: 80%; margin: 0 auto; }
+
   `}
 `
 export default About
