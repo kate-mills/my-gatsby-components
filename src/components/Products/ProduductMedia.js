@@ -40,7 +40,6 @@ const MediaWrapper = styled(ProductMedia)`
     justify-content: space-evenly;
   }
   div.flex-item {
-    transition: var(--mainTransition);
   }
 
   & > div.flex-item,

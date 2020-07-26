@@ -26,12 +26,14 @@ html {
   padding: 0;
 }
 body {
+    background-attachment: fixed;
     background-image: none;
     background-position: top left;
     background-size: auto;
     background-attachment: scroll;
     background-repeat: repeat;
-    background-color: #ff665e;
+    background: var(--mccPink);
+    background-color: var(--mccPink);
     color: #5c5c5c;
     font-family: 'proxima-nova', 'sans-serif';
     line-height: 27px; 
@@ -134,8 +136,6 @@ article.page-article:last-child{
   color: var(--primaryColor);
 }
 
-
-
 /*https://css-tricks.com/aspect-ratio-boxes/*/
 .aspect-ratio-box {
   background: var(--mainWhite);
@@ -155,21 +155,26 @@ article.page-article:last-child{
 }
 
 /*phone */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 480px){
   div#content{width:100vw;margin:0 auto;} /* 0vw of pink border*/
+}
+
+/*tablet - sm*/
+@media screen and (min-width:481px) and (max-width: 767px){
+  div#content{width:100vw;margin:0 auto;} 
 }
 
 /*tablet - landscape */
 @media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  div#content{width:80vw;margin:0 auto;} /* 20vw of pink border*/
+  div#content{width:99vw;margin:0 auto;} /* 20vw of pink border*/
 }
 
 /*tablet - md & large */
 @media screen and (min-width:768px) and (max-width:1280px){
-  div#content{width:80vw;margin:0 auto;} /* 20vw of pink border*/
+  div#content{width:99vw;margin:0 auto;} /* 20vw of pink border*/
 }
 
 /*desktop */
 @media screen and (min-width: 1281px){
-  div#content{width:70vw;margin:0 auto;} /* 30vw of pink border*/
+  div#content{width:1280px;margin:0 auto;} /* 30vw of pink border*/
 }

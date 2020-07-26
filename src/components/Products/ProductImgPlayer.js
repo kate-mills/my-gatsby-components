@@ -25,7 +25,6 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
 
 const MediaWrapper = styled(ProductMedia)`
   & { padding: 10px; }
-  div.flex-item { transition: var(--mainTransition);}
   ${screen.phone.phone` 
     & {
       display: flex;

@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
     <>
       <OverlayPink />
       <Announcement />
-      <Status />
       <div id="content">
+        <Status />
         <MobileNavbar />
         <LogoImg />
         <DesktopNavbar />
