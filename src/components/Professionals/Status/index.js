@@ -1,7 +1,6 @@
 import React from "react"
 import { navigate } from "@reach/router"
 import {
-  getCurrentUser,
   isLoggedIn,
   logout,
   isAppInPath,
@@ -16,7 +15,7 @@ export default () => {
   if (!isLoggedIn()) {
     details = (
       <p className={styles[`status__text`]}>
-        <span> Professionals</span>
+        <span>Professionals</span>
         {` `}
         <AniLink
           fade
@@ -29,13 +28,9 @@ export default () => {
       </p>
     )
   } else {
-    const { name, email } = getCurrentUser()
     details = (
       <p className={styles[`status__text`]}>
-        {`     `}
-        Logged in as {name} ({email}
-        )!
-        {` `}
+        {` `} Credentialed user - {` `}
         <AniLink
           className={styles[`professional__status`]}
           fade
@@ -55,9 +50,7 @@ export default () => {
               className={styles[`professional__status`]}
               fade
               to="/app/articles"
-            >
-              Professionals
-            </AniLink>
+            >Professionals</AniLink>
           ) : (
             ""
           )}{" "}
