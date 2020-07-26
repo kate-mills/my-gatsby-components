@@ -6,25 +6,25 @@ import {handleStatus, hideAnnouncement} from "../utils/announcement"
 const borderOnly = <div id="border-only" style={{border: "1px solid rgba(0, 0, 0, 0.1)"}}></div>
 
 const Announcement = ({ className }) => {
-  if(hideAnnouncement()){return borderOnly}
-  return (
-    <div id="announcement" className={`${className} grid-container`} style={{color: "var(--mainWhite)"}}>
-      <div className="grid-item"></div>
-      <div className="grid-item">
-        <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ info@michelecorley.com</p>
+  if(!hideAnnouncement()){
+    return (
+      <div id="announcement" className={`${className} grid-container`} style={{color: "var(--mainWhite)"}}>
+        <div className="grid-item"></div>
+        <div className="grid-item">
+          <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ info@michelecorley.com</p>
+        </div>
+        <div className="grid-item">
+          <button onClick={() => { handleStatus()
+              document.getElementById("announcement").style.display = "none"
+            }}
+          >
+            x
+          </button>
+        </div>
       </div>
-      <div className="grid-item">
-        <button
-          onClick={() => {
-            handleStatus()
-            document.getElementById("announcement").style.display = "none"
-          }}
-        >
-          x
-        </button>
-      </div>
-    </div>
-  )
+      )
+  }
+  return borderOnly
 }
 const WrappedAnnouncement = styled(Announcement)`
   & {
