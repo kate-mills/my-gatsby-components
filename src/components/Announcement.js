@@ -8,14 +8,16 @@ const borderOnly = <div id="border-only" style={{border: "1px solid rgba(0, 0, 0
 const Announcement = ({ className }) => {
   if(!hideAnnouncement()){
     return (
-      <div id="announcement" className={`${className} grid-container`} style={{color: "var(--mainWhite)"}}>
+      <div id="x" className={`${className} grid-container`}>
         <div className="grid-item"></div>
         <div className="grid-item">
           <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ info@michelecorley.com</p>
         </div>
         <div className="grid-item">
-          <button onClick={() => { handleStatus()
-              document.getElementById("announcement").style.display = "none"
+          <button
+            onClick={ () => {
+              handleStatus()
+              document.getElementById("x").style.display = "none"
             }}
           >
             x
