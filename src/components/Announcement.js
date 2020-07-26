@@ -1,16 +1,24 @@
 import React from "react"
 import styled from "styled-components"
+import {screen} from "../css/js/media-functions"
+import {handleStatus, checkStatus, hideAnnouncement} from "../utils/announcement"
 
 const Announcement = ({ className }) => {
+  if(hideAnnouncement()){
+    return null
+  }
   return (
-    <div id="announcement" className={`${className} grid-container`}>
+    <div id="announcement" className={`${className} grid-container`} style={{color: "var(--mainWhite)"}}>
       <div className="grid-item"></div>
       <div className="grid-item">
-        <p> 707.637.4996 ~ info@michelecorley.com</p>
+        <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ info@michelecorley.com</p>
       </div>
       <div className="grid-item">
         <button
           onClick={() => {
+            handleStatus()
+            let x = checkStatus()
+            console.log('currentStatus', x)
             document.getElementById("announcement").style.display = "none"
           }}
         >
@@ -64,5 +72,7 @@ const WrappedAnnouncement = styled(Announcement)`
     background: #ffffff;
     color: #ff665e;
   }
+  ${screen.phone.phone` & {display: none;} `}
+  ${screen.tablet.tablet` & {display: none;} `}
 `
 export default WrappedAnnouncement
