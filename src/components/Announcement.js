@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import {screen} from "../css/js/media-functions"
-import {handleStatus, checkStatus, hideAnnouncement} from "../utils/announcement"
+import {handleStatus, hideAnnouncement} from "../utils/announcement"
+
+const borderOnly = <div id="border-only" style={{border: "1px solid rgba(0, 0, 0, 0.1)"}}></div>
 
 const Announcement = ({ className }) => {
-  if(hideAnnouncement()){
-    return null
-  }
+  if(hideAnnouncement()){return borderOnly}
   return (
     <div id="announcement" className={`${className} grid-container`} style={{color: "var(--mainWhite)"}}>
       <div className="grid-item"></div>
@@ -17,8 +17,6 @@ const Announcement = ({ className }) => {
         <button
           onClick={() => {
             handleStatus()
-            let x = checkStatus()
-            console.log('currentStatus', x)
             document.getElementById("announcement").style.display = "none"
           }}
         >
