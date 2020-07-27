@@ -163,7 +163,7 @@ class ClientSearch extends Component {
                       cursor: `pointer`,
                     }}
                   >
-                    Product CONTENTFUL_ID
+                    Product ID
                   </th>
                   <th
                     style={{

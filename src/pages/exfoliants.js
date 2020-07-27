@@ -43,7 +43,7 @@ export const query = graphql`
   {
     products: allContentfulMccProduct(
       filter: { category: { eq: "exfoliants" } }
-      sort: { order: [DESC, ASC], fields: [featured, name] }
+      sort: { order: [ASC], fields: [name] }
     ) {
       edges {
         node {

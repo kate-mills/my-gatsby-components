@@ -42,7 +42,7 @@ export const query = graphql`
   {
     products: allContentfulMccProduct(
       filter: { category: { eq: "toner" } }
-      sort: { order: [DESC, ASC], fields: [featured, name] }
+      sort: { order: [ASC], fields: [name] }
     ) {
       edges {
         node {
