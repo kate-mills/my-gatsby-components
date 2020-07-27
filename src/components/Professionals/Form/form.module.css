@@ -38,3 +38,16 @@
 .form__button:focus {
   background-color: color(var(--mccPink) lightness(-20%));
 }
+
+.form__instructions{
+  text-align: center;
+  max-width: 70%;
+}
+
+
+@media screen and (max-width: 600px){
+.form__instructions{
+  text-align: center;
+  max-width: 70%;
+}
+}

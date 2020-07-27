@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 640px;
+  max-width: 80%;
   margin: 2rem auto 3rem;
 }
