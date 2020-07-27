@@ -41,7 +41,7 @@ const PageWrapper = styled.div`
 export const query = graphql`
   {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "toner" } }
+      filter: { category: { eq: "toners" } }
       sort: { order: [ASC], fields: [name] }
     ) {
       edges {

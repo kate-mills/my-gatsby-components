@@ -43,7 +43,7 @@ const CleansersWrapper = styled.div`
 export const query = graphql`
   {
     products: allContentfulMccProduct(
-      filter: { category: { eq: "cleanser" } }
+      filter: { category: { eq: "cleansers" } }
       sort: { order: [ASC], fields: [name] }
     ) {
       edges {
