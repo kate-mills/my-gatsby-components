@@ -56,7 +56,7 @@ const MoreItemsWrapper = styled.div`
     })}
     display:flex;
     justify-content: center;
-    background: none;
+    background: var(--mainWhite);
     outline: none;
     border: none;
     text-transform: uppercase;
@@ -93,12 +93,12 @@ const MoreItemsWrapper = styled.div`
     display: none;
   }
   & ul.sub-ul.show li {
-    background: var(--offWhite);
+    background: var(--mainWhite);
     text-align: center;
     list-style: none;
   }
   & ul.sub-ul.show li.show a {
-    background: var(--offWhite);
+    background: var(--mainWhite);
   }
 `
 
@@ -174,7 +174,7 @@ export default styled(MobileNavbar)`
   margin: 0 auto;
   height: 1px;
 }
-button.navbar-toggler {width: 100%; border: none; background:none; font-size: 16px;}
+button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); font-size: 16px;}
 & nav.show.main-nav  button.navbar-toggler{ margin-bottom: 0px; outline: none;}
 & nav.hide.main-nav  button.navbar-toggler{ margin-bottom: 30px;outline: none;}
 & li {list-style: none;}

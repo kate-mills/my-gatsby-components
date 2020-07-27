@@ -8,7 +8,6 @@ import ContactForm from "../components/ContactForm"
 import styled from "styled-components"
 
 const ContactPage = ({data}) => {
-  console.log(data)
   return (
     <PageModel title="Contact">
       <PageWrapper>
