@@ -24,7 +24,7 @@ class VimeoPlayer extends React.Component {
             controls: true,
             playerOptions: {
               color: "eef4f7",
-              title: false,
+              title: true,
               width: "427px",
               height: "240px",
               portrait: true,
