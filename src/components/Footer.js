@@ -34,7 +34,7 @@ const Footer = ({ className }) => {
           })}
         </div>
         <div className="row lg-text phone-email">
-          <p className="phone">707.637.4996</p>
+          <p className="phone" style={{color: "#524c4c"}}>707.637.4996</p>
           &middot;
           <p className="email">info@michelecorley.com</p>
         </div>
