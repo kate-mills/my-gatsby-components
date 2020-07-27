@@ -4,7 +4,7 @@ import styled from "styled-components"
 const Title = ({ className, title }) => {
   return (
     <div className={className}>
-      <h1 className="product-category title">{title} </h1>
+      <h1 className="product-category title">{title}</h1>
     </div>
   )
 }
