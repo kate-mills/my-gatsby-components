@@ -3,7 +3,6 @@
 :root {
   --primaryColor: #ff665e;
   --mccPink: #ff665e;
-  --mccBlue: #6495ed;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -57,11 +56,10 @@ main{
   font-size: 15px;
 }
 h1 {
-    font-family: Varela Round,arial,sans-serif;
+    font-family: 'proxima-nova', 'sans-serif';
     font-weight: normal;
     text-transform: capitalize;
     letter-spacing: 3px;
-    font-family: proxima-nova;
     font-weight: 300;
     font-style: normal;
     line-height: 1.2em;
@@ -80,6 +78,12 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .3em;
     font-weight: 300;
+}
+
+a {
+  color: var(--mainBlack);
+  cursor: pointer;
+
 }
 div#content {
   top: 0;
