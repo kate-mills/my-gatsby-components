@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
 
-import OverlayPink from "./OverlayPink"
 import { LogoImg } from "./LogoImg"
 import Announcement from "./Announcement"
 import Status from "./Professionals/Status"
@@ -14,7 +13,6 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
     <>
-      <OverlayPink />
       <Announcement />
       <div id="content">
         <Status />

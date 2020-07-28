@@ -43,10 +43,12 @@ body {
     overflow: scroll;
     text-transform: none;
     text-decoration: none;
+    min-height: 100vh;
 }
 
 main{
-  min-height: 100vh;
+  background: var(--mainWhite);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 #page{
   background: var(--mainWhite);
@@ -84,8 +86,9 @@ div#content {
   right: 0;
   bottom: 0;
   left: 0;
-  background:white;
+  background:var(--mainWhite);
   z-index: 0;
+  border-bottom: 5px solid var(--mccPink);
 }
 nav  li  a {
     font-family: 'proxima-nova', 'sans-serif';
@@ -176,5 +179,7 @@ article.page-article:last-child{
 
 /*desktop */
 @media screen and (min-width: 1281px){
-  div#content{width:1280px;margin:0 auto;} /* 30vw of pink border*/
+  div#content{
+    width:1280px;margin:0 auto;
+  } /* 30vw of pink border*/
 }
