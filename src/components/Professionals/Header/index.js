@@ -5,49 +5,32 @@ import styles from "./header.module.css"
 const Header = ({ title, msg }) => (
   <>
     <header className={styles.header}>
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "37px",
-        }}
-      >
-        {title}
-      </h1>
       <div className={styles[`header__wrap`]}>
         <nav role="main" className={styles[`header__nav`]}>
-          <ul
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
+          <ul>
             <li className={styles[`header__link`]}>
               <AniLink fade to="/app/upcoming-classes">
-                {" "}
-                {`Upcoming Classes`}{" "}
+                {`Upcoming Classes`}
               </AniLink>
             </li>
             <li className={styles[`header__link`]}>
               <AniLink fade to="/app/articles">
-                {" "}
-                {`Articles`}{" "}
+                {`Articles`}
               </AniLink>
             </li>
             <li className={styles[`header__link`]}>
               <AniLink fade to="/app/treatment-protocol-videos">
-                {" "}
-                {`Treatment Protocol & Videos`}{" "}
+                {`Treatment Protocol & Videos`}
               </AniLink>
             </li>
             <li className={styles[`header__link`]}>
               <AniLink fade to="/app/product-images-and-logos">
-                {" "}
-                Product Images & Logos{" "}
+                Product Images & Logos
               </AniLink>
             </li>
           </ul>
         </nav>
+        <h1 className={styles[`header__title`]}>{title}</h1>
       </div>
     </header>
   </>
