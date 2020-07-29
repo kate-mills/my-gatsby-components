@@ -1,5 +1,4 @@
 import React from "react"
-import View from "./View"
 import Header from "./Header"
 
 import { graphql, useStaticQuery } from "gatsby"
@@ -18,7 +17,6 @@ const Profile = () => {
   console.log('data', data)
   return (
     <>
-      <View>
       <Header title="Treatment Protocol & Videos" />
       <div>
         <article>
@@ -42,7 +40,6 @@ const Profile = () => {
         <p>MC, Visa, American Express, and Discover are accepted</p>
         </article>
         </div>
-      </View>
     </>
   )
 }
