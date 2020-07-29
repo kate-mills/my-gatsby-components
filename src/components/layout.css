@@ -96,15 +96,6 @@ a {
 .facebook {
   color: #285aeb;
 }
-div#content {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background:var(--mainWhite);
-  z-index: 0;
-  border-bottom: 5px solid var(--mccPink);
-}
 nav  li  a {
     font-family: 'proxima-nova', 'sans-serif';
     font-size: 15px;
@@ -163,7 +154,6 @@ article.page-article:last-child{
   border: 2px solid var(--primaryColor);
 }
 
-
 /*https://css-tricks.com/aspect-ratio-boxes/*/
 .aspect-ratio-box {
   background: var(--mainWhite);
@@ -182,29 +172,45 @@ article.page-article:last-child{
   clear: both;
 }
 
+
+div#content {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid rgba(0, 0, 0, .1);
+  background:var(--mainWhite);
+  z-index: 0;
+  margin: 55px auto;
+}
+
 /*phone */
 @media screen and (max-width: 480px){
-  div#content{width:100vw;margin:0 auto;} /* 0vw of pink border*/
+  div#content{width:100vw;} /* 0vw of pink border*/
 }
 
 /*tablet - sm*/
 @media screen and (min-width:481px) and (max-width: 767px){
-  div#content{width:100vw;margin:0 auto;} 
+  div#content{width:100vw;} 
 }
 
 /*tablet - landscape */
 @media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  div#content{width:99vw;margin:0 auto;} /* 20vw of pink border*/
+  div#content{width:99vw;} /* 20vw of pink border*/
+  margin: 0px auto;
+  padding: 50px 50px 0;
+  border-width: 0px !important;
 }
 
 /*tablet - md & large */
 @media screen and (min-width:768px) and (max-width:1280px){
-  div#content{width:99vw;margin:0 auto;} /* 20vw of pink border*/
+  div#content{width:99vw;} /* 20vw of pink border*/
 }
 
 /*desktop */
 @media screen and (min-width: 1281px){
   div#content{
-    width:1280px;margin:0 auto;
+    max-width: 1030px;
+    padding: 50px 50px 0;
   } /* 30vw of pink border*/
 }
