@@ -7,6 +7,7 @@ import Announcement from "./Announcement"
 import Status from "./Professionals/Status"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
+import CallToActionBtn from "./CallToActionBtn"
 
 import Footer from "./Footer"
 
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
         <DesktopNavbar />
         <main>
           {children}
+          <CallToActionBtn/>
           <Footer />
         </main>
       </div>

@@ -10,8 +10,8 @@
   --lightGrey:#dcd9d9;
   --mainGrey: #d3d3d3;
   --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
-  --btnTransition: background-color 150ms linear;
+  --mainTransition: all .1s linear;
+  --bgTransition: background-color 100ms linear;
   --mainSpacing: 1px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -128,10 +128,7 @@ article.page-article:last-child{
 }
 .bold {font-weight: 600;}
 
-.btn-white,
-.btn-primary {
-  border: 2px solid var(--mainWhite);
-  color: var(--mainWhite);
+.btn {
   cursor: pointer;
   display: inline-block;
   letter-spacing: var(--mainSpacing);
@@ -139,18 +136,22 @@ article.page-article:last-child{
   text-transform: uppercase;
   text-decoration: none;
   transition: var(--mainTransition);
+  border: 2px solid var(--mainWhite);
+  color: var(--mainWhite);
+  outline: none;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: color(var(--mainBlack) lightness(-20%));
+  color: var(--mainBlack);
+  border: 2px solid var(--mainBlack);
 }
 .btn-white {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
-}
-
-.btn-white:hover {
-  background: var(--primaryColor);
+  background: var(--mainBlack);
+  border: 2px solid var(--mainBlack);
   color: var(--mainWhite);
-  border: 2px solid var(--mainWhite);
 }
-
 .btn-primary {
   background: var(--primaryColor);
   color: var(--mainWhite);
@@ -159,7 +160,9 @@ article.page-article:last-child{
 .btn-primary:hover {
   background: transparent;
   color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
 }
+
 
 /*https://css-tricks.com/aspect-ratio-boxes/*/
 .aspect-ratio-box {
