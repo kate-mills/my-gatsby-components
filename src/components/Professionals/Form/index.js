@@ -1,10 +1,9 @@
 import React from "react"
 import styles from "./form.module.css"
 import { navigate } from "@reach/router"
-import PageModel from "../../PageModel"
 
 export default ({ handleSubmit, handleUpdate }) => (
-  <PageModel title="Login">
+  <>
     <p className={styles[`form__instructions`]}>
       Professionals, please contact us at{" "}
       <span className={styles[`phone`]}>
@@ -40,5 +39,5 @@ export default ({ handleSubmit, handleUpdate }) => (
       </label>
       <input className={styles[`form__button`]} type="submit" value="Log In" />
     </form>
-  </PageModel>
+  </>
 )

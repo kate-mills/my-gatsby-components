@@ -7,11 +7,13 @@ import TreatmentPV from "../components/Professionals/TreatmentPV"
 import UpcomingClasses from "../components/Professionals/UpcomingClasses"
 import ProductImagesLogos from "../components/Professionals/ProductImagesLogos"
 
+import Layout from "../components/layout"
 import Login from "../components/Professionals/Login"
 import PrivateRoute from "../components/Professionals/PrivateRoute"
 
 const App = () => {
   return (
+    <Layout>
       <Router primary={false}>
         <PrivateRoute path="/app/profile" component={Profile} />
 
@@ -36,6 +38,7 @@ const App = () => {
         />
         <Login path="/app/login" />
       </Router>
+    </Layout>
   )
 }
 export default App
