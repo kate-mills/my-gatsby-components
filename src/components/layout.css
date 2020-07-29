@@ -75,17 +75,26 @@ h1 {
     font-size: 2em;
     margin: 1em 0 .3em;
     font-size: 45px;
-    font-weight: bold;
+    font-weight: 300;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .3em;
-    font-weight: 300;
 }
-
+h2{
+  font-family: 'proxima-nova', 'sans-serif';
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(179, 0, 0, 0.8);
+  line-height: 42px;
+  font-size: 30px;
+}
 a {
   color: var(--mainBlack);
   cursor: pointer;
+}
 
+.facebook {
+  color: #285aeb;
 }
 div#content {
   top: 0;
