@@ -19,7 +19,7 @@
   padding: 0.25rem;
 }
 .form__button {
-  background-color: var(--mccPink);
+  background-color: var(--mccAltPink);
   border: 1px solid white;
   color: white;
   font-size: 1.25rem;
@@ -30,18 +30,25 @@
 }
 .form__button:hover {
   cursor: pointer;
-  color: var(--mccPink);
+  color: var(--mccAltPink);
   border: 1px solid var(--mccPink);
 }
 .form__button:hover,
 .form__button:active,
 .form__button:focus {
-  background-color: color(var(--mccPink) lightness(-20%));
+  background-color: color(var(--mccAltPink) lightness(-20%));
 }
 
 .form__instructions{
   text-align: center;
   max-width: 70%;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.form__instructions span.phone {
+  font-weight: 600;
+  margin: 0 5px;
 }
 
 
@@ -49,5 +56,6 @@
 .form__instructions{
   text-align: center;
   max-width: 70%;
+  margin: 0 auto;
 }
 }

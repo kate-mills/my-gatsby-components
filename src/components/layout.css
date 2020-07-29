@@ -1,6 +1,7 @@
 @import url("https://use.typekit.net/wua6cxq.css");
 
 :root {
+  --mccAltPink: #e55b54;
   --primaryColor: #ff665e;
   --mccPink: #ff665e;
   --mainWhite: #fff;
@@ -10,6 +11,7 @@
   --mainGrey: #d3d3d3;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
+  --btnTransition: background-color 150ms linear;
   --mainSpacing: 1px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -119,20 +121,27 @@ article.page-article:last-child{
 
 .btn-white,
 .btn-primary {
+  border: 2px solid var(--mainWhite);
+  color: var(--mainWhite);
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: var(--mainSpacing);
+  padding: 0.8rem 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
-  border: 2px solid var(--mainWhite);
-  padding: 0.9rem 1.6rem;
-  display: inline-block;
   transition: var(--mainTransition);
-  cursor: pointer;
 }
-.btn-white:hover {
+.btn-white {
   background: var(--mainWhite);
   color: var(--primaryColor);
 }
+
+.btn-white:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: 2px solid var(--mainWhite);
+}
+
 .btn-primary {
   background: var(--primaryColor);
   color: var(--mainWhite);

@@ -3,7 +3,6 @@ import { navigate } from "@reach/router"
 import {
   isLoggedIn,
   logout,
-  isAppInPath,
 } from "../../../utils/auth"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -15,46 +14,29 @@ export default () => {
   if (!isLoggedIn()) {
     details = (
       <p className={styles[`status__text`]}>
-        <span>Professionals</span>
-        {` `}
         <AniLink
           fade
           to="/app/login"
           className={styles[`professional__status`]}
         >
-          <span>Log in</span>
+          <button className={styles[`professionals__login__btn`]}>Professionals Login</button>
         </AniLink>
-        .
       </p>
     )
   } else {
     details = (
       <p className={styles[`status__text`]}>
-        {` `} Credentialed user - {` `}
-        <AniLink
-          className={styles[`professional__status`]}
-          fade
-          to="/"
+        <AniLink className={styles[`professional__link`]} fade to="/app/articles" >PROFESSIONALS</AniLink>
+
+        <AniLink className={styles[`professional__logout__link`]} fade to="/"
           onClick={event => {
             event.preventDefault()
             logout(() => navigate(`/app/login`))
           }}
         >
-          <span className={styles[`professional__status`]}>Log out</span>
+          <span style={{fontSize: "10px", fontWeight: "300", color: "var(--mainBlack)", padding: "5px"}}>Logout</span>
         </AniLink>
-        {`  `}
-        <span className={styles[`professional__status`]}>
-          {" "}
-          {!isAppInPath() ? (
-            <AniLink
-              className={styles[`professional__status`]}
-              fade
-              to="/app/articles"
-            >Professionals</AniLink>
-          ) : (
-            ""
-          )}{" "}
-        </span>
+
       </p>
     )
   }

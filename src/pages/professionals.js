@@ -7,7 +7,9 @@ import styled from "styled-components"
 const Professionals = () => {
   return (
     <PageModel title="Professionals">
-      <ProfessionalsWrapper></ProfessionalsWrapper>
+      <ProfessionalsWrapper>
+      Professional Information Here
+      </ProfessionalsWrapper>
     </PageModel>
   )
 }
