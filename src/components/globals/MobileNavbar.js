@@ -6,6 +6,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import links from "../../constants/links"
 import { screen } from "../../css/js/media-functions"
 import { setFont } from "../../css/js/helper-styles"
+import ProfessionalStatus from "../Professionals/Status" 
+
 
 const MoreItems = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -128,8 +130,12 @@ class MobileNavbar extends Component {
 
           <ul className={`${this.state.css} main-ul`}>
             {links.map((item, id) => {
+              if (item.id === "professional"){
+                return <li key={id} className="parent"> <ProfessionalStatus/></li>
+              }
+              else{
               return item.menu.length > 0 ? (
-                <li key={id} className="parent">
+                <li key={id}>
                   <MoreItems name={item.text} menu={item.menu} />
                 </li>
               ) : (
@@ -141,6 +147,7 @@ class MobileNavbar extends Component {
                   </AniLink>
                 </li>
               )
+              }
             })}
           </ul>
         </nav>

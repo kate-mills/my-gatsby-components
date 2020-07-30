@@ -13,7 +13,6 @@ export default () => {
 
   if (!isLoggedIn()) {
     details = (
-      <p className={styles[`status__text`]}>
         <AniLink
           fade
           to="/app/login"
@@ -21,25 +20,24 @@ export default () => {
         >
           <button className={styles[`professionals__login__btn`]}>Professionals Login</button>
         </AniLink>
-      </p>
     )
   } else {
     details = (
-      <p className={styles[`status__text`]}>
-        <AniLink className={styles[`professional__link`]} fade to="/app/articles" >PROFESSIONALS</AniLink>
-
-        <AniLink className={styles[`professional__logout__link`]} fade to="/"
-          onClick={event => {
-            event.preventDefault()
-            logout(() => navigate(`/app/login`))
-          }}
-        >
-          <span style={{fontSize: "10px", fontWeight: "300", color: "var(--mainBlack)", padding: "5px"}}>Logout</span>
-        </AniLink>
-
-      </p>
+      <>
+      <AniLink className={styles[`professional__link`]} fade to="/app/treatment-protocol-videos" >
+          PROFESSIONALS
+      </AniLink>
+      <AniLink className={styles[`professional__logout__link`]}
+        fade 
+        to="/"
+        onClick={ event => { 
+          event.preventDefault()
+          logout(() => navigate(`/app/login`)) 
+          }
+        }> <span> Logout </span>
+      </AniLink>
+      </>
     )
   }
-
-  return <div className={styles.status}>{details}</div>
+  return <span className={styles.status}>{details}</span>
 }

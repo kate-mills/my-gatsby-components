@@ -1,10 +1,6 @@
 import React from "react"
-import ProfessionalLink from "./ProfessionalLink"
-console.log(ProfessionalLink());
-
 
 export default [
-
   {
     path: "/",
     text: "home",
@@ -162,7 +158,6 @@ export default [
       }
     ]
   },
-
   {
     text: ( <span style={{ borderLeft: "5px solid var(--mainWhite)", lineHeight: "32px", padding: "0 10px", background: "var(--mainWhite)", }} > why mc?  </span>),
     menu: [
@@ -212,11 +207,13 @@ export default [
     ],
   },
   { path: "/contact", text: "contact", menu: [] },
-
-  ProfessionalLink(),
   {
     path: "/pro-orders",
     text: "pro orders",
     menu: [],
   },
+{
+  id: "professional",
+  menu:[]
+}
 ]

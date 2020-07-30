@@ -3,6 +3,7 @@ import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import links from "../../constants/links"
 import { screen } from "../../css/js/media-functions"
+import ProfessionalStatus from "../Professionals/Status" 
 
 const MoreItems = props => {
   return (
@@ -38,17 +39,16 @@ const MoreItemsWrapper = styled.nav`
     color: #111111;
     background: var(--mainWhite);
   }
+  & li { list-style: none; }
   nav ul.main-nav li:hover & li.sub-li {
     position: sticky;
     visibility: visible;
     z-index: 1;
-    list-style: none;
     background: var(--mainWhite);
     opacity: 1;
   }
 
   nav ul.main-nav li:hover & li.sub-li a {
-    color: inherit;
     font-size: 15px;
     letter-spacing: 0.5px;
     margin-top: 0px;
@@ -64,6 +64,10 @@ class DesktopNavbar extends Component {
         <nav>
           <ul className="main-nav">
             {links.map((item, id) => {
+              if(item.id === "professional"){
+                return <li key={id}> <ProfessionalStatus/></li>
+              }
+              else{
               return item.menu.length > 0 ? (
                 <li
                   aria-label={item.label}
@@ -86,7 +90,8 @@ class DesktopNavbar extends Component {
                     {item.text}
                   </AniLink>
                 </li>
-              )
+                )
+                }
             })}
           </ul>
         </nav>
@@ -111,7 +116,7 @@ export default styled(DesktopNavbar)`
     margin-left: 0.75rem;
     margin-top: 0px;
     padding: 0.25rem;
-    letter-spacing: 0px;
+    list-style: none;
   }
 
   & nav ul.main-nav li.parent-li {
@@ -120,7 +125,6 @@ export default styled(DesktopNavbar)`
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    list-style: none;
     width: auto;
     text-transform: uppercase;
     color: #111111;

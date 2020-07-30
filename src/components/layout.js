@@ -4,7 +4,6 @@ import "./layout.css"
 
 import { LogoImg } from "./LogoImg"
 import Announcement from "./Announcement"
-import Status from "./Professionals/Status"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
 import CallToActionBtn from "./CallToActionBtn"
@@ -16,7 +15,6 @@ const Layout = ({ children }) => {
     <>
       <Announcement />
       <div id="content">
-        <Status />
         <MobileNavbar />
         <LogoImg />
         <DesktopNavbar />
