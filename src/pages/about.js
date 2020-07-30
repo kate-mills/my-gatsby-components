@@ -2,9 +2,7 @@ import React from "react"
 
 import styled from "styled-components"
 import { Img } from "../constants/imageurls"
-import { setColor, setFont } from "../css/js/helper-styles"
 import { screen } from "../css/js/media-functions"
-
 import PageModel from "../components/PageModel"
 
 const About = () => {
@@ -94,7 +92,6 @@ const AboutWrapper = styled.section`
     align-items: center;
     box-sizing: border-box;
     display: flex;
-    color: ${setColor.mainText};
     justify-content: center;
     margin: 0 auto;
     line-height: 27px;
