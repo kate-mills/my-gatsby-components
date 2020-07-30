@@ -150,10 +150,15 @@ class MobileNavbar extends Component {
 }
 
 export default styled(MobileNavbar)`
-&{
-  font-size: 16px;
-  line-height: 27px;
-  letter-spacing: 1px;
+  &{ 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 1px;
 }
 & hr.hr-80{
   height: 2px;
@@ -185,14 +190,5 @@ button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); f
   cursor: pointer;}
 & ul.hide {display: none;}
 & ul.show.sub-ul, & ul.show.main-ul {padding: unset;}
-  ${screen.minmax.narrow`
-    &{ 
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  `}
-  ${screen.minmax.wide`display: none;`}
+  ${screen.nav.wide`& {display: none;}`}
 `

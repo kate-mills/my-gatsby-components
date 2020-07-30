@@ -16,7 +16,7 @@ export default ({ handleSubmit, handleUpdate }) => (
       method="post"
       onSubmit={event => {
         handleSubmit(event)
-        navigate(`/app/profile`)
+        navigate(`/app/treatment-protocol-videos`)
       }}
     >
       <label htmlFor="username" className={styles[`form__label`]}>

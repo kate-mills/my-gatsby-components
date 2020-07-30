@@ -152,6 +152,5 @@ export default styled(DesktopNavbar)`
     position: absolute;
     top: 45px;
   }
-  ${screen.minmax.narrow`&{display:none;}`}
-  ${screen.minmax.wide`display: block`}
+  ${screen.nav.narrow`&{display:none;}`}
 `

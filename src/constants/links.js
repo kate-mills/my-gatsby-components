@@ -1,6 +1,10 @@
 import React from "react"
+import ProfessionalLink from "./ProfessionalLink"
+console.log(ProfessionalLink());
+
 
 export default [
+
   {
     path: "/",
     text: "home",
@@ -126,18 +130,41 @@ export default [
     ],
   },
   {
-    text: (
-      <span
-        style={{
-          borderLeft: "5px solid var(--mainWhite)",
-          lineHeight: "32px",
-          padding: "0 10px",
-          background: "var(--mainWhite)",
-        }}
-      >
-        why mc?
-      </span>
-    ),
+    text: ( <span style={{ lineHeight: "32px", padding: "0 10px", background: "var(--mainWhite)", }} > education  </span>),
+    menu: [
+      {
+        path: "/upcoming-classes",
+        text: (
+          <span
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "var(--mainWhite)",
+            }}
+          >
+          upcoming classes
+          </span>
+        ),
+      },
+      {
+        path: "/articles",
+        text: (
+          <span
+            style={{
+              lineHeight: "32px",
+              padding: "0 10px",
+              background: "var(--mainWhite)",
+            }}
+          >
+          articles
+          </span>
+        ),
+      }
+    ]
+  },
+
+  {
+    text: ( <span style={{ borderLeft: "5px solid var(--mainWhite)", lineHeight: "32px", padding: "0 10px", background: "var(--mainWhite)", }} > why mc?  </span>),
     menu: [
       {
         path: "/why-mc",
@@ -181,21 +208,12 @@ export default [
           </span>
         ),
       },
-      {
-        path: "/press",
-        text: (
-          <span style={{ padding: "0 10px", background: "var(--mainWhite)" }}>
-            press
-          </span>
-        ),
-      },
+      { path: "/press", text: ( <span style={{ padding: "0 10px", background: "var(--mainWhite)" }}> press </span>), },
     ],
   },
-  {
-    path: "/contact",
-    text: "contact",
-    menu: [],
-  },
+  { path: "/contact", text: "contact", menu: [] },
+
+  ProfessionalLink(),
   {
     path: "/pro-orders",
     text: "pro orders",

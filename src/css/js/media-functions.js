@@ -35,12 +35,14 @@ export const screen = {
       `
     },
   },
+  nav: { 
+    narrow: (...args) => { return ` @media (max-width: 749px){${args};};` }, 
+    wide: (...args) => { return ` @media (min-width: 750px){${args};};`}, 
+  },
+
   minmax: { 
-    narrow: (...args) => {
-      return ` @media (max-width: 739px){${args};};`
-    }, 
-    wide: (...args) => {
-      return ` @media (min-width: 740px){${args};};`}, 
+    narrow: (...args) => { return ` @media (max-width: 739px){${args};};` }, 
+    wide: (...args) => { return ` @media (min-width: 740px){${args};};`}, 
   },
 
 }

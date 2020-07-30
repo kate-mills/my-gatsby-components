@@ -15,7 +15,6 @@ const App = () => {
   return (
     <Layout>
       <Router primary={false}>
-        <PrivateRoute path="/app/profile" component={Profile} />
 
         <PrivateRoute
           path="/app/upcoming-classes"
@@ -36,6 +35,7 @@ const App = () => {
           title="Professionals - Product Images & Logos"
           component={ProductImagesLogos}
         />
+        <PrivateRoute path="/app/profile" component={Profile} />
         <Login path="/app/login" />
       </Router>
     </Layout>
