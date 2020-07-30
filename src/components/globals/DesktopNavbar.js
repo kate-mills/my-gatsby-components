@@ -102,7 +102,7 @@ export default styled(DesktopNavbar)`
   }
   & nav ul.main-nav {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     margin: 20px auto;
     justify-content: space-evenly;
     max-width: 80%;
@@ -152,8 +152,6 @@ export default styled(DesktopNavbar)`
     position: absolute;
     top: 45px;
   }
-
-  ${screen.phone.phone`&{display:none;}`}
-  ${screen.tablet.tablet`& {display:none;}`}
-  ${screen.desktop.desktop``}
+  ${screen.nav.mobile`&{display:none;}`}
+  ${screen.nav.desktop``}
 `

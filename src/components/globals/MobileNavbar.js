@@ -185,8 +185,7 @@ button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); f
   cursor: pointer;}
 & ul.hide {display: none;}
 & ul.show.sub-ul, & ul.show.main-ul {padding: unset;}
-
-  ${screen.phone.phone`
+  ${screen.nav.mobile`
     &{
       margin: 0 auto;
       display: flex;
@@ -195,14 +194,5 @@ button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); f
       text-align: center;
     }
   `}
-  ${screen.tablet.tablet`
-    &{
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  `}
-  ${screen.desktop.desktop`&{display: none;} `}
+  @media (min-width: 640px) { display: none; }
 `

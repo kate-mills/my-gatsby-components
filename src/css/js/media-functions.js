@@ -34,4 +34,8 @@ export const screen = {
       `
     },
   },
+  nav: {
+    mobile: (...args) => {return ` @media (max-width: 639px){${args};};`},
+    desktop: (...args) => {return ` @media (max-width: 740px){${args};};`},
+  },
 }
