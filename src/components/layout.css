@@ -20,14 +20,13 @@
 * + * { margin: 0; padding: 0; }
 
 html {
-  font-family: 'proxima-nova', 'sans-serif';
   display: block;
+  font-family: 'proxima-nova', 'sans-serif';
   font-size: 100%;
   margin: 0;
   padding: 0;
 }
 body {
-    background-attachment: fixed;
     background-image: none;
     background-position: top left;
     background-size: auto;
@@ -37,10 +36,11 @@ body {
     background-color: var(--mccPink);
     color: #5c5c5c;
     font-family: 'proxima-nova', 'sans-serif';
-    line-height: 27px; 
+    font-weight: 300;
     font-size: 15px;
     font-style: normal;
-    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8em; 
     overflow: scroll;
     text-transform: none;
     text-decoration: none;
@@ -96,6 +96,7 @@ a {
 .facebook {
   color: #285aeb;
 }
+
 nav  li  a {
     font-family: 'proxima-nova', 'sans-serif';
     font-size: 15px;
@@ -106,17 +107,13 @@ nav  li  a {
     text-decoration: none;
     text-transform: uppercase;
 }
-p {
-  padding: 5px 0;
-}
-article.page-article{
-}
-article.page-article:first-child{
-  margin-top: 0px;
-}
-article.page-article:last-child{
-  margin-bottom: 0px;
-}
+
+p { padding: 0 0 1.8em; }
+
+article.page-article{}
+article.page-article:first-child{}
+article.page-article:last-child{}
+
 .bold {font-weight: 600;}
 
 .btn {
@@ -174,43 +171,31 @@ article.page-article:last-child{
 
 
 div#content {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: 2px solid rgba(0, 0, 0, .1);
   background:var(--mainWhite);
+  border: none;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  max-width: 1030px;
   z-index: 0;
-  margin: 55px auto;
 }
 
-/*phone */
-@media screen and (max-width: 480px){
-  div#content{width:100vw;} /* 0vw of pink border*/
-}
 
-/*tablet - sm*/
-@media screen and (min-width:481px) and (max-width: 767px){
-  div#content{width:100vw;} 
-}
-
-/*tablet - landscape */
-@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  div#content{width:99vw;} /* 20vw of pink border*/
-  margin: 0px auto;
-  padding: 50px 50px 0;
-  border-width: 0px !important;
-}
-
-/*tablet - md & large */
-@media screen and (min-width:768px) and (max-width:1280px){
-  div#content{width:99vw;} /* 20vw of pink border*/
-}
-
-/*desktop */
-@media screen and (min-width: 1281px){
+@media screen and (max-width: 1023px){
   div#content{
-    max-width: 1030px;
+    border-right: 1px solid var(--mcccPink);
+    border-left: 1px solid var(--mcccPink);
     padding: 50px 50px 0;
-  } /* 30vw of pink border*/
+    margin: 0;
+  }
+}
+
+/*desktop mv 1281px 1240px */
+@media screen and (min-width: 1024px){
+  div#content{
+    padding: 50px 50px 0;
+    margin: 55px auto;
+    max-width: 1030px;
+  }
 }
