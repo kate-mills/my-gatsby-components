@@ -14,9 +14,7 @@ const Footer = ({ className }) => {
     <footer className={className}>
       <div className="clear"/>
       <div className="column">
-        <div className="lg-text">
-          <p> Follow us on </p>
-        </div>
+        <div className="lg-text"><h3 style={{color: "#524c4c", fontWeight:"400", lineHeight: "32px", fontSize: "21px", fontFamily: "proxima-nova", textAlign: "center"}}>Follow us on</h3></div>
         <div className="row footer-icons">
           {socialLinks.map((item, index) => {
             return (
@@ -26,8 +24,7 @@ const Footer = ({ className }) => {
                   className={item.class}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={item.style}
-                >
+                  style={item.style}>
                   {item.icon}
                 </a>
               </div>
@@ -35,9 +32,10 @@ const Footer = ({ className }) => {
           })}
         </div>
         <div className="row lg-text phone-email">
-          <p className="phone" style={{color: "#524c4c"}}>707.637.4996</p>
-          &middot;
-          <p className="email">info@michelecorley.com</p>
+          <h3 style={{color: "#524c4c", fontWeight:"400", fontSize: "21px", lineHeight: "32px", fontFamily: "proxima-nova"}}>
+            <span className="phone">707.637.4996</span>{` `}<span className="middot">&middot;</span>{` `}
+            <span className="email span1">customerservice</span><span className="email span2">@michelecorley.com</span>
+          </h3>
         </div>
         <div className="row sm-text">
           <p className="address">
@@ -55,63 +53,40 @@ const Footer = ({ className }) => {
 
 const FooterWrapper = styled(Footer)`
   & {
-    margin: 0px auto;
-    margin-top: 30px;
-    padding: 10px 0;
-    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 60px;
     text-align: center;
     letter-spacing: 1px;
+    white-space: initial;
   }
 
-  & div.column {
-    margin: 0 auto;
-    ${setFlexContainer({ direction: "column" })};
+  & div.row { width: 100%; ${setFlexContainer({})} }
+
+  & div.column, & div.row {
+    font-size: 16px;
+    line-height: 19px;
+    color: #5c5c5c;
+    font-weight: 400;
   }
 
-  & div.row {
-    width: 80%;
-    ${setFlexContainer({})}
-  }
+  & div.row.footer-icons {  font-size: 28px; justify-content: space-around;line-height: unset; }
+  a.instagram-logo{font-size: 0px;}
+  a.instagram-logo img{height: 40px; width: 40px;}
 
-  & div.row.footer-icons {
-    font-size: 38px;
-    justify-content: space-around;
-  }
-
-  & a.instagram {
-    ${setInstagram()}
-  }
-
-  & .phone-email p {
-    padding: 0 5px;
-  }
-
-  & div.column,
-  & div.column > div.row.lg-text.phone-email {
-    ${setFont({
-      size: "21px",
-      height: "25px",
-      color: "#524c4c",
-      weight: "400",
-    })}
-  }
-  & div.row {
-    ${setFont({
-      size: "16px",
-      height: "19px",
-      color: "#5c5c5c",
-      weight: "400",
-    })}
-  }
-  div.row.sm-text p {
-    margin: 4px;
-  }
+  div.row.sm-text p { padding: 5px; }
 
   ${screen.phone.phone`
-      div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
-`}
-  ${screen.tablet.tablet`
-      div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
-`}
+    div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
+    span.email{display: block;}
+    span.email.span1{margin-top: 5px; margin-bottom: 0px;}
+    span.email.span2{margin-bottom: 5px; margin-top: 0px;}
+  `}
+  ${screen.tablet.tablet` div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;} `}
+
+  @media (max-width: 700px){
+    .middot{display:none;}
+    .div-row{flex-direction: column;flex-wrap: wrap;}
+    span.phone{display:block;}
+  }
 `
 export default FooterWrapper
