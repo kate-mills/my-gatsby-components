@@ -178,15 +178,13 @@ div#content {
   border-bottom: 0px;
   border-left: 0px;
   max-width: 1030px;
+  padding: 50px 50px 0;
   z-index: 0;
 }
 
 
 @media screen and (max-width: 1023px){
   div#content{
-    border-right: 1px solid var(--mcccPink);
-    border-left: 1px solid var(--mcccPink);
-    padding: 50px 50px 0;
     margin: 0;
   }
 }
@@ -194,8 +192,6 @@ div#content {
 /*desktop mv 1281px 1240px */
 @media screen and (min-width: 1024px){
   div#content{
-    padding: 50px 50px 0;
     margin: 55px auto;
-    max-width: 1030px;
   }
 }
