@@ -3,11 +3,7 @@ import styled from "styled-components"
 import socialLinks from "../constants/social"
 
 import { screen } from "../css/js/media-functions"
-import {
-  setFont,
-  setFlexContainer,
-  setInstagram,
-} from "../css/js/helper-styles"
+import { setFlexContainer } from "../css/js/helper-styles"
 
 const Footer = ({ className }) => {
   return (
