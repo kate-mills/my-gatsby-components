@@ -46,17 +46,10 @@ body {
     text-decoration: none;
     min-height: 100vh;
 }
-
 main{
   background: var(--mainWhite);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-#page{
-  background: var(--mainWhite);
-  width: 95%;
-  border: 0;
-  font-size: 15px;
-}
+#page{ background: var(--mainWhite); width: 95%; border: 0; font-size: 15px; }
 h1 {
     font-family: 'proxima-nova', 'sans-serif';
     font-weight: normal;
@@ -168,8 +161,6 @@ article.page-article:last-child{}
   display: table;
   clear: both;
 }
-
-
 div#content {
   background:var(--mainWhite);
   border: none;
@@ -181,7 +172,6 @@ div#content {
   padding: 50px 50px 0;
   z-index: 0;
 }
-
 
 @media screen and (max-width: 1023px){
   div#content{
