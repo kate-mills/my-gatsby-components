@@ -23,6 +23,7 @@ export const screen = {
     `
     },
   },
+
   desktop: {
     small: (...args) => {
       return `@media (min-width: 1025px) and (max-width:1280px){${args};};`
@@ -34,8 +35,12 @@ export const screen = {
       `
     },
   },
-  nav: {
-    mobile: (...args) => {return ` @media (max-width: 639px){${args};};`},
-    desktop: (...args) => {return ` @media (max-width: 740px){${args};};`},
+  minmax: { 
+    narrow: (...args) => {
+      return ` @media (max-width: 739px){${args};};`
+    }, 
+    wide: (...args) => {
+      return ` @media (min-width: 740px){${args};};`}, 
   },
+
 }

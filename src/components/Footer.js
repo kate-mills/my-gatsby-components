@@ -12,6 +12,7 @@ import {
 const Footer = ({ className }) => {
   return (
     <footer className={className}>
+      <div className="clear"/>
       <div className="column">
         <div className="lg-text">
           <p> Follow us on </p>
@@ -60,7 +61,6 @@ const FooterWrapper = styled(Footer)`
     width: 100%;
     text-align: center;
     letter-spacing: 1px;
-    border: 1px solid #00000026;
   }
 
   & div.column {

@@ -96,48 +96,26 @@ const AboutWrapper = styled.section`
     display: flex;
     color: ${setColor.mainText};
     justify-content: center;
-    max-width: 80%;
     margin: 0 auto;
     line-height: 27px;
     white-space: initial;
   }
-  & .flexItem { box-sizing: border-box; white-space:pre-line;  }
-
+  & .flexItem { box-sizing: border-box; white-space:initial;  }
   & h1 {
-    ${setFont({
-      size: "45px",
-      height: "54px",
-      color: "#222222",
-      weight: "300",
-    })}
     text-align: left;
-    white-space: break-spaces;
   }
-  & h2 {
-    ${setFont({
-      size: "30px",
-      height: "42px",
-      color: setColor.h2,
-      style: "normal",
-      weight: "400",
-    })};
+  & h2 { 
+   font-style: normal;
    text-align: center;
    margin-top: unset;
    white-space: break-spaces;
   }
   & h2.italic{
-    ${setFont({
-      size: "30px",
-      height: "42px",
-      color: setColor.h2,
-      style: "italic",
-      weight: "400",
-    })} text-align: left;
+    font-style: italic;
+    text-align: left;
     padding-inline-start: 10%;
-    padding-block-start: 0%;
   }
-
-  & p {paddingng-inline-start: 5px; white-space: initial;}
+  & p {padding-inline-start: 5px; white-space: initial;}
   & p.text{
     padding-inline-start: 15px;
     padding-inline-end: 20px;
@@ -149,41 +127,18 @@ const AboutWrapper = styled.section`
     color: #5c5c5c; 
     font-size: 16px;
     line-height: 27px;
-    white-space: initial;
+    white-space: pre-line;
   }
-  /* Meet Michele Corley */
-  .col:nth-child(2) {text-align: center;}
-
-  ${screen.phone.phone`
-    & {flex-direction: column; padding: 20px;}
-    & .col:nth-child(2) {margin-top: 30px;}
-    & h1{ padding-top: 10px;}
-    & img {max-width: 100%; height: auto;}
-  `}
-P
-  ${screen.tablet.tablet`
-    & { 
-      flex-direction: column;
-      flex-wrap: nowrap;
-      margin: 0 auto; 
-    }
-    & .col { padding: 15px; }
-    & .col:nth-child(1){ flex-direction: column;}
-    & p.text.tiny {width: 80%;}
-    & img {max-width: 80%; height: auto;}
-  `}
-  ${screen.desktop.desktop`
+  ${screen.minmax.narrow` & { flex-wrap: wrap; } & img {height: auto;}`}
+  ${screen.minmax.wide`
     & {
       flex-direction: row;
-      width: 100%;
+      flex-wrap: nowrap;
       align-items: flex-start;
       justify-content: space-evenly;
     }
-    & .col { margin: 10px; padding: 20px; }
-    & .col:nth-child(2) { }
-    & img {max-width: 80%; height: auto;}
-    & p.text.tiny {width: 80%; margin: 0 auto; }
-
+    & .col:nth-child(1) { padding-right: 30px;}
+    & .col:nth-child(2) { padding-left: 30px;}
   `}
 `
 export default About

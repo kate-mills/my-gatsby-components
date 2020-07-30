@@ -185,8 +185,8 @@ button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); f
   cursor: pointer;}
 & ul.hide {display: none;}
 & ul.show.sub-ul, & ul.show.main-ul {padding: unset;}
-  ${screen.nav.mobile`
-    &{
+  ${screen.minmax.narrow`
+    &{ 
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -194,5 +194,5 @@ button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); f
       text-align: center;
     }
   `}
-  @media (min-width: 640px) { display: none; }
+  ${screen.minmax.wide`display: none;`}
 `
