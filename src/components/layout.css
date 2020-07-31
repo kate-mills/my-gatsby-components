@@ -91,6 +91,9 @@ a {
 .facebook {
   color: #285aeb;
 }
+nav li {
+  list-style: none;
+}
 
 nav  li  a {
     font-family: 'proxima-nova', 'sans-serif';
@@ -101,6 +104,7 @@ nav  li  a {
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: .5px;
 }
 
 p { padding: 0 0 1.8em; }

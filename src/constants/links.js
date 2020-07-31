@@ -1,219 +1,69 @@
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+const createParentLink = (name, pth) => {
+  let link= ( 
+    <AniLink to={`/${pth}`} fade
+      style={{ 
+        lineHeight: "20px",
+        padding: "4px 10px 10px 7px", 
+        marginTop: "10px", 
+        background: "var(--mainWhite)", 
+      }}
+    >{name}
+    </AniLink>
+  )
+  return link
+}
+
+const createChildLink = (name) => {
+  let pth = name.replace(' & ', ' ').split(' ').join('-')
+  let obj = {
+      path: `/${pth}`,
+      text: (
+        <span
+          style={{
+            lineHeight: "20px",
+            padding: "4px 10px 10px 4px",
+            background: "var(--mainWhite)",
+          }}> {name} </span>
+      ),
+  }
+  return obj
+}
 
 export default [
+  { path: "/", text: "home", menu: [] },
+  { path: "/about", text: "about", menu: [] },
   {
-    path: "/",
-    text: "home",
-    menu: [],
-  },
-  {
-    path: "/about",
-    text: "about",
-    menu: [],
-  },
-  {
-    text: (
-      <span
-        style={{
-          borderLeft: "5px solid var(--mainWhite)",
-          lineHeight: "32px",
-          padding: "0 10px",
-          background: "var(--mainWhite)",
-        }}
-      >
-        products
-      </span>
-    ),
+    text: createParentLink("products", "cleansers"),
     menu: [
-      {
-        path: "/cleansers",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            cleansers
-          </span>
-        ),
-      },
-      {
-        path: "/toners",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            toners
-          </span>
-        ),
-      },
-      {
-        path: "/moisturizers-spf",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            moisturizers & spf
-          </span>
-        ),
-      },
-      {
-        path: "/eyes-lips",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            eyes & lips
-          </span>
-        ),
-      },
-      {
-        path: "/serums-specialty",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            serums & specialty
-          </span>
-        ),
-      },
-      {
-        path: "/exfoliants",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            exfoliants
-          </span>
-        ),
-      },
-      {
-        path: "/masks",
-        text: (
-          <span
-            style={{
-              background: "var(--mainWhite)",
-              lineHeight: "32px",
-              padding: "0 10px",
-            }}
-          >
-            masks
-          </span>
-        ),
-      },
-    ],
-  },
-  {
-    text: ( <span style={{ lineHeight: "32px", padding: "0 10px", background: "var(--mainWhite)", }} > education  </span>),
-    menu: [
-      {
-        path: "/upcoming-classes",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-          upcoming classes
-          </span>
-        ),
-      },
-      {
-        path: "/articles",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-          articles
-          </span>
-        ),
-      }
+      createChildLink("cleansers", "cleansers"),
+      createChildLink("toners", "toners"),
+      createChildLink("moisturizers & spf"),
+      createChildLink("eyes & lips"),
+      createChildLink("serums & specialty"),
+      createChildLink("exfoliants"),
+      createChildLink("masks"),
     ]
   },
   {
-    text: ( <span style={{ borderLeft: "5px solid var(--mainWhite)", lineHeight: "32px", padding: "0 10px", background: "var(--mainWhite)", }} > why mc?  </span>),
+    text: createParentLink("education", "articles"),
     menu: [
-      {
-        path: "/why-mc",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            why choose us?
-          </span>
-        ),
-      },
-      {
-        path: "/before-and-after",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            before and after
-          </span>
-        ),
-      },
-      {
-        path: "/rave-reviews",
-        text: (
-          <span
-            style={{
-              lineHeight: "32px",
-              padding: "0 10px",
-              background: "var(--mainWhite)",
-            }}
-          >
-            rave reviews{" "}
-          </span>
-        ),
-      },
-      { path: "/press", text: ( <span style={{ padding: "0 10px", background: "var(--mainWhite)" }}> press </span>), },
-    ],
+      createChildLink("articles"),
+      createChildLink("before & after"),
+      createChildLink("press"),
+      createChildLink("upcoming & classes"),
+    ]
+  },
+  {
+    text: createParentLink("why mc?", "why-choose-us"),
+    menu: [
+      createChildLink("why choose us"),
+      createChildLink("rave reviews"),
+    ]
   },
   { path: "/contact", text: "contact", menu: [] },
-  {
-    path: "/pro-orders",
-    text: "pro orders",
-    menu: [],
-  },
-{
-  id: "professional",
-  menu:[]
-}
+  { path: "/pro-orders", text: "pro orders", menu: [] },
+  { id: "professional", menu:[] }
 ]

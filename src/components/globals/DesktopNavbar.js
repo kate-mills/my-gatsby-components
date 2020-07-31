@@ -32,29 +32,21 @@ const MoreItemsWrapper = styled.nav`
   & {
     display: flex;
     flex-direction: column;
-    flex-wrap: inherit;
     align-self: flex-start;
     width: -webkit-max-content;
     display: none;
-    color: #111111;
-    background: var(--mainWhite);
   }
-  & li { list-style: none; }
   nav ul.main-nav li:hover & li.sub-li {
-    position: sticky;
+    position: relative;
+    right: 20px;
     visibility: visible;
     z-index: 1;
     background: var(--mainWhite);
-    opacity: 1;
   }
-
   nav ul.main-nav li:hover & li.sub-li a {
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    position: sticky;
+    padding-left: 24px;
     margin-top: 0px;
-  }
-  & a:hover {
-    background-color: var(--mccPink);
   }
 `
 class DesktopNavbar extends Component {
@@ -74,11 +66,7 @@ class DesktopNavbar extends Component {
                   role="navigation"
                   className="parent-li parent-plus"
                   key={id}
-                  style={{
-                    lineHeight: "20px",
-                    padding: "10px",
-                    background: "white",
-                  }}
+                  style={{padding: "4px 10px 10px 4px"}}
                 >
                   {item.text}
                   <MoreItems label={item.label} menu={item.menu} />
@@ -102,59 +90,33 @@ class DesktopNavbar extends Component {
 export default styled(DesktopNavbar)`
   & {
     position: sticky;
-    letter-spacing: .5px;
-    color: #111111;
   }
   & nav ul.main-nav {
     display: flex;
     flex-flow: row wrap;
     margin: 20px auto;
     justify-content: space-evenly;
-    max-width: 80%;
   }
-  & li{
-    margin-left: 0.75rem;
-    margin-top: 0px;
-    padding: 0.25rem;
-    list-style: none;
-  }
+  & li{ margin-left: 1rem; }
 
   & nav ul.main-nav li.parent-li {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    width: auto;
-    text-transform: uppercase;
-    color: #111111;
-    font-weight: 400;
+    border: 3px solid var(--mainWhite);
   }
   & nav ul.main-nav li.sub-li {
-    visibility: hidden;
     margin: 0;
-  }
-  & nav ul.main-nav li.parent-li.parent-plus:hover {
-    cursor: pointer;
   }
   & nav ul.main-nav li.parent-plus:hover li.sub-li {
     visibility: visible;
     padding: 1px 0;
     height: auto;
   }
-  & nav ul.main-nav li.parent-li li.sub-li {
-    visibility: hidden;
-  }
   & nav ul.main-nav li.parent-li:hover nav {
     display: flex;
     height: 0;
   }
-  & nav ul.main-nav li.parent-li:hover nav ul {
-    border: 3px solid white;
-  }
   & nav ul.main-nav li:hover ul{
     position: absolute;
-    top: 45px;
+    top: 40px;
   }
   ${screen.nav.narrow`&{display:none;}`}
 `
