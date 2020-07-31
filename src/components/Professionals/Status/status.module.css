@@ -6,17 +6,22 @@
   cursor: pointer;
   display: inline-block;
   font-family: 'proxima-nova', 'sans-serif';
-  font-size: 15px;
-  line-height: 32px;
   outline: none;
-  padding: 0.1rem;
   text-decoration: none; 
   transition: var(--btnTransition);
+
+  line-height: 32px;
+  margin-left: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
 } 
 
 .professional__logout__link {
   color: var(--mainGrey);
   font-size: 10px;
+  padding-left: 0px;
+  position:relative;
+  right: 20px;
 }
 .professional__link {
   font-weight: 400;

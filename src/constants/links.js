@@ -5,9 +5,10 @@ const createParentLink = (name, pth) => {
   let link= ( 
     <AniLink to={`/${pth}`} fade
       style={{ 
-        lineHeight: "20px",
-        padding: "4px 0px 4px 7px", 
-        background: "var(--mainWhite)", 
+        lineHeight: "32px",
+        paddingRight: "10px", 
+        marginLeft: "12px",
+        boxSizing: "border-box"
       }}
     >{name}
     </AniLink>
@@ -21,11 +22,7 @@ const createChildLink = (name) => {
       path: `/${pth}`,
       text: (
         <span
-          style={{
-            lineHeight: "20px",
-            padding: "4px 10px 10px 4px",
-            background: "var(--mainWhite)",
-          }}> {name} </span>
+          style={{ padding: "4px 10px 10px 4px",boxSizing: "borderBox" }}> {name} </span>
       ),
   }
   return obj
@@ -47,22 +44,16 @@ export default [
     ]
   },
   {
-    text: createParentLink("education", "articles"),
-    menu: [
-      createChildLink("articles"),
-      createChildLink("before & after"),
-      createChildLink("press"),
-      createChildLink("upcoming & classes"),
-    ]
-  },
-  {
     text: createParentLink("why mc?", "why-choose-us"),
     menu: [
-      createChildLink("why choose us"),
-      createChildLink("rave reviews"),
+      createChildLink("why choose us?"),
+      createChildLink("before and after"),
+      createChildLink("rave reviews!"),
+      createChildLink("press"),
     ]
   },
   { path: "/contact", text: "contact", menu: [] },
   { path: "/pro-orders", text: "pro orders", menu: [] },
-  { id: "professional", menu:[] }
+  { id: "professional", menu:[] },
+  { text: createParentLink("education", "articles"), menu: [ createChildLink("upcoming classes"), createChildLink("articles"), ] },
 ]

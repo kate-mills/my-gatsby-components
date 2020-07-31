@@ -66,14 +66,16 @@ class DesktopNavbar extends Component {
                   role="navigation"
                   className="parent-li parent-plus"
                   key={id}
-                  style={{padding: "4px 10px 10px 4px"}}
+                  style={{padding: "0px 10px 10px 9px"}}
                 >
                   {item.text}
                   <MoreItems label={item.label} menu={item.menu} />
                 </li>
               ) : (
-                <li key={id} className="parent-li">
-                  <AniLink fade to={item.path}>
+                <li key={id} className="parent-li"
+                >
+                  <AniLink fade to={item.path}
+                    style={{ paddingRight: "12px", marginLeft: "15px" }}>
                     {" "}
                     {item.text}
                   </AniLink>
@@ -95,28 +97,29 @@ export default styled(DesktopNavbar)`
     display: flex;
     flex-flow: row wrap;
     margin: 20px auto;
-    justify-content: space-evenly;
+    justify-content: center;
   }
-  & li{ margin-left: 1rem; }
 
   & nav ul.main-nav li.parent-li {
     border: 3px solid var(--mainWhite);
   }
   & nav ul.main-nav li.sub-li {
     margin: 0;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--mainWhite);
+    border-right: 1px solid var(--mainWhite);
+    border-left: 5px solid var(--mainWhite);
+    padding-right: 35px;
   }
   & nav ul.main-nav li.parent-plus:hover li.sub-li {
     visibility: visible;
-    padding: 1px 0;
-    height: auto;
   }
   & nav ul.main-nav li.parent-li:hover nav {
     display: flex;
-    height: 0;
   }
   & nav ul.main-nav li:hover ul{
     position: absolute;
-    top: 40px;
   }
   ${screen.nav.narrow`&{display:none;}`}
 `
