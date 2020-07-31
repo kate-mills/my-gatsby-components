@@ -161,7 +161,7 @@ export default styled(MobileNavbar)`
     border: none; 
     font-size: 16px;
   } 
-  & hr.hr-80{ width: 100vw; margin-top: 10px;}
+  & hr.hr-80{ width: 96vw; margin-top: 10px;}
   & ul.sub-ul { 
     max-width: 55%; 
     border: 1px solid rgba(0, 0, 0, 0.1); 
