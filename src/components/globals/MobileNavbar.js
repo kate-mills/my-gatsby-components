@@ -51,48 +51,34 @@ const MoreItemsWrapper = styled.div`
     pointer-events: none;
   } 
   & button.plus-btn {
-    background: var(--mainWhite);
-    outline: none;
-    border: none;
-    text-transform: uppercase;
     align-items: center;
-    margin: 0 auto;
-    letter-spacing: 1px;
-    width: 100%;
-    text-align: center;
-  }
-
-  & button.plus-btn::after {
-    position: sticky;
-    font-size: 18px;
-    color: black;
-    padding: 10px 10px;
-  }
-  & button.plus-btn.hide::after {
-    content: "+";
-  }
-  & button.plus-btn.show::after {
-    content: "--";
+    background: var(--mainWhite);
+    border: none;
     font-weight: bold;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    outline: none;
+    position: sticky;
+    text-align: center;
+    text-transform: uppercase;
   }
+  & button.plus-btn::after {
+    padding: 2px 10px 2px 10px;
+  }
+  & button.plus-btn.hide::after { content: "+"; }
+  & button.plus-btn.show::after { content: "--"; letter-spacing: -1px; }
+
   & nav.show.sub-nav {
     box-sizing: border-box;
-    padding-bottom: 10px;
-    padding-top: 5px;
   }
-  & nav.show.sub-nav li.sub-item {
-  }
+
   & nav.sub-nav.hide {
     display: none;
   }
+
   & ul.sub-ul.show li {
-    background: var(--mainWhite);
     text-align: center;
     list-style: none;
-  }
-  & ul.sub-ul.show li.show a {
-    background: var(--mainWhite);
   }
 `
 
@@ -115,7 +101,6 @@ class MobileNavbar extends Component {
       <div className={`${this.props.className}`}>
         <nav className={`${this.state.css} main-nav`}>
           <button className="navbar-toggler" onClick={this.navbarHandler}>
-            <hr className="hr-80" />
             MENU
             <hr className="hr-80" />
           </button>
@@ -123,15 +108,15 @@ class MobileNavbar extends Component {
           <ul className={`${this.state.css} main-ul`}>
             {links.map((item, id) => {
               if (item.id === "professional"){
-                return <li key={id} className="parent"> <ProfessionalStatus/></li>
+                return <li key={id} className="li parent"> <ProfessionalStatus/></li>
               }
               else{
               return item.menu.length > 0 ? (
-                <li key={id}>
+                <li key={id} className="li">
                   <MoreItems name={item.text} menu={item.menu} />
                 </li>
               ) : (
-                <li key={id}>
+                <li key={id} className="li">
                   {" "}
                   <AniLink fade to={item.path}>
                     {" "}
@@ -150,6 +135,8 @@ class MobileNavbar extends Component {
 
 export default styled(MobileNavbar)`
   &{ 
+    position: relative;
+    bottom: 20px;
     margin: 0 auto; 
     display: flex; 
     align-items: center; 
@@ -158,6 +145,9 @@ export default styled(MobileNavbar)`
     font-size: 16px;
     line-height: 27px;
     letter-spacing: 1px;
+  }
+  & li.li{
+    margin: 5px auto;
   }
   & button.show.plus-btn:hover,
   & button.hide.plus-btn:hover,
@@ -169,24 +159,19 @@ export default styled(MobileNavbar)`
     border: none; 
     font-size: 16px;
   } 
-  & hr.hr-80{ width: 100vw;}
-  & hr.hr-80:first-child{ margin-bottom: 10px; }
-  & hr.hr-80:last-child { margin-top: 10px; }
-
+  & hr.hr-80{ width: 100vw; margin-top: 10px;}
   & ul.sub-ul { 
     max-width: 55%; 
-    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
     margin: 0 auto; 
   }
   & hr.hr-50:first-child{ margin-bottom: 2px; }
   & hr.hr-50:last-child { margin-top: 5px; }
-
-  & nav.hide.main-nav  button.navbar-toggler{ 
-    margin-bottom: 30px;
-  } 
   & nav.show.main-nav li.parent:last-child {
     margin-bottom: 30px;
   }
   & ul.hide {display: none;}
+  & ul { margin 0px; }
+
   ${screen.nav.wide`&{display: none;}`}
 `
