@@ -54,7 +54,6 @@ const MoreItemsWrapper = styled.div`
     align-items: center;
     background: var(--mainWhite);
     border: none;
-    font-weight: bold;
     letter-spacing: 1px;
     margin: 0 auto;
     outline: none;
@@ -64,8 +63,11 @@ const MoreItemsWrapper = styled.div`
   }
   & button.plus-btn::after {
     padding: 2px 10px 2px 10px;
+    font-size: medium;
   }
-  & button.plus-btn.hide::after { content: "+"; }
+  & button.plus-btn.hide::after { 
+    content: "+"; 
+  }
   & button.plus-btn.show::after { content: "--"; letter-spacing: -1px; }
 
   & nav.show.sub-nav {
