@@ -33,5 +33,5 @@ export default () => {
       </>
     )
   }
-  return <span className={styles.status}>{details}</span>
+  return <span className="professionals">{details}</span>
 }

@@ -44,43 +44,40 @@ const MoreItems = props => {
 }
 
 const MoreItemsWrapper = styled.div`
-  & {
-    background: var(--mainWhite);
-  }
-  & span.no-event{
-    pointer-events: none;
-  } 
+  & {}
+  & span.no-event{ pointer-events: none;outline:none } 
   & button.plus-btn {
-    align-items: center;
-    background: var(--mainWhite);
     border: none;
-    letter-spacing: 1px;
-    margin: 0 auto;
-    outline: none;
     position: sticky;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  & button.plus-btn::after {
-    padding: 2px 10px 2px 10px;
-    font-size: medium;
+    font-size: 16px;
+    font-family: proxima-nova;
+    cursor: pointer;
   }
   & button.plus-btn.hide::after { 
     content: "+"; 
   }
-  & button.plus-btn.show::after { content: "--"; letter-spacing: -1px; }
-
-  & nav.show.sub-nav {
-    box-sizing: border-box;
+  & button.plus-btn.show::after { 
+    content: "--"; 
+    letter-spacing: -1px; 
+  }
+  & nav{
+    background: #f2f2f2;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(242, 242, 242, 1);
+    width: 90vw;
+    margin: 0 auto;
   }
 
   & nav.sub-nav.hide {
     display: none;
-  }
-
-  & ul.sub-ul.show li {
-    text-align: center;
-    list-style: none;
   }
 `
 
@@ -114,9 +111,7 @@ class MobileNavbar extends Component {
               }
               else{
               return item.menu.length > 0 ? (
-                <li key={id} className="li">
-                  <MoreItems name={item.text} menu={item.menu} />
-                </li>
+                <MoreItems key={id} name={item.text} menu={item.menu} />
               ) : (
                 <li key={id} className="li">
                   {" "}
@@ -137,43 +132,39 @@ class MobileNavbar extends Component {
 
 export default styled(MobileNavbar)`
   &{ 
-    position: relative;
-    bottom: 20px;
-    margin: 0 auto; 
-    display: flex; 
     align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+    bottom: 20px;
+    display: flex; 
     font-size: 16px;
+    justify-content: center; 
+    letter-spacing: .5px;
     line-height: 27px;
-    letter-spacing: 1px;
+    margin: 0 auto; 
+    position: relative;
+    text-align: center; 
   }
-  & li.li{
-    margin: 5px auto;
+  & a {
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
-  & button.show.plus-btn:hover,
-  & button.hide.plus-btn:hover,
-  & button.navbar-toggler:hover { 
-    cursor: pointer; 
-  }
+  & li.li{ margin: 5px auto; }
+
   & button.navbar-toggler {
     background:var(--mainWhite);
     border: none; 
     font-size: 16px;
+    cursor: pointer;
   } 
-  & hr.hr-80{ width: 96vw; margin-top: 10px;}
-  & ul.sub-ul { 
-    max-width: 55%; 
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    margin: 0 auto; 
-  }
-  & hr.hr-50:first-child{ margin-bottom: 2px; }
-  & hr.hr-50:last-child { margin-top: 5px; }
-  & nav.show.main-nav li.parent:last-child {
-    margin-bottom: 30px;
-  }
-  & ul.hide {display: none;}
+
+  & hr.hr-80{ margin-top: 10px; width: 90vw;}
+  & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
+  & hr.hr-50:last-child { margin-top:7px; height: 0px;}
+
+  & nav.show.main-nav li.parent:last-child { margin-bottom: 30px; }
+
   & ul { margin 0px; }
+  & ul.hide {display: none;}
 
   ${screen.nav.wide`&{display: none;}`}
 `

@@ -87,8 +87,13 @@ a {
   color: var(--mainBlack);
   cursor: pointer;
 }
+a:focus{
+  outline: none;
+  background: inherit;
+}
 button {
   outline: none;
+  background-color: var(--mainWhite);
 }
 hr {
   background: rgba(0, 0, 0, 0.1);
@@ -104,7 +109,9 @@ nav li {
   list-style: none;
 }
 
-nav  li  a {
+nav  li  a,
+nav button.plus-btn,
+nav span.professionals{
     font-family: 'proxima-nova', 'sans-serif';
     font-size: 15px;
     line-height:32px;

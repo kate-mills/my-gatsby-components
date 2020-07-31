@@ -1,6 +1,5 @@
 .professional__logout__link,
 .professional__link {
-  background: var(--mainWhite);
   border: 2px solid var(--mainWhite);
   color: var(--mainBlack);
   cursor: pointer;
@@ -9,7 +8,6 @@
   outline: none;
   text-decoration: none; 
   transition: var(--btnTransition);
-
   line-height: 32px;
   margin-left: 10px;
   padding-right: 12px;
@@ -24,7 +22,6 @@
   right: 20px;
 }
 .professional__link {
-  font-weight: 400;
   letter-spacing: .5px;
   /*padding: 0.4rem 1.4rem;*/
 }
