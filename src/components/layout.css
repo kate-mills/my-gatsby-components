@@ -87,6 +87,15 @@ a {
   color: var(--mainBlack);
   cursor: pointer;
 }
+button {
+  outline: none;
+}
+hr {
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  height: 1px;
+  margin: 0 auto;
+}
 
 .facebook {
   color: #285aeb;

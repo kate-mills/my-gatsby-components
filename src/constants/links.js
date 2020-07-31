@@ -6,8 +6,7 @@ const createParentLink = (name, pth) => {
     <AniLink to={`/${pth}`} fade
       style={{ 
         lineHeight: "20px",
-        padding: "4px 10px 10px 7px", 
-        marginTop: "10px", 
+        padding: "4px 0px 4px 7px", 
         background: "var(--mainWhite)", 
       }}
     >{name}

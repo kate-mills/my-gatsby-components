@@ -5,9 +5,7 @@ import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import links from "../../constants/links"
 import { screen } from "../../css/js/media-functions"
-import { setFont } from "../../css/js/helper-styles"
 import ProfessionalStatus from "../Professionals/Status" 
-
 
 const MoreItems = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,11 +22,11 @@ const MoreItems = props => {
   return (
     <MoreItemsWrapper>
       <button onClick={clickHandler} className={`${css} plus-btn`}>
-        {props.name}
+      <span className="no-event">{props.name}</span>
       </button>
       <nav className={`${css} sub-nav`}>
-        <hr className="hr-50" />
         <ul className={`${css} sub-ul`}>
+        <hr className="hr-50" />
           {props.menu.map((item, id) => {
             return (
               <li key={id} className={`${css} sub-item`}>
@@ -38,8 +36,8 @@ const MoreItems = props => {
               </li>
             )
           })}
-        </ul>
         <hr className="hr-50" />
+        </ul>
       </nav>
     </MoreItemsWrapper>
   )
@@ -49,15 +47,10 @@ const MoreItemsWrapper = styled.div`
   & {
     background: var(--mainWhite);
   }
+  & span.no-event{
+    pointer-events: none;
+  } 
   & button.plus-btn {
-    ${setFont({
-      size: "15px",
-      height: "32px",
-      color: "#111111",
-      weight: "400",
-    })}
-    display:flex;
-    justify-content: center;
     background: var(--mainWhite);
     outline: none;
     border: none;
@@ -72,15 +65,14 @@ const MoreItemsWrapper = styled.div`
   & button.plus-btn::after {
     position: sticky;
     font-size: 18px;
-    line-height: 10px;
     color: black;
+    padding: 10px 10px;
   }
   & button.plus-btn.hide::after {
-    content: "  +";
-    font-weight: bold;
+    content: "+";
   }
   & button.plus-btn.show::after {
-    content: "  --";
+    content: "--";
     font-weight: bold;
     letter-spacing: -1px;
   }
@@ -166,36 +158,35 @@ export default styled(MobileNavbar)`
     font-size: 16px;
     line-height: 27px;
     letter-spacing: 1px;
-}
-& hr.hr-80{
-  height: 2px;
-  border: none;
-  background: rgba(0, 0, 0, 0.1);
-  width: 80vw;
-}
-& hr.hr-80:first-child{
-  margin: 2px auto 20px auto;
-}
-& hr.hr-80:last-child{
-  margin: 20px auto;
-}
-& hr.hr-50{
-  border: none;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  height: 1px;
-}
-button.navbar-toggler {width: 100%; border: none; background:var(--mainWhite); font-size: 16px;}
-& nav.show.main-nav  button.navbar-toggler{ margin-bottom: 0px; outline: none;}
-& nav.hide.main-nav  button.navbar-toggler{ margin-bottom: 30px;outline: none;}
-& li {list-style: none;}
-& nav.show.main-nav li.parent:last-child {margin-bottom: 30px;}
+  }
+  & button.show.plus-btn:hover,
+  & button.hide.plus-btn:hover,
+  & button.navbar-toggler:hover { 
+    cursor: pointer; 
+  }
+  & button.navbar-toggler {
+    background:var(--mainWhite);
+    border: none; 
+    font-size: 16px;
+  } 
+  & hr.hr-80{ width: 100vw;}
+  & hr.hr-80:first-child{ margin-bottom: 10px; }
+  & hr.hr-80:last-child { margin-top: 10px; }
 
-& button.show.plus-btn:hover{cursor: pointer}
-& button.hide.plus-btn:hover{
-  cursor: pointer;}
-& ul.hide {display: none;}
-& ul.show.sub-ul, & ul.show.main-ul {padding: unset;}
-  ${screen.nav.wide`& {display: none;}`}
+  & ul.sub-ul { 
+    max-width: 55%; 
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    margin: 0 auto; 
+  }
+  & hr.hr-50:first-child{ margin-bottom: 2px; }
+  & hr.hr-50:last-child { margin-top: 5px; }
+
+  & nav.hide.main-nav  button.navbar-toggler{ 
+    margin-bottom: 30px;
+  } 
+  & nav.show.main-nav li.parent:last-child {
+    margin-bottom: 30px;
+  }
+  & ul.hide {display: none;}
+  ${screen.nav.wide`&{display: none;}`}
 `
