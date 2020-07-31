@@ -12,7 +12,7 @@ export default () => {
 
   if (!isLoggedIn()) {
     details = (
-      <Link to="/app/login"  className={styles[`professional__link`]}> PROFESSIONALS LEARN MORE </Link>
+      <Link to="/app/login"  className={styles[`professional__link`]}>PROFESSIONALS</Link>
     )
   } else {
     details = (
