@@ -1,24 +1,44 @@
 import React from "react"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import PageModel from "../components/PageModel"
+import Timer from "../components/SlideShow/Timer"
 import YesNo from "../components/YesNo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1
-      style={{
-        padding: "10px",
-        fontSize: "45px",
-        textAlign: "center",
-        color: "#222222",
-      }}
-    >
-      Beautifully Healthy Skin Starts Here
-    </h1>
-    <YesNo />
-  </Layout>
-)
+import styled from "styled-components"
 
-export default IndexPage
+const Home = ({data}) => {
+
+  console.log('DATA->', data);
+  return (
+    <PageModel title="Home">
+      <PressWrapper>
+        <h1 style={{textAlign: "center"}}> Beautifully Healthy Skin Starts Here </h1>
+          <Timer images={data.allFile.nodes} />
+      <YesNo />
+      </PressWrapper>
+    </PageModel>
+  )
+}
+
+export const query = graphql`
+  query {
+    allFile(filter: {relativeDirectory: {eq: "slideshow/fixed"}}) {
+      nodes {
+        childImageSharp {
+          fluid(maxHeight: 400, fit: CONTAIN, jpegQuality: 100){
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  }
+`
+
+
+const PressWrapper = styled.section`
+
+
+`
+
+export default Home
