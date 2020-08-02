@@ -2,9 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import Timer from "../components/SlideShow/Timer"
+import SlideShow from "../components/SlideShow/SlideShow"
 import YesNo from "../components/YesNo"
-
 import styled from "styled-components"
 
 const Home = ({data}) => {
@@ -14,7 +13,9 @@ const Home = ({data}) => {
     <PageModel title="Home">
       <PressWrapper>
         <h1 style={{textAlign: "center"}}> Beautifully Healthy Skin Starts Here </h1>
-          <Timer images={data.allFile.nodes} />
+        <SlideShow interval={5000}
+          images={data.allFile.nodes}/>
+
       <YesNo />
       </PressWrapper>
     </PageModel>
