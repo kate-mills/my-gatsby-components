@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import SlideShow from "../components/SlideShow/SlideShow"
+import Slider from "../components/Slider/Slider"
 import YesNo from "../components/YesNo"
 import styled from "styled-components"
 
@@ -13,7 +13,7 @@ const Home = ({data}) => {
     <PageModel title="Home">
       <PressWrapper>
         <h1 style={{textAlign: "center"}}> Beautifully Healthy Skin Starts Here </h1>
-        <SlideShow interval={5000}
+        <Slider interval={5000}
           images={data.allFile.nodes}/>
 
       <YesNo />
@@ -27,8 +27,10 @@ export const query = graphql`
     allFile(filter: {relativeDirectory: {eq: "slideshow/fixed"}}) {
       nodes {
         childImageSharp {
-          fluid(maxHeight: 400, fit: CONTAIN, jpegQuality: 100){
-            ...GatsbyImageSharpFluid_tracedSVG
+          fluid(maxHeight: 3000, maxWidth: 3000, fit: CONTAIN, jpegQuality: 100, background: "white"){
+          src
+          srcSet
+            ...GatsbyImageSharpFluid
           }
         }
       }
