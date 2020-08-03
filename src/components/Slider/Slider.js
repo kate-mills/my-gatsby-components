@@ -1,14 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import './styles.css';
+import Img from 'gatsby-image'
 
 export default function Slideshow({images=[], interval=3000}){
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [imgSet, setImgSet] = useState(null);
-    const [cls, setCls] = useState('next')
 
     useEffect(()=>{
-      setCls('next');
-      setImgSet(images[currentSlide].childImageSharp.fluid.srcSet);
 
       const loop = setInterval(()=>{ 
           if(currentSlide === images.length-1){ 
@@ -20,7 +16,7 @@ export default function Slideshow({images=[], interval=3000}){
 
     return (
         <div data-slideshow className="img-container">
-          <img srcSet={imgSet}  className={cls} alt="" />
+          <Img fluid={images[currentSlide].childImageSharp.fluid} alt="" className="next"/>
         </div>
     )
 }
