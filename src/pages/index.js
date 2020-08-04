@@ -7,15 +7,12 @@ import YesNo from "../components/YesNo"
 import styled from "styled-components"
 
 const Home = ({data}) => {
-
-  console.log('DATA->', data);
   return (
     <PageModel title="Home">
       <PressWrapper>
         <h1 style={{textAlign: "center"}}> Beautifully Healthy Skin Starts Here </h1>
         <Slider interval={5000}
           images={data.allFile.nodes}/>
-
       <YesNo />
       </PressWrapper>
     </PageModel>
@@ -27,9 +24,7 @@ export const query = graphql`
     allFile(filter: {relativeDirectory: {eq: "slideshow/fixed"}}) {
       nodes {
         childImageSharp {
-          fluid(fit: CONTAIN, jpegQuality: 100, background: "white"){
-          src
-          srcSet
+          fluid(maxWidth: 1280, maxHeight: 800, fit: COVER){
             ...GatsbyImageSharpFluid
           }
         }
