@@ -3,6 +3,7 @@ import Title from './ContactTitle'
 import styles from '../css/contact.module.css'
 
 const Contact = () => {
+  const asterisk = <span style={{paddingRight: "2px"}}>&lowast;</span>
   return (
     <section className={styles.contact}>
       <Title title="contact" subtitle="us" />
@@ -11,7 +12,7 @@ const Contact = () => {
           <input type="hidden" name="bot-field"/>
           <input type="hidden" name="form-name" value="contact" />
           <div>
-            <label htmlFor="name">name: &lowast;
+            <label htmlFor="name">{asterisk}Name:
               <input
                 type="text"
                 name="name"
@@ -22,7 +23,7 @@ const Contact = () => {
             </label>
           </div>
           <div>
-            <label htmlFor="email">email: &lowast;
+            <label htmlFor="email">{asterisk}Email:
               <input type="email"
                 name="email"
                 id="email"
@@ -32,7 +33,7 @@ const Contact = () => {
             </label>
           </div>
           <div>
-            <label htmlFor="phone">Phone: &lowast;
+            <label htmlFor="phone">{asterisk}Phone:
               <input type="tel"
                 name="phone"
                 id="phone"
@@ -42,7 +43,7 @@ const Contact = () => {
             </label>
           </div>
           <div>
-            <label htmlFor="subject">subject: &lowast;
+            <label htmlFor="subject">{asterisk}Subject:
               <input type="text" name="subject" id="subject" className={styles.formControl} required/>
             </label>
           </div>
@@ -52,7 +53,7 @@ const Contact = () => {
             </label>
           </div>
           <div>
-            <label htmlFor="message">message: &lowast;
+            <label htmlFor="message">{asterisk}Message:
               <textarea
                 name="message"
                 id="message"
@@ -64,7 +65,7 @@ const Contact = () => {
             </label>
           </div>
           <div>
-            <label htmlFor="reference">How Did You Hear About Us?: &lowast;
+            <label htmlFor="reference">{asterisk}How Did You Hear About Us?:
               <select type="text" name="reference" id="reference" className={styles.formControl} required>
                 <option value="Licensed Professional">Licensed Professional</option>
                 <option value="Internet Search">Internet Search</option>
