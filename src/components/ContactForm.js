@@ -3,20 +3,13 @@ import Title from './ContactTitle'
 import styles from '../css/contact.module.css'
 
 const Contact = () => {
-  function submitFn() { console.log("The form was submitted!"); }
   return (
     <section className={styles.contact}>
       <Title title="contact" subtitle="us" />
       <div className={styles.center}>
-        <form
-          name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
-          onSubmit={submitFn}
-          className={styles.form}
-        >
+        <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" className={styles.form} >
+          <input type="hidden" name="bot-field"/>
+          <input type="hidden" name="form-name" value="contact" />
           <div>
             <label htmlFor="name">name: &lowast;
               <input
