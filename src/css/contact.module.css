@@ -16,9 +16,6 @@
 .formFlex{
   display: inline-block;
 }
-
-
-
 .formControl,
 .submit {
   width: 100%;
@@ -36,8 +33,10 @@
   transition: var(--mainTransition);
   cursor: pointer;
 }
-.submit:hover {
-  background: var(--darkGrey);
-  color: var(--mainWhite);
-  border-color: var(--darkGrey);
+.submit:hover,.submit:active,.submit:focus {
+  background: var(--mainWhite);
+  color: var(--mccAltPink);
+  border-color: var(--mccAltPink);
+  outline:none;
+  transition: var(--bgTransition);
 }

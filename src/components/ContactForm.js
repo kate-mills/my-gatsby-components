@@ -3,30 +3,33 @@ import Title from './ContactTitle'
 import styles from '../css/contact.module.css'
 
 const Contact = () => {
+  function submitFn() { console.log("The form was submitted!"); }
   return (
     <section className={styles.contact}>
       <Title title="contact" subtitle="us" />
       <div className={styles.center}>
-        <form 
-          method="post" 
-          data-netlify-honeypot="bot-field" 
-          data-netlify="true" 
+        <form
           name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+          onSubmit={submitFn}
           className={styles.form}
         >
           <div>
-            <label htmlFor="name">name: &lowast; 
-              <input 
-                type="text" 
-                name="name" 
-                id="name" 
-                className={styles.formControl} 
+            <label htmlFor="name">name: &lowast;
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className={styles.formControl}
                 required
               />
             </label>
           </div>
           <div>
-            <label htmlFor="email">email: &lowast; 
+            <label htmlFor="email">email: &lowast;
               <input type="email"
                 name="email"
                 id="email"
@@ -35,10 +38,8 @@ const Contact = () => {
               />
             </label>
           </div>
-
-
           <div>
-            <label htmlFor="phone">Phone: &lowast; 
+            <label htmlFor="phone">Phone: &lowast;
               <input type="tel"
                 name="phone"
                 id="phone"
@@ -47,23 +48,18 @@ const Contact = () => {
               />
             </label>
           </div>
-
-
-
           <div>
-            <label htmlFor="subject">subject: &lowast; 
+            <label htmlFor="subject">subject: &lowast;
               <input type="text" name="subject" id="subject" className={styles.formControl} required/>
             </label>
           </div>
-
           <div>
             <label htmlFor="license">Professional License Number:
               <input type="text" name="license" id="license" className={styles.formControl} />
             </label>
           </div>
-
           <div>
-            <label htmlFor="message">message: &lowast; 
+            <label htmlFor="message">message: &lowast;
               <textarea
                 name="message"
                 id="message"
@@ -74,9 +70,8 @@ const Contact = () => {
               />
             </label>
           </div>
-
           <div>
-            <label htmlFor="reference">How Did You Hear About Us?: &lowast; 
+            <label htmlFor="reference">How Did You Hear About Us?: &lowast;
               <select type="text" name="reference" id="reference" className={styles.formControl} required>
                 <option value="Licensed Professional">Licensed Professional</option>
                 <option value="Internet Search">Internet Search</option>
@@ -88,11 +83,10 @@ const Contact = () => {
           </div>
           <div>
             <label htmlFor="website">Website:
-              <input type="url" name="website" id="website" className={styles.formControl} 
+              <input type="url" name="website" id="website" className={styles.formControl}
               />
             </label>
           </div>
-
           <div>
             <input type="submit" value="send" className={styles.submit} />
           </div>
@@ -101,5 +95,4 @@ const Contact = () => {
     </section>
   )
 }
-
 export default Contact
