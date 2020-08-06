@@ -16,8 +16,8 @@ const createParentLink = (name, pth) => {
   return link
 }
 
-const createChildLink = (name) => {
-  let pth = name.replace(' & ', ' ').split(' ').join('-')
+const createChildLink = (name, pthStr="") => {
+  let pth = pthStr || name.replace(' & ', ' ').split(' ').join('-')
   let obj = {
       path: `/${pth}`,
       text: (
@@ -44,9 +44,9 @@ export default [
     ]
   },
   {
-    text: createParentLink("why mc?", "why-choose-us"),
+    text: createParentLink("why mc?", "why-mc"),
     menu: [
-      createChildLink("why choose us?"),
+      createChildLink("why choose us?", "why-mc"),
       createChildLink("before and after"),
       createChildLink("rave reviews!"),
       createChildLink("press"),

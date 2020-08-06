@@ -123,7 +123,7 @@ nav span.professionals{
     letter-spacing: .5px;
 }
 
-p { padding: 0 0 1.8em; }
+p { padding: 0 0 1.8em; white-space: pre-wrap; }
 
 article.page-article{}
 article.page-article:first-child{}
@@ -201,6 +201,22 @@ div#content {
   max-width: 1030px;
   padding: 50px 50px 0;
   z-index: 0;
+  outline: none;
+}
+
+ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
+
+ul[data-bullet-list] li>*:first-child::before{
+  display: inline-block;
+  margin-left: -40px;
+  min-width: 40px;
+  text-align: right;
+  box-sizing: border-box;
+}
+ul[data-bullet-list] li>*:first-child::before {
+  padding-right: 10px;
+  content: "\2022";
+  white-space:pre;
 }
 
 @media screen and (max-width: 1023px){
