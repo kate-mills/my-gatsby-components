@@ -23,7 +23,7 @@ const Product = ({ product }) => {
       <ProductMedia {...product} />
       <div className="product-ingredients">
         <p className="bold">A FEW KEY Ingredients & Benefits:</p>
-        <ul>
+        <ul data-bullet-list>
           {keyIngredients.map(ing => {
             return (
               <li className="key-ingredient" key={ing.id}>
