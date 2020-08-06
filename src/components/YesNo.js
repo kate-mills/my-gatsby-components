@@ -5,34 +5,35 @@ import { screen } from "../css/js/media-functions"
 const YesNo = ({ className }) => {
   return (
     <section className={className}>
-      <article className="flex-container">
-        <ul>
+      <article className="flex-row">
+        <div className="flex-col">
           <h2>YES</h2>
-          <li>Powerful Peptides</li>
-          <li>Potent Antioxidants</li>
-          <li>Stable Vitamin C</li>
-          <li>Active Enzymes</li>
-          <li>Nutritious Plant Oils</li>
-          <li>Balancing Essential Oils</li>
-          <li>Vegetarian Formulas</li>
-          <li>Gentle Preservatives</li>
+        <ul data-bullet-list>
+          <li><p>Powerful Peptides</p></li>
+          <li><p>Potent Antioxidants</p></li>
+          <li><p>Stable Vitamin C</p></li>
+          <li><p>Active Enzymes</p></li>
+          <li><p>Nutritious Plant Oils</p></li>
+          <li><p>Balancing Essential Oils</p></li>
+          <li><p>Vegetarian Formulas</p></li>
+          <li><p>Gentle Preservatives</p></li>
         </ul>
-
-        <ul>
+        </div>
+        <div className="flex-col">
           <h2>NO</h2>
-          <li>Parabens</li>
-          <li>Synthetic Colorants</li>
-          <li>Synthetic Fragrance</li>
-          <li>Phthalates</li>
-          <li>Urea</li>
-          <li>
-            Formaldehyde Releasing
-            <br />
-            Preservatives
-          </li>
-          <li>Sodium Lauryl Sulfate</li>
-          <li>Sodium Laureth Sulfate</li>
+        <ul data-bullet-list>
+          <li><p>Parabens</p></li>
+          <li><p>Synthetic Colorants</p></li>
+          <li><p>Synthetic Fragrance</p></li>
+          <li><p>Phthalates</p></li>
+          <li><p>Urea</p></li>
+          <li><p>
+            Formaldehyde Releasing<br/>Preservatives
+          </p></li>
+          <li><p>Sodium Lauryl Sulfate</p></li>
+          <li><p>Sodium Laureth Sulfate</p></li>
         </ul>
+        </div>
       </article>
       <article className="flex-column">
         <h2 className="yn">
@@ -47,40 +48,18 @@ const YesNo = ({ className }) => {
   )
 }
 const Wrapper = styled(YesNo)`
-  & .flex-container {
+  & .flex-row {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
-  & ul {
-    margin: 0 50px;
-    list-style-type: "*  ";
-    list-style-position: outside;
+  & .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  & li {
-    color: #5c5c5c;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 27px;
-  }
-  & .flex-container h2 {
-    color: rgba(179, 0, 0, 0.8);
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 42px;
-    text-align: center;
-    width: 150px;
-  }
-  & .flex-column h2.yn {
-    font-size: 30px;
-    line-height: 42px;
-    color: rgba(179, 0, 0, 0.8);
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    padding: 17px;
-    margin: 0 auto;
-  }
+  & .flex-column h2.yn { text-align: center; padding: 17px; margin: 0 auto; }
   & .flex-column h3.yn {
     font-size: 21px;
     line-height: 32px;
@@ -89,8 +68,34 @@ const Wrapper = styled(YesNo)`
     font-weight: 400;
     text-align: center;
   }
-  ${screen.phone
-    .phone`& .flex-container{flex-flow:column nowrap;align-items:center;justify-content:center;}`}
+  & [data-bullet-list] {
+    color: rgb(92,92,92);
+    display: block;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 27px;
+    list-style:none;
+    margin-block-end: 15px;
+    margin-block-start: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 40px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  & ul[data-bullet-list] li p{  padding: 0; margin: 7.5px auto; }
+  & ul[data-bullet-list] li>*:first-child::before{
+    display: inline-block;
+    margin-left: -40px;
+    min-width: 40px;
+    text-align: right;
+    box-sizing: border-box;
+  }
+  ${screen.phone.phone`
+    & .flex-container{
+      flex-flow: column wrap;
+      justify-content:center;
+    }`
+  }
 `
-
 export default Wrapper

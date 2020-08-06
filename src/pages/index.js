@@ -9,12 +9,12 @@ import styled from "styled-components"
 const Home = ({data}) => {
   return (
     <PageModel title="Home">
-      <PressWrapper>
-        <h1 style={{textAlign: "center"}}> Beautifully Healthy Skin Starts Here </h1>
+      <Wrapper>
+        <h1 style={{textAlign: "center"}}>Beautifully Healthy Skin Starts Here</h1>
         <Slider interval={5000}
           images={data.allFile.nodes}/>
       <YesNo />
-      </PressWrapper>
+      </Wrapper>
     </PageModel>
   )
 }
@@ -34,8 +34,7 @@ export const query = graphql`
 `
 
 
-const PressWrapper = styled.section`
-
+const Wrapper = styled.section`
 
 `
 
