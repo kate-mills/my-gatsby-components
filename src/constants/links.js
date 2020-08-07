@@ -48,7 +48,7 @@ export default [
     menu: [
       createChildLink("why choose us?", "why-mc"),
       createChildLink("before and after"),
-      createChildLink("rave reviews!"),
+      createChildLink("rave reviews!", "rave-reviews"),
       createChildLink("press"),
     ]
   },
