@@ -53,5 +53,19 @@ module.exports = {
         domains: ["https://foo.com", "https://bar.com"],
       },
     },
-  ],
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_API, 
+        concurrency: 5,
+        tables: [
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `Articles`,
+            mapping: {image: `fileNode`, pdf: `fileNode`}
+          }
+        ]
+      }
+    },
+  ]
 }
