@@ -202,6 +202,7 @@ div#content {
   padding: 50px 50px 0;
   z-index: 0;
   outline: none;
+  margin: 55px auto;
 }
 
 ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
