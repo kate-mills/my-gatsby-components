@@ -28,10 +28,11 @@ const Footer = ({ className }) => {
           })}
         </div>
         <div className="row lg-text phone-email">
-          <h3 style={{color: "#524c4c", fontWeight:"400", fontSize: "21px", lineHeight: "32px", fontFamily: "proxima-nova"}}>
+          <p style={{margin: "0", padding: "0 0 1.0em"}}>
             <span className="phone">707.637.4996</span>{` `}<span className="middot">&middot;</span>{` `}
-            <span className="email span1">customerservice</span><span className="email span2">@michelecorley.com</span>
-          </h3>
+              <a href="mailto:customerservice@michelecorley.com?Subject=Hello%20Michele!" target="_top" className="email"> 
+              <span className="span1">customerservice</span><span className="email span2">@michelecorley.com </span></a>
+          </p>
         </div>
         <div className="row sm-text">
           <p className="address">
@@ -71,16 +72,42 @@ const FooterWrapper = styled(Footer)`
 
   div.row.sm-text p { padding: 5px; }
 
+  div.phone-email{
+    color: #524c4c; 
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 22px; 
+  }
+  a.email{
+    text-decoration: none;
+    font-size: 19px;
+  }
+
+  div.phone-email p {
+    white-space: initial;
+  }
+
+
   ${screen.phone.phone`
     div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;}
-    span.email{display: block;}
-    span.email.span1{margin-top: 5px; margin-bottom: 0px;}
-    span.email.span2{margin-bottom: 5px; margin-top: 0px;}
+    span.phone{ 
+      display:block;
+      font-size: 18px; 
+      letter-spacing: 1.5px; 
+      line-height: 30px;
+    }
+    a.email{ 
+      display:block; 
+      font-size: 17px;
+      margin-inline-end: 10px;
+      margin-inline-start: 10px; 
+    }
   `}
   ${screen.tablet.tablet` div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;} `}
 
   @media (max-width: 700px){
-    .middot{display:none;}
+    .middot{display:block; line-height: 8px; color: var(--mainWhite);}
     .div-row{flex-direction: column;flex-wrap: wrap;}
     span.phone{display:block;}
   }
