@@ -1,6 +1,6 @@
 .view {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;*/
   margin: 2rem auto 3rem;
 }
