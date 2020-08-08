@@ -10,7 +10,9 @@ const Footer = ({ className }) => {
     <footer className={className}>
       <div className="clear"/>
       <div className="column">
-        <div className="lg-text"><h3 style={{color: "#524c4c", fontWeight:"400", lineHeight: "32px", fontSize: "21px", fontFamily: "proxima-nova", textAlign: "center"}}>Follow us on</h3></div>
+        <div className="lg-text"><h3 style={{
+          textTransform: "capitalize",
+        color: "#524c4c", fontWeight:"400", lineHeight: "32px", fontSize: "21px", fontFamily: "proxima-nova", textAlign: "center"}}>Follow us on</h3></div>
         <div className="row footer-icons">
           {socialLinks.map((item, index) => {
             return (
@@ -71,22 +73,25 @@ const FooterWrapper = styled(Footer)`
   a.instagram-logo img{height: 40px; width: 40px;}
 
   div.row.sm-text p { padding: 5px; }
+  div.row.sm-text p.address {font-weight: 400;}
 
   div.phone-email{
     color: #524c4c; 
-    font-weight: 300;
     font-size: 20px;
     margin-top: 10px;
     line-height: 22px; 
   }
-  a.email{
-    text-decoration: none;
-    font-size: 19px;
-  }
-
   div.phone-email p {
     white-space: initial;
   }
+  span.phone, a.email{
+    text-decoration: none;
+    font-weight: 400;
+  }
+  a.email{ font-size: 19px; }
+  a.email span{display:inline;}
+  div.row.sm-text{font-weight: 300;}
+
 
 
   ${screen.phone.phone`
@@ -107,9 +112,20 @@ const FooterWrapper = styled(Footer)`
   ${screen.tablet.tablet` div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;} `}
 
   @media (max-width: 700px){
-    .middot{display:block; line-height: 8px; color: var(--mainWhite);}
-    .div-row{flex-direction: column;flex-wrap: wrap;}
-    span.phone{display:block;}
+    .middot{
+      display:none;
+    }
+    .div-row{
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    span.phone{
+      display:block;
+      line-height: 35px;}
   }
+  @media (max-width: 325px) {
+    a.email{font-size: 15px;}
+  }
+
 `
 export default FooterWrapper
