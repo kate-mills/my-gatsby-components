@@ -73,9 +73,7 @@ const query = graphql`{
 `
 const Profile = () => {
   const data =  useStaticQuery(query)
-  console.log('data', data)
   const {manuals, media, facialsA, facialsB} = data
-  console.log('media', media);
   const esty = media.nodes.filter(({data}) => data.name==="esty")
   const bowl = media.nodes.filter(({data}) => data.name==="bowl")
 
