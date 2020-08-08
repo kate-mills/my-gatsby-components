@@ -44,6 +44,7 @@ const query = graphql`{
 
   facialsA: allAirtable(filter: {table: {eq: "Facials"}}, limit: 4, sort: {fields: data___name, order: ASC}) {
     nodes {
+      id
       data {
         name
         pdf {
@@ -57,6 +58,7 @@ const query = graphql`{
 
   facialsB: allAirtable(filter: {table: {eq: "Facials"}}, skip: 4, sort: {fields: data___name, order: ASC}) {
     nodes {
+      id
       data {
         name
         pdf {
