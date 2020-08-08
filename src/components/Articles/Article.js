@@ -27,7 +27,7 @@ const ArticleWrapper = styled.article`
   margin-block-end: 100px;
 }
 & .article-image-container{
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 & a {text-decoration: none;}
@@ -59,7 +59,6 @@ const ArticleWrapper = styled.article`
   white-space: nowrap;
   color:#5c5c5c;
   font-style: italic;
-  font-size: 13px;
 }
 & span.article-readmore span.article-dots{
   color: var(--mainWhite);
@@ -72,7 +71,6 @@ const ArticleWrapper = styled.article`
   position: relative;
   top: 3px;
 }
-
 `
 export default SingleArticle
 

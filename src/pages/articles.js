@@ -20,7 +20,9 @@ const ArticlesWrapper = styled.section``
 
 export const query = graphql`
   {
-    allAirtable(filter: {table: {eq: "Articles"}}, sort: {fields: data___date, order: DESC}) {
+    allAirtable(filter: {
+      table: {eq: "Articles"}}, 
+      sort: { order: [DESC, ASC], fields: [data___date, data___name]}) {
       articles: nodes {
         id
         article:data {
