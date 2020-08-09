@@ -1,17 +1,60 @@
 import React from "react"
+import {graphql} from 'gatsby'
 
 import PageModel from "../components/PageModel"
+import BeforeAfterList from "../components/BeforeAfter/BeforeAfterList"
 
 import styled from "styled-components"
 
-const BeforeAfter = () => {
+const BeforeAfter = ({data}) => {
   return (
     <PageModel title="Before and After">
-      <BeforeAfterWrapper></BeforeAfterWrapper>
+      <BeforeAfterWrapper>
+        <h2>Before & After Photos</h2>
+        <p> These photos are provided by my dear clients utilizing only Michele Corley Clinical Skin Care Products (unless noted). The results were achieved by using proper home care product daily and most clients also received regular facials.  No equipment beyond a steamer and magnifying lamp were used.  These photos are not retouched and are generally taken with cellular phones.</p>
+        <BeforeAfterList bal={data.allAirtable.bal}/>
+      </BeforeAfterWrapper>
     </PageModel>
   )
 }
+const BeforeAfterWrapper = styled.section`
+  & {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+    text-align: left;
+    box-sizing: border-box;
+  }
+`
 
-const BeforeAfterWrapper = styled.section``
+
+export const query = graphql`
+  {
+    allAirtable(filter: {table: {eq: "BeforeAfter"}}, sort: {fields: data___name, order: ASC}) {
+      bal: nodes {
+        id
+        data {
+          name
+          notes
+          media {
+            localFiles {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          product_list
+          product_heading
+        }
+      }
+    }
+  }
+`
+
 
 export default BeforeAfter

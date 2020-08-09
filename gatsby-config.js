@@ -66,8 +66,8 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_EDUCATION_BASE_ID,
-            tableName: `Maps`,
-            mapping: {marker: `fileNode`}
+            tableName: `BeforeAfter`,
+            mapping: {media: `fileNode`}
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_EDUCATION_BASE_ID,
