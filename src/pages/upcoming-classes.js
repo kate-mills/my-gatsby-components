@@ -8,7 +8,6 @@ import styled from "styled-components"
 import UpcomingClassList from '../components/UpcomingClasses/UpcomingClassList'
 
 const UpcomingClasses = ({data}) => {
-  console.log('data', data);
   return (
     <PageModel title="Upcoming Classes">
       <UpcomingClassesWrapper>
@@ -24,7 +23,7 @@ const UpcomingClasses = ({data}) => {
 
 export const query = graphql`
   {
-    allAirtable(filter: {table: {eq: "Classes"}}) {
+    allAirtable(filter: {table: {eq: "Classes"}}, sort: {fields: data___name, order: DESC}){
       classes: nodes {
         id
         data {
