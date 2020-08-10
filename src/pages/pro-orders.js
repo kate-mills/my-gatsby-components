@@ -1,4 +1,5 @@
 import React from "react"
+import Email from "../components/Email"
 
 import PageModel from "../components/PageModel"
 
@@ -20,9 +21,7 @@ const ProOrders = () => {
           </p>
           <p>
             If you need a login to place online orders contact us{` - `}
-            <a href="mailto:customerservice@michelecorley.com?subject=Pro%20Order%20Login">
-              <span className="email-prefix">customerservice</span>@michelecorley.com
-            </a>
+            <Email subject="Pro Order Login"/>
           </p>
       </ProOrdersWrapper>
     </PageModel>
