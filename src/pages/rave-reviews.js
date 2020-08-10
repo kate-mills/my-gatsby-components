@@ -32,22 +32,13 @@ export const query = graphql`
 `
 const RaveReviewsWrapper = styled.section`
   & {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    max-width: 98%;
+    margin: 5px auto;
     margin-bottom: 1rem;
-    text-align: left;
     box-sizing: border-box;
   }
-
-
   & .heading{
     text-align: center;
   }
-
-
 `
-
 export default RaveReviews
