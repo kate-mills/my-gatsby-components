@@ -43,10 +43,15 @@ export const query = graphql`
   }
 `
 const PressWrapper = styled.section`
+  & {
+    margin: 0 auto;
+  }
+  & > section{
+    margin: 0 auto;
+  }
   & h2{
     margin: 0 auto;
     text-align: center;
   }
 `
-
 export default Press
