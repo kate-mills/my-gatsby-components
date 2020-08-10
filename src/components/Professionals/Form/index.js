@@ -22,6 +22,7 @@ export default ({ handleSubmit, handleUpdate }) => (
       <label htmlFor="username" className={styles[`form__label`]}>
         Username
         <input
+          ref={input => input && input.focus()}
           className={styles[`form__input`]}
           type="text"
           name="username"
