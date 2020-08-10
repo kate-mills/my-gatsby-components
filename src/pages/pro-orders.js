@@ -20,8 +20,10 @@ const ProOrders = () => {
             Travel Size Kit).
           </p>
           <p>
-            If you need a login to place online orders contact us -
-            info@michelecorley.com
+            If you need a login to place online orders contact us {` - `}
+            <a href="mailto:customerservice@michelecorley.com?subject=Pro%20Order%20Login">
+              customerservice@michelecorley.com
+            </a>
           </p>
         </article>
       </ProOrdersWrapper>
@@ -39,6 +41,7 @@ const ProOrdersWrapper = styled.section`
   & p {
     line-height: 30px;
     padding: 20px;
+    margin: 0 auto;
     margin-left: 30px;
     text-align: left;
   }
