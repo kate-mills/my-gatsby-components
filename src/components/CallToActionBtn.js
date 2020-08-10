@@ -18,16 +18,15 @@ export default () => {
             fontSize: "21px",
             lineHeight: "32px",
             color: "#524c4c",
-            whiteSpace: "pre-wrap",
             textAlign: "center",
+            paddingBottom: "10px"
           }}
         >Licensed Professionals - Are you interested in wholesale?</h3>
-        <p>
+        <p style={{marginTop: "25px"}}>
           <AniLink fade to="/app/login" className="btn-white btn" 
             style={{
               fontSize: "15px",
               fontWeight: "600",
-              display: "inline-block",
             }}
           >LEARN MORE
           </AniLink>
@@ -41,6 +40,6 @@ export default () => {
     margin: "30px auto",
     textAlign: "center",
     width: "auto",
-  }}>{details}</div>
+  }} className="interested-professionals">{details}</div>
 }
 
