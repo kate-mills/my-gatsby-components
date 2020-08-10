@@ -51,7 +51,7 @@ const PageWrapper = styled.section`
     margin: 0 auto;
   }
   & .flex-col .flex-item-1 .contact-p {
-    width: 80%;
+    width: 95%;
   }
   & .contact-img-container{
     max-width: 500px;
@@ -75,7 +75,7 @@ const PageWrapper = styled.section`
     }
     & .flex-col .flex-item-2{ 
       margin: 0 auto;
-      width: 70%; 
+      width: 100%; 
     }
   }
 `

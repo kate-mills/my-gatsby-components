@@ -1,20 +1,22 @@
 .center {
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+*{
+  box-sizing: border-box;
 }
 @media screen and (min-width: 992px) {
   .center {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
 }
 .contact label {
+  font-size: 17px;
   text-transform: capitalize;
   display: block;
   margin-bottom: 0.5rem;
-}
-.formFlex{
-  display: inline-block;
 }
 .formControl,
 .submit {
@@ -33,6 +35,10 @@
   transition: var(--mainTransition);
   cursor: pointer;
 }
+input:focus, textarea:focus, select:focus{
+    outline-color: var(--mccPink);
+}
+
 .submit:hover,.submit:active,.submit:focus {
   background: var(--mainWhite);
   color: var(--mccAltPink);

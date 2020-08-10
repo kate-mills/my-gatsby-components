@@ -18,6 +18,7 @@ const Contact = () => {
                 name="name"
                 id="name"
                 className={styles.formControl}
+                ref={input => input && input.focus()}
                 required
               />
             </label>
@@ -59,7 +60,7 @@ const Contact = () => {
                 id="message"
                 rows="7"
                 className={styles.formControl}
-                placeholder="hello there"
+                placeholder="Hello there..."
                 required
               />
             </label>
