@@ -79,6 +79,11 @@ module.exports = {
             tableName: `RaveReviews`,
           },
           {
+            baseId: process.env.GATSBY_AIRTABLE_MARKETING_BASE_ID,
+            tableName: `Press`,
+            mapping: {image: `fileNode`}
+          },
+          {
             baseId: process.env.GATSBY_AIRTABLE_PROFESSIONALS_BASE_ID,
             tableName: `Facials`,
             mapping: {pdf: `fileNode`}
