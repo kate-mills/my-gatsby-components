@@ -8,10 +8,9 @@ const ProOrders = () => {
   return (
     <PageModel title="Pro Orders">
       <ProOrdersWrapper>
-        <article>
           <p>
             If you have a login for online ordering click{" "}
-            <a href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867">
+            <a href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867" target="_blank" rel="noreferrer">
               HERE
             </a>
           </p>
@@ -20,31 +19,38 @@ const ProOrders = () => {
             Travel Size Kit).
           </p>
           <p>
-            If you need a login to place online orders contact us {` - `}
+            If you need a login to place online orders contact us{` - `}
             <a href="mailto:customerservice@michelecorley.com?subject=Pro%20Order%20Login">
-              customerservice@michelecorley.com
+              <span className="email-prefix">customerservice</span>@michelecorley.com
             </a>
           </p>
-        </article>
       </ProOrdersWrapper>
     </PageModel>
   )
 }
-
 const ProOrdersWrapper = styled.section`
+  & *, & > * { box-sizing: border-box; }
   & {
-    margin: 30px auto;
+    width: 90%;
+    box-sizing; border-box;
     font-size: 20px;
     color: #54c4c;
     font-weight: 400;
   }
-  & p {
-    line-height: 30px;
-    padding: 20px;
-    margin: 0 auto;
-    margin-left: 30px;
-    text-align: left;
+  @media (max-width: 600px){
+    & .email-prefix{
+      box-sizing; border-box;
+      display: block;
+      padding: 5px;
+    }
+  }
+  @media (max-width: 400px){
+    &{width: 100%;}
+    & p {
+      box-sizing; border-box;
+      text-align: justify;
+      margin: 0 auto;
+    }
   }
 `
-
 export default ProOrders
