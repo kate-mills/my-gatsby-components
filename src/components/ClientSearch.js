@@ -120,6 +120,7 @@ class ClientSearch extends Component {
             <div style={{ display: `flex`, margin: `0 auto` }}>
               <input
                 id="Search"
+                autoComplete="off"
                 value={searchQuery}
                 onChange={this.searchData}
                 placeholder="Enter your search here"
