@@ -11,7 +11,7 @@
   border-radius: 4px;
   font-family: 'proxima-nova';
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .search__thead{
@@ -19,16 +19,24 @@
 }
 .search__th{
   text-align: left;
-  padding: 6px;
+  padding: 10px;
   font-size: 16px;
   font-weight: 600;
   /*border-bottom: 2px solid #d3d3d3;*/
   cursor: pointer;
 }
+.search__th:nth-child(2){
+  background:yellow;
+  text-align: right
+
+}
+.search__td:nth-child(2){
+  text-align: right
+}
 
 .search__td{
   font-size: 16px;
-  padding-inline-start: 5px;
+  padding-inline-start: 10px;
   padding: 5px;
   /*border: 1px solid #d3d3d3;*/
 }
