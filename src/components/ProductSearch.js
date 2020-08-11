@@ -76,7 +76,9 @@ class Search extends Component {
     return (
       <div>
         <div style={{ margin: "0 auto" }}>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}
+            className={styles.search__form}
+          >
             <div className={styles.search__flex}>
             <input
               tabIndex={`0`}

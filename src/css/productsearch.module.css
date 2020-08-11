@@ -1,4 +1,8 @@
 *{ box-sizing: border-box; }
+.search__form{
+  outline-color: var(--mainWhite);
+  outline-width: 0px;
+}
 .search__form__input{
   box-sizing: border-box;
   background-image: url(../images/searchicon.png);
@@ -8,11 +12,12 @@
   border: 2px solid #ccc;
   border-radius: 4px;
   display:block;
+  font-family: 'proxima-nova';
   font-size: 16px;
   margin: 20px auto;
   padding: 12px 20px 12px 40px;
-  transition: width 0.4s ease-in-out;
-  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
   width: 130px;
 }
 
@@ -27,8 +32,6 @@
   font-family: 'proxima-nova';
   margin: 0 auto 50px auto;
   width: 85%;
-  background: var(--mccPink);
-  color: white;
 }
 .search__thead{
   border: 1px solid var(--mainWhite);
