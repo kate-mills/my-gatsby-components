@@ -97,7 +97,7 @@ class Search extends Component {
                   <th className={styles.search__th}>
                       Products found: {queryResults.length}
                   </th>
-                  <th className={styles.search__th}>Product Category</th>
+                  <th className={styles.search__th}>Category</th>
                 </tr>
               </thead>: false
               }
