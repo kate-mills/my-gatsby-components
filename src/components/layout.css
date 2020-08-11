@@ -229,6 +229,23 @@ ul[data-bullet-list] li>*:first-child::before {
   white-space:pre;
 }
 
+#Search {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-image: url(../images/searchicon.png);
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+#Search:focus {
+  width: 100%;
+}
+
 @media screen and (max-width: 1023px){
   div#content{
     margin: 0;

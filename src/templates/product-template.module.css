@@ -1,0 +1,20 @@
+.singlep__col{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.singlep__category::before{
+  content: "Product Category";
+  display: block;
+  padding-right: 10px;
+  font-size: 26px;
+  color: grey;
+
+}
+.singlep__category{
+  text-transform: capitalize;
+}
