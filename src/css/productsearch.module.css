@@ -1,0 +1,52 @@
+.search__form__input{
+  display:block;
+  margin: 20px auto;
+}
+.search__form__input:focus{
+  width: 85%;
+}
+.search__table{
+  border: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  border-radius: 4px;
+  font-family: 'proxima-nova';
+  margin: 0 auto;
+  width: 50%;
+}
+
+.search__thead{
+  border: 1px solid #808080;
+}
+.search__th{
+  text-align: left;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 2px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.search__td{
+  font-size: 14px;
+  padding-inline-start: 5px;
+  border: 1px solid #d3d3d3;
+}
+.search__td > a{ }
+
+.search__flex{
+  margin: 0 auto;
+  display: flex;
+}
+
+@media screen and (max-width: 767px){
+  .search__table{ 
+     width: 75%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .search__table{
+    width: 100%;
+    margin: 0 auto;
+  }
+}

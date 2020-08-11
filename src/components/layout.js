@@ -18,9 +18,9 @@ const Layout = ({ children }) => {
       <div id="content">
         <MobileNavbar />
         <LogoImg />
+        <ProductSearch/>
         <DesktopNavbar />
         <main>
-          <ProductSearch/>
           {children}
           <CallToActionBtn/>
           <Footer />

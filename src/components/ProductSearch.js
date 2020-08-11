@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import Axios from "axios"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import styles from "../css/productsearch.module.css"
 import * as JsSearch from "js-search"
+
 
 class Search extends Component {
   state = {
@@ -12,9 +14,8 @@ class Search extends Component {
     isError: false,
     searchQuery: "",
   }
-  /**
-   * React lifecycle method to fetch the data
-   */
+
+  /** React lifecycle method to fetch the data */
   async componentDidMount() {
     Axios.get("https://kate-mills.github.io/mcc-product-list/products.json")
       .then(result => {
@@ -36,21 +37,17 @@ class Search extends Component {
   rebuildIndex = () => {
     const { productList } = this.state
     const dataToSearch = new JsSearch.Search("contentful_id")
-    /**
-     *  defines a indexing strategy for the data
-     * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
-     */
+
+    /** defines a indexing strategy for the data more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy */
+
     dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
-    /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
-     *
-     */
+    
+    /** defines the sanitizer for the search to prevent some of the words from being excluded */
+
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
-    /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
-     */
+
+    /** defines the search index read more in here https://github.com/bvaughn/js-search#configuring-the-search-index */
+
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("contentful_id")
 
     dataToSearch.addIndex("name") // sets the index attribute for the data
@@ -60,10 +57,8 @@ class Search extends Component {
     this.setState({ search: dataToSearch, isLoading: false })
   }
 
-  /**
-   * handles the input change and perform a search with js-search
-   * in which the results will be added to the state
-   */
+  /** handles the input change and perform a search with js-search in which the results will be added to the state */
+
   searchData = e => {
     const { search } = this.state
     const queryResult = search.search(e.target.value)
@@ -72,16 +67,17 @@ class Search extends Component {
   handleSubmit = e => {
     e.preventDefault()
   }
-
+  formReset = e => {
+    console.log('reset e:', e)
+  }
   render() {
-    //const { productList, searchResults, searchQuery } = this.state
     const { searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? [] : searchResults
     return (
       <div>
         <div style={{ margin: "0 auto" }}>
           <form onSubmit={this.handleSubmit}>
-            <div style={{ margin: "0 auto", display: "flex" }}>
+            <div className={styles.search__flex}>
             <input
               tabIndex={`0`}
               autoComplete="off"
@@ -89,90 +85,37 @@ class Search extends Component {
               onChange={this.searchData}
               placeholder="Search..." 
               type="text"
-              style={{ margin: "0 auto 50px auto"}} 
+              className={styles.search__form__input}
               value={searchQuery} />
             </div>
           </form>
           <div>
-            {queryResults.length? `Number of items: ${queryResults.length}`:false}
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                borderRadius: "4px",
-                border: "1px solid #d3d3d3",
-              }}
-            >
+            <table className={styles.search__table} >
               { queryResults.length?
-              <thead style={{ border: "1px solid #808080" }}>
+              <thead className={styles.search__thead}>
                 <tr>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Product Id
+                  <th className={styles.search__th}>
+                      Products found: {queryResults.length}
                   </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Product Name
-                  </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Product Category
-                  </th>
+                  <th className={styles.search__th}>Product Category</th>
                 </tr>
               </thead>: false
               }
-
               <tbody>
                 {queryResults.map(item => {
                   return (
-                    <tr key={`row_${item.contentful_id}`}>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.contentful_id}
+                    <tr key={`row_${item.contentful_id}`}> 
+                      <td className={styles.search__td}>
+                        <AniLink fade to={`/products/${item.slug}`}>{item.name}</AniLink>
                       </td>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                      <AniLink fade to={`/products/${item.slug}`}>{item.name}</AniLink>
-                      </td>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.category}
+                      <td className={styles.search__td}>
+                        {
+                        item.category.indexOf(' ') === -1 ? 
+                        
+                          <AniLink fade to={`/${item.category}`}>{item.category}</AniLink>
+                          :
+                          <AniLink fade to={`/${item.category.replace(' & ', '-')}`}>{item.category}</AniLink>
+                        }
                       </td>
                     </tr>
                   )
@@ -186,3 +129,4 @@ class Search extends Component {
   }
 }
 export default Search
+
