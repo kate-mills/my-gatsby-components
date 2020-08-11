@@ -228,6 +228,9 @@ ul[data-bullet-list] li>*:first-child::before {
   content: "\2022";
   white-space:pre;
 }
+
+input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
+
 @media screen and (max-width: 1023px){
   div#content{
     margin: 0;

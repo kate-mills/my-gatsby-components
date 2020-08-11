@@ -1,7 +1,6 @@
 *{ box-sizing: border-box; }
 .search__form{
   outline-color: var(--mainWhite);
-  outline-width: 0px;
 }
 .search__form__input{
   box-sizing: border-box;
@@ -16,8 +15,8 @@
   font-size: 16px;
   margin: 20px auto;
   padding: 12px 20px 12px 40px;
-  transition: width 0.5s ease-in-out;
-  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  -webkit-transition: width 0.4s ease-in-out;
   width: 130px;
 }
 
@@ -43,7 +42,6 @@
   font-family: proxima-nova;
   font-style: normal;
   border-bottom: 2px solid var(--mainWhite);
-  font-variant: proportional-width;
 }
 .search__th:nth-child(2){
   text-align: right

@@ -35,9 +35,6 @@
   transition: var(--mainTransition);
   cursor: pointer;
 }
-input:focus, textarea:focus, select:focus{
-    outline-color: var(--mccPink);
-}
 
 .submit:hover,.submit:active,.submit:focus {
   background: var(--mainWhite);
