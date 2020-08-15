@@ -1,10 +1,12 @@
 import React from "react"
-import View from "./View"
+import SEO from "../../../components/seo"
+
 import Img from "gatsby-image"
 
-import styles from "./treatmentpv.module.css"
+import styles from "./professionals.module.css"
 
 import { graphql, useStaticQuery } from "gatsby"
+
 
 
 const query = graphql`{
@@ -78,7 +80,8 @@ const Profile = () => {
   const bowl = media.nodes.filter(({data}) => data.name==="bowl")
 
   return (
-    <View title="">
+    <section>
+    <SEO title="ABCProfessionals"/>
     <h1 style={{textAlign: "center"}}>Professionals</h1>
       {/* Top Row - Manuals */}
       <article className={styles.manuals__row}>
@@ -145,8 +148,9 @@ const Profile = () => {
           </div>
 
         </article>
-    </View>
+    </section>
   )
 }
 
 export default Profile
+

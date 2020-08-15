@@ -1,7 +1,7 @@
 import React from "react"
 import { Router } from "@reach/router"
 
-import TreatmentPV from "../components/Professionals/TreatmentPV"
+import Professionals from "../components/Professionals/View/professionals"
 
 import Layout from "../components/layout"
 import Login from "../components/Professionals/Login"
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Layout>
       <Router primary={false}>
-        <PrivateRoute path="/app/treatment-protocol-videos" component={TreatmentPV} />
+        <PrivateRoute path="/app/professionals" component={Professionals} />
         <Login path="/app/login" />
       </Router>
     </Layout>
