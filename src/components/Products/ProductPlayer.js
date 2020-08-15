@@ -1,5 +1,5 @@
 import React from "react"
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player/vimeo"
 // https://github.com/CookPete/react-player#config-prop
 // https://github.com/CookPete/react-player
 
