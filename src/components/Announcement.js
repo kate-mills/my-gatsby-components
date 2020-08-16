@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import {screen} from "../css/js/media-functions"
-import {handleStatus, checkStatus} from "../utils/announcement"
+import {handleStatus, checkShowStatus} from "../utils/announcement"
 
 class Announcement extends React.Component{
   constructor(props){
@@ -17,7 +17,7 @@ class Announcement extends React.Component{
             <button onClick={ () => { this.handleClick() }}>x</button>
           </div>
         </div>),
-     showAnnouncement: !checkStatus(),
+      showAnnouncement: checkShowStatus()
     }
   }
   handleClick = ()=>{
