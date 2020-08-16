@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import {screen} from "../css/js/media-functions"
+import Email from "./Email"
 import {handleStatus, checkShowStatus} from "../utils/announcement"
 
 class Announcement extends React.Component{
@@ -11,7 +12,7 @@ class Announcement extends React.Component{
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
           <div className="grid-item">
-            <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ info@michelecorley.com</p>
+            <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ <Email color={`white`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
             <button onClick={ () => { this.handleClick() }}>x</button>
@@ -71,7 +72,7 @@ const WrappedAnnouncement = styled(Announcement)`
   }
   button:hover {
     background: #ffffff;
-    color: #ff665e;
+    color: var(--mccPink);
   }
   ${screen.phone.phone` & {display: none;} `}
   ${screen.tablet.tablet` & {display: none;} `}
