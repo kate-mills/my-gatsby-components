@@ -12,7 +12,7 @@ class Announcement extends React.Component{
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
           <div className="grid-item">
-            <p style={{color: "var(--mainWhite)"}}> 707.637.4996 ~ <Email color={`white`} subject={`General Information`}/></p>
+            <p style={{padding: "0", color: "var(--mainWhite)"}}> 707.637.4996 ~ <Email color={`white`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
             <button onClick={ () => { this.handleClick() }}>x</button>
@@ -40,13 +40,13 @@ const WrappedAnnouncement = styled(Announcement)`
     font-size: 18px;
     font-weight: 400;
     grid-template-columns: 1fr 12fr 1fr;
-    grid-template-rows: 80px;
+    grid-template-rows: 55px;
     letter-spacing: 1.5px;
     line-height: 22px;
     width: 100vw;
   }
   & .grid-item {
-    align-items: baseline;
+    align-items: center;
     border: 1px solid rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
