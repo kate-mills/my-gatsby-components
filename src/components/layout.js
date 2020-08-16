@@ -16,11 +16,11 @@ const Layout = ({ children }) => {
     <>
       <Announcement />
       <div id="content">
+        <main>
         <MobileNavbar />
         <LogoImg />
         <ProductSearch/>
         <DesktopNavbar />
-        <main>
           {children}
           <CallToActionBtn/>
           <Footer />

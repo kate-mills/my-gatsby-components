@@ -27,15 +27,15 @@ html {
   padding: 0;
 }
 body {
-    background-image: none;
-    background-position: top left;
-    background-size: auto;
     background-attachment: scroll;
-    background-repeat: repeat;
+    background-image: none;
+    background-size: auto;
     background: var(--mccPink);
     background-color: var(--mccPink);
+    background-repeat: repeat;
     color: #5c5c5c;
-    font-family: 'proxima-nova', 'sans-serif';
+    display: block;
+    font-family: 'proxima-nova';
     font-weight: 300;
     font-size: 15px;
     font-style: normal;
@@ -44,10 +44,12 @@ body {
     overflow: scroll;
     text-transform: none;
     text-decoration: none;
+    margin: 0;
     min-height: 100vh;
 }
 main{
   background: var(--mainWhite);
+  padding: 50px 50px 0;
 }
 #page{ background: var(--mainWhite); width: 95%; border: 0; font-size: 15px; }
 h1 {
@@ -200,18 +202,18 @@ div.interested-professionals{
   width: 100%;
   padding: 20px;
 }
-div#content {
+div #content {
   background:var(--mainWhite);
   border: none;
   border-top: 0px;
   border-right: 0px;
   border-bottom: 0px;
   border-left: 0px;
-  max-width: 1030px;
+  max-width: 1150px;
+  margin: 55px auto;
   padding: 50px 50px 0;
   z-index: 0;
   outline: none;
-  margin: 55px auto;
 }
 
 ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
@@ -231,15 +233,20 @@ ul[data-bullet-list] li>*:first-child::before {
 
 input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
 
-@media screen and (max-width: 1023px){
-  div#content{
-    margin: 0;
+@media screen and (max-width: 1239px){
+  #content{
+   margin:0;
+   width: 100%;
   }
+  div #content{ margin: 0 auto; }
 }
 
 /*desktop mv 1281px 1240px */
-@media screen and (min-width: 1024px){
-  div#content{
-    margin: 55px auto;
+@media screen and (min-width: 1240px){
+  #content{
+    margin: 0;
+   width: 100%;
   }
+  #gatsby-focus-wrapper>div>div{}
+  #gatsby-focus-wrapper{}
 }
