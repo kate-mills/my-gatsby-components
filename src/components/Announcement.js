@@ -5,10 +5,10 @@ import {handleStatus, hideAnnouncement} from "../utils/announcement"
 
 
 const Announcement = ({ className }) => {
-  if (hideAnnouncement()) {
-    return <div id="border-only" style={{border: "1px solid rgba(0, 0, 0, 0.1)"}}></div>
-  }
-  return (
+  let details = ""
+  
+  if (!hideAnnouncement()){
+  details = (
     <div id="x" className={`${className} grid-container`}>
       <div className="grid-item"></div>
       <div className="grid-item">
@@ -26,6 +26,11 @@ const Announcement = ({ className }) => {
       </div>
     </div>
     )
+  }
+    else{
+      details = (<div/>)
+    }
+  return details
 }
 
 const WrappedAnnouncement = styled(Announcement)`
