@@ -8,7 +8,6 @@ const Professionals = () => {
   return (
     <PageModel title="Professionals">
       <ProfessionalsWrapper>
-      Professional Information Here
       </ProfessionalsWrapper>
     </PageModel>
   )

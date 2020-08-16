@@ -11,7 +11,7 @@ export default () => {
   }
   else {
     return  {
-      path: "/app/treatment-protocol-videos",
+      path: "/app/professionals",
       text: "professionals",
       menu: [],
     }

@@ -19,7 +19,7 @@ export default () => {
       <>
         <Link 
           className={styles[`professional__link`]} 
-          to="/app/treatment-protocol-videos" >
+          to="/app/professionals" >
           PROFESSIONALS
       </Link>
       <Link className={styles[`professional__logout__link`]}

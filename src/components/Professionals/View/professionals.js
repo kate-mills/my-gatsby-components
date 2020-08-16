@@ -81,7 +81,7 @@ const Profile = () => {
 
   return (
     <section>
-    <SEO title="ABCProfessionals"/>
+    <SEO title="Professionals"/>
     <h1 style={{textAlign: "center"}}>Professionals</h1>
       {/* Top Row - Manuals */}
       <article className={styles.manuals__row}>
