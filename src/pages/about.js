@@ -5,7 +5,11 @@ import { Img } from "../constants/imageurls"
 import { screen } from "../css/js/media-functions"
 import PageModel from "../components/PageModel"
 
-const About = () => {
+import { graphql } from "gatsby"
+import Image from 'gatsby-image'
+
+const About = ({data}) => {
+  console.log('data', data)
   return (
     <PageModel title="About">
       <AboutWrapper>
@@ -48,21 +52,7 @@ const About = () => {
         <div className="flexItem col" style={{margin: "0 auto" }}>
           <div className="innerFlexContainer">
             <h2 >Meet Michele Corley</h2>
-            <img
-              style={{
-                display: "block",
-                margin: "0 auto",
-                objectFit:"cover",
-                width: "90%",
-                height: "auto",
-                whiteSpace: "initial",
-              }}
-              src={Img.michele.md}
-              alt={Img.michele.alt}
-              width="446"
-              height="457"
-              overflow="hidden"
-            />
+            <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} alt="Portrait of Michele Corley in a red floral blouse."/>
             <div className="flexItem">
               <p className="text tiny" style={{ margin: "0 auto", fontSize: "12px", lineHeight: "27px", paddingBlockStart: "10px", paddingBlockEnd: "10px", paddingInlineStart: "15px", paddingInlineEnd: "unset"  }}>
                 Michele is a licensed esthetician and creative visionary behind
@@ -137,5 +127,18 @@ const AboutWrapper = styled.section`
     & .col:nth-child(1) { padding-right: 30px;}
     & .col:nth-child(2) { padding-left: 30px;}
   `}
+`
+export const query = graphql`
+  {
+    allFile(filter: {relativePath: {eq: "Michele_Corley.jpg"}}) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 446) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
 `
 export default About
