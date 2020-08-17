@@ -38,7 +38,7 @@ class Announcement extends React.Component{
 const WrappedAnnouncement = styled(Announcement)`
   & {
     background: var(--mainMcc);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: #ffffff;
     display: grid;
     font-family: Times New Roman, Times, serif;
@@ -59,11 +59,13 @@ const WrappedAnnouncement = styled(Announcement)`
   }
   & .grid-item:last-child {
     justify-content: flex-end;
-    padding-right: 0;
+    padding-right: 5px;
+    align-items: center;
   }
   button {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
     box-sizing: border-box;
     color: #ffffff;
     cursor: pointer;
