@@ -209,7 +209,7 @@ div #content {
   border-bottom: 0px;
   border-left: 0px;
   max-width: 1150px;
-  margin: 55px auto;
+  margin: 0 auto;
   padding: 50px 50px 0;
   z-index: 0;
   outline: none;
@@ -232,20 +232,10 @@ ul[data-bullet-list] li>*:first-child::before {
 
 input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
 
-@media screen and (max-width: 1239px){
-  #content{
-   margin:0;
-   width: 100%;
-  }
-  div #content{ margin: 0 auto; }
-}
+@media screen and (max-width: 1239px){}
 
 /*desktop mv 1281px 1240px */
 @media screen and (min-width: 1240px){
-  #content{
-    margin: 0;
-   width: 100%;
-  }
   #gatsby-focus-wrapper>div>div{}
   #gatsby-focus-wrapper{}
 }
