@@ -22,12 +22,12 @@ const Whymc = ({data:{files:{nodes}}}) => {
           <li><p>Retail and back bar</p></li>
           <li><p>Only sold through skincare professionals</p></li>
         </ul>
-          <p> What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.  </p>
+          <p>What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.  </p>
         </div>
         <div className="col-right">
           <Image className="desktop-img" fluid={facialImg.childImageSharp.fluid} alt="Woman receiving a relaxing facial." style={{maxWidth: "447px", maxHeight: "352px"}}/>
         </div>
-          <p> We stand behind our commitment to outstanding customer service in a big way.  No long wait times for orders, low minimum purchase requirements and the absolute best in product education.</p>
+          <p>We stand behind our commitment to outstanding customer service in a big way.  No long wait times for orders, low minimum purchase requirements and the absolute best in product education.</p>
         </div>
       </WhyWrapper>
     </PageModel>
