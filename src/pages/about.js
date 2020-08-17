@@ -1,7 +1,6 @@
 import React from "react"
 
 import styled from "styled-components"
-import { Img } from "../constants/imageurls"
 import { screen } from "../css/js/media-functions"
 import PageModel from "../components/PageModel"
 
