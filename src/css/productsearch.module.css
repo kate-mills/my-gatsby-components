@@ -29,7 +29,7 @@
   border-collapse: collapse;
   border-radius: 4px;
   font-family: 'proxima-nova';
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
   width: 85%;
 }
 .search__thead{

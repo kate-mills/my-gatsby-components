@@ -93,10 +93,12 @@ export default styled(DesktopNavbar)`
   & {
     position: sticky;
   }
+  & ul{
+    margin: unset;
+  }
   & nav ul.main-nav {
     display: flex;
     flex-flow: row wrap;
-    margin: 20px auto;
     justify-content: center;
   }
 
