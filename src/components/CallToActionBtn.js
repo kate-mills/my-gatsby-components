@@ -11,7 +11,15 @@ export default () => {
 
   if (!isLoggedIn() && !isAppInPath()) {
     details = (
-      <div>
+      <div style={{
+        padding: "20px",
+        whiteSpace: "pre-wrap",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        flexWrap: "nowrap",
+        width: "100%"
+        }}>
         <h3
           style={{
             fontWeight: "700",
@@ -22,7 +30,7 @@ export default () => {
             paddingBottom: "10px"
           }}
         >Licensed Professionals - Are you interested in wholesale?</h3>
-        <p style={{marginTop: "25px"}}>
+        <p style={{marginTop: "25px", padding: "unset"}}>
           <AniLink fade to="/app/login" className="btn-white btn" 
             style={{
               fontSize: "15px",
@@ -37,7 +45,6 @@ export default () => {
     details = "" 
   }
   return <div style={{
-    margin: "30px auto",
     textAlign: "center",
     width: "auto",
   }} className="interested-professionals">{details}</div>

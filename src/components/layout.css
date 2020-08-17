@@ -192,15 +192,6 @@ article.page-article:last-child{}
   clear:both;
   content: ".";
 }
-div.interested-professionals{
-  white-space: pre-wrap;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100%;
-  padding: 20px;
-}
 div #content {
   background:var(--mainWhite);
   border: none;
@@ -231,6 +222,9 @@ ul[data-bullet-list] li>*:first-child::before {
 }
 
 input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
+#gatsby-focus-wrapper > div.tl-edges{
+  border-bottom: 10px solid var(--mccPink);
+}
 
 @media screen and (max-width: 1239px){}
 
