@@ -28,8 +28,8 @@
   border-radius: 0.25rem;
 }
 .submit {
-  background-color: var(--primaryColor);
-  border-color: var(--primaryColor);
+  background-color: var(--mainMcc);
+  border-color: var(--darkGrey);
   text-transform: uppercase;
   color: var(--mainBlack);
   transition: var(--mainTransition);
@@ -38,8 +38,6 @@
 
 .submit:hover,.submit:active,.submit:focus {
   background: var(--mainWhite);
-  color: var(--mccAltPink);
-  border-color: var(--mccAltPink);
   outline:none;
   transition: var(--bgTransition);
 }

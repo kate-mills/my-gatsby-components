@@ -3,6 +3,7 @@
 :root {
   --mccAltPink: #e55b54;
   --primaryColor: #ff665e;
+  --mainMcc: #dcdcdc;
   --mccPink: #ff665e;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -30,8 +31,8 @@ body {
     background-attachment: scroll;
     background-image: none;
     background-size: auto;
-    background: var(--mccPink);
-    background-color: var(--mccPink);
+    background: var(--mainMcc);
+    background-color: var(--mainMcc);
     background-repeat: repeat;
     color: #5c5c5c;
     display: block;
@@ -223,7 +224,7 @@ ul[data-bullet-list] li>*:first-child::before {
 
 input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
 #gatsby-focus-wrapper > div.tl-edges{
-  border-bottom: 10px solid var(--mccPink);
+  border: 1px solid var(--mainMcc);
 }
 
 @media screen and (max-width: 1239px){}

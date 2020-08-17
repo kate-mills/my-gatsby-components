@@ -13,7 +13,7 @@ class Announcement extends React.Component{
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
           <div className="grid-item">
-            <p style={{padding: "0", color: "var(--mainWhite)"}}> 707.637.4996 ~ <Email color={`white`} subject={`General Information`}/></p>
+            <p style={{padding: "0", color: "#5c5c5c"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
             <button onClick={ () => { this.handleClick() }}>x</button>
@@ -37,7 +37,7 @@ class Announcement extends React.Component{
 
 const WrappedAnnouncement = styled(Announcement)`
   & {
-    background: #ff665e;
+    background: var(--mainMcc);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #ffffff;
     display: grid;
@@ -45,7 +45,7 @@ const WrappedAnnouncement = styled(Announcement)`
     font-size: 18px;
     font-weight: 400;
     grid-template-columns: 1fr 12fr 1fr;
-    grid-template-rows: 55px;
+    grid-template-rows: 45px;
     letter-spacing: 1.5px;
     line-height: 22px;
     width: 100vw;
@@ -60,7 +60,6 @@ const WrappedAnnouncement = styled(Announcement)`
   & .grid-item:last-child {
     justify-content: flex-end;
     padding-right: 0;
-    padding-top: 0;
   }
   button {
     background: rgba(0, 0, 0, 0.1);
@@ -77,7 +76,7 @@ const WrappedAnnouncement = styled(Announcement)`
   }
   button:hover {
     background: #ffffff;
-    color: var(--mccPink);
+    color: #5c5c5c;
   }
   ${screen.phone.phone` & {display: none;} `}
   ${screen.tablet.tablet` & {display: none;} `}

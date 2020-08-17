@@ -37,6 +37,7 @@
 .form__button:active,
 .form__button:focus {
   background-color: color(var(--mccAltPink) lightness(-20%));
+  color: var(--mccAltPink)
 }
 
 .form__instructions{

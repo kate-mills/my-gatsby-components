@@ -59,7 +59,6 @@ export default styled(SlideShow)`
   position: sticky;
   height: 533px;
     margin: 0 auto;
-    border: 1px solid var(--mccPink);
     width: 80%;
     overflow: hidden;
   }
