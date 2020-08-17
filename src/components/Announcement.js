@@ -8,7 +8,6 @@ class Announcement extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-
       hiddenDetails: <div style={{display:"none"}}/>,
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
@@ -21,6 +20,9 @@ class Announcement extends React.Component{
         </div>),
       showAnnouncement: getAnnouncementStatus()
     }
+  }
+  componentDidMount(){
+    console.log(this.state.showAnnouncement);
   }
   handleClick = ()=>{
     setHideStatus();
