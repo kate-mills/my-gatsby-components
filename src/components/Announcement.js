@@ -21,7 +21,6 @@ class Announcement extends React.Component{
         </div>),
       showAnnouncement: getAnnouncementStatus()
     }
-    console.log(this.state);
   }
   handleClick = ()=>{
     setHideStatus();
