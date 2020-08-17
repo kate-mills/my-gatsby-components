@@ -13,7 +13,7 @@ const Product = ({data: {product}}) => {
         <div className={styles.singlep__col}>
 
         <h1>{product.name}</h1>
-          <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}> {item} </span>) })} </h2>
+          <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}>{item}</span>) })} </h2>
 
 
           <h3 className={styles.singlep__category}>{product.category}</h3>
