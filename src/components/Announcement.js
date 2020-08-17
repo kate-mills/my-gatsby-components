@@ -8,6 +8,7 @@ class Announcement extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      details:<div style={{display:"none"}}/>,
       hiddenDetails: <div style={{display:"none"}}/>,
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
@@ -18,18 +19,19 @@ class Announcement extends React.Component{
             <button onClick={ () => { this.handleClick() }}>x</button>
           </div>
         </div>),
-      showAnnouncement: getAnnouncementStatus()
     }
   }
   componentDidMount(){
-    console.log(this.state.showAnnouncement);
+    if(getAnnouncementStatus()){
+      this.setState({details: this.state.visibleDetails})
+    }
   }
   handleClick = ()=>{
     setHideStatus();
-    this.setState({showAnnouncement: false})
+    this.setState({details: this.state.hiddenDetails})
   }
   render(){
-    return ( this.state.showAnnouncement ?  this.state.visibleDetails: this.state.hiddenDetails)
+    return this.state.details
   }
 }
 
