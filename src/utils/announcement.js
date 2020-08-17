@@ -1,12 +1,21 @@
 const isBrowser = typeof window !== `undefined`
 
-const setStatus = noAnnouncement => (window.localStorage.closeAnnouncement = JSON.stringify(1))
+export const setHideStatus = () => (window.localStorage.closeAnnouncement = JSON.stringify(1))
 
-export const checkStatus = () => window.localStorage.closeAnnouncement ? JSON.parse(window.localStorage.closeAnnouncement) : {}
-
-export const handleStatus = () => {
+export const ensureCloseStatus = () =>{
   if (!isBrowser) return false
-  setStatus();
+
+  if(!window.localStorage.closeAnnouncement){
+    window.localStorage.closeAnnouncement = JSON.stringify(0)
+  }
 }
 
-export const checkShowStatus = () => isBrowser && checkStatus()!==1
+
+export const checkWindow = () => window.localStorage.closeAnnouncement ? JSON.parse(window.localStorage.closeAnnouncement) : {}
+
+const checkShowStatus = () => isBrowser && checkWindow()!==1
+
+export const getAnnouncementStatus = () => {
+  ensureCloseStatus()
+  return checkShowStatus()
+}

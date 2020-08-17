@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import {screen} from "../css/js/media-functions"
 import Email from "./Email"
-import {handleStatus, checkShowStatus} from "../utils/announcement"
+import {getAnnouncementStatus, setHideStatus} from "../utils/announcement"
 
 class Announcement extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+
       hiddenDetails: <div style={{display:"none"}}/>,
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
@@ -18,11 +19,12 @@ class Announcement extends React.Component{
             <button onClick={ () => { this.handleClick() }}>x</button>
           </div>
         </div>),
-      showAnnouncement: checkShowStatus()
+      showAnnouncement: getAnnouncementStatus()
     }
+    console.log(this.state);
   }
   handleClick = ()=>{
-    handleStatus();
+    setHideStatus();
     this.setState({showAnnouncement: false})
   }
   render(){
