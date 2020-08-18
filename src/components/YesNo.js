@@ -27,7 +27,7 @@ const YesNo = ({ className }) => {
           <li><p>Synthetic Fragrance</p></li>
           <li><p>Phthalates</p></li>
           <li><p>
-            Formaldehyde Releasing<br/>Preservatives
+            Formaldehyde Releasing<p style={{position: "relative", bottom: "5px"}}>Preservatives</p>
           </p></li>
           <li><p>Sodium Lauryl Sulfate</p></li>
           <li><p>Sodium Laureth Sulfate</p></li>
@@ -50,12 +50,14 @@ const Wrapper = styled(YesNo)`
   & .flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
   }
   & .flex-col {
     display: flex;
     flex-direction: column;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
     align-items: center;
   }
   & .flex-column h2.yn { text-align: center; padding: 0px; margin: 0 auto; }
