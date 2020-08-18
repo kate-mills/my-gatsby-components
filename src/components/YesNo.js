@@ -58,10 +58,9 @@ const Wrapper = styled(YesNo)`
     flex-direction: column;
     align-items: center;
   }
-  & .flex-column h2.yn { text-align: center; padding: 17px; margin: 0 auto; }
+  & .flex-column h2.yn { text-align: center; padding: 0px; margin: 0 auto; }
   & .flex-column h3.yn {
     font-size: 21px;
-    line-height: 32px;
     color: #524c4c;
     font-style: italic;
     font-weight: 400;
@@ -75,7 +74,7 @@ const Wrapper = styled(YesNo)`
     font-weight: 300;
     line-height: 27px;
     list-style:none;
-    margin-block-end: 15px;
+    margin-block-end: 0px;
     margin-block-start: 0px;
     margin-inline-end: 0px;
     margin-inline-start: 40px;
