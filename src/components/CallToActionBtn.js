@@ -12,7 +12,7 @@ export default () => {
   if (!isLoggedIn() && !isAppInPath()) {
     details = (
       <div style={{
-        padding: "20px",
+        margin: "10px auto",
         whiteSpace: "pre-wrap",
         display: "flex",
         flexDirection: "column",
@@ -22,17 +22,18 @@ export default () => {
         }}>
         <h3
           style={{
+            margin: "10px auto",
             fontWeight: "700",
             fontSize: "21px",
             lineHeight: "32px",
             color: "#524c4c",
             textAlign: "center",
-            paddingBottom: "10px"
           }}
         >Licensed Professionals - Are you interested in wholesale?</h3>
-        <p style={{marginTop: "25px", padding: "unset"}}>
+        <p style={{padding: "unset"}}>
           <AniLink fade to="/app/login" className="btn-white btn" 
             style={{
+              borderRadius: "15px",
               fontSize: "15px",
               fontWeight: "600",
             }}
