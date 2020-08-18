@@ -26,7 +26,6 @@ const YesNo = ({ className }) => {
           <li><p>Synthetic Colorants</p></li>
           <li><p>Synthetic Fragrance</p></li>
           <li><p>Phthalates</p></li>
-          <li><p>Urea</p></li>
           <li><p>
             Formaldehyde Releasing<br/>Preservatives
           </p></li>
