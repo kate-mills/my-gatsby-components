@@ -32,10 +32,9 @@ export const query = graphql`
     }
   }
 `
-
-
 const Wrapper = styled.section`
-
+& picture img{
+  border-radius: 20px;
+}
 `
-
 export default Home
