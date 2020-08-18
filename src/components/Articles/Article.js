@@ -5,32 +5,28 @@ import styled from "styled-components"
 
 const SingleArticle = ({data}) => {
   const{name, image, link, date, preview} = data.article
-  const arrow = <span className="arrow">→</span>
+  const arrow=<span style={{fontSize:"inherit",fontWeight:"bold"}}className="arrow">→</span>
   return (
     <ArticleWrapper>
-      <h5 className="article-name">{name}</h5>
-      <p className="article-date"> {date} </p>
+      <a href={link} target="_blank" rel="noreferrer"><h5 className="article-name">{name}{arrow}</h5></a>
+      <p className="article-date">{date}</p>
       <div className="article-image-container">
         <a href={link} target="_blank" rel="noreferrer">
           <Img fluid={image.localFiles[0].childImageSharp.fluid} alt={`Shows a preview of the article titled '${name}' in the ${date} Dermascope magazine.`}/>
         </a>
-        <br/>
-        <p className="article-preview">{preview}<a href={link} target="_blank" rel="noreferrer"><span className="article-readmore"><span className="article-dots">{`...`}</span>Read more {arrow}</span></a></p>
+        <p className="article-preview">{preview}<a href={link} target="_blank" rel="noreferrer"><span className="article-readmore"><span className="article-dots">{`...`}</span>Read more{arrow}</span></a></p>
       </div>
     </ArticleWrapper>
   )
 }
 const ArticleWrapper = styled.article`
-& {
-  width: 80%;
-  margin: 50px auto;
-  margin-block-end: 100px;
-}
-& .article-image-container{
-  width: 100%;
-  margin: 0 auto;
-}
-& a {text-decoration: none;}
+& {margin-top: 40px;}
+&:first-of-type {margin-top: 10px;}
+
+& .article-image-container{ max-width: 90%; margin: 0 auto; }
+
+& a {text-decoration: none; display:  block;}
+& a:last-child {display: inline;}
 & .article-name, & .article-date {
   text-align: center;
   white-space: pre-wrap;
@@ -42,9 +38,11 @@ const ArticleWrapper = styled.article`
   font-style: normal;
   font-size: 30px;
   line-height: 36px;
-  margin-top: 30px;
+  margin: unset;
 }
 & .article-date{
+  padding: unset;
+  margin: unset;
   font-style: italic;
   color: rgba(0, 0, 0, 0.4);
   display:block;
@@ -70,6 +68,7 @@ const ArticleWrapper = styled.article`
   font-style: normal;
   position: relative;
   top: 3px;
+  left: 2px;
 }
 `
 export default SingleArticle
