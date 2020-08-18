@@ -35,18 +35,23 @@ const MoreItemsWrapper = styled.nav`
     align-self: flex-start;
     width: -webkit-max-content;
     display: none;
+    position: absolute;
+    z-index: 5;
+    opacity: 1;
   }
   nav ul.main-nav li:hover & li.sub-li {
     position: relative;
     right: 20px;
     visibility: visible;
-    z-index: 1;
+    z-index: 5;
     background: var(--mainWhite);
   }
   nav ul.main-nav li:hover & li.sub-li a {
     position: sticky;
     padding-left: 24px;
     margin-top: 0px;
+    z-index: 5;
+    background: var(--mainWhite);
   }
 `
 class DesktopNavbar extends Component {
@@ -66,7 +71,7 @@ class DesktopNavbar extends Component {
                   role="navigation"
                   className="parent-li parent-plus"
                   key={id}
-                  style={{padding: "0px 10px 10px 9px"}}
+                  style={{padding: "0px 10px 10px 9px", opacity: "1"}}
                 >
                   {item.text}
                   <MoreItems label={item.label} menu={item.menu} />
@@ -92,6 +97,8 @@ class DesktopNavbar extends Component {
 export default styled(DesktopNavbar)`
   & {
     position: sticky;
+    opacity: 1;
+    z-index: 1;
   }
   & ul{
     margin: unset;
@@ -111,7 +118,7 @@ export default styled(DesktopNavbar)`
     letter-spacing: 0.5px;
     border-top: 1px solid var(--mainWhite);
     border-right: 1px solid var(--mainWhite);
-    border-left: 5px solid var(--mainWhite);
+    border-left: 2px solid var(--mainWhite);
     padding-right: 35px;
   }
   & nav ul.main-nav li.parent-plus:hover li.sub-li {
@@ -119,9 +126,18 @@ export default styled(DesktopNavbar)`
   }
   & nav ul.main-nav li.parent-li:hover nav {
     display: flex;
-  }
-  & nav ul.main-nav li:hover ul{
     position: absolute;
+    top: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    opacity: 1;
+    transition-delay: 500ms;
+  }
+  & nav ul.main-nav li:hover nav ul{
+    position: sticky;
+    opacity: 1;
+    z-index: 5
   }
   ${screen.nav.narrow`&{display:none;}`}
 `
