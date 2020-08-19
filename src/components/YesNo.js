@@ -27,7 +27,7 @@ const YesNo = ({ className }) => {
           <li><p>Synthetic Fragrance</p></li>
           <li><p>Phthalates</p></li>
           <li><p>
-            Formaldehyde Releasing<p style={{position: "relative", bottom: "5px"}}>Preservatives</p>
+            Formaldehyde Releasing<span style={{margin: "7.5px auto",display:"block",position: "relative", bottom: "5px"}}>Preservatives</span>
           </p></li>
           <li><p>Sodium Lauryl Sulfate</p></li>
           <li><p>Sodium Laureth Sulfate</p></li>
