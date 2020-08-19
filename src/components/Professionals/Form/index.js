@@ -26,6 +26,7 @@ export default ({ handleSubmit, handleUpdate }) => (
           type="text"
           name="username"
           onChange={handleUpdate}
+          ref={input => input && input.focus()}
         />
       </label>
       <label htmlFor="password" className={styles[`form__label`]}>
