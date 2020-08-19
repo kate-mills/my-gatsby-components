@@ -28,7 +28,6 @@ const Masks = ({ data }) => {
 }
 const MasksWrapper = styled.div`
   & {
-    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -37,6 +36,7 @@ const MasksWrapper = styled.div`
     text-align: left;
     box-sizing: border-box;
   }
+  & p.description{ margin-bottom: 0; padding-bottom: 0; }
 `
 
 export const query = graphql`

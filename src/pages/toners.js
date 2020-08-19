@@ -27,7 +27,6 @@ const Toners = ({ data }) => {
 
 const PageWrapper = styled.div`
   & {
-    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -36,6 +35,7 @@ const PageWrapper = styled.div`
     text-align: left;
     box-sizing: border-box;
   }
+  & p.description{ margin-bottom: 0; padding-bottom: 0; }
 `
 
 export const query = graphql`
