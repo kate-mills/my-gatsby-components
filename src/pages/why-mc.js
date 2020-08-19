@@ -2,14 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Image from 'gatsby-image'
 import PageModel from "../components/PageModel"
+import PageTitle from "../components/Title"
 import styled from "styled-components"
 
 const Whymc = ({data:{files:{nodes}}}) => {
   const facialImg = nodes[0]
   return (
     <PageModel title="Why Choose Michele Corley Clinical Skincare?">
+      <PageTitle title="Why Choose Michele Corley Clinical Skincare?" align="center" size="30px" weight="400"></PageTitle>
       <WhyWrapper>
-        <h2>Why Choose Michele Corley Clinical Skincare?</h2>
         <div className="row">
         <div className="col-left">
           <Image className="mobile-img" fluid={facialImg.childImageSharp.fluid} alt="Woman receiving a relaxing facial." style={{maxWidth: "447px", maxHeight: "352px"}}/>
@@ -22,12 +23,12 @@ const Whymc = ({data:{files:{nodes}}}) => {
           <li><p>Retail and back bar</p></li>
           <li><p>Only sold through skincare professionals</p></li>
         </ul>
-          <p>What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.  </p>
+          <p className="p1">What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.  </p>
         </div>
         <div className="col-right">
           <Image className="desktop-img" fluid={facialImg.childImageSharp.fluid} alt="Woman receiving a relaxing facial." style={{maxWidth: "447px", maxHeight: "352px"}}/>
         </div>
-          <p>We stand behind our commitment to outstanding customer service in a big way.  No long wait times for orders, low minimum purchase requirements and the absolute best in product education.</p>
+          <p className="p2">We stand behind our commitment to outstanding customer service in a big way.  No long wait times for orders, low minimum purchase requirements and the absolute best in product education.</p>
         </div>
       </WhyWrapper>
     </PageModel>
@@ -52,7 +53,7 @@ const WhyWrapper = styled.div`
     display: flex;
     display-content: center;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 0 auto;
   }
   & div.row{
     display: flex;
@@ -88,6 +89,11 @@ const WhyWrapper = styled.div`
     text-align: right;
     box-sizing: border-box;
   }
+  & p.p1{padding-bottom: 15px}
+  & p.p2{
+    padding-bottom: 0;
+  }
+
   @media (max-width: 767px){
     & h2{margin: 0 auto;white-space: pre-line; text-align: center;}
     & .col-right{display:none;}
