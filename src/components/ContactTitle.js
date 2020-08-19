@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Title = ({ title, subtitle, className }) => {
+const Title = ({ title, className }) => {
   return (
     <div className={className}>
       <h3>
         <span className="title">{title}</span>
-        <span>{subtitle}</span>
       </h3>
     </div>
   )
@@ -17,6 +16,7 @@ export default styled(Title)`
     font-size: 2.3rem;
     margin-bottom: 2rem;
     line-height: 34px;
+    font-family: 'proxima-nova';
   }
   & h3 {
     text-align: center;
