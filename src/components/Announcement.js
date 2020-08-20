@@ -59,8 +59,7 @@ const WrappedAnnouncement = styled(Announcement)`
   }
   & .grid-item:last-child {
     justify-content: flex-end;
-    padding-right: 5px;
-    padding-bottom: 0px;
+    padding-right: 0px;
     align-items: center;
   }
   button {
