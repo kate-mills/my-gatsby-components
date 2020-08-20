@@ -49,7 +49,7 @@ const ProductWrapper = styled.article`
     ${setFont({
       size: "30px",
       height: "42px",
-      color: "#b30000cc",
+      color: "var(--poppy)",
       weight: "400",
     })};
     padding: 0;

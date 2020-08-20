@@ -23,6 +23,7 @@
 .search__form__input:active,
 .search__form__input:focus{
   width: 85%;
+  border: 2px solid var(--poppy);
 }
 .search__table{
   border: 1px solid var(--mainWhite);

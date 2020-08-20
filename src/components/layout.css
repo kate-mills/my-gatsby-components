@@ -1,6 +1,7 @@
 @import url("https://use.typekit.net/wua6cxq.css");
 
 :root {
+  --poppy: #fc3c3a;
   --mccAltPink: #e55b54;
   --primaryColor: #ff665e;
   --mainMcc: #dcdcdc;
@@ -84,7 +85,8 @@ h2{
   font-family: 'proxima-nova', 'sans-serif';
   font-size: 30px;
   font-weight: 400;
-  color: rgba(179, 0, 0, 0.8);
+  color: var(--poppy);
+  /*color: rgba(179, 0, 0, 0.8);*/
   line-height: 42px;
   font-size: 30px;
 }
@@ -220,17 +222,26 @@ ul[data-bullet-list] li>*:first-child::before {
   content: "\2022";
   white-space:pre;
 }
-input:focus, textarea:focus, select:focus{ outline-color: var(--mccPink); }
+input:focus, textarea:focus, select:focus{ outline-color: var(--poppy); }
 #gatsby-focus-wrapper > div.tl-edges{
   border: 1px solid var(--mainMcc);
 }
-
+@media screen and (max-width: 320px){
+  div#content{
+    padding: 35px 20px 0;
+  }
+}
+@media screen and (max-width: 480px){
+  div#content{
+    padding: 35px 30px 0;
+    border-radius: 15px;
+  }
+}
 @media screen and (max-width: 1239px){
   div#content{
     padding: 35px 50px 0;
   }
 }
-
 /*desktop mv 1281px 1240px */
 @media screen and (min-width: 1240px){
   #gatsby-focus-wrapper>div>div{}

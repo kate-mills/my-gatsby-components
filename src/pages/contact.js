@@ -18,7 +18,7 @@ const ContactPage = ({data}) => {
                 style={{
                   fontSize: "30px",
                   lineHeight: "42px",
-                  color: "rgba(179, 0,0, 0.8)",
+                  color: "var(--poppy)",
                   fontWeight: "400",
                 }}>
                 Have questions about Michele Corley Clinical Skin Care?
