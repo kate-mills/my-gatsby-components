@@ -10,15 +10,10 @@ class VimeoPlayer extends React.Component {
     false ) : (
       <ReactPlayer
         className="react-player aspect-ratio-box"
-        url={`https://vimeo.com/${this.props.id}`}
+        url={this.props.url}
         width="427px"
         height="240px"
         controls
-        onReady={() => console.log("ready")}
-        onError={e => {
-          console.log("error", e)
-          console.log(this)
-        }}
         config={{
           vimeo: {
             controls: true,
