@@ -13,7 +13,7 @@ class Announcement extends React.Component{
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
           <div className="grid-item">
-            <p style={{padding: "0", color: "#5c5c5c"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
+            <p style={{padding: "0", color: "#5c5c5c", fontFamily: "Times, serif"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
             <button onClick={ () => { this.handleClick() }}>x</button>
@@ -41,7 +41,7 @@ const WrappedAnnouncement = styled(Announcement)`
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: #ffffff;
     display: grid;
-    font-family: Times New Roman, Times, serif;
+    font-family: Times, serif;
     font-size: 18px;
     font-weight: 400;
     grid-template-columns: 1fr 12fr 1fr;
