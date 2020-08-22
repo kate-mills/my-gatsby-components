@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import {screen} from "../css/js/media-functions"
 import Email from "./Email"
 import {getAnnouncementStatus, setHideStatus} from "../utils/announcement"
 
