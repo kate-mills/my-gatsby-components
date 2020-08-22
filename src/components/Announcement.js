@@ -84,6 +84,7 @@ const WrappedAnnouncement = styled(Announcement)`
   button:hover {
     background: #ffffff;
     color: #5c5c5c;
+    border 1px solid #ffffff;
   }
   @media (max-width: 570px){
     & { display: none; }
