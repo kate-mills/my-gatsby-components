@@ -44,13 +44,12 @@ const MoreItems = props => {
 }
 
 const MoreItemsWrapper = styled.div`
-  & {}
-  & span.no-event{ pointer-events: none;outline:none } 
+  & *{font-family: var(--mainFont);}
+  & span.no-event{pointer-events: none;outline:none} 
   & button.plus-btn {
     border: none;
     position: sticky;
     font-size: 16px;
-    font-family: proxima-nova;
     cursor: pointer;
   }
   & button.plus-btn.hide::after { 
@@ -75,7 +74,6 @@ const MoreItemsWrapper = styled.div`
     width: 90vw;
     margin: 0 auto;
   }
-
   & nav.sub-nav.hide {
     display: none;
   }
@@ -99,11 +97,16 @@ class MobileNavbar extends Component {
     return (
       <div className={`${this.props.className}`}>
         <nav className={`${this.state.css} main-nav`}>
-          <button className="navbar-toggler" onClick={this.navbarHandler}>
-            MENU
+          <button className="navbar-toggler" onClick={this.navbarHandler}
+            style={{
+              height: "32px",
+              paddingTop: "15px",
+              width: "50px",
+            }}
+          > MENU
             <hr className="hr-80" />
           </button>
-
+            
           <ul className={`${this.state.css} main-ul`}>
             {links.map((item, id) => {
               if (item.id === "professional"){
@@ -133,14 +136,12 @@ class MobileNavbar extends Component {
 export default styled(MobileNavbar)`
   &{ 
     align-items: center; 
-    bottom: 20px;
     display: flex; 
     font-size: 16px;
     justify-content: center; 
     letter-spacing: .5px;
     line-height: 27px;
     margin: 0 auto; 
-    position: relative;
     text-align: center; 
   }
   & a {
@@ -154,9 +155,10 @@ export default styled(MobileNavbar)`
     background:var(--mainWhite);
     border: none; 
     font-size: 16px;
+    line-height: 15px;
     cursor: pointer;
+    padding-top: 1px;
   } 
-
   & hr.hr-80{ margin-top: 10px; width: 90vw;}
   & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
   & hr.hr-50:last-child { margin-top:7px; height: 0px;}
