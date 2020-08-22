@@ -13,7 +13,7 @@ class Announcement extends React.Component{
       visibleDetails: ( <div id="x" className={`${this.props.className} grid-container`}>
           <div className="grid-item"></div>
           <div className="grid-item">
-            <p style={{padding: "0", color: "#5c5c5c", fontFamily: "Times, serif"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
+            <p style={{padding: "0", paddingTop: "0px", lineHeight: "17px", textAlign: "center", color: "#5c5c5c", fontFamily: "Times, serif"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
             <button onClick={ () => { this.handleClick() }}>x</button>
@@ -45,32 +45,37 @@ const WrappedAnnouncement = styled(Announcement)`
     font-size: 18px;
     font-weight: 400;
     grid-template-columns: 1fr 12fr 1fr;
-    grid-template-rows: 45px;
+    grid-template-rows: 36px;
     letter-spacing: 1.5px;
-    line-height: 22px;
     width: 100vw;
+    height: 36px;
   }
   & .grid-item {
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom-right: 1px solid rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
-    padding: 10px;
+    white-space: nowrap;
   }
   & .grid-item:last-child {
-    justify-content: flex-end;
-    padding-right: 0px;
     align-items: center;
+    background-clip: border-box;
+    border-radius: 5px;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 5px;
   }
   button {
     background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 2px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    background-clip: border-box !important;
     box-sizing: border-box;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
-    margin: 0;
     padding: 0.9rem 1.6rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -80,7 +85,8 @@ const WrappedAnnouncement = styled(Announcement)`
     background: #ffffff;
     color: #5c5c5c;
   }
-  ${screen.phone.phone` & {display: none;} `}
-  ${screen.tablet.tablet` & {display: none;} `}
+  @media (max-width: 570px){
+    & { display: none; }
+  }
 `
 export default WrappedAnnouncement
