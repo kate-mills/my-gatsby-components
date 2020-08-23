@@ -12,7 +12,7 @@ export default ({ handleSubmit, handleUpdate }) => (
       <span className={styles[`phone`]}>
         707{`.`}637{`.`}4996
       </span>{" "}or{" "}<Email subject="Professional login and password" fontWeight="600"/>{" "}
-      to get access to our exclusive information.
+      for access to our exclusive information.
     </p>
     <form
       className={styles.form}
