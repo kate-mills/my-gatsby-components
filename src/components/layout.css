@@ -21,7 +21,6 @@
 }
 *, ::before, ::after{ margin: 0; padding: 0; }
 * + * { margin: 0; padding: 0; }
-
 html {
   display: block;
   font-size: 100%;
@@ -67,7 +66,6 @@ h1 {
     text-decoration: none;
     letter-spacing: 1px;
 }
-/*{position:absolute;top:100%;left:-19px;background:#ff665e;height:0;overflow:hidden;opacity:1;min-width:100%;z-index:1000}*/
 h1 {
     color: #222222;
     font-size: 45px;
@@ -108,14 +106,15 @@ hr {
   height: 1px;
   margin: 0 auto;
 }
-
+img{
+  border-radius: 10px;
+}
 .facebook {
   color: #285aeb;
 }
 nav li {
   list-style: none;
 }
-
 nav  li  a,
 nav button.plus-btn,
 nav span.professionals{
@@ -129,16 +128,13 @@ nav span.professionals{
     text-transform: uppercase;
     letter-spacing: .5px;
 }
-
 p {
   padding: 0 0 1.8em;
   white-space: pre-wrap;
   font-family: var(--mainFont);
   color: var(--textColor);
 }
-
 .bold {font-weight: 600;}
-
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -173,7 +169,6 @@ p {
   color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
 }
-
 /*https://css-tricks.com/aspect-ratio-boxes/*/
 .aspect-ratio-box {
   background: var(--mainWhite);
@@ -222,7 +217,6 @@ input:active, textarea:active, select:active{
   /*1px border at the very top & bottom */
   border: 1px solid var(--mainMcc);
 }
-
 div#content {
   background:var(--mainWhite);
   border: 1px solid var(--mainWhite);
