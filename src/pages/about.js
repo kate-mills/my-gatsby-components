@@ -8,7 +8,6 @@ import { graphql } from "gatsby"
 import Image from 'gatsby-image'
 
 const About = ({data}) => {
-  console.log('data', data)
   return (
     <PageModel title="About">
       <AboutWrapper>
