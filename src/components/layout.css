@@ -144,6 +144,7 @@ p {
   text-decoration: none;
   transition: var(--mainTransition);
   border: 2px solid var(--mainWhite);
+  border-radius: 15px;
   color: var(--mainWhite);
   outline: none;
 }
