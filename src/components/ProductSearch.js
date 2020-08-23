@@ -22,7 +22,6 @@ class Search extends Component {
         const productData = result.data
         this.setState({ productList: productData.products })
         this.rebuildIndex()
-        console.log('productList', productData);
       })
       .catch(err => {
         this.setState({ isError: true })
