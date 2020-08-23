@@ -74,23 +74,17 @@ class Search extends Component {
     const { searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? [] : searchResults
     return (
-      <div>
-        <div style={{ margin: "0 auto" }}>
-          <form onSubmit={this.handleSubmit}
-            className={styles.search__form}
-          >
-            <div className={styles.search__flex}>
-            <input
-              autoComplete="off"
-              id="Search"
-              onChange={this.searchData}
-              placeholder="Search..." 
-              type="search"
-              className={styles.search__form__input}
-              value={searchQuery} />
-            </div>
+      <>
+        <form onSubmit={this.handleSubmit} className={styles.search__form}>
+          <input
+            autoComplete="off"
+            id="Search"
+            onChange={this.searchData}
+            placeholder="Search..."
+            type="text"
+            className={styles.search__form__input}
+            value={searchQuery} />
           </form>
-          <div>
             <table className={styles.search__table} >
               { queryResults.length?
               <thead className={styles.search__thead}>
@@ -123,9 +117,7 @@ class Search extends Component {
                 })}
               </tbody>
             </table>
-          </div>
-        </div>
-    </div>
+    </>
     )
   }
 }

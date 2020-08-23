@@ -1,8 +1,9 @@
 *{ box-sizing: border-box; }
 .search__form{
-  outline-color: var(--mainWhite);
+  outline-color: none;
 }
 .search__form__input{
+  outline: none;
   box-sizing: border-box;
   background-image: url(../images/searchicon.png);
   background-color: white;
@@ -13,7 +14,7 @@
   display:block;
   font-family: 'proxima-nova';
   font-size: 16px;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
   -webkit-transition: width 0.4s ease-in-out;
