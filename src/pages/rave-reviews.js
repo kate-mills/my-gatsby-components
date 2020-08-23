@@ -34,11 +34,12 @@ const RaveReviewsWrapper = styled.section`
   & {
     max-width: 98%;
     margin: 5px auto;
-    margin-bottom: 1rem;
     box-sizing: border-box;
   }
   & .heading{
     text-align: center;
   }
+  & div{ margin-block-start: 20px; }
+  & div:first-child{ margin-block-start: 0; }
 `
 export default RaveReviews
