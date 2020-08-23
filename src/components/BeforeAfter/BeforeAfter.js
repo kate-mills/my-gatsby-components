@@ -12,7 +12,9 @@ const BeforeAfter = ({data}) => {
       <div className={styles.ba__top__row}>
         <figure className={styles.imageContainer}>
           <Img fluid={data.data.media.localFiles[0].childImageSharp.fluid}/>
-          <figcaption>{data.data.notes}</figcaption>
+          <figcaption
+            className={styles.ba__notes}
+          >{data.data.notes}</figcaption>
         </figure>
       </div>
       <div className={`${styles.ba__col} ${styles.ba__col__right}`}>

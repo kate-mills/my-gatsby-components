@@ -1,36 +1,43 @@
 .ba__row{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: space-between;
-  margin: 70px auto;
-  padding: 10px;
-  max-height: 800px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 10px solid var(--mainWhite);
+  border-radius: 15px;
 }
 .ba__top__row{
-  width: 55%;
-  margin-top: 10px;
-}
-.ba__top__row > figure figcaption{
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
-  margin: 0 auto;
-  font-family: 'proxima-nova';
+  width: 45%;
+  border-radius: 15px;
 }
 .ba__col{
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   white-space: pre-wrap;
   margin: 0 auto;
   text-align: center;
+  justify-content: center;
+}
+.ba__col__right{
+  border: 5px solid var(--poppy);
+  border-radius: 15px;
+}
+
+.ba__notes{
+  line-height: 22px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  margin: 0 auto;
+  font-family: 'proxima-nova';
+  text-align: justify;
 }
 .ba__col__right > h4{
-  margin: 0 auto;
   font-family: proxima-nova;
+  padding-bottom: 0;
 }
 .product__heading{
   margin: 0 auto;
@@ -53,7 +60,7 @@
   margin-top: 0px;
   text-align: left;
 }
-ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
+ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 3px auto; }
 ul[data-bullet-list] li>*:first-child::before{
   display: inline-block;
   margin-left: -40px;
@@ -61,14 +68,20 @@ ul[data-bullet-list] li>*:first-child::before{
   text-align: right;
   box-sizing: border-box;
 }
+.product_list{ margin: 0 auto; white-space: pre-line; padding-left: 7%;}
+
+.ba__col > h4{margin-bottom: 0;line-height: 20px;}
+
 @media screen and (max-width: 767px){
   .ba__row{
     flex-direction: column;
+    max-height: unset;
+    border: 5px solid var(--mainMcc);
+    border-radius: 15px;
   }
   .ba__top__row{
     width: 100%;
     margin: 0 auto;
-    margin-top: 50px;
   }
   .ba__col{
     width: 100%;
@@ -78,11 +91,12 @@ ul[data-bullet-list] li>*:first-child::before{
     margin: 0 auto;
   }
   .ba__col > h4{
-    width: fit-content;
-    margin-top: 20px;
     margin-bottom: 0;
   }
-  .product_list{
-    margin: 0 auto;
+  .ba__col__right{
+    border: 5px solid var(--mainWhite);
+    border-radius: 15px;
   }
+  .product_list{ margin: 0 auto; white-space: pre-line; padding-left: 10%;padding-right: 5px;}
+
 }

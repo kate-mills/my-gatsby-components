@@ -19,18 +19,12 @@ const BeforeAfter = ({data}) => {
 }
 const BeforeAfterWrapper = styled.section`
   & {
-    width: 85%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-bottom: 1rem;
     text-align: left;
     box-sizing: border-box;
   }
+  & > p{padding-bottom: 0;}
 `
-
-
 export const query = graphql`
   {
     allAirtable(filter: {table: {eq: "BeforeAfter"}}, sort: {fields: data___name, order: ASC}) {
@@ -55,6 +49,4 @@ export const query = graphql`
     }
   }
 `
-
-
 export default BeforeAfter
