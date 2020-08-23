@@ -26,6 +26,7 @@ export default ({ handleSubmit, handleUpdate }) => (
         Username
         <input
           focus="true"
+          autoComplete="new-username"
           autoCapitalize="off"
           className={styles[`form__input`]}
           type="text"
@@ -36,6 +37,7 @@ export default ({ handleSubmit, handleUpdate }) => (
       <label htmlFor="password" className={styles[`form__label`]}>
         Password
         <input
+          autoComplete="new-password"
           className={styles[`form__input`]}
           type="password"
           name="password"
