@@ -15,7 +15,8 @@ class Login extends React.Component {
     })
   }
   componentDidMount() {
-    document.getElementsByTagName("input")[1].focus()
+    var el = document.getElementsByTagName("input")[1]; // input[0] is search
+    el.focus();
   }
 
   handleSubmit(event) {

@@ -25,6 +25,8 @@ export default ({ handleSubmit, handleUpdate }) => (
       <label htmlFor="username" className={styles[`form__label`]}>
         Username
         <input
+          focus="true"
+          autoCapitalize="off"
           className={styles[`form__input`]}
           type="text"
           name="username"
@@ -40,7 +42,7 @@ export default ({ handleSubmit, handleUpdate }) => (
           onChange={handleUpdate}
         />
       </label>
-      <input className={styles[`form__button`]} type="submit" value="Log In" />
+      <button className={styles[`form__button`]} type="submit">Log in</button>
     </form>
   </>
 )

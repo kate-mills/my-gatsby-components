@@ -27,7 +27,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 0.75rem;
-  padding: 0.25rem 1.75rem;
+  padding: 0.95rem 2.05rem;
   transition: background-color 150ms linear;
 }
 .form__button:hover {
