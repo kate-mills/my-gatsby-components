@@ -1,11 +1,13 @@
 .ba__row{
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 20px;
   border: 10px solid var(--mainWhite);
   border-radius: 15px;
+  padding: 5px;
+
 }
 .ba__top__row{
   width: 45%;
