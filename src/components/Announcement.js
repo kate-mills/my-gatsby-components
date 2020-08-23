@@ -66,13 +66,13 @@ const WrappedAnnouncement = styled(Announcement)`
     padding-bottom: 0px;
     padding-top: 5px;
   }
-  button {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid #c6c6c6;
+  & button {
+    background: inherit;
+    border: 1px solid var(--mainMcc);
     border-radius: 5px;
     background-clip: border-box !important;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #5c5c5c;
     cursor: pointer;
     display: inline-block;
     padding: 0.9rem 1.6rem;
@@ -80,7 +80,7 @@ const WrappedAnnouncement = styled(Announcement)`
     text-transform: uppercase;
     transition: all 0.3s linear;
   }
-  button:hover {
+  & button:hover {
     background: #ffffff;
     color: #5c5c5c;
     border 1px solid #ffffff;
