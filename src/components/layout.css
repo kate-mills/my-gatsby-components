@@ -212,9 +212,11 @@ ul[data-bullet-list] li>*:first-child::before {
   content: "\2022";
   white-space:pre;
 }
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus,
+input:active, textarea:active, select:active{
   outline: none;
   outline-color: var(--poppy);
+  border: 1px solid var(--poppy);
 }
 #gatsby-focus-wrapper > div.tl-edges{
   /*1px border at the very top & bottom */
