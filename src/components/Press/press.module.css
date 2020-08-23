@@ -1,9 +1,16 @@
 .pr__row{
+  background: var(--mainMcc);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
+  border: 5px solid var(--mainMcc);
+  border-radius: 15px;
+}
+.pr__row:first-child{
+  margin-top:0px;
 }
 .pr__col{
   width: 45%;
@@ -28,6 +35,10 @@
   .pr__row{
     flex-direction: column;
   }
+  .pr__col p{
+    width: 95%;
+    padding-bottom: 5px;
+  }
   .pr__col{
     width: 100%;
   }
@@ -36,4 +47,5 @@
     align-items: baseline;
 
   }
+
 }
