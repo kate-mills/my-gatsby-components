@@ -81,12 +81,11 @@ class Search extends Component {
           >
             <div className={styles.search__flex}>
             <input
-              tabIndex={`0`}
               autoComplete="off"
               id="Search"
               onChange={this.searchData}
               placeholder="Search..." 
-              type="text"
+              type="search"
               className={styles.search__form__input}
               value={searchQuery} />
             </div>
