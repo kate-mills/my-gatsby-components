@@ -11,7 +11,7 @@ const Home = ({data}) => {
     <PageModel title="Home">
       <Wrapper>
         <h1 style={{textAlign: "center"}}>Beautifully Healthy Skin Starts Here</h1>
-        <Slider interval={5000}
+        <Slider interval={10000}
           images={data.allFile.nodes}/>
       <YesNo />
       </Wrapper>

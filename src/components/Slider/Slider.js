@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Img from 'gatsby-image'
+import styles from './slider.module.css'
 
 export default function Slideshow({images=[], interval=3000}){
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,8 +16,8 @@ export default function Slideshow({images=[], interval=3000}){
         }, interval); return () => clearInterval(loop);}, [images, currentSlide, interval]);
 
     return (
-        <div data-slideshow className="img-container">
-          <Img fluid={images[currentSlide].childImageSharp.fluid} alt="" className="next"/>
+        <div data-slideshow>
+          <Img fluid={images[currentSlide].childImageSharp.fluid} alt="" className={styles.fade__in__out}/>
         </div>
     )
 }
