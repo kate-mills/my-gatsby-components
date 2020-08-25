@@ -10,7 +10,9 @@ import ProductList from "../components/Products/ProductList"
 
 const Exfoliants = ({ data }) => {
   return (
-    <PageModel title="Exfoliants">
+    <PageModel
+      title="Exfoliants"
+      description={`Michele Corley Clinical Skincare exfoliants help clear away all traces of debris and build up on the skin that can lead to fine lines and wrinkles, uneven skin tone and clogged pores.`}>
       <ExfoliantsWrapper>
         <PageTitle title="Exfoliants" />
         <p className="description">

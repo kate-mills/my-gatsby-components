@@ -8,7 +8,7 @@ import ProductPlayer from '../components/Products/ProductPlayer'
 
 const Product = ({data: {product}}) => {
   return(
-    <PageModel title={product.name}>
+    <PageModel title={product.name} description={product.description.description}>
       <section>
         <div className={styles.singlep__col}>
 

@@ -10,9 +10,11 @@ import ProductList from "../components/Products/ProductList"
 
 const Moisturizers = ({ data }) => {
   return (
-    <PageModel title="Moisturizers & SPF">
+    <PageModel
+      title="Moisturizers & SPF"
+      description={`Whether concerned about slowing the look of aging, keeping skin properly hydrated or protecting it from UV exposure, we have a moisturizer for every skin type - and every season.`}>
       <MoisturizersWrapper>
-        <PageTitle title="Moisturizers & SPF" />
+        <PageTitle title="Moisturizers & SPF"/>
         <p className="description">
           Whether concerned about slowing the look of aging, keeping skin
           properly hydrated or protecting it from UV exposure,{` `}

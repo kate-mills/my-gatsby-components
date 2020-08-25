@@ -10,12 +10,15 @@ import ProductList from "../components/Products/ProductList"
 
 const Toners = ({ data }) => {
   return (
-    <PageModel title="Toners">
+    <PageModel
+      title="Toners"
+      description={`Michele Corley Clinical Skincare toners provide a super-boost to the cleansing process to help clear away congestion and debris while giving the skin a nice drink of replenishing hydration.`}
+    >
       <PageWrapper>
         <PageTitle title="Toners" />
         <p className="description">
           Our toners provide a{" "}
-          <span className="bold"> super-boost to the cleansing process</span> to
+          <span className="bold">super-boost to the cleansing process</span> to
           help clear away congestion and debris while giving the skin a nice
           drink of <span className="bold">replenishing hydration</span>.
         </p>

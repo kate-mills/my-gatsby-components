@@ -10,7 +10,9 @@ import ProductList from "../components/Products/ProductList"
 
 const Masks = ({ data }) => {
   return (
-    <PageModel title="Masks">
+    <PageModel
+      title="Masks"
+      description={`Michele Corley Clinical Skincare masks help clarify and balance the skin, while offering a unique way to customize and tailor treatments to the specific needs of your clients.`}>
       <MasksWrapper>
         <PageTitle title="Masks" />
         <p className="description">

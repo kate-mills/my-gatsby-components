@@ -10,18 +10,17 @@ import ProductList from "../components/Products/ProductList"
 
 const Moisturizers = ({ data }) => {
   return (
-    <PageModel title="Eyes & Lips">
+    <PageModel
+      title="Eyes & Lips"
+      description={`Accentuate your best features with this trio of results-driven eye and lip treatments that target specific concerns. Skin is resculpted while youthful looking contours and firmness are revived.`}
+    >
       <CleansersWrapper>
         <PageTitle title="Eyes & Lips" />
-        <p className="description">
-          {" "}
-          Accentuate your best features with this trio of results-driven eye and
+        <p className="description">Accentuate your best features with this trio of results-driven eye and
           lip treatments that target specific concerns.{` `}
           <span className="bold">
             Skin is resculpted while youthful looking contours and firmness are
-            revived
-          </span>
-          .
+            revived</span>.
         </p>
         <ProductList products={data.products} />
       </CleansersWrapper>
