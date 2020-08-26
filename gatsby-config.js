@@ -7,10 +7,25 @@ module.exports = {
     title: `Michele Corley Clinical Skincare`,
     description: `Professional skincare available through your licensed skincare professional. Clean, safe, efficacious formulas.`,
     author: `@kate-mills`,
+    siteUrl: `https://my-gatsby-components.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve:'gatsby-plugin-robots-txt',
+      options:{
+        host: `https://my-gatsby-components.netlify.app`,
+        sitemap:`https://my-gatsby-components.netlify.app/sitemap.xml`,
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: { policy: [{ userAgent: '*', disallow: ['/'] }] },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
