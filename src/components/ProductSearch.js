@@ -76,6 +76,7 @@ class Search extends Component {
       <>
         <form onSubmit={this.handleSubmit} className={styles.search__form}>
           <input
+            aria-label="Search"
             autoComplete="off"
             id="Search"
             onChange={this.searchData}
