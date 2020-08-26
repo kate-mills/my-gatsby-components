@@ -17,13 +17,7 @@ module.exports = {
       options:{
         host: `https://my-gatsby-components.netlify.app`,
         sitemap:`https://my-gatsby-components.netlify.app/sitemap.xml`,
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: { policy: [{ userAgent: '*', disallow: ['/'] }] },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
+        policy: [{ userAgent: '*', allow: '/' }]
       },
     },
     {
@@ -138,5 +132,20 @@ module.exports = {
       }
     },
     `gatsby-plugin-preload-fonts`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: { typekit:{ id:`wua6cxq`, } }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: ['300', `400`, '600', `700`]
+          },
+        ],
+      },
+    },
   ]
 }
