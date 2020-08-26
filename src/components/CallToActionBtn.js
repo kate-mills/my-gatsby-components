@@ -37,7 +37,7 @@ export default () => {
               fontSize: "15px",
               fontWeight: "600",
             }}
-          >LEARN MORE
+          >PROFESSIONALS LEARN MORE
           </AniLink>
         </p>
       </div>
