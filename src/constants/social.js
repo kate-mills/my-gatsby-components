@@ -5,19 +5,22 @@ import { GrFacebook, GrVimeo } from "react-icons/gr"
 export default [
   {
     icon: <GrFacebook />,
-    url: "https://www.facebook.com/michelecorleyclinicalskincare/",
+    label: "Go to Michele Corley Clinical Skincare Facebook Page",
+    href: "https://www.facebook.com/michelecorleyclinicalskincare/",
     class: "facebook",
     style: { color: "#3b998", background: "white" },
   },
   {
     icon: <GrVimeo />,
-    url: "https://vimeo.com/michelecorley",
+    label: "Go to Michele Corley Clinical Skincare Vimeo Page",
+    href: "https://vimeo.com/michelecorley",
     class: "vimeo",
     style: { color: "#00adef", background: "white" },
   },
   {
     icon: <Instagram />,
-    url: "https://www.instagram.com/michelecorleyskincare/",
+    label: "Go to Michele Corley Clinical Skincare Instagram Page",
+    href: "https://www.instagram.com/michelecorleyskincare/",
     class: "instagram-logo",
     style: { color: "#fff" },
   },

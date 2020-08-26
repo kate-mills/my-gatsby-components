@@ -18,7 +18,8 @@ const Footer = ({ className }) => {
             return (
               <div className="icon" key={index}>
                 <a
-                  href={item.url}
+                  href={item.href}
+                  aria-label={item.label}
                   className={item.class}
                   target="_blank"
                   rel="noopener noreferrer"
