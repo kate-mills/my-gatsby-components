@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
 
-import { LogoImg } from "./LogoImg"
+import { OptLogo } from "./LogoImg"
 import Announcement from "./Announcement"
 import MobileNavbar from "./globals/MobileNavbar"
 import DesktopNavbar from "./globals/DesktopNavbar"
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <div id="content">
         <main>
         <MobileNavbar />
-        <LogoImg />
+        <OptLogo/>
         <ProductSearch/>
         <DesktopNavbar />
           {children}
