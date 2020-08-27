@@ -46,6 +46,7 @@ const ArticleWrapper = styled.article`
   font-style: italic;
   color: rgba(0, 0, 0, 0.4);
   display:block;
+  font-weight: 300;
 }
 & .article-preview{
   text-align: center;
@@ -56,6 +57,7 @@ const ArticleWrapper = styled.article`
   text-align: right;
   white-space: nowrap;
   color:#5c5c5c;
+  font-weight: 300;
   font-style: italic;
 }
 & span.article-readmore span.article-dots{

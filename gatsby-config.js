@@ -134,7 +134,7 @@ module.exports = {
     `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
-      options: { typekit:{ id:`wua6cxq`, } }
+      options: {typekit:{ id:`wua6cxq`, },}
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

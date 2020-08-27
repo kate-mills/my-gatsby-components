@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import { setFont } from "../../css/js/helper-styles"
 import ProductMedia from "./ProductImgPlayer"
 
 const Product = ({ product }) => {
@@ -44,15 +43,15 @@ const ProductWrapper = styled.article`
     display: flex;
     flex-flow: column nowrap;
     margin: 0 auto;
+    font-weight: 300;
   }
   & .product-name {
-    ${setFont({
-      size: "30px",
-      height: "42px",
-      color: "var(--poppy)",
-      weight: "400",
-    })};
+    font-size: 30px;
+    line-height: 42px;
+    color: var(--poppy);
+    font-weight: 400;
     padding: 0;
+    margin-bottom: 0;
   }
   & .product-skintypes {
     padding: 5px 0px;
@@ -61,7 +60,7 @@ const ProductWrapper = styled.article`
 
   & .product-skintypes .skintype {
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
   }
   & .product-skintypes .skintype::after {
     content: ", ";
@@ -69,10 +68,13 @@ const ProductWrapper = styled.article`
   & .product-skintypes .skintype:last-child::after {
     content: "";
   }
+  & p.product-description{
+    padding-bottom: 10px;
+  }
 
   & .product-ingredients p.bold {
-    font-weight: 700;
-    margin-top: 20px;
+    font-weight: 600;
+    padding-bottom: 0;
     text-align: left;
   }
   & .product-ingredients ul {
@@ -80,7 +82,7 @@ const ProductWrapper = styled.article`
     margin: 0 auto;
   }
   & .product-ingredients .name-formatted {
-    font-weight: 400;
+    font-weight: 300;
   }
   & .product-ingredients .benefit {
     padding-left: 6px;

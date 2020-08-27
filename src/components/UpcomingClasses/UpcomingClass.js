@@ -83,6 +83,7 @@ const Wrapper = styled(SingleClass)`
 }
 & .ucls-laddress{
   font-style: italic;
+  font-weight: 300;
   margin: unset;
 }
 & .ucls-rdescription{
