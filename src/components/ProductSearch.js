@@ -1,40 +1,21 @@
-import React, { Component } from "react"
-import Axios from "axios"
+import React, { useState, useEffect } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import styles from "../css/productsearch.module.css"
 import * as JsSearch from "js-search"
 
+import {useProductData} from "../hooks/use-product-data"
 
-class Search extends Component {
-  state = {
-    productList: [],
-    search: [],
-    searchResults: [],
-    isLoading: true,
-    isError: false,
-    searchQuery: "",
-  }
 
-  /** React lifecycle method to fetch the data */
-  async componentDidMount() {
-    Axios.get("https://kate-mills.github.io/mcc-product-list/products.json")
-      .then(result => {
-        const productData = result.data
-        this.setState({ productList: productData.products })
-        this.rebuildIndex()
-      })
-      .catch(err => {
-        this.setState({ isError: true })
-        console.log("====================================")
-        console.log(`Something bad happened while fetching the data\n${err}`)
-        console.log("====================================")
-      })
-  }
-  /**
-   * rebuilds the overall index based on the options
-   */
-  rebuildIndex = () => {
-    const { productList } = this.state
+
+const Search = () => {
+  const productList = useProductData()
+  const [search, setSearch] = useState([])
+  const [searchResults, setSearchResults] = useState([])
+  const [searchQuery, setSearchQuery] = useState("")
+
+
+  /** rebuilds the overall index based on the options */
+  useEffect(() => {
     const dataToSearch = new JsSearch.Search("contentful_id")
 
     /** defines a indexing strategy for the data more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy */
@@ -53,33 +34,30 @@ class Search extends Component {
     dataToSearch.addIndex("category") // sets the index attribute for the data
 
     dataToSearch.addDocuments(productList) // adds the data to be searched
-    this.setState({ search: dataToSearch, isLoading: false })
-  }
+
+    setSearch(dataToSearch);
+  }, [productList])
 
   /** handles the input change and perform a search with js-search in which the results will be added to the state */
 
-  searchData = e => {
-    const { search } = this.state
+  const searchData = e => {
     const queryResult = search.search(e.target.value)
-    this.setState({ searchQuery: e.target.value, searchResults: queryResult })
+    setSearchQuery(e.target.value);
+    setSearchResults(queryResult);
   }
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault()
   }
-  formReset = e => {
-    console.log('reset e:', e)
-  }
-  render() {
-    const { searchResults, searchQuery } = this.state
+
     const queryResults = searchQuery === "" ? [] : searchResults
     return (
       <>
-        <form onSubmit={this.handleSubmit} className={styles.search__form}>
+        <form onSubmit={handleSubmit} className={styles.search__form}>
           <input
             aria-label="Search"
             autoComplete="off"
             id="Search"
-            onChange={this.searchData}
+            onChange={searchData}
             placeholder="Search..."
             type="text"
             className={styles.search__form__input}
@@ -118,8 +96,8 @@ class Search extends Component {
               </tbody>
             </table>
     </>
+
     )
-  }
 }
 export default Search
 
