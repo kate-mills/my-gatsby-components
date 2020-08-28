@@ -17,7 +17,6 @@ const query = graphql`
 
 export const OptLogo = () => {
   const data = useStaticQuery(query);
-  console.log(data);
   return(
     <Img fixed={data.file.childImageSharp.fixed}
       alt="Michele Corley Clinical Skincare Logo"
