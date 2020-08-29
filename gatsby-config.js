@@ -5,8 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Michele Corley Clinical Skincare`,
-    description: `Professional skincare available through your licensed skincare professional. Clean, safe, efficacious formulas.`,
-    author: `@kate-mills`,
+    description: `Professional skin care products available through licensed estheticians. Clean, safe, efficacious formulas.`,
+    author: `MCC`,
     siteUrl: `https://my-gatsby-components.netlify.app`,
   },
   plugins: [
