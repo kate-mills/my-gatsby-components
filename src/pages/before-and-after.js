@@ -8,10 +8,11 @@ import styled from "styled-components"
 
 const BeforeAfter = ({data}) => {
   return (
-    <PageModel title="Before and After">
+    <PageModel title="Before & After Photos"
+      description="See results achieved by using proper home skincare product daily. Our before and after photos are not retouched and are generally taken with cellular phones.">
       <BeforeAfterWrapper>
-        <h2>Before & After Photos</h2>
-        <p> These photos are provided by my dear clients utilizing only Michele Corley Clinical Skin Care Products (unless noted). The results were achieved by using proper home care product daily and most clients also received regular facials.  No equipment beyond a steamer and magnifying lamp were used.  These photos are not retouched and are generally taken with cellular phones.</p>
+        <h1 className="pink-h1">Before & After Photos</h1>
+        <p>These photos are provided by my dear clients utilizing only Michele Corley Clinical Skin Care Products (unless noted). The results were achieved by using proper home care product daily and most clients also received regular facials.  No equipment beyond a steamer and magnifying lamp were used.  These photos are not retouched and are generally taken with cellular phones.</p>
         <BeforeAfterList bal={data.allAirtable.bal}/>
       </BeforeAfterWrapper>
     </PageModel>

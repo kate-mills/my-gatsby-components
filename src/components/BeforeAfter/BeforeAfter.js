@@ -18,7 +18,7 @@ const BeforeAfter = ({data}) => {
         </figure>
       </div>
       <div className={`${styles.ba__col} ${styles.ba__col__right}`}>
-        <h4 className={styles.product__heading}>{data.data.product_heading}</h4>
+        <h2 className={styles.product__heading}>{data.data.product_heading}</h2>
         <ul className={styles.product_list} data-bullet-list>
           {product_list.map((product, i) => {
             return (

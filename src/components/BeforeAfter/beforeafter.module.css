@@ -31,13 +31,15 @@
   text-align: justify;
   width: 90%;
 }
-.ba__col__right > h4{
-  font-family: proxima-nova;
-  padding-bottom: 0;
-}
 .product__heading{
   margin: 0 auto;
   padding-top: 14px;
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #333;
 }
 .product_list{
   color: rgb(92,92,92);
