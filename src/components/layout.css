@@ -38,9 +38,8 @@ body {
     display: block;
     font-family:var(--mainFont);
     font-weight: 300;
-    font-size: 15px;
     font-style: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8em; 
     overflow: scroll;
     text-transform: none;
@@ -52,7 +51,7 @@ main{
   background: var(--mainWhite);
   padding: 0;
 }
-#page{ background: var(--mainWhite); width: 95%; border: 0; font-size: 15px; }
+#page{ background: var(--mainWhite); width: 95%; border: 0; font-size: 16px; }
 h1 {
     font-family: var(--mainFont);
     font-weight: normal;
@@ -133,7 +132,7 @@ nav  li  a,
 nav button.plus-btn,
 nav span.professionals{
     font-family:var(--mainFont);
-    font-size: 15px;
+    font-size: 16px;
     line-height:32px;
     color: #111;
     font-style: normal;
