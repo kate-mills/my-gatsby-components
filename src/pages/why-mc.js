@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Image from 'gatsby-image'
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import styled from "styled-components"
 
 const Whymc = ({data:{files:{nodes}}}) => {
   const facialImg = nodes[0]
   return (
     <PageModel title="Why Choose Michele Corley Clinical Skincare?">
-      <PageTitle title="Why Choose Michele Corley Clinical Skincare?" align="center" size="30px" weight="400"></PageTitle>
+      <h1 className="pink-h1" style={{textAlign: "left"}}
+      >Why Choose Michele Corley Clinical Skincare?</h1>
       <WhyWrapper>
         <div className="row">
         <div className="col-left">
@@ -95,7 +95,6 @@ const WhyWrapper = styled.div`
   }
 
   @media (max-width: 767px){
-    & h2{margin: 0 auto;white-space: pre-line; text-align: center;}
     & .col-right{display:none;}
     & .col-left{ width: 100%; }
     & div.mobile-img{ width: 85%; margin: 0 auto;}

@@ -10,7 +10,7 @@ const RaveReviews = ({data}) => {
   return (
     <PageModel title="Rave Reviews">
       <RaveReviewsWrapper>
-        <h2 className="heading">Rave Reviews!</h2>
+        <h1 className="pink-h1">Rave Reviews!</h1>
         <RaveReviewList reviews={data.allAirtable.reviews}/>
       </RaveReviewsWrapper>
     </PageModel>
@@ -36,7 +36,7 @@ const RaveReviewsWrapper = styled.section`
     margin: 5px auto;
     box-sizing: border-box;
   }
-  & .heading{
+  & .pink-h1{
     text-align: center;
   }
   & div{ margin-block-start: 20px; }
