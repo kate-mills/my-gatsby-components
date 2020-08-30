@@ -11,7 +11,8 @@ const Press = ({data}) => {
   return (
     <PageModel title="Press">
       <PressWrapper>
-        <h2>Press</h2>
+        <h1 className="pink-h1"
+          style={{textAlign: "center"}}>Press</h1>
         <PressList pressList={data.allAirtable.pressList}/>
       </PressWrapper>
     </PageModel>

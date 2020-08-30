@@ -84,6 +84,13 @@ h1.pink-h1{
   line-height: 44px;
   color: var(--poppy);
 }
+h1.with-padding{
+  font-family: var(--mainFont);
+  margin: 10px auto 20px auto;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem;
+  color: var(--poppy);
+}
 h2, h3, h4, h5, h6 {
     margin: .5em 0 .3em;
 }
