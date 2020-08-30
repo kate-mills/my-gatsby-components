@@ -127,7 +127,6 @@ export default styled(DesktopNavbar)`
   & nav ul.main-nav li.parent-li:hover nav {
     display: flex;
     position: absolute;
-    top: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center center;
