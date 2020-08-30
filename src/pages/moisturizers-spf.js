@@ -5,16 +5,15 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Moisturizers = ({ data }) => {
   return (
     <PageModel
       title="Moisturizers & SPF"
+      defaultTitle
       description={`Whether concerned about slowing the look of aging, keeping skin properly hydrated or protecting it from UV exposure, we have a moisturizer for every skin type - and every season.`}>
       <MoisturizersWrapper>
-        <PageTitle title="Moisturizers & SPF"/>
         <p className="description">
           Whether concerned about slowing the look of aging, keeping skin
           properly hydrated or protecting it from UV exposure,{` `}

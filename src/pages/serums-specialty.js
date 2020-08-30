@@ -5,17 +5,16 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Serums = ({ data }) => {
   return (
     <PageModel
       title="Serums & Specialty"
+      defaultTitle
       description={`Sometimes skin needs an extra dose of nourishment. Our serums, facial oils and specialty products provide just that; a correcting, protecting and evening out unbalanced skin. They give the skin a strong foundation to be its most beautiful, healthy self. Any type of issue, from sun-damage, aging or acne-prone conditions don't have a chance against these powerhouse treatments.`}
     >
       <SerumsWrapper>
-        <PageTitle title="Serums & Specialty" />
         <p className="description">
           Sometimes skin needs an extra dose of nourishment. Our serums, facial
           oils and specialty products provide just that;{" "}

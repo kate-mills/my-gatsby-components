@@ -161,6 +161,7 @@ p {
   border-radius: 15px;
   color: var(--mainWhite);
   outline: none;
+  box-shadow: unset;
 }
 .btn:hover,
 .btn:active,

@@ -5,17 +5,16 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Toners = ({ data }) => {
   return (
     <PageModel
       title="Toners"
+      defaultTitle
       description={`Michele Corley Clinical Skincare toners provide a super-boost to the cleansing process to help clear away congestion and debris while giving the skin a nice drink of replenishing hydration.`}
     >
       <PageWrapper>
-        <PageTitle title="Toners" />
         <p className="description">
           Our toners provide a{" "}
           <span className="bold">super-boost to the cleansing process</span> to

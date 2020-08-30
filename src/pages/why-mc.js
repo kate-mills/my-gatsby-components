@@ -2,14 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Image from 'gatsby-image'
 import PageModel from "../components/PageModel"
+import PageTitle from "../components/Title"
 import styled from "styled-components"
 
 const Whymc = ({data:{files:{nodes}}}) => {
   const facialImg = nodes[0]
   return (
-    <PageModel title="Why Choose Michele Corley Clinical Skincare?">
-      <h1 className="pink-h1" style={{textAlign: "left"}}
-      >Why Choose Michele Corley Clinical Skincare?</h1>
+    <PageModel title="Why Choose Michele Corley Clinical Skincare?"
+      description="What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.">
+      <PageTitle size="37px" title="Why Choose Michele Corley Clinical Skincare?" />
       <WhyWrapper>
         <div className="row">
         <div className="col-left">
@@ -23,7 +24,7 @@ const Whymc = ({data:{files:{nodes}}}) => {
           <li><p>Retail and back bar</p></li>
           <li><p>Only sold through skincare professionals</p></li>
         </ul>
-          <p className="p1">What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.  </p>
+          <p className="p1">What makes Michele Corley Clinical Skin Care different in a sea of other brands?  Our commitment to you and your success by offering the best possible products for your clients; with the cleanest, most efficacious ingredients and absolute accessibility whenever you need us.</p>
         </div>
         <div className="col-right">
           <Image className="desktop-img" fluid={facialImg.childImageSharp.fluid} alt="Woman receiving a relaxing facial." style={{maxWidth: "447px", maxHeight: "352px"}}/>
@@ -34,7 +35,6 @@ const Whymc = ({data:{files:{nodes}}}) => {
     </PageModel>
   )
 }
-
 export const query = graphql`
   {
     files: allFile(filter: {relativePath: {eq: "facial-treatment.jpg"}}) {
@@ -90,10 +90,7 @@ const WhyWrapper = styled.div`
     box-sizing: border-box;
   }
   & p.p1{padding-bottom: 15px}
-  & p.p2{
-    padding-bottom: 0;
-  }
-
+  & p.p2{padding-bottom: 0;}
   @media (max-width: 767px){
     & .col-right{display:none;}
     & .col-left{ width: 100%; }
@@ -105,5 +102,4 @@ const WhyWrapper = styled.div`
     & .col-left, & .col-right{width: 50%;}
   }
 `
-
-export default Whymc
+export default Whymc;

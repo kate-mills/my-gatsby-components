@@ -7,9 +7,8 @@ import styled from "styled-components"
 
 const ProOrders = () => {
   return (
-    <PageModel title="Pro Orders">
+    <PageModel title="Pro Orders" centeredTitle>
       <ProOrdersWrapper>
-          <h1 className="with-padding" style={{textAlign: "center"}}>Pro orders</h1>
           <p>
             If you have a login for online ordering click{" "}
             <a href="https://portal.nowcommerce.com/custsignin.aspx?ID=99867" target="_blank" rel="noreferrer">
@@ -29,28 +28,20 @@ const ProOrders = () => {
   )
 }
 const ProOrdersWrapper = styled.section`
-  & *, & > * { box-sizing: border-box; }
   & {
     width: 90%;
-    box-sizing; border-box;
     font-size: 20px;
     color: #54c4c;
     font-weight: 400;
   }
-  & p.contains-email a{
-    text-decoration: underline;
-  }
   @media (max-width: 600px){
     & .email-prefix{
-      box-sizing; border-box;
       display: block;
-      padding: 5px;
     }
   }
   @media (max-width: 400px){
     &{width: 100%;}
     & p {
-      box-sizing; border-box;
       text-align: justify;
       margin: 0 auto;
     }

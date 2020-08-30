@@ -9,7 +9,8 @@ import Image from 'gatsby-image'
 
 const About = ({data}) => {
   return (
-    <PageModel title="About">
+    <PageModel title="About"
+    description="Each Michele Corley Clinical Skincare product is crafted with care and consideration to the health and well being of the skin. The ingredients I choose must come from the most natural sources available, and their effectiveness proven.">
       <AboutWrapper>
         <div className="flexItem col" style={{margin: "0 auto" }}>
           <div className="innerFlexContainer">

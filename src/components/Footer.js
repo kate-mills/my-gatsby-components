@@ -70,6 +70,7 @@ const FooterWrapper = styled(Footer)`
   }
 
   & div.row.footer-icons {  font-size: 28px; justify-content: space-around;line-height: unset; }
+}
   a.instagram-logo{font-size: 0px;}
   a.instagram-logo img{height: 40px; width: 40px;}
 

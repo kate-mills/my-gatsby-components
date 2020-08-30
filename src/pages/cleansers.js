@@ -5,17 +5,16 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Cleansers = ({ data }) => {
   return (
     <PageModel
       title={`Cleansers`}
+      defaultTitle
       description={`Whether skin is dry, normal, oily or in between, Michele Corley Clinical Skin Care has a cleanser for every type. Our cleansers are gentle enough for the most sensitive or Rosacea prone skin, and relieve congestion by keeping skin flawlessly clean.`}
     >
       <CleansersWrapper>
-        <PageTitle title="Cleansers" />
         <p className="description">
           Whether skin is dry, normal, oily or in between,{" "}
           <span className="bold">

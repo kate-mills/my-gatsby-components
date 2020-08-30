@@ -5,16 +5,15 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Masks = ({ data }) => {
   return (
     <PageModel
       title="Masks"
+      defaultTitle
       description={`Michele Corley Clinical Skincare masks help clarify and balance the skin, while offering a unique way to customize and tailor treatments to the specific needs of your clients.`}>
       <MasksWrapper>
-        <PageTitle title="Masks" />
         <p className="description">
           Our masks help clarify and balance the skin, while offering a{" "}
           <span className="bold">

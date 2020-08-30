@@ -5,17 +5,16 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Moisturizers = ({ data }) => {
   return (
     <PageModel
       title="Eyes & Lips"
+      defaultTitle
       description={`Accentuate your best features with this trio of results-driven eye and lip treatments that target specific concerns. Skin is resculpted while youthful looking contours and firmness are revived.`}
     >
       <CleansersWrapper>
-        <PageTitle title="Eyes & Lips" />
         <p className="description">Accentuate your best features with this trio of results-driven eye and
           lip treatments that target specific concerns.{` `}
           <span className="bold">

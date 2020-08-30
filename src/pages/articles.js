@@ -9,7 +9,7 @@ import styled from "styled-components"
 
 const Articles = ({data}) => {
   return (
-    <PageModel name="Articles" title="Articles">
+    <PageModel name="Articles" title="Articles" centeredTitle>
       <ArticlesWrapper>
         <ArticleList articles={data.allAirtable.articles}/>
       </ArticlesWrapper>

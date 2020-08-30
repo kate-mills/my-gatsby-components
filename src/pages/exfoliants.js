@@ -5,16 +5,15 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import PageModel from "../components/PageModel"
-import PageTitle from "../components/Title"
 import ProductList from "../components/Products/ProductList"
 
 const Exfoliants = ({ data }) => {
   return (
     <PageModel
       title="Exfoliants"
+      defaultTitle
       description={`Michele Corley Clinical Skincare exfoliants help clear away all traces of debris and build up on the skin that can lead to fine lines and wrinkles, uneven skin tone and clogged pores.`}>
       <ExfoliantsWrapper>
-        <PageTitle title="Exfoliants" />
         <p className="description">
           Our exfoliants help{" "}
           <span className="bold">
