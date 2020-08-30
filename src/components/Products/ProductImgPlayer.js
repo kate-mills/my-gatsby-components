@@ -12,7 +12,11 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
   return (
     <div className={`${className} media aspect-ratio-box`}>
       <div className="flex-item image-media aspect-ratio-box">
-        <Image fixed={imgRetail.fixed} alt={imgRetail.description} />
+        <Image 
+          fixed={imgRetail.fixed}
+          title={imgRetail.title}
+          alt={imgRetail.description}
+        />
       </div>
       { video ? (
         <VideoMedia id={video} url={`https://vimeo.com/${video}`} />

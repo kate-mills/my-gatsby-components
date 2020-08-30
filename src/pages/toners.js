@@ -57,6 +57,7 @@ export const query = graphql`
           imgRetail {
             id
             description
+            title
             fixed(cropFocus: CENTER, width: 177, height: 250, quality: 100) {
               ...GatsbyContentfulFixed
             }

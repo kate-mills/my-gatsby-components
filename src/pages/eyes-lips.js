@@ -57,6 +57,7 @@ export const query = graphql`
           imgRetail {
             id
             description
+            title
             fixed(height: 200) {
               ...GatsbyContentfulFixed
             }
