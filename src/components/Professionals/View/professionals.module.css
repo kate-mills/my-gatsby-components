@@ -12,6 +12,9 @@
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+.manual__item p{
+  padding-bottom: 0.5em;
+}
 .manuals__row .manuals__col h2{
   letter-spacing: 1px;
   text-decoration-style: solid;
@@ -46,7 +49,7 @@
   margin: 0 auto;
   color: rgb(92,92,92);
   font-style: normal;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 27px;
   list-style: none;
@@ -95,7 +98,7 @@
 .facial__top__container .facialA__item{
   width: 45%;
   text-align: center;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 0.6rem 0.5rem;
   display: inline-block;
 }

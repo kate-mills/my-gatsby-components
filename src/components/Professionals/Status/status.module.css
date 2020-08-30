@@ -4,7 +4,7 @@
   color: var(--mainBlack);
   cursor: pointer;
   display: inline-block;
-  font-family: 'proxima-nova', 'sans-serif';
+  font-family: var(--mainFont);
   outline: none;
   text-decoration: none; 
   transition: var(--btnTransition);

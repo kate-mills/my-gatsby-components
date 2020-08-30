@@ -137,15 +137,10 @@ module.exports = {
       options: {typekit:{ id:`wua6cxq`, },}
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: ['300', `400`, '600', `700`]
-          },
-        ],
-      },
-    },
+    resolve: "gatsby-plugin-netlify-cache",
+    options: {
+      cachePublic: true
+    }
+  },
   ]
 }
