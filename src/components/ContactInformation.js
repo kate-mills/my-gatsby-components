@@ -15,23 +15,23 @@ const ContactInfo = (props) => {
         <h4>Email:</h4>
         <p><Email/></p>
       </div>
+      <div style={{flexDirection: "row", flexWrap: "wrap"}}>
+        <h4 style={{}}>Address:</h4>
+        <p style={{marginLeft: "15px"}}>3055 Jefferson St. Suite 3</p>
+        <p style={{marginLeft: "70px"}}>Napa, CA 94558</p>
+      </div>
     </div>
-    <div className="office-hours">
+    <div className="hours">
       <h3>Our Hours</h3>
-      <p>Mon - Fri: 10AM - 4PM</p>
+      <p style={{padding: "0"}}>Monday - Friday:{` `}10AM - 4PM</p>
       <p>Saturday & Sunday:{` `}Closed</p>
-    </div>
-    <div className="address">
-      <h3>Our Location</h3>
-      <p>3055 Jefferson St. Suite 3</p>
-      <p>Napa, CA 94558</p>
     </div>
   </Wrapper>
     )
 }
 
 const Wrapper = styled.aside`
-  & div.address, & div.phone-email, & div.office-hours{
+  & div.phone-email, & div.hours{
     text-align: center;
     margin: 5px auto;
     white-space: pre-line;
@@ -40,7 +40,7 @@ const Wrapper = styled.aside`
     background: var(--mainMcc);
     width: 75%;
     text-align: center;
-    margin: 5px auto;
+    margin: 10px auto;
     white-space: pre-line;
   }
   & > div p, & > div h4{
