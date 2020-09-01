@@ -11,13 +11,11 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
   if(vimeoUrl){ video = null }
   return (
     <div className={`${className} media aspect-ratio-box`}>
-      <div className="flex-item image-media aspect-ratio-box">
         <Image 
           fixed={imgRetail.fixed}
           title={imgRetail.title}
           alt={imgRetail.description}
         />
-      </div>
       { video ? (
         <VideoMedia id={video} url={`https://vimeo.com/${video}`} />
       ) : (
@@ -28,19 +26,23 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
 }
 
 const MediaWrapper = styled(ProductMedia)`
+  & img{
+    border: 10px solid var(--mainWhite);
+    border-radius: 30px;
+  }
   & { padding: 10px; }
   ${screen.phone.phone` 
     & {
       display: flex;
       flex-flow: column nowrap;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       max-height: unset;
       max-width: inherit;
       padding: 30px auto;
     }
     .react-player{max-width: 100vw;}
-
+    & img{border 1px solid var(--mainWhite);}
   `}
   ${screen.tablet.tablet`
     & {
