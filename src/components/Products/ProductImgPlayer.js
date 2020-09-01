@@ -13,6 +13,8 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
     <div className={`${className} media aspect-ratio-box`}>
         <Image 
           fixed={imgRetail.fixed}
+          objectFit="cover"
+          objectPosition="50% 50%"
           title={imgRetail.title}
           alt={imgRetail.description}
         />
