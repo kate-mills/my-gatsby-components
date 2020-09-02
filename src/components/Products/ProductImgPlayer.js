@@ -19,7 +19,9 @@ const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
           alt={imgRetail.description}
         />
       { video ? (
-        <VideoMedia id={video} url={`https://vimeo.com/${video}`} />
+        <VideoMedia id={video}
+        height="238px"
+        url={`https://vimeo.com/${video}`} />
       ) : (
         <div></div>
       )}

@@ -5,30 +5,34 @@ import styles from './product-template.module.css'
 import PageModel from "../components/PageModel"
 import ProductPlayer from '../components/Products/ProductPlayer'
 
-
 const Product = ({data: {product}}) => {
   return(
     <PageModel title={product.name} description={product.description.description}>
-      <section>
+      <section className={styles.single__product}>
         <div className={styles.singlep__col}>
 
         <h1>{product.name}</h1>
           <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}>{item}</span>) })} </h2>
-
 
           <h3 className={styles.singlep__category}>{product.category}</h3>
 
         </div>
         <p>{product.description.description}</p>
         <div className={styles.singlep__media}>
-          <div className={styles.singlep__image__container}>
-            <Image fluid={product.imgRetail.fluid}/>
-          </div>
-
-        <ProductPlayer id={product.video} url={`https://vimeo.com/${product.video}`} />
+            <Image 
+              fixed={product.imgRetail.fixed}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              title={product.imgRetail.title}
+              alt={product.imgRetail.description}
+            />
+          <ProductPlayer
+            uniqueClassName={styles.video__player}
+            id={product.video}
+            url={`https://vimeo.com/${product.video}`}
+          />
         </div>
         <h4>A FEW KEY Ingredients & Benefits:</h4>
-
         <ul className={styles.singlep__ul} data-bullet-list>
           {
             product.keyIngredients.map((item, index) => {
@@ -62,13 +66,15 @@ export const query = graphql`
         benefit
       }
       imgRetail {
-        fluid { ...GatsbyContentfulFluid  }
+        id
+        title
+        description
+        fixed(cropFocus: CENTER, height: 300, quality: 100) {
+          ...GatsbyContentfulFixed
+        }
       }
+
     }
   }
 `
 export default Product
-
-
-/*const categoryMap = { 'cleansers': 'Cleanser', 'toners': 'Toner', 'exfoliants': 'Exfoliant', 'moisturizers & spf': 'Moisturizer & Spf', 'exfoliants': 'Exfoliant', 'masks': 'Mask', }*/
-
