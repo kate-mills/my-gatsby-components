@@ -8,23 +8,29 @@ const ContactInfo = (props) => {
     <div className="phone-email">
       <h3>Get in touch </h3>
       <div>
-        <h4>Phone:</h4>
-        <p>(707) 637-4996</p>
+        <h4 style={{marginRight: "2px"}}>Phone:</h4>
+        <p><a
+            style={{textDecoration: "none"}}
+            href="tel:1-707-637-4996">(707) 637-4996
+           </a>
+        </p>
       </div>
       <div>
-        <h4>Email:</h4>
+        <h4 style={{marginRight: "4px"}}>Email:</h4>
         <p><Email/></p>
       </div>
       <div style={{flexDirection: "row", flexWrap: "wrap"}}>
         <h4 style={{}}>Address:</h4>
+        <address>
         <p style={{marginLeft: "15px"}}>3055 Jefferson St. Suite 3</p>
         <p style={{marginLeft: "70px"}}>Napa, CA 94558</p>
+        </address>
       </div>
     </div>
     <div className="hours">
       <h3>Our Hours</h3>
-      <p style={{padding: "0"}}>Monday - Friday:{` `}10AM - 4PM</p>
-      <p>Saturday & Sunday:{` `}Closed</p>
+      <p style={{padding: "0"}}>Monday - Friday:{` `}
+        <time datetime="10:00">10 AM</time> - <time datetime="16:00">4 PM</time></p>
     </div>
   </Wrapper>
     )
