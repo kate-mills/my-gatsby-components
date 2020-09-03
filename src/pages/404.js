@@ -11,7 +11,7 @@ const ErrorPage = () => {
   return (
     <PageModel name="Oops" title="Oops">
       <ErrorWrapper>
-        <article>
+        <div>
           <h1 className="oops">Oops!</h1>
           <p>
             We couldn't find the page you were looking for. This is either
@@ -32,21 +32,21 @@ const ErrorPage = () => {
             </AniLink>
             .
           </p>
-        </article>
+        </div>
       </ErrorWrapper>
     </PageModel>
   )
 }
 const ErrorWrapper = styled.section`
-  & article h1 {
+  & div h1 {
     margin-left: 5px;
   }
-  & article {
+  & div {
     ${setFlexContainer({ direction: "column", y: "left" })};
     margin: 10px auto;
     width: 80%;
   }
-  & article p {
+  & div p {
     ${setFont({
       size: "15px",
       height: "27px",
@@ -55,7 +55,7 @@ const ErrorWrapper = styled.section`
     })};
   }
 
-  & article h1.oops {
+  & div h1.oops {
     ${setFont({
       size: "45px",
       height: "1.2em",
@@ -63,7 +63,7 @@ const ErrorWrapper = styled.section`
       weight: "300",
     })};
   }
-  & article li {
+  & div li {
     margin-left: 40px;
   }
 `

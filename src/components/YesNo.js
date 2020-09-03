@@ -5,7 +5,7 @@ import { screen } from "../css/js/media-functions"
 const YesNo = ({ className }) => {
   return (
     <section className={className}>
-      <article className="flex-row">
+      <div className="flex-row">
         <div className="flex-col">
           <h2>YES</h2>
         <ul data-bullet-list>
@@ -33,8 +33,8 @@ const YesNo = ({ className }) => {
           <li><p>Sodium Laureth Sulfate</p></li>
         </ul>
         </div>
-      </article>
-      <article className="flex-column">
+      </div>
+      <div className="flex-column">
         <h2 className="yn">
           Professional skincare that delivers. Clean, safe, efficacious
           formulas.
@@ -42,7 +42,7 @@ const YesNo = ({ className }) => {
         <h3 className="yn">
           Only available through your licensed skincare professional.
         </h3>
-      </article>
+      </div>
     </section>
   )
 }
