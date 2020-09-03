@@ -1,6 +1,6 @@
 *{ box-sizing: border-box; }
 .search__form{
-  outline-color: none;
+  outline-color: transparent;
 }
 .search__form__input{
   outline: none;
