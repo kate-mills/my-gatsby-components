@@ -28,7 +28,7 @@
   font-weight: 600;
   margin-top: 0.75rem;
   padding: 0.95rem 2.05rem;
-  transition: background-color 150ms linear;
+  transition: background-color 100ms linear;
 }
 .form__button:hover {
   cursor: pointer;
@@ -38,22 +38,18 @@
 .form__button:hover,
 .form__button:active,
 .form__button:focus {
-  background-color: color(var(--poppy) lightness(-20%));
+  background-color: var(--mainWhite);
   color: var(--poppy)
 }
-
 .form__instructions{
   text-align: center;
   margin: 0 auto;
   font-size: 17px;
 }
-
 .form__instructions span.phone {
   font-weight: 600;
   margin: 0 5px;
 }
-
-
 @media screen and (max-width: 600px){
 .form__instructions{
   text-align: center;
