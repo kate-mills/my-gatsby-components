@@ -99,14 +99,13 @@ const AboutWrapper = styled.section`
   & h2.italic{
     font-style: italic;
     text-align: left;
-    padding-inline-start: 10%;
+    padding-left: 10%;
   }
-  & p {padding-inline-start: 5px; white-space: initial;}
+  & p {padding-left: 5px; white-space: initial;}
   & p.text{
-    padding-inline-start: 15px;
-    padding-inline-end: 20px;
+    padding-left: 15px;
+    padding-right: 20px;
     display:block; 
-    padding-block-end: 10px;
     margin: 0 auto;
     text-align: left;
     font-weight: 300;
