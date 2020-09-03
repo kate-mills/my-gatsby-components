@@ -33,11 +33,14 @@ const Product = ({data: {product}}) => {
               title={product.imgRetail.title}
               alt={product.imgRetail.description}
             />
+          { product.video ? (
           <ProductPlayer
+            style={{margin: "0 auto", textAlign: "center"}}
             uniqueClassName={styles.video__player}
             id={product.video}
             url={`https://vimeo.com/${product.video}`}
           />
+          ):(<div style={{width: "30%"}}></div>)}
         </div>
         <h4>A FEW KEY Ingredients & Benefits:</h4>
         <ul className={styles.singlep__ul} data-bullet-list>
