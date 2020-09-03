@@ -57,7 +57,6 @@ const ProductWrapper = styled.article`
     padding: 5px 0px;
     text-align: left;
   }
-
   & .product-skintypes .skintype {
     font-style: italic;
     font-weight: 300;
@@ -69,9 +68,8 @@ const ProductWrapper = styled.article`
     content: "";
   }
   & p.product-description{
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
-
   & .product-ingredients p.bold {
     font-weight: 600;
     padding-bottom: 0;
@@ -82,10 +80,10 @@ const ProductWrapper = styled.article`
     margin: 0 auto;
   }
   & .product-ingredients .name-formatted {
-    font-weight: 300;
+    font-weight: 400;
   }
   & .product-ingredients .benefit {
-    padding-left: 6px;
+    padding-left: 5px;
   }
 `
 export default Product

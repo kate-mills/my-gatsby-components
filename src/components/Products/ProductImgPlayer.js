@@ -10,7 +10,7 @@ import VideoMedia from "./ProductPlayer"
 const ProductMedia = ({ className, name, imgRetail, video, vimeoUrl }) => {
   if(vimeoUrl){ video = null }
   return (
-    <div className={`${className} media aspect-ratio-box`}>
+    <div className={`${className}`}>
         <Image 
           fixed={imgRetail.fixed}
           objectFit="cover"
@@ -34,7 +34,7 @@ const MediaWrapper = styled(ProductMedia)`
     border: 10px solid var(--mainWhite);
     border-radius: 30px;
   }
-  & { padding: 10px; }
+  & { padding-top: 0; padding-bottom: 0;}
   ${screen.phone.phone` 
     & {
       display: flex;
@@ -43,7 +43,7 @@ const MediaWrapper = styled(ProductMedia)`
       align-items: center;
       max-height: unset;
       max-width: inherit;
-      padding: 30px auto;
+      padding: 0 auto;
     }
     .react-player{max-width: 100vw;}
     & img{border 1px solid var(--mainWhite);}
@@ -61,7 +61,7 @@ const MediaWrapper = styled(ProductMedia)`
     & {
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       max-height: 240px;
     }
