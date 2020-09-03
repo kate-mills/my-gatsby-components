@@ -7,19 +7,26 @@ import ProductPlayer from '../components/Products/ProductPlayer'
 
 const Product = ({data: {product}}) => {
   return(
-    <PageModel title={product.name} description={product.description.description}>
+    <PageModel
+      title={product.name}
+      description={product.description.description}
+      itemScope
+      itemType="https://schema.org/IndividualProduct"
+      itemID="#product"
+    >
       <section className={styles.single__product}>
-        <div className={styles.singlep__col}>
-
-        <h1>{product.name}</h1>
-          <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}>{item}</span>) })} </h2>
-
-          <h3 className={styles.singlep__category}>{product.category}</h3>
-
+            <h1 itemProp="name">{product.name}</h1>
+            <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}>{item}</span>) })} </h2>
+            <h3 itemProp="category" className={styles.singlep__category}>{product.category}</h3>
+        <div className={styles.flex__justify} >
+          <p
+            itemProp="description"
+            className={styles.description}>{product.description.description}
+          </p>
         </div>
-        <p>{product.description.description}</p>
         <div className={styles.singlep__media}>
             <Image 
+              className={styles.product__image}
               fixed={product.imgRetail.fixed}
               objectFit="cover"
               objectPosition="50% 50%"
@@ -36,17 +43,15 @@ const Product = ({data: {product}}) => {
         <ul className={styles.singlep__ul} data-bullet-list>
           {
             product.keyIngredients.map((item, index) => {
-              return( 
+              return(
                 <li key={index}> <p>
                   <span className={styles.formatted__name}>{item.name.formatted}: </span>
                   {item.benefit}
-                </p> </li>
+                </p></li>
               )
           })
           }
-
         </ul>
-
       </section>
     </PageModel>
   )
@@ -73,7 +78,7 @@ export const query = graphql`
           ...GatsbyContentfulFixed
         }
       }
-
+      award
     }
   }
 `
