@@ -15,7 +15,7 @@ class Announcement extends React.Component{
             <p style={{padding: "0", paddingTop: "0px", lineHeight: "17px", textAlign: "center", color: "#5c5c5c", fontFamily: "Times, serif"}}> 707.637.4996 ~ <Email color={`#5c5c5c`} subject={`General Information`}/></p>
           </div>
           <div className="grid-item">
-            <button onClick={ () => { this.handleClick() }}>x</button>
+            <button onClick={ () => { this.handleClick() }}>X</button>
           </div>
         </div>),
     }
@@ -43,7 +43,7 @@ const WrappedAnnouncement = styled(Announcement)`
     font-family: Times, serif;
     font-size: 18px;
     font-weight: 400;
-    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-columns: 1fr 20fr 1fr;
     grid-template-rows: 36px;
     letter-spacing: 1.5px;
     width: 100vw;
@@ -51,22 +51,15 @@ const WrappedAnnouncement = styled(Announcement)`
   }
   & .grid-item {
     align-items: center;
-    border-bottom-right: 1px solid rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     white-space: nowrap;
   }
   & .grid-item:last-child {
-    align-items: center;
-    background-clip: border-box;
-    border-radius: 5px;
-    justify-content: flex-end;
-    margin: 0;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 5px;
+    align-items: right;
   }
   & button {
+    line-height: 17px;
     background: inherit;
     border: 1px solid var(--mainMcc);
     border-radius: 5px;
@@ -77,8 +70,7 @@ const WrappedAnnouncement = styled(Announcement)`
     display: inline-block;
     padding: 0.9rem 1.6rem;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s linear;
+    transition: background 100ms linear;
   }
   & button:hover {
     background: #ffffff;
