@@ -6,24 +6,24 @@ import ClassMap from './ClassMap'
 const SingleClass = ({className, id, data:{data}}) => {
   return (
       <div className={className}>
-        <h2 className="ucls-name">{data.name}</h2>
-        <div className="ucls__column__left">
-          <h4 className="ucls-lheading">{data.heading}</h4>
-          <div className="ucls-image-container"> 
+        <h2 className="class__name">{data.name}</h2>
+        <div className="left__column">
+          <h4 className="left__heading">{data.heading}</h4>
+          <div className="left__image__container"> 
             <Img fluid={data.image.localFiles[0].childImageSharp.fluid} />
           </div>
           {
             data.heading_details ? 
-              <p className="ucls-lheading_details">{data.heading_details}<br/>{data.datestr}</p>:
+              <p className="left__heading__details">{data.heading_details}<br/>{data.datestr}</p>:
               false
           } 
-          <h4 className="ucls-llocation">Located at {data.location}</h4>
-          <h4 className="ucls-laddress">{data.address}<br/>{data.city_state}</h4>
+          <h4 className="class__location">Located at {data.location}</h4>
+          <h4 className="class__address">{data.address}<br/>{data.city_state}</h4>
 
         </div>
-        <div className="ucls__column__right">
-          <div className="ucls-description-container">
-            <p className="ucls-rdescription">{data.description}</p>
+        <div className="right__column">
+          <div className="class__description__container">
+            <p className="class__description">{data.description}</p>
           </div>
           <div className="map-container">
             <ClassMap />
@@ -37,22 +37,22 @@ const Wrapper = styled(SingleClass)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-block-end: 80px;
-  justify-content: space-around;
-}
-& .ucls-name{
   width: 100%;
-  margin-bottom: 20px;
+}
+& .class__name{
+  width: 100%;
   text-align: center;
 }
-& .ucls__column__left, & .ucls__column__right{
+& p{
+    padding-bottom: 0;
+}
+& .left__column, & .right__column{
   display: flex;
   flex-direction: column;
-  width: 45%;
-  margin: 10px auto;
+  width: 50%;
   text-align: center;
   white-space: pre-line;
-  margin: 10px auto;
+  margin: 0 auto;
   text-align: center;
   white-space: pre-line;
 }
@@ -65,31 +65,31 @@ const Wrapper = styled(SingleClass)`
   text-align: center;
   font-weight: 400;
 }
-& .ucls-lheading{
+& .left__heading{
   font-weight: 700;
   margin-top: 0px;
 }
-& .ucls-image-container .gatsby-image-wrapper{
+& .left__image__container .gatsby-image-wrapper{
   width: 50%;
 }
-& .ucls-description-container, & .ucls-image-container{
+& .class__description__container, & .left__image__container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-& .ucls-llocation{
+& .class__location{
   margin-top: 0px;
   padding-top: unset;
 }
-& .ucls-laddress{
+& .class__address{
   font-style: italic;
   font-weight: 300;
   margin: unset;
 }
-& .ucls-rdescription{
+& .class__description{
   text-align: justify;
 }
-div.google-map{
+& div.google-map{
   min-height: 100%;
   max-width: 100%;
 }
@@ -100,7 +100,7 @@ div.google-map{
   justify-content: center;
   align-items: center;
 }
-& .ucls-lheading_details{
+& .left__heading__details{
   text-align: center;
   margin: 10px auto;
 }
@@ -109,25 +109,25 @@ div.google-map{
     flex-direction: column;
     margin: 0 auto;
   }
-  & .ucls__column__left, & .ucls__column__right{
+  & .left__column, & .right__column{
     width: 100%;
   }
-  & .ucls__column__right{
+  & .right__column{
     margin-top: 20px;
     margin-bottom: 60px;
   }
-  & .ucls-laddress, & .ucls-lheading_details{
+  & .class__address, & .left__heading__details{
     width: 100%;
   }
-  & .ucls-llocation, & .ucls-rdescription{
+  & .class__location, & .class__description{
     margin: 0 auto;
   }
 }
 @media (max-width: 540px){
-  & .ucls-image-container{width: 100%;}
-  & .ucls_rdescription{
+  & .left__image__container{width: 100%;}
+  & .class_rdescription{
     margin-top: 20px;
   }
 }
 `
-export default Wrapper
+export default Wrapper;

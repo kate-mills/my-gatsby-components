@@ -164,8 +164,7 @@ p {
 .btn:hover,
 .btn:active,
 .btn:focus {
-  background-color: color(var(--mainBlack) lightness(-20%));
-  color: var(--mainBlack);
+  background-color: (var(--mainBlack) brightness(20%));
   border: 2px solid var(--mainBlack);
 }
 .btn-white {
