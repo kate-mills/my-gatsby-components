@@ -11,28 +11,31 @@ const Product = ({data: {product}}) => {
       title={product.name}
       description={product.description.description}
       itemScope
-      itemType="https://schema.org/IndividualProduct"
-      itemID="#product"
-    >
+      itemType="https://schema.org/Product">
       <section className={styles.single__product}>
-            <h1 itemProp="name">{product.name}</h1>
-            <h2 className={styles.singlep__skintypes} style={{whiteSpace: "break-spaces", width: "100%", textAlign: "center"}}> {product.skinType.map((item, index) => { return ( <span key={index} className={styles.skintype}>{item}</span>) })} </h2>
-            <h3 itemProp="category" className={styles.singlep__category}>{product.category}</h3>
-        <div className={styles.flex__justify} >
+        <h1 itemProp="name">{product.name}</h1>
+        <h2 className={styles.singlep__skintypes}>
+          {product.skinType.map((item, index) => {return (<span key={index} className={styles.skintype}>{item}</span>)})}
+        </h2>
+        <h3 className={styles.singlep__category} itemProp="category">
+          {product.category}
+        </h3>
+        <div className={styles.flex__justify}>
           <p
             itemProp="description"
-            className={styles.description}>{product.description.description}
+            className={styles.description}
+          >{product.description.description}
           </p>
         </div>
         <div className={styles.singlep__media}>
-            <Image 
-              className={styles.product__image}
-              fixed={product.imgRetail.fixed}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              title={product.imgRetail.title}
-              alt={product.imgRetail.description}
-            />
+          <Image
+            className={styles.product__image}
+            fixed={product.imgRetail.fixed}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            title={product.imgRetail.title}
+            alt={product.imgRetail.description}
+          />
           { product.video ? (
           <ProductPlayer
             style={{margin: "0 auto", textAlign: "center"}}
