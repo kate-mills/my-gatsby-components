@@ -102,7 +102,6 @@ class MobileNavbar extends Component {
               width: "50px",
             }}
           > MENU
-            <hr className="hr-80" />
           </button>
             
           <ul className={`${this.state.css} main-ul`}>
@@ -156,7 +155,6 @@ export default styled(MobileNavbar)`
     cursor: pointer;
     padding-top: 1px;
   } 
-  & hr.hr-80{ margin-top: 10px; width: 90vw;}
   & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
   & hr.hr-50:last-child { margin-top:7px; height: 0px;}
   & nav.show.main-nav li.parent:last-child { margin-bottom: 30px; }
