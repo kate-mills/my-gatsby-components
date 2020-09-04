@@ -46,7 +46,7 @@ const Product = ({data: {product}}) => {
           ):(<div style={{width: "30%"}}></div>)}
         </div>
         <h4>A FEW KEY Ingredients & Benefits:</h4>
-        <ul className={styles.singlep__ul} data-bullet-list>
+        <ul style={{margin: "0 60px"}} data-bullet-list>
           {
             product.keyIngredients.map((item, index) => {
               return(

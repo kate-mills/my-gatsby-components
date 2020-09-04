@@ -1,10 +1,8 @@
-*{ box-sizing: border-box; }
 .search__form{
   outline-color: transparent;
 }
 .search__form__input{
   outline: none;
-  box-sizing: border-box;
   background-image: url(../images/searchicon.png);
   background-color: white;
   background-position: 10px 10px;

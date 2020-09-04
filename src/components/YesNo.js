@@ -61,6 +61,7 @@ const Wrapper = styled(YesNo)`
   }
   & h3.list-title{
     margin-bottom: 0;
+    color: var(--poppy);
   }
   & .flex-column h2.yn {
     text-align: center;

@@ -50,13 +50,6 @@
     margin-top: 0px;
   }
 .singlep__ul li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
-.singlep__ul li>*:first-child::before{
-    display: inline-block;
-    margin-left: -40px;
-    min-width: 40px;
-    text-align: right;
-    box-sizing: border-box;
-}
 .formatted__name{
   font-weight: 400;
 }
