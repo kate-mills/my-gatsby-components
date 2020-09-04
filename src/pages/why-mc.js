@@ -62,32 +62,7 @@ const WhyWrapper = styled.div`
     width: 100%;
   }
   & ul[data-bullet-list] {
-    color: rgb(92,92,92);
-    display: block;
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 27px;
-    list-style:none;
-    margin-block-end: 15px;
-    margin-block-start: 0px;
-    margin-inline-end: 0px;
-    margin-inline-start: 40px;
-    margin-left: 40px;
-    margin-right: 0px;
-    margin-top: 0px;
-  }
-  & ul[data-bullet-list] li p{
-    white-space: pre-wrap;
-    padding: 0;
-    margin: 7.5px auto;
-  }
-  & ul[data-bullet-list] li>*:first-child::before{
-    display: inline-block;
-    margin-left: -40px;
-    min-width: 40px;
-    text-align: right;
-    box-sizing: border-box;
+    margin: 0 0 15px 60px;
   }
   & p.p1{padding-bottom: 15px}
   & p.p2{padding-bottom: 0;}

@@ -7,7 +7,7 @@ const YesNo = ({ className }) => {
     <section className={className}>
       <div className="flex-row">
         <div className="flex-col">
-          <h2>YES</h2>
+          <h3 className="list-title">YES</h3>
         <ul data-bullet-list>
           <li><p>Powerful Peptides</p></li>
           <li><p>Potent Antioxidants</p></li>
@@ -20,7 +20,7 @@ const YesNo = ({ className }) => {
         </ul>
         </div>
         <div className="flex-col">
-          <h2>NO</h2>
+          <h3 className="list-title">NO</h3>
         <ul data-bullet-list>
           <li><p>Parabens</p></li>
           <li><p>Synthetic Colorants</p></li>
@@ -56,11 +56,17 @@ const Wrapper = styled(YesNo)`
   & .flex-col {
     display: flex;
     flex-direction: column;
-    margin-inline-start: 30px;
-    margin-inline-end: 30px;
+    margin: 0 60px;
     align-items: center;
   }
-  & .flex-column h2.yn { text-align: center; padding: 0px; margin: 0 auto; }
+  & h3.list-title{
+    margin-bottom: 0;
+  }
+  & .flex-column h2.yn {
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+  }
   & .flex-column h3.yn {
     font-size: 21px;
     color: #524c4c;
@@ -76,14 +82,15 @@ const Wrapper = styled(YesNo)`
     font-weight: 300;
     line-height: 27px;
     list-style:none;
-    margin-block-end: 0px;
-    margin-block-start: 0px;
-    margin-inline-end: 0px;
-    margin-inline-start: 40px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin: 0 20px;
   }
-  & ul[data-bullet-list] li p{  padding: 0; margin: 7.5px auto; }
+  & ul[data-bullet-list] li p{
+    padding: 0;
+    margin: 7.5px auto;
+  }
+  & ul[data-bullet-list] li:first-child p{
+    margin-top: 0;
+  }
   & ul[data-bullet-list] li>*:first-child::before{
     display: inline-block;
     margin-left: -40px;

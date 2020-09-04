@@ -103,12 +103,12 @@ const FooterWrapper = styled(Footer)`
       font-size: 18px; 
       letter-spacing: 1.5px; 
       line-height: 30px;
+      text-align: center;
     }
     a.email{ 
       display:block; 
       font-size: 17px;
-      margin-inline-end: 10px;
-      margin-inline-start: 10px; 
+      text-align: center;
     }
   `}
   ${screen.tablet.tablet` div.row.footer-icons{flex-direction: column;} .icon{margin: 20px;} `}

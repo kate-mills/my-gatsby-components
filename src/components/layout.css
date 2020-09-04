@@ -92,13 +92,12 @@ h1.with-padding{
 h2, h3, h4, h5, h6 {
     margin: .5em 0 .3em;
 }
-h2{
+h2, h3{
+  color: var(--poppy);
   font-family: var(--mainFont);
   font-size: 30px;
   font-weight: 400;
-  color: var(--poppy);
   line-height: 42px;
-  font-size: 30px;
 }
 a {
   color: var(--mainBlack);
@@ -211,19 +210,33 @@ p {
   clear:both;
   content: ".";
 }
+ul[data-bullet-list] {
+  color: rgb(92,92,92);
+  display: block;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 27px;
+  list-style:none;
+  margin: 0 20px;
+}
 ul[data-bullet-list] li p{ white-space: pre-wrap; padding: 0; margin: 7.5px auto; }
+ul[data-bullet-list] li:first-child p{
+  margin-top: 0;
+}
 ul[data-bullet-list] li>*:first-child::before{
+  box-sizing: border-box;
+  color: var(--mainText);
+  content: "\2022";
   display: inline-block;
   margin-left: -40px;
   min-width: 40px;
-  text-align: right;
-  box-sizing: border-box;
-}
-ul[data-bullet-list] li>*:first-child::before {
   padding-right: 10px;
-  content: "\2022";
+  text-align: right;
   white-space:pre;
 }
+
+
 input:focus, textarea:focus, select:focus,
 input:active, textarea:active, select:active{
   outline: none;
