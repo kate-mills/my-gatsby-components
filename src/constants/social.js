@@ -8,7 +8,7 @@ export default [
     label: "Go to Michele Corley Clinical Skincare Facebook Page",
     href: "https://www.facebook.com/michelecorleyclinicalskincare/",
     class: "facebook",
-    style: { color: "#3b998", background: "white" },
+    style: { color: "#2055ef", background: "white" },
   },
   {
     icon: <GrVimeo />,
