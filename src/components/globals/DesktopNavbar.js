@@ -7,9 +7,7 @@ import ProfessionalStatus from "../Professionals/Status"
 
 const MoreItems = props => {
   return (
-    <MoreItemsWrapper>
-      {props.text}
-      <ul>
+      <MoreItemsWrapper>
         {props.menu.map((item, id) => {
           return (
             <li key={id} className={`sub-li`}>
@@ -22,11 +20,10 @@ const MoreItems = props => {
             </li>
           )
         })}
-      </ul>
-    </MoreItemsWrapper>
+      </MoreItemsWrapper>
   )
 }
-const MoreItemsWrapper = styled.nav`
+const MoreItemsWrapper = styled.ul`
   & {
     display: flex;
     flex-direction: column;
@@ -34,22 +31,14 @@ const MoreItemsWrapper = styled.nav`
     width: -webkit-max-content;
     display: none;
     position: absolute;
-    z-index: 5;
+    z-index: 1;
     opacity: 1;
+    background: var(--mainWhite);
   }
-  nav ul.main-nav li:hover & li.sub-li {
-    position: relative;
-    right: 20px;
+  & li.sub-li {
     visibility: visible;
-    z-index: 5;
     background: var(--mainWhite);
-  }
-  nav ul.main-nav li:hover & li.sub-li a {
-    position: sticky;
-    padding-left: 24px;
-    margin-top: 0px;
-    z-index: 5;
-    background: var(--mainWhite);
+    padding: 10px;
   }
 `
 class DesktopNavbar extends Component {
@@ -67,7 +56,7 @@ class DesktopNavbar extends Component {
                 <li
                   className="parent-li parent-plus"
                   key={id}
-                  style={{padding: "0px 10px 10px 9px", opacity: "1"}}
+                  style={{opacity: "1"}}
                 >
                   {item.text}
                   <MoreItems label={item.label} menu={item.menu} />
@@ -75,11 +64,7 @@ class DesktopNavbar extends Component {
               ) : (
                 <li key={id} className="parent-li"
                 >
-                  <AniLink fade to={item.path}
-                    style={{ paddingRight: "12px", marginLeft: "15px" }}>
-                    {" "}
-                    {item.text}
-                  </AniLink>
+                  <AniLink fade to={item.path}>{item.text}</AniLink>
                 </li>
                 )
                 }
@@ -102,25 +87,22 @@ export default styled(DesktopNavbar)`
   & nav ul.main-nav {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
-
   & nav ul.main-nav li.parent-li {
     border: 3px solid var(--mainWhite);
   }
-  & nav ul.main-nav li.sub-li {
+  & ul.main-nav li.sub-li {
     margin: 0;
     white-space: nowrap;
     letter-spacing: 0.5px;
-    border-top: 1px solid var(--mainWhite);
-    border-right: 1px solid var(--mainWhite);
-    border-left: 2px solid var(--mainWhite);
-    padding-right: 35px;
+    padding: 2px; 
+    padding-left: 0;
   }
   & nav ul.main-nav li.parent-plus:hover li.sub-li {
     visibility: visible;
   }
-  & nav ul.main-nav li.parent-li:hover nav {
+  & nav ul.main-nav li.parent-li:hover ul {
     display: flex;
     position: absolute;
     height: 100%;
@@ -128,11 +110,6 @@ export default styled(DesktopNavbar)`
     object-position: center center;
     opacity: 1;
     transition-delay: 500ms;
-  }
-  & nav ul.main-nav li:hover nav ul{
-    position: sticky;
-    opacity: 1;
-    z-index: 5
   }
   ${screen.nav.narrow`&{display:none;}`}
 `

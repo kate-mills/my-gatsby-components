@@ -6,8 +6,6 @@ const createParentLink = (name, pth) => {
     <AniLink to={`/${pth}`} fade
       style={{ 
         lineHeight: "32px",
-        paddingRight: "10px", 
-        marginLeft: "12px",
         position: "initial"
       }}
     >{name}
@@ -20,10 +18,7 @@ const createChildLink = (name, pthStr="") => {
   let pth = pthStr || name.replace(' & ', ' ').split(' ').join('-')
   let obj = {
       path: `/${pth}`,
-      text: (
-        <span
-          style={{ padding: "4px 10px 10px 4px", position: "sticky" }}> {name} </span>
-      ),
+      text: (<span>{name}</span>),
   }
   return obj
 }
