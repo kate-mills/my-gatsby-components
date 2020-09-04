@@ -56,7 +56,7 @@ const WrappedAnnouncement = styled(Announcement)`
     white-space: nowrap;
   }
   & .grid-item:last-child {
-    align-items: start;
+    align-items: center;
   }
   & button {
     line-height: 17px;
