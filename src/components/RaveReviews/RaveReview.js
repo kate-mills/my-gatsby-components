@@ -3,8 +3,8 @@ import React from "react"
 const RaveReview = ({id, data:{data}}) => {
   return (
     <div>
-      <p style={{fontStyle: "italic", fontWeight: "300", margin: "0", padding: "0", border: "0", boxSizing: "border-box" }}>"{data.review}"</p>
-      <p style={{ boxSizing: "border-box",
+      <p style={{fontStyle: "italic", fontWeight: "300", margin: "0", padding: "0", border: "0" }}>"{data.review}"</p>
+      <p style={{
           fontWeight: "600",
         letterSpacing: "normal",
         padding: "0",

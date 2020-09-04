@@ -1,7 +1,6 @@
 .center {
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 @media screen and (min-width: 992px) {
   .center {

@@ -8,7 +8,6 @@ const createParentLink = (name, pth) => {
         lineHeight: "32px",
         paddingRight: "10px", 
         marginLeft: "12px",
-        boxSizing: "border-box",
         position: "initial"
       }}
     >{name}
@@ -23,7 +22,7 @@ const createChildLink = (name, pthStr="") => {
       path: `/${pth}`,
       text: (
         <span
-          style={{ padding: "4px 10px 10px 4px",boxSizing: "borderBox",position: "sticky" }}> {name} </span>
+          style={{ padding: "4px 10px 10px 4px", position: "sticky" }}> {name} </span>
       ),
   }
   return obj
