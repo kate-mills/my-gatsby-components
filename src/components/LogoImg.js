@@ -19,6 +19,7 @@ export const OptLogo = () => {
   const data = useStaticQuery(query);
   return(
     <Img fixed={data.file.childImageSharp.fixed}
+      media="screen"
       alt="Michele Corley Clinical Skincare Logo"
       style={{
         display:'flex',
