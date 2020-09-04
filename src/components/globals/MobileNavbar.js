@@ -65,8 +65,6 @@ const MoreItemsWrapper = styled.div`
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
@@ -150,7 +148,6 @@ export default styled(MobileNavbar)`
     text-transform: uppercase;
   }
   & li.li{ margin: 5px auto; }
-
   & button.navbar-toggler {
     background:var(--mainWhite);
     border: none; 
@@ -162,9 +159,7 @@ export default styled(MobileNavbar)`
   & hr.hr-80{ margin-top: 10px; width: 90vw;}
   & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
   & hr.hr-50:last-child { margin-top:7px; height: 0px;}
-
   & nav.show.main-nav li.parent:last-child { margin-bottom: 30px; }
-
   & ul { margin 0px; }
   & ul.hide {display: none;}
 
