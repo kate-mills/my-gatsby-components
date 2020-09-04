@@ -9,10 +9,9 @@ const Product = ({data: {product}}) => {
   return(
     <PageModel
       title={product.name}
-      description={product.description.description}
-      itemScope
-      itemType="https://schema.org/Product">
-      <section className={styles.single__product}>
+      description={product.description.description} >
+      <section className={styles.single__product}
+      itemScope itemType="https://schema.org/Product">
         <h1 itemProp="name">{product.name}</h1>
         <h2 className={styles.singlep__skintypes}>
           {product.skinType.map((item, index) => {return (<span key={index} className={styles.skintype}>{item}</span>)})}
@@ -27,7 +26,9 @@ const Product = ({data: {product}}) => {
           >{product.description.description}
           </p>
         </div>
-        <div className={styles.singlep__media}>
+        <div
+          className={styles.singlep__media}
+        >
           <Image
             className={styles.product__image}
             fixed={product.imgRetail.fixed}
@@ -35,10 +36,12 @@ const Product = ({data: {product}}) => {
             objectPosition="50% 50%"
             title={product.imgRetail.title}
             alt={product.imgRetail.description}
+            type="media"
           />
           { product.video ? (
           <ProductPlayer
-            style={{margin: "0 auto", textAlign: "center"}}
+            type="media"
+            style={{margin: "0 auto" }}
             uniqueClassName={styles.video__player}
             id={product.video}
             url={`https://vimeo.com/${product.video}`}
