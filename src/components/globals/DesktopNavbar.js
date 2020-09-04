@@ -7,7 +7,7 @@ import ProfessionalStatus from "../Professionals/Status"
 
 const MoreItems = props => {
   return (
-    <MoreItemsWrapper role="navigation" aria-label={props.label}>
+    <MoreItemsWrapper>
       {props.text}
       <ul>
         {props.menu.map((item, id) => {
@@ -15,8 +15,6 @@ const MoreItems = props => {
             <li key={id} className={`sub-li`}>
               <AniLink
                 fade
-                aria-label={item.text}
-                role="navigation"
                 to={item.path}
               >
                 {item.text}
@@ -67,8 +65,6 @@ class DesktopNavbar extends Component {
               else{
               return item.menu.length > 0 ? (
                 <li
-                  aria-label={item.label}
-                  role="navigation"
                   className="parent-li parent-plus"
                   key={id}
                   style={{padding: "0px 10px 10px 9px", opacity: "1"}}
