@@ -2,19 +2,23 @@ import React from "react"
 import Img from 'gatsby-image'
 import styled from "styled-components"
 
+import {RiArrowRightLine} from "react-icons/ri";
+
+const Arrow = ({top})=> {
+  return <RiArrowRightLine style={{position: "relative", top: top}} />
+}
 
 const SingleArticle = ({data}) => {
   const{name, image, link, date, preview} = data.article
-  const arrow=<span style={{fontSize:"inherit",fontWeight:"bold"}}className="arrow">→</span>
   return (
     <ArticleWrapper>
-      <a href={link} target="_blank" rel="noreferrer"><h5 className="article-name">{name}{arrow}</h5></a>
+      <a href={link} target="_blank" rel="noreferrer"><h5 className="article-name">{name}<Arrow top={6}/></h5></a>
       <p className="article-date">{date}</p>
       <div className="article-image-container">
         <a href={link} target="_blank" rel="noreferrer">
           <Img fluid={image.localFiles[0].childImageSharp.fluid} alt={`Shows a preview of the article titled '${name}' in the ${date} Dermascope magazine.`}/>
         </a>
-        <p className="article-preview">{preview}<a href={link} target="_blank" rel="noreferrer"><span className="article-readmore"><span className="article-dots">{`...`}</span>Read more{arrow}</span></a></p>
+        <p clrssName="article-preview">{preview}<a href={link} target="_blank" rel="noreferrer"><span className="article-readmore"><span className="article-dots">{`...`}</span>Read more <Arrow top={3}/></span></a></p>
       </div>
     </ArticleWrapper>
   )
