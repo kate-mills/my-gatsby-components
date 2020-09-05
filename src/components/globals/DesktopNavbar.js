@@ -38,7 +38,7 @@ const MoreItemsWrapper = styled.ul`
   & li.child-li {
     visibility: visible;
     background: var(--mainWhite);
-    padding: 10px;
+    padding: 15px;
   }
 `
 class DesktopNavbar extends Component {
@@ -75,7 +75,13 @@ export default styled(DesktopNavbar)`
     opacity: 1;
     z-index: 1;
   }
-  & .parent-plus { position:relative; left: 0;}
+  & .parent-plus {
+    position:relative; left: 0;
+  }
+  & li.parent-li  a{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   & ul{
     margin: unset;
   }
@@ -86,7 +92,6 @@ export default styled(DesktopNavbar)`
   }
   & nav ul.main-nav li.parent-li {
     border: 5px solid var(--mainWhite);
-    padding-left: 10px;
   }
   & ul.main-nav li.child-li {
     margin: 0;
