@@ -29,10 +29,8 @@ const MoreItems = props => {
         <hr className="hr-50" />
           {props.menu.map((item, id) => {
             return (
-              <li key={id} className={`${css} sub-item`}>
-                <AniLink fade to={item.path}>
-                  {item.text}
-                </AniLink>
+              <li key={id} className={`${css} child`}>
+                <AniLink fade to={item.path}> {item.text}</AniLink>
               </li>
             )
           })}
@@ -53,9 +51,13 @@ const MoreItemsWrapper = styled.div`
     cursor: pointer;
   }
   & button.plus-btn.hide::after { 
+    position: relative;
+    left: 5px;
     content: "+"; 
   }
   & button.plus-btn.show::after { 
+    position: relative;
+    left: 5px;
     content: "--"; 
     letter-spacing: -1px; 
   }
@@ -94,37 +96,23 @@ class MobileNavbar extends Component {
   render() {
     return (
       <div className={`${this.props.className}`}>
-        <nav className={`${this.state.css} main-nav`}>
-          <button className="navbar-toggler" onClick={this.navbarHandler}
-            style={{
-              height: "32px",
-              paddingTop: "15px",
-              width: "50px",
-            }}
-          > MENU
-          </button>
-            
-          <ul className={`${this.state.css} main-ul`}>
+        <div>
+          <button className={`${this.state.css} navbar-toggler`} onClick={this.navbarHandler}style={{ height: "32px", paddingTop: "15px", width: "50px", }} >MENU</button>
+          <div className={`${this.state.css} full-nav`}>
             {links.map((item, id) => {
-              if (item.id === "professional"){
-                return <li key={id} className="li parent"> <ProfessionalStatus/></li>
+              if (item.id === "professional"){ 
+                return <ProfessionalStatus key={id} className="li" /> 
               }
               else{
-              return item.menu.length > 0 ? (
-                <MoreItems key={id} name={item.text} menu={item.menu} />
-              ) : (
-                <li key={id} className="li">
-                  {" "}
-                  <AniLink fade to={item.path}>
-                    {" "}
-                    {item.text}{" "}
-                  </AniLink>
-                </li>
-              )
-              }
+                return item.menu.length > 0 ? 
+                  (
+                    <MoreItems key={id} name={item.text} menu={item.menu} />):(
+                    <AniLink key={id} className="li" fade to={item.path}>{item.text}</AniLink>
+                  )
+                }
             })}
-          </ul>
-        </nav>
+          </div>
+        </div>
       </div>
     )
   }
@@ -132,7 +120,7 @@ class MobileNavbar extends Component {
 
 export default styled(MobileNavbar)`
   &{ 
-    align-items: center; 
+    align-items: center !important; 
     display: flex; 
     font-size: 16px;
     justify-content: center; 
@@ -145,21 +133,29 @@ export default styled(MobileNavbar)`
     font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 500;
   }
-  & li.li{ margin: 5px auto; }
+  & a.li{
+    display: block;
+  }
+  & li.li{ margin: 5px auto;}
   & button.navbar-toggler {
     background:var(--mainWhite);
     border: none; 
-    font-size: 16px;
-    line-height: 15px;
+    font-size: 17px;
+    line-height: 17px;
     cursor: pointer;
-    padding-top: 1px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 8px;
   } 
+  & button.navbar-toggler.show{border-bottom: 2px solid var(--poppy);}
   & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
   & hr.hr-50:last-child { margin-top:7px; height: 0px;}
-  & nav.show.main-nav li.parent:last-child { margin-bottom: 30px; }
   & ul { margin 0px; }
-  & ul.hide {display: none;}
+  & div.full-nav.hide {display: none;}
 
   ${screen.nav.wide`&{display: none;}`}
 `
