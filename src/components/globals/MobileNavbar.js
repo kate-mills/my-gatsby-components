@@ -26,7 +26,6 @@ const MoreItems = props => {
       </button>
       <nav className={`${css} sub-nav`}>
         <ul className={`${css} sub-ul`}>
-        <hr className="hr-50" />
           {props.menu.map((item, id) => {
             return (
               <li key={id} className={`${css} child`}>
@@ -34,7 +33,6 @@ const MoreItems = props => {
               </li>
             )
           })}
-        <hr className="hr-50" />
         </ul>
       </nav>
     </MoreItemsWrapper>
@@ -152,8 +150,6 @@ export default styled(MobileNavbar)`
     margin-bottom: 8px;
   } 
   & button.navbar-toggler.show{border-bottom: 2px solid var(--poppy);}
-  & hr.hr-50:first-child{ margin-bottom: 7px;height: 0px; }
-  & hr.hr-50:last-child { margin-top:7px; height: 0px;}
   & ul { margin 0px; }
   & div.full-nav.hide {display: none;}
 
