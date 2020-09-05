@@ -22,7 +22,7 @@ const MoreItems = props => {
   return (
     <MoreItemsWrapper>
       <button onClick={clickHandler} className={`${css} plus-btn`}>
-      <span className="no-event">{props.name}</span>
+        {props.name}
       </button>
       <nav className={`${css} sub-nav`}>
         <ul className={`${css} sub-ul`}>
@@ -41,12 +41,12 @@ const MoreItems = props => {
 
 const MoreItemsWrapper = styled.div`
   & *{font-family: var(--mainFont);}
-  & span.no-event{pointer-events: none;outline:none} 
   & button.plus-btn {
     border: none;
     position: sticky;
     font-size: 16px;
     cursor: pointer;
+    margin: 6px auto;
   }
   & button.plus-btn.hide::after { 
     position: relative;
@@ -95,7 +95,7 @@ class MobileNavbar extends Component {
     return (
       <div className={`${this.props.className}`}>
         <div>
-          <button className={`${this.state.css} navbar-toggler`} onClick={this.navbarHandler}style={{ height: "32px", paddingTop: "15px", width: "50px", }} >MENU</button>
+          <button className={`${this.state.css} navbar-toggler`} onClick={this.navbarHandler}style={{ height: "32px",  width: "50px", }} >MENU</button>
           <div className={`${this.state.css} full-nav`}>
             {links.map((item, id) => {
               if (item.id === "professional"){ 
@@ -104,7 +104,7 @@ class MobileNavbar extends Component {
               else{
                 return item.menu.length > 0 ? 
                   (
-                    <MoreItems key={id} name={item.text} menu={item.menu} />):(
+                    <MoreItems key={id} name={item.title} menu={item.menu} />):(
                     <AniLink key={id} className="li" fade to={item.path}>{item.text}</AniLink>
                   )
                 }
@@ -124,7 +124,7 @@ export default styled(MobileNavbar)`
     justify-content: center; 
     letter-spacing: .5px;
     line-height: 27px;
-    margin: 0 auto; 
+    margin: 6px auto; 
     text-align: center; 
   }
   & a {
@@ -136,7 +136,6 @@ export default styled(MobileNavbar)`
   & a.li{
     display: block;
   }
-  & li.li{ margin: 5px auto;}
   & button.navbar-toggler {
     background:var(--mainWhite);
     border: none; 
@@ -149,7 +148,6 @@ export default styled(MobileNavbar)`
     margin: 0 auto;
     margin-bottom: 8px;
   } 
-  & button.navbar-toggler.show{border-bottom: 2px solid var(--poppy);}
   & ul { margin 0px; }
   & div.full-nav.hide {display: none;}
 

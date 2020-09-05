@@ -28,6 +28,7 @@ export default [
   { path: "/about", text: "about", menu: [] },
   {
     text: createParentLink("products", "cleansers"),
+    title: "PRODUCTS",
     menu: [
       createChildLink("cleansers", "cleansers"),
       createChildLink("toners", "toners"),
@@ -40,6 +41,7 @@ export default [
   },
   {
     text: createParentLink("why mc?", "why-mc"),
+    title: "WHY MC?",
     menu: [
       createChildLink("why choose us?", "why-mc"),
       createChildLink("before and after"),
@@ -50,5 +52,5 @@ export default [
   { path: "/contact", text: "contact", menu: [] },
   { path: "/pro-orders", text: "pro orders", menu: [] },
   { id: "professional", menu:[] },
-  { text: createParentLink("education", "articles"), menu: [ createChildLink("upcoming classes"), createChildLink("articles"), ] },
+  { text: createParentLink("education", "articles"), title: "EDUCATION", menu: [ createChildLink("upcoming classes"), createChildLink("articles"), ] },
 ]
