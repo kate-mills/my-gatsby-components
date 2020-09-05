@@ -1,6 +1,6 @@
 .professional__logout__link,
 .professional__link {
-  border: 2px solid var(--mainWhite);
+  border: 5px solid var(--mainWhite);
   color: var(--mainBlack);
   cursor: pointer;
   display: inline-block;
@@ -9,11 +9,10 @@
   text-decoration: none; 
   transition: var(--btnTransition);
   line-height: 32px;
-  margin-left: 10px;
+  margin-left: 0;
   padding-right: 12px;
-  padding-left: 12px;
+  padding-left: 10px;
 } 
-
 .professional__logout__link {
   color: var(--mainGrey);
   font-size: 10px;

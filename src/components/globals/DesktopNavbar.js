@@ -10,7 +10,7 @@ const MoreItems = props => {
       <MoreItemsWrapper>
         {props.menu.map((item, id) => {
           return (
-            <li key={id} className={`sub-li`}>
+            <li key={id} className={`child-li`}>
               <AniLink
                 fade
                 to={item.path}
@@ -35,7 +35,7 @@ const MoreItemsWrapper = styled.ul`
     opacity: 1;
     background: var(--mainWhite);
   }
-  & li.sub-li {
+  & li.child-li {
     visibility: visible;
     background: var(--mainWhite);
     padding: 10px;
@@ -48,18 +48,12 @@ class DesktopNavbar extends Component {
         <nav>
           <ul className="main-nav">
             {links.map((item, id) => {
-              if(item.id === "professional"){
-                return <li key={id}> <ProfessionalStatus/></li>
-              }
+              if(item.id === "professional"){ return <li key={id}><ProfessionalStatus/></li> }
               else{
-              return item.menu.length > 0 ? (
-                <li
-                  className="parent-li parent-plus"
-                  key={id}
-                  style={{opacity: "1"}}
-                >
-                  {item.text}
+                return item.menu.length > 0 ? (
+                  <li className="parent-li parent-plus" key={id} style={{opacity: "1"}} >
                   <MoreItems label={item.label} menu={item.menu} />
+                  {item.text}
                 </li>
               ) : (
                 <li key={id} className="parent-li"
@@ -81,6 +75,7 @@ export default styled(DesktopNavbar)`
     opacity: 1;
     z-index: 1;
   }
+  & .parent-plus { position:relative; left: 0;}
   & ul{
     margin: unset;
   }
@@ -90,21 +85,23 @@ export default styled(DesktopNavbar)`
     justify-content: space-around;
   }
   & nav ul.main-nav li.parent-li {
-    border: 3px solid var(--mainWhite);
+    border: 5px solid var(--mainWhite);
+    padding-left: 10px;
   }
-  & ul.main-nav li.sub-li {
+  & ul.main-nav li.child-li {
     margin: 0;
     white-space: nowrap;
     letter-spacing: 0.5px;
     padding: 2px; 
     padding-left: 0;
   }
-  & nav ul.main-nav li.parent-plus:hover li.sub-li {
+  & nav ul.main-nav li.parent-plus:hover li.child-li {
     visibility: visible;
   }
   & nav ul.main-nav li.parent-li:hover ul {
     display: flex;
     position: absolute;
+    top: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center center;
