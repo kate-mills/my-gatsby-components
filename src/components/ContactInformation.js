@@ -30,7 +30,7 @@ const ContactInfo = (props) => {
     <div className="hours">
       <h3>Our Hours</h3>
       <p style={{padding: "0"}}>Monday - Friday:{` `}
-        <time datetime="10:00">10 AM</time> - <time datetime="16:00">4 PM</time></p>
+        <time dateTime="10:00">10 AM</time> - <time dateTime="16:00">4 PM</time></p>
     </div>
   </Wrapper>
     )
