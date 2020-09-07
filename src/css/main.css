@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/hwt7dfz.css");
+/*@import url("https://use.typekit.net/hwt7dfz.css");*/
 
 :root {
   --poppy: #fc3c3a;
@@ -17,7 +17,7 @@
   --mainSpacing: 1px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainFont: 'proxima-nova', 'arial', 'sans-serif';
+  --mainFont: Montserrat, 'arial', 'sans-serif';
   --textColor: '#5c5c5c';
 }
 *, ::before, ::after{ margin: 0; padding: 0; box-sizing: border-box;}
