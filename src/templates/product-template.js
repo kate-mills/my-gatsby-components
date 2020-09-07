@@ -3,15 +3,14 @@ import {graphql} from 'gatsby'
 import Image from 'gatsby-image'
 import styles from './product-template.module.css'
 import PageModel from "../components/PageModel"
-import ProductPlayer from '../components/Products/ProductPlayer'
+import {Video} from '../components/Video'
 
 const Product = ({data: {product}}) => {
   return(
     <PageModel
       title={product.name}
       description={product.description.description} >
-      <section className={styles.single__product}
-      itemScope itemType="https://schema.org/Product">
+      <div className={styles.single__product} itemScope itemType="https://schema.org/Product">
         <h1 itemProp="name">{product.name}</h1>
         <h2 className={styles.singlep__skintypes}>
           {product.skinType.map((item, index) => {return (<span key={index} className={styles.skintype}>{item}</span>)})}
@@ -38,30 +37,23 @@ const Product = ({data: {product}}) => {
             alt={product.imgRetail.description}
             type="media"
           />
-          { product.video ? (
-          <ProductPlayer
-            type="media"
-            style={{margin: "0 auto" }}
-            uniqueClassName={styles.video__player}
-            id={product.video}
-            url={`https://vimeo.com/${product.video}`}
-          />
-          ):(<div style={{width: "30%"}}></div>)}
+
+          { product.videoId && <Video src={`https://player.vimeo.com/video/${product.videoId}`} /> }
         </div>
         <h4>A FEW KEY Ingredients & Benefits:</h4>
         <ul style={{margin: "0 60px"}} data-bullet-list>
           {
             product.keyIngredients.map((item, index) => {
               return(
-                <li key={index}> <p>
-                  <span className={styles.formatted__name}>{item.name.formatted}: </span>
-                  {item.benefit}
-                </p></li>
+                <li key={index}>
+                  <p><span className={styles.formatted__name}>{item.name.formatted}:</span>{item.benefit}
+                  </p>
+                </li>
               )
           })
           }
         </ul>
-      </section>
+      </div>
     </PageModel>
   )
 }
@@ -73,8 +65,7 @@ export const query = graphql`
       category
       skinType
       description{ description }
-      video
-      vimeoUrl
+      videoId:video
       keyIngredients { 
         name{ formatted }
         benefit
@@ -84,6 +75,7 @@ export const query = graphql`
         title
         description
         fixed(cropFocus: CENTER, height: 300, quality: 100) {
+          src
           ...GatsbyContentfulFixed
         }
       }
