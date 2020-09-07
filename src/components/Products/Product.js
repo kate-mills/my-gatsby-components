@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import ProductMedia from "./ProductImgPlayer"
+import Image from 'gatsby-image'
+import VideoPlayer from "../Video"
 
 const Product = ({ product }) => {
   const { name, skinType, description, keyIngredients } = product
@@ -19,7 +20,17 @@ const Product = ({ product }) => {
         })}
       </p>
       <p className="product-description">{description.description}</p>
-      <ProductMedia {...product} />
+
+      <div className="product-media">
+        <div className="fifty"><Image fixed={product.imgRetail.fixed}/></div>
+        {
+          product.video &&
+            <div className="fifty">
+              <VideoPlayer
+                 src={`https://player.vimeo.com/video/${product.video}`}/>
+            </div>
+        }
+      </div>
       <div className="product-ingredients">
         <p className="bold">A FEW KEY Ingredients & Benefits:</p>
         <ul data-bullet-list>
@@ -67,8 +78,16 @@ const ProductWrapper = styled.article`
   & .product-skintypes .skintype:last-child::after {
     content: "";
   }
-  & p.product-description{
+  & .product-description{
     padding-bottom: 0;
+  }
+  & .product-media{
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-evenly;
+    width: 100%;
   }
   & .product-ingredients p.bold {
     font-weight: 600;
@@ -84,6 +103,15 @@ const ProductWrapper = styled.article`
   }
   & .product-ingredients .benefit {
     padding-left: 5px;
+  }
+  @media(max-width: 600px){
+    & .product-media{
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+    & .product-media .fifty{
+    }
   }
 `
 export default Product

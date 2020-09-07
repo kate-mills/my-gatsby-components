@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Video = ({ src, title, ...props }) => {
+const Video = ({ src, title, ...props }) => {
       console.log("video", src)
   return (
     <IframeVideoWrapper>
@@ -22,7 +22,7 @@ export const Video = ({ src, title, ...props }) => {
 }
 
 const IframeVideoWrapper = styled.div`
-  width: 90vw;
+  width: 50vw;
   max-width: 700px;
 
   .video {
@@ -41,6 +41,10 @@ const IframeVideoWrapper = styled.div`
     top: 0;
     width: 100%;
   }
+
+  @media(max-width:600px){
+    width: 90vw;
+  }
 `
 
  Video.defaultProps = {
@@ -48,3 +52,4 @@ const IframeVideoWrapper = styled.div`
   title: 'Peptide Rich & Radiant Eye Cream',
 }
 
+export default Video;

@@ -3,7 +3,7 @@ import {graphql} from 'gatsby'
 import Image from 'gatsby-image'
 import styles from './product-template.module.css'
 import PageModel from "../components/PageModel"
-import {Video} from '../components/Video'
+import VideoPlayer from '../components/Video'
 
 const Product = ({data: {product}}) => {
   return(
@@ -38,7 +38,7 @@ const Product = ({data: {product}}) => {
             type="media"
           />
 
-          { product.videoId && <Video src={`https://player.vimeo.com/video/${product.videoId}`} /> }
+          { product.videoId && <VideoPlayer src={`https://player.vimeo.com/video/${product.videoId}`} /> }
         </div>
         <h4>A FEW KEY Ingredients & Benefits:</h4>
         <ul style={{margin: "0 60px"}} data-bullet-list>
